@@ -1,0 +1,36 @@
+# guests:
+#   - name: "Sarah Chen"
+#     bio: "Open source maintainer and community builder at GitHub"
+#     twitter: "@sarahc_dev"
+#     linkedin: "sarah-chen-dev"
+#     website: "https://sarahchen.dev"
+
+#   - name: "Marcus Rivera"
+#     bio: "Remote work consultant and author of 'Distributed Teams'"
+#     twitter: "@marcusremote"
+#     linkedin: "marcus-rivera"
+#     website: "https://remoteworkinsights.com"
+
+#   - name: "Alex Thompson"
+#     bio: "Serial entrepreneur and founder of three successful SaaS companies"
+#     twitter: "@alexbuilds"
+#     linkedin: "alex-thompson-ceo"
+#     website: "https://alexthompson.io"
+
+#   - name: "Maya Patel"
+#     bio: "Senior Product Designer at Figma, design systems expert"
+#     twitter: "@mayauxdesign"
+#     linkedin: "maya-patel-design"
+#     website: "https://mayapatel.design"
+
+#   - name: "Dr. James Wilson"
+#     bio: "AI Ethics researcher at MIT and consultant for tech companies"
+#     twitter: "@jameswilsonai"
+#     linkedin: "james-wilson-phd"
+#     website: "https://aiethicslab.mit.edu"
+
+#   - name: "Lisa Park"
+#     bio: "Principal Engineer at Netflix, distributed systems architect"
+#     twitter: "@lisabuilds"
+#     linkedin: "lisa-park-engineer"
+#     website: "https://lisapark.dev"

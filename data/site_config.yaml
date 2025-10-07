@@ -1,0 +1,44 @@
+site:
+  title: "Mia Bajić - Software Engineer & Podcast Host"
+  name: "Mia Bajić"
+  tagline: "Software Engineer & Podcast Host"
+  description: "I'm a software engineer who loves merging tech & community. Host of Behind the Commit where I chat with people shaping open source in Europe."
+
+podcast:
+  name: "Behind the Commit"
+  description: "Have you ever wondered who the people are behind the open source technologies you use every day? Behind the Commit explores the stories and technologies shaping open source across Europe—from the tools being built to the challenges of maintaining them in a constantly evolving ecosystem. We speak with maintainers about what they’re building, why it matters, and how open source is changing in the age of AI."
+
+  links:
+    # spotify: "#"
+    # apple_podcasts: "#"
+    youtube: "https://www.youtube.com/@BehindtheCommit"
+    # rss: "#"
+
+
+social_links:
+  # - name: "🎧 Spotify"
+  #   url: "#"
+  - name: "📺 YouTube"
+    url: "https://www.youtube.com/@BehindtheCommit"
+  # - name: "🐦 Twitter"
+  #   url: "#"
+  # - name: "💼 LinkedIn"
+  #   url: "#"
+  # - name: "🐙 GitHub"
+  #   url: "#"
+
+sections:
+  - title: "📝 TIL Blog"
+    description: "I write about my tech learnings and community work."
+    link_text: "Browse posts →"
+    link_url: "https://clytaemnestra.github.io/tech-blog/"
+
+  - title: "🤝 Community Work"
+    description: "I'm Vice Chair of EuroPython Society and I co-organize local events in Prague."
+    link_text: "Browse posts about community →"
+    link_url: "https://clytaemnestra.github.io/tech-blog/tags#community"
+
+  - title: "🎤 Talks"
+    description: "I regularly give talks on technical topics"
+    link_text: "See all my talks →"
+    link_url: "https://github.com/clytaemnestra/talks"

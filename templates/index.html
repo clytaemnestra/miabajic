@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mia Bajić - Software Engineer & Podcast Host</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #0f0f23;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 15, 35, 0.95);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-item a {
+            text-decoration: none;
+            color: #ccc;
+            font-weight: 400;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-item a:hover {
+            color: #64ffda;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a3a 100%);
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.2rem;
+            color: #64ffda;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.7rem 1.2rem;
+            background: rgba(100, 255, 218, 0.1);
+            color: #64ffda;
+            text-decoration: none;
+            border-radius: 25px;
+            border: 1px solid rgba(100, 255, 218, 0.3);
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .social-link:hover {
+            background: rgba(100, 255, 218, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            text-align: center;
+        }
+
+        .hero-image img {
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+            object-fit: cover;
+            object-position: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Podcast Section */
+        .podcast-section {
+            background: #fff;
+            padding: 5rem 0;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+        }
+
+        .podcast-main {
+            background: linear-gradient(135deg, #0a4d68, #088395, #05bfdb);
+            padding: 3rem;
+            border-radius: 20px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 3rem;
+        }
+
+        .podcast-main::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transform: translate(30px, -30px);
+        }
+
+        .podcast-logo {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 250px;
+            height: 250px;
+            opacity: 0.3;
+            z-index: 2;
+        }
+
+        .podcast-main p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
+        }
+
+        .episodes-preview {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .episodes-preview h4 {
+            font-size: 1.3rem;
+            color: #333;
+        }
+
+        .acknowledgments {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 2.5rem;
+            border-radius: 15px;
+            border: 1px solid #dee2e6;
+        }
+
+        .acknowledgments h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+            text-align: center;
+        }
+
+        .acknowledgments > p {
+            text-align: center;
+            color: #666;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .thanks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .thanks-section {
+            text-align: center;
+        }
+
+        .thanks-section h5 {
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .thanks-section p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Other Sections */
+        .other-sections {
+            background: #fff;
+            padding: 4rem 0;
+        }
+
+        .sections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .section-card {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-card:hover {
+            transform: translateY(-8px);
+            border-color: #667eea;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.15);
+        }
+
+        .section-card h4 {
+            font-size: 1.4rem;
+            margin-bottom: 1.2rem;
+            color: #333;
+        }
+
+        .section-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .section-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .section-link:hover {
+            color: #764ba2;
+        }
+
+        /* Footer */
+        .footer {
+            background: #0f0f23;
+            color: white;
+            padding: 3rem 0 1rem;
+            text-align: center;
+        }
+
+        .footer p {
+            color: #ccc;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-image img {
+                width: 250px;
+                height: 250px;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">Mia Bajić</div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#about">About</a></li>
+                <li class="nav-item"><a href="#podcast">Podcast</a></li>
+                <li class="nav-item"><a href="#projects">Projects</a></li>
+                <li class="nav-item"><a href="#blog">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Hi, I'm Mia Bajić</h1>
+                <p class="subtitle">Software Engineer & Podcast Host</p>
+                <p>I'm a software engineer who loves merging tech & community. Host of Behind the Commit where I chat with people shaping open source in Europe.</p>
+
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/mia-bajic/" class="social-link">💼 LinkedIn</a>
+                    <a href="https://bsky.app/profile/clytaemnestra.bsky.social" class="social-link">🦋 Bluesky</a>
+                    <a href="https://www.youtube.com/@BehindtheCommit" class="social-link">📺 YouTube</a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="static/host.jpg" alt="Mia Bajić - Software Engineer & Podcast Host">
+            </div>
+        </div>
+    </section>
+
+    <!-- Podcast Section -->
+    <section class="podcast-section" id="podcast">
+        <div class="section-container">
+            <h2 class="section-title">Behind the Commit</h2>
+            <p class="section-subtitle">Meet the people shaping open-source across Europe and beyond</p>
+
+            <div class="podcast-main">
+                <img src="static/logo_btc_6.svg" alt="Behind the Commit Logo" class="podcast-logo">
+                <p>Have you ever wondered who the people are behind the open source technologies you use every day? Behind the Commit explores the stories and technologies shaping open source across Europe—from the tools being built to the challenges of maintaining them in a constantly evolving ecosystem. We speak with maintainers about what they're building, why it matters, and how open source is changing in the age of AI.</p>
+            </div>
+
+            <div class="episodes-preview">
+                <h4>Full Episodes Coming Soon!</h4>
+            </div>
+
+            <div class="acknowledgments">
+                <h4>🙏 Acknowledgments</h4>
+                <p>This podcast wouldn't exist without the amazing people who've helped along the way. Huge thanks to my guests for sharing their stories, the conferences that let me record talks, and everyone who's supported this community project.</p>
+
+                <div class="thanks-grid">
+                    <div class="thanks-section">
+                        <h5>Conferences</h5>
+                        <p>EuroPython 2025</p>
+                    </div>
+                    <div class="thanks-section">
+                        <h5>Special Thanks</h5>
+                        <p>Artur Czepiel for all the amazing ideas, Anna-Paula Marie Cederholn for marketing advice, Marcin Wierzbanowski for logo design, Piotr Gnus for A/V advice and recording</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Sections -->
+    <section class="other-sections">
+        <div class="section-container">
+            <div class="sections-grid">
+                <div class="section-card">
+                    <h4>📝 TIL Blog</h4>
+                    <p>I write about my tech learnings and community work.</p>
+                    <a href="https://clytaemnestra.github.io/tech-blog/" class="section-link">Browse posts →</a>
+                </div>
+                <div class="section-card">
+                    <h4>🤝 Community Work</h4>
+                    <p>I'm Vice Chair of EuroPython Society and I co-organize local events in Prague.</p>
+                    <a href="https://clytaemnestra.github.io/tech-blog/tags#community" class="section-link">Browse posts about community →</a>
+                </div>
+                <div class="section-card">
+                    <h4>🎤 Talks</h4>
+                    <p>I regularly give talks on technical topics</p>
+                    <a href="https://github.com/clytaemnestra/talks" class="section-link">See all my talks →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="section-container">
+            <p>&copy; 2025 Mia Bajić</p>
+        </div>
+    </footer>
+</body>
+</html>
