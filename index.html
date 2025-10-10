@@ -12,7 +12,7 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Tahoma', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
             color: #333;
             background: #0f0f23;
@@ -44,7 +44,7 @@
         .logo {
             font-size: 1.5rem;
             font-weight: 600;
-            color: #fff;
+            color: #f5e6be;
         }
 
         .nav-menu {
@@ -55,14 +55,14 @@
 
         .nav-item a {
             text-decoration: none;
-            color: #ccc;
+            color: #f5e6be;
             font-weight: 400;
             transition: all 0.3s ease;
             position: relative;
         }
 
         .nav-item a:hover {
-            color: #64ffda;
+            color: #059388;
         }
 
         /* Hero Section */
@@ -88,21 +88,21 @@
         .hero-content h1 {
             font-size: 3rem;
             font-weight: 700;
-            color: #fff;
+            color: #f5e6be;
             margin-bottom: 1rem;
             line-height: 1.2;
         }
 
         .hero-content .subtitle {
             font-size: 1.2rem;
-            color: #64ffda;
+            color: #059388;
             margin-bottom: 1.5rem;
             font-weight: 500;
         }
 
         .hero-content p {
             font-size: 1.1rem;
-            color: #ccc;
+            color: #f5e6be;
             margin-bottom: 2rem;
             line-height: 1.6;
         }
@@ -118,17 +118,17 @@
             align-items: center;
             gap: 0.5rem;
             padding: 0.7rem 1.2rem;
-            background: rgba(100, 255, 218, 0.1);
-            color: #64ffda;
+            background: rgba(5, 147, 136, 0.1);
+            color: #059388;
             text-decoration: none;
             border-radius: 25px;
-            border: 1px solid rgba(100, 255, 218, 0.3);
+            border: 1px solid rgba(5, 147, 136, 0.3);
             transition: all 0.3s ease;
             font-size: 0.9rem;
         }
 
         .social-link:hover {
-            background: rgba(100, 255, 218, 0.2);
+            background: rgba(5, 147, 136, 0.2);
             transform: translateY(-2px);
         }
 
@@ -173,7 +173,7 @@
         }
 
         .podcast-main {
-            background: linear-gradient(135deg, #0a4d68, #088395, #05bfdb);
+            background: linear-gradient(135deg, #002147, #004e7a, #0077b6);
             padding: 3rem;
             border-radius: 20px;
             color: white;
@@ -207,7 +207,8 @@
         .podcast-main p {
             font-size: 1.1rem;
             margin-bottom: 2rem;
-            opacity: 0.9;
+            color: #f5e6be;
+            opacity: 0.95;
             position: relative;
             z-index: 2;
         }
@@ -363,18 +364,18 @@
     <!-- Header -->
     <header class="header">
         <nav class="nav-container">
-            <div class="logo">Mia Bajić</div>
+            <a href="#" class="logo" style="text-decoration: none;">Mia Bajić</a>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="#about">About</a></li>
                 <li class="nav-item"><a href="#podcast">Podcast</a></li>
-                <li class="nav-item"><a href="#projects">Projects</a></li>
+                <li class="nav-item"><a href="#talks">Talks</a></li>
                 <li class="nav-item"><a href="#blog">Blog</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="about">
         <div class="hero-container">
             <div class="hero-content">
                 <h1>Hi, I'm Mia Bajić</h1>
@@ -396,7 +397,7 @@
 
     <!-- Podcast Section -->
     <section class="podcast-section" id="podcast">
-        <div class="section-container">
+        <div class="section-container" id="behindthecommit">
             <h2 class="section-title">Behind the Commit</h2>
             <p class="section-subtitle">Meet the people shaping open-source across Europe and beyond</p>
 
@@ -429,7 +430,7 @@
 
     <!-- Other Sections -->
     <section class="other-sections">
-        <div class="section-container">
+        <div class="section-container" id="blog">
             <div class="sections-grid">
                 <div class="section-card">
                     <h4>📝 TIL Blog</h4>
@@ -441,7 +442,7 @@
                     <p>I'm Vice Chair of EuroPython Society and I co-organize local events in Prague.</p>
                     <a href="https://clytaemnestra.github.io/tech-blog/tags#community" class="section-link">Browse posts about community →</a>
                 </div>
-                <div class="section-card">
+                <div class="section-card" id="talks">
                     <h4>🎤 Talks</h4>
                     <p>I regularly give talks on technical topics</p>
                     <a href="https://github.com/clytaemnestra/talks" class="section-link">See all my talks →</a>
