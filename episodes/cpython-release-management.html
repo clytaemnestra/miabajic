@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behind the Python Release: Motivation, Fails & Rituals with Łukasz, Pablo & Hugo - Behind the Commit</title>
+    <meta name="description" content="Hugo van Kemenade, Pablo Galindo Salgado, and Łukasz Langa discuss CPython release management, the evolution of the release process, and sustainable open source funding.">
+    <link rel="icon" type="image/svg+xml" href="../static/logo_btc_6.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Rajdhani', 'Tahoma', sans-serif;
+            line-height: 1.8;
+            color: #00fff9;
+            background: linear-gradient(135deg, #001529 0%, #003a5c 50%, #001529 100%);
+            min-height: 100vh;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 21, 41, 0.95);
+            backdrop-filter: blur(15px);
+            border-bottom: 2px solid #00fff9;
+            box-shadow: 0 0 15px rgba(0, 255, 249, 0.5);
+            padding: 1rem 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #00fff9;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .episode-container {
+            max-width: 900px;
+            margin: 120px auto 4rem;
+            padding: 0 2rem;
+        }
+
+        .episode-header-thumbnail {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid rgba(0, 255, 249, 0.5);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            color: #00fff9;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .episode-meta {
+            color: #ff69b4;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .description {
+            font-size: 1.2rem;
+            color: #d4dce6;
+            margin-bottom: 2rem;
+            line-height: 1.9;
+        }
+
+        .listen-links {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .listen-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.8rem 1.3rem;
+            background: rgba(255, 105, 180, 0.2);
+            color: #ff69b4;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 2px solid #ff69b4;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .listen-link:hover {
+            background: rgba(0, 255, 249, 0.2);
+            border-color: #00fff9;
+            color: #00fff9;
+            box-shadow: 0 0 15px rgba(0, 255, 249, 0.5);
+        }
+
+        .section {
+            background: rgba(0, 58, 92, 0.4);
+            padding: 2.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            border: 2.5px solid rgba(0, 255, 249, 0.5);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #ff69b4;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: #00fff9;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        p, li {
+            color: #d4dce6;
+            font-size: 1.1rem;
+            line-height: 1.9;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            margin-left: 2rem;
+        }
+
+        .timestamp {
+            color: #ff69b4;
+            font-weight: 600;
+        }
+
+        a {
+            color: #00fff9;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #ff69b4;
+        }
+
+        .footer {
+            background: #001529;
+            color: #00fff9;
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(0, 255, 249, 0.3);
+        }
+
+        .footer p {
+            color: #d4dce6;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="../index.html" class="logo">Behind the Commit</a>
+        </nav>
+    </header>
+
+    <main class="episode-container">
+        <h1>Behind the Python Release: Motivation, Fails & Rituals with Łukasz, Pablo & Hugo</h1>
+
+        <img src="../static/static/release-managers-thumbnail.png" alt="Behind the Python Release" class="episode-header-thumbnail">
+
+        <p class="description">In this episode, I talk with Hugo van Kemenade, Pablo Galindo Salgado, and Łukasz Langa about CPython release management—from the evolution of the release process to becoming a Release Manager and sustainable open source funding.</p>
+
+        <div class="listen-links">
+            <a href="https://www.youtube.com/@BehindtheCommit" class="listen-link">Watch on YouTube</a>
+            <a href="https://open.spotify.com/show/2Z9EwkdBv8EV9HBC1seNcR" class="listen-link">Listen on Spotify</a>
+            <a href="https://podcasts.apple.com/podcast/id1845604486" class="listen-link">Apple Podcasts</a>
+            <a href="https://media.rss.com/behindthecommit/feed.xml" class="listen-link">RSS Feed</a>
+        </div>
+
+        <div class="section">
+            <h2>About the Guests</h2>
+
+            <h3>Hugo van Kemenade</h3>
+            <p>Release Manager for Python 3.14 & 3.15, currently employed at the Sovereign Tech Agency as a fellow. Maintainer of open-source projects such as Pillow. Co-organizer of local Python events in Helsinki.</p>
+
+            <h3>Pablo Galindo Salgado</h3>
+            <p>Core Python developer, currently employed in the Software Infrastructure department at Bloomberg. Release Manager for Python 3.10 & 3.11, and a member of the Steering Council. Co-host of the core.py podcast.</p>
+
+            <h3>Łukasz Langa</h3>
+            <p>Python's Developer in Residence at the PSF and Release Manager for Python 3.8 & 3.9. Creator of Black, the opinionated Python code formatter, and co-host of the core.py podcast.</p>
+        </div>
+
+        <div class="section">
+            <h2>Episode Outline</h2>
+            <ul>
+                <li><span class="timestamp">01:34</span> Most & Least Successful Releases</li>
+                <li><span class="timestamp">05:34</span> Evolution of Release Process</li>
+                <li><span class="timestamp">11:37</span> Release Schedule and Annual Releases</li>
+                <li><span class="timestamp">15:05</span> Handling PRs and Reverts</li>
+                <li><span class="timestamp">18:07</span> Becoming a Python Release Manager</li>
+                <li><span class="timestamp">25:24</span> Motivation and Time Zone Challenges</li>
+                <li><span class="timestamp">29:36</span> Release Rituals and YouTube Party</li>
+                <li><span class="timestamp">35:11</span> Sustainable Open Source Funding Models</li>
+                <li><span class="timestamp">42:10</span> Getting Involved & Further Listening</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Links & Resources</h2>
+            <ul>
+                <li><a href="https://open.spotify.com/show/1PGRfdrLEwgXjQbPBNk1pW">core.py podcast</a></li>
+                <li><a href="https://devguide.python.org/">Python's Developer Guide</a></li>
+                <li><a href="https://peps.python.org/pep-0101/">PEP 101</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Mia Bajić</p>
+    </footer>
+</body>
+</html>
