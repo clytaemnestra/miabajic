@@ -333,17 +333,107 @@
             padding: 2rem;
             border-radius: 10px;
             margin-bottom: 2rem;
-            text-align: center;
             border: 2.5px solid rgba(0, 255, 249, 0.5);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 0 0 15px rgba(0, 255, 249, 0.2);
         }
 
-        .episodes-preview h4 {
-            font-size: 1.3rem;
+        .episodes-preview h3 {
+            font-size: 1.5rem;
             color: #00fff9;
             text-transform: uppercase;
             letter-spacing: 2px;
             font-weight: 700;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .episode {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+
+        .episode-thumbnail-link {
+            flex-shrink: 0;
+        }
+
+        .episode-thumbnail {
+            width: 280px;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid rgba(0, 255, 249, 0.5);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .episode-thumbnail:hover {
+            border-color: #ff69b4;
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .episode-content {
+            flex: 1;
+        }
+
+        .episode h4 {
+            font-size: 1.3rem;
+            color: #ff69b4;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .episode h4 a {
+            color: #ff69b4;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .episode h4 a:hover {
+            color: #00fff9;
+            text-shadow: 0 0 10px rgba(0, 255, 249, 0.5);
+        }
+
+        .episode p {
+            color: #d4dce6;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .episode-meta {
+            font-style: italic;
+            font-size: 1rem;
+        }
+
+        .episode-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .episode-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.6rem 1rem;
+            background: rgba(255, 105, 180, 0.2);
+            color: #ff69b4;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 2px solid #ff69b4;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .episode-link:hover {
+            background: rgba(0, 255, 249, 0.2);
+            border-color: #00fff9;
+            color: #00fff9;
+            box-shadow: 0 0 15px rgba(0, 255, 249, 0.5);
         }
 
         .acknowledgments {
@@ -580,7 +670,20 @@
             </div>
 
             <div class="episodes-preview">
-                <h4>Full Episodes Coming Soon!</h4>
+                <h3>Latest Episode</h3>
+                <div class="episode">
+                    <a href="episodes/cpython-release-management.html" class="episode-thumbnail-link">
+                        <img src="static/static/release-managers-thumbnail.png" alt="Behind the Python Release" class="episode-thumbnail">
+                    </a>
+                    <div class="episode-content">
+                        <h4><a href="episodes/cpython-release-management.html">Behind the Python Release: Motivation, Fails & Rituals with Łukasz, Pablo & Hugo</a></h4>
+                        <p>I talk with Hugo van Kemenade, Pablo Galindo Salgado, and Łukasz Langa about CPython release management—from the evolution of the release process to becoming a Release Manager and sustainable open source funding.</p>
+                        <div class="episode-links">
+                            <a href="https://www.youtube.com/@BehindtheCommit" class="episode-link">Watch on YouTube</a>
+                            <a href="https://open.spotify.com/show/2Z9EwkdBv8EV9HBC1seNcR" class="episode-link">Listen on Spotify</a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="acknowledgments">
