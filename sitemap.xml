@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://miabajic.dev/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://miabajic.dev/#about</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Podcast -->
+  <url>
+    <loc>https://miabajic.dev/podcast</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Talks -->
+  <url>
+    <loc>https://github.com/clytaemnestra/talks</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://clytaemnestra.github.io/tech-blog/</loc>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
