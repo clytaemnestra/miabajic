@@ -1,9 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4CGZ8EQWVF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-4CGZ8EQWVF');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mia Bajić - Software Engineer & Podcast Host</title>
+    <link rel="icon" type="image/svg+xml" href="static/logotype.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,11 +25,31 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #0f0f23;
+            font-family: 'Rajdhani', 'Tahoma', sans-serif;
+            line-height: 1.8;
+            color: #00fff9;
+            background: linear-gradient(135deg, #001529 0%, #003a5c 50%, #001529 100%);
             min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                repeating-linear-gradient(
+                    0deg,
+                    rgba(0, 255, 249, 0.005) 0px,
+                    transparent 1px,
+                    transparent 2px,
+                    rgba(0, 255, 249, 0.005) 3px
+                );
+            pointer-events: none;
+            z-index: 1;
         }
 
         /* Header */
@@ -24,9 +57,10 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(15, 15, 35, 0.95);
+            background: rgba(0, 21, 41, 0.95);
             backdrop-filter: blur(15px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 2px solid #00fff9;
+            box-shadow: 0 0 15px rgba(0, 255, 249, 0.5), 0 2px 10px rgba(0, 0, 0, 0.3);
             padding: 1rem 0;
             z-index: 1000;
             transition: all 0.3s ease;
@@ -43,8 +77,11 @@
 
         .logo {
             font-size: 1.5rem;
-            font-weight: 600;
-            color: #fff;
+            font-weight: 700;
+            color: #00fff9;
+            text-shadow: 0 0 5px rgba(0, 255, 249, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         .nav-menu {
@@ -55,24 +92,59 @@
 
         .nav-item a {
             text-decoration: none;
-            color: #ccc;
-            font-weight: 400;
+            color: #00fff9;
+            font-weight: 500;
             transition: all 0.3s ease;
             position: relative;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
         }
 
         .nav-item a:hover {
-            color: #64ffda;
+            color: #ff69b4;
+            text-shadow: 0 0 10px rgba(255, 105, 180, 0.8);
+        }
+
+        .nav-item a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #ff69b4;
+            box-shadow: 0 0 10px #ff69b4;
+            transition: width 0.3s ease;
+        }
+
+        .nav-item a:hover::after {
+            width: 100%;
         }
 
         /* Hero Section */
         .hero {
             margin-top: 80px;
-            min-height: 70vh;
+            min-height: auto;
             display: flex;
             align-items: center;
-            padding: 4rem 0;
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a3a 100%);
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #001529 0%, #003a5c 50%, #001529 100%);
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 255, 249, 0.1) 0%, transparent 70%);
+            filter: blur(80px);
+            pointer-events: none;
         }
 
         .hero-container {
@@ -86,25 +158,33 @@
         }
 
         .hero-content h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 1rem;
-            line-height: 1.2;
+            font-size: 3.5rem;
+            font-weight: 500;
+            color: #00fff9;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+            text-shadow: none;
+            text-transform: none;
+            letter-spacing: 1px;
+            font-family: 'Rajdhani', sans-serif;
         }
 
         .hero-content .subtitle {
-            font-size: 1.2rem;
-            color: #64ffda;
-            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            color: #ff69b4;
+            margin-bottom: 2rem;
             font-weight: 500;
+            text-shadow: 0 0 5px rgba(255, 105, 180, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
         }
 
         .hero-content p {
-            font-size: 1.1rem;
-            color: #ccc;
+            font-size: 1.2rem;
+            color: #d4dce6;
             margin-bottom: 2rem;
-            line-height: 1.6;
+            line-height: 1.9;
+            font-weight: 400;
         }
 
         .social-links {
@@ -118,17 +198,24 @@
             align-items: center;
             gap: 0.5rem;
             padding: 0.7rem 1.2rem;
-            background: rgba(100, 255, 218, 0.1);
-            color: #64ffda;
+            background: rgba(0, 255, 249, 0.1);
+            color: #00fff9;
             text-decoration: none;
-            border-radius: 25px;
-            border: 1px solid rgba(100, 255, 218, 0.3);
+            border-radius: 5px;
+            border: 2px solid #00fff9;
             transition: all 0.3s ease;
             font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 0 10px rgba(0, 255, 249, 0.3);
         }
 
         .social-link:hover {
-            background: rgba(100, 255, 218, 0.2);
+            background: rgba(255, 105, 180, 0.2);
+            border-color: #ff69b4;
+            color: #ff69b4;
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
             transform: translateY(-2px);
         }
 
@@ -139,16 +226,20 @@
         .hero-image img {
             width: 300px;
             height: 300px;
-            border-radius: 20px;
+            border-radius: 10px;
             object-fit: cover;
             object-position: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 3px solid #00fff9;
+            box-shadow: 0 0 30px rgba(0, 255, 249, 0.6), inset 0 0 20px rgba(0, 255, 249, 0.1);
+            filter: brightness(1.1) contrast(1.1);
         }
 
         /* Podcast Section */
         .podcast-section {
-            background: #fff;
+            background: #001529;
             padding: 5rem 0;
+            position: relative;
+            z-index: 2;
         }
 
         .section-container {
@@ -158,28 +249,36 @@
         }
 
         .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
+            font-size: 2.8rem;
+            font-weight: 500;
             text-align: center;
-            margin-bottom: 1rem;
-            color: #333;
+            margin-bottom: 1.5rem;
+            color: #00fff9;
+            text-shadow: none;
+            text-transform: none;
+            letter-spacing: 1px;
+            font-family: 'Rajdhani', sans-serif;
         }
 
         .section-subtitle {
             text-align: center;
-            color: #666;
-            font-size: 1.2rem;
+            color: #d4dce6;
+            font-size: 1.3rem;
             margin-bottom: 3rem;
+            font-weight: 400;
+            line-height: 1.8;
         }
 
         .podcast-main {
-            background: linear-gradient(135deg, #0a4d68, #088395, #05bfdb);
+            background: linear-gradient(135deg, #001529, #002a47, #001529);
             padding: 3rem;
             border-radius: 20px;
             color: white;
             position: relative;
             overflow: hidden;
             margin-bottom: 3rem;
+            border: 2.5px solid rgba(0, 255, 249, 0.5);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 255, 249, 0.2);
         }
 
         .podcast-main::before {
@@ -187,63 +286,182 @@
             position: absolute;
             top: 0;
             right: 0;
-            width: 100px;
-            height: 100px;
-            background: rgba(255, 255, 255, 0.1);
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(0, 255, 249, 0.3) 0%, transparent 70%);
             border-radius: 50%;
-            transform: translate(30px, -30px);
+            transform: translate(50px, -50px);
+            filter: blur(40px);
+        }
+
+        .podcast-main::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(255, 105, 180, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(-30px, 30px);
+            filter: blur(40px);
         }
 
         .podcast-logo {
             position: absolute;
-            top: 1rem;
-            right: 1rem;
-            width: 250px;
-            height: 250px;
-            opacity: 0.3;
-            z-index: 2;
+            top: 50%;
+            right: 2rem;
+            transform: translateY(-50%);
+            width: 350px;
+            height: 350px;
+            opacity: 0.25;
+            z-index: 1;
         }
 
         .podcast-main p {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             margin-bottom: 2rem;
-            opacity: 0.9;
+            color: #e8eef5;
             position: relative;
             z-index: 2;
+            line-height: 2;
+            font-weight: 400;
         }
 
         .episodes-preview {
-            background: #f8f9fa;
+            background: rgba(0, 58, 92, 0.4);
             padding: 2rem;
-            border-radius: 15px;
+            border-radius: 10px;
             margin-bottom: 2rem;
-            text-align: center;
+            border: 2.5px solid rgba(0, 255, 249, 0.5);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 0 0 15px rgba(0, 255, 249, 0.2);
         }
 
-        .episodes-preview h4 {
+        .episodes-preview h3 {
+            font-size: 1.5rem;
+            color: #00fff9;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .episode {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+
+        .episode-thumbnail-link {
+            flex-shrink: 0;
+        }
+
+        .episode-thumbnail {
+            width: 280px;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid rgba(0, 255, 249, 0.5);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .episode-thumbnail:hover {
+            border-color: #ff69b4;
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .episode-content {
+            flex: 1;
+        }
+
+        .episode h4 {
             font-size: 1.3rem;
-            color: #333;
+            color: #ff69b4;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .episode h4 a {
+            color: #ff69b4;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .episode h4 a:hover {
+            color: #00fff9;
+            text-shadow: 0 0 10px rgba(0, 255, 249, 0.5);
+        }
+
+        .episode p {
+            color: #d4dce6;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .episode-meta {
+            font-style: italic;
+            font-size: 1rem;
+        }
+
+        .episode-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .episode-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.6rem 1rem;
+            background: rgba(255, 105, 180, 0.2);
+            color: #ff69b4;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 2px solid #ff69b4;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .episode-link:hover {
+            background: rgba(0, 255, 249, 0.2);
+            border-color: #00fff9;
+            color: #00fff9;
+            box-shadow: 0 0 15px rgba(0, 255, 249, 0.5);
         }
 
         .acknowledgments {
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            background: rgba(0, 58, 92, 0.4);
             padding: 2.5rem;
-            border-radius: 15px;
-            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            border: 2.5px solid rgba(255, 105, 180, 0.5);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 0 0 15px rgba(255, 105, 180, 0.2);
         }
 
         .acknowledgments h4 {
             font-size: 1.3rem;
             margin-bottom: 1.5rem;
-            color: #333;
+            color: #ff69b4;
             text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            text-shadow: 0 0 5px rgba(255, 105, 180, 0.3);
         }
 
         .acknowledgments > p {
             text-align: center;
-            color: #666;
+            color: #d4dce6;
             margin-bottom: 2rem;
             font-style: italic;
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
 
         .thanks-grid {
@@ -259,20 +477,24 @@
         .thanks-section h5 {
             font-size: 1.1rem;
             margin-bottom: 0.8rem;
-            color: #667eea;
-            font-weight: 600;
+            color: #00fff9;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .thanks-section p {
-            color: #666;
-            font-size: 0.95rem;
-            line-height: 1.5;
+            color: #d4dce6;
+            font-size: 1.05rem;
+            line-height: 1.8;
         }
 
         /* Other Sections */
         .other-sections {
-            background: #fff;
+            background: #001529;
             padding: 4rem 0;
+            position: relative;
+            z-index: 2;
         }
 
         .sections-grid {
@@ -282,55 +504,148 @@
         }
 
         .section-card {
-            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            background: rgba(0, 58, 92, 0.5);
             padding: 2.5rem;
-            border-radius: 20px;
+            border-radius: 10px;
             text-align: center;
             transition: all 0.3s ease;
-            border: 2px solid transparent;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 2.5px solid rgba(0, 255, 249, 0.5);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 0 0 15px rgba(0, 255, 249, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 255, 249, 0.1) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .section-card:hover::before {
+            opacity: 1;
         }
 
         .section-card:hover {
             transform: translateY(-8px);
-            border-color: #667eea;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.15);
+            border-color: #ff69b4;
+            box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3), 0 0 25px rgba(255, 105, 180, 0.4);
         }
 
         .section-card h4 {
             font-size: 1.4rem;
             margin-bottom: 1.2rem;
-            color: #333;
+            color: #00fff9;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
         }
 
         .section-card p {
-            color: #666;
+            color: #d4dce6;
             margin-bottom: 1.5rem;
-            font-size: 1.05rem;
-            line-height: 1.6;
+            font-size: 1.15rem;
+            line-height: 1.9;
+            position: relative;
+            z-index: 1;
         }
 
         .section-link {
-            color: #667eea;
+            color: #ff69b4;
             text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
         }
 
         .section-link:hover {
-            color: #764ba2;
+            color: #00fff9;
+            text-shadow: 0 0 15px rgba(0, 255, 249, 0.8);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #001529 0%, #003a5c 100%);
+            padding: 5rem 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-section .section-title {
+            color: #00fff9;
+            text-shadow: 0 0 20px rgba(0, 255, 249, 0.5);
+        }
+
+        .contact-section .section-subtitle {
+            color: #d4dce6;
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-email {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.2rem;
+            color: #ff69b4;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            background: rgba(255, 105, 180, 0.1);
+            border-radius: 30px;
+            border: 2px solid rgba(255, 105, 180, 0.5);
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+            text-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+        }
+
+        .contact-email:hover {
+            background: rgba(255, 105, 180, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255, 105, 180, 0.3);
+            text-shadow: 0 0 15px rgba(255, 105, 180, 0.8);
+        }
+
+        .contact-socials {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
         }
 
         /* Footer */
         .footer {
-            background: #0f0f23;
-            color: white;
+            background: #001529;
+            color: #00fff9;
             padding: 3rem 0 1rem;
             text-align: center;
+            border-top: 1px solid rgba(0, 255, 249, 0.3);
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 2;
         }
 
         .footer p {
-            color: #ccc;
+            color: #d4dce6;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 400;
+            font-size: 1rem;
         }
 
         /* Responsive */
@@ -356,6 +671,53 @@
             .social-links {
                 justify-content: center;
             }
+
+            .podcast-logo {
+                display: none;
+            }
+
+            .podcast-main {
+                padding: 2rem;
+            }
+
+            .episode {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .episode-thumbnail {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .episode-links {
+                flex-direction: column;
+            }
+
+            .episode-link {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .section-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .episodes-preview h3 {
+                font-size: 1.2rem;
+            }
+
+            .episode h4 {
+                font-size: 1.1rem;
+            }
+
+            .episode p {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -363,64 +725,87 @@
     <!-- Header -->
     <header class="header">
         <nav class="nav-container">
-            <div class="logo">Mia Bajić</div>
+            <a href="#" class="logo" style="text-decoration: none;">Mia Bajić</a>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="#about">About</a></li>
                 <li class="nav-item"><a href="#podcast">Podcast</a></li>
-                <li class="nav-item"><a href="#projects">Projects</a></li>
-                <li class="nav-item"><a href="#blog">Blog</a></li>
+                <li class="nav-item"><a href="https://github.com/clytaemnestra/talks">Talks</a></li>
+                <li class="nav-item"><a href="https://clytaemnestra.github.io/tech-blog/">Blog</a></li>
+                <li class="nav-item"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="about">
         <div class="hero-container">
             <div class="hero-content">
-                <h1>Hi, I'm Mia Bajić</h1>
+                <h1>Hi, I'm Mia</h1>
                 <p class="subtitle">Software Engineer & Podcast Host</p>
-                <p>I'm a software engineer who loves merging tech & community. Host of Behind the Commit where I chat with people shaping open source in Europe.</p>
+                <p>I'm a software engineer building data products. I host Behind the Commit, a series of casual conversations with people shaping open source in Europe and beyond.</p>
 
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/mia-bajic/" class="social-link">💼 LinkedIn</a>
-                    <a href="https://bsky.app/profile/clytaemnestra.bsky.social" class="social-link">🦋 Bluesky</a>
-                    <a href="https://www.youtube.com/@BehindtheCommit" class="social-link">📺 YouTube</a>
+                    <a href="https://www.linkedin.com/in/mia-bajic/" class="social-link">LinkedIn</a>
+                    <a href="https://bsky.app/profile/clytaemnestra.bsky.social" class="social-link">Bluesky</a>
+                    <a href="https://www.instagram.com/miabajic.dev/" class="social-link">Instagram</a>
+                    <a href="https://www.tiktok.com/@miabajic.dev" class="social-link">TikTok</a>
+                    <a href="https://www.youtube.com/@BehindtheCommit" class="social-link">YouTube</a>
+                    <a href="https://open.spotify.com/show/2Z9EwkdBv8EV9HBC1seNcR" class="social-link">Spotify</a>
+                    <a href="https://podcasts.apple.com/podcast/id1845604486" class="social-link">Apple Podcasts</a>
+                    <a href="https://media.rss.com/behindthecommit/feed.xml" class="social-link">RSS Feed</a>
                 </div>
             </div>
 
             <div class="hero-image">
-                <img src="static/host.jpg" alt="Mia Bajić - Software Engineer & Podcast Host">
+                <img src="static/static/host-original.png" alt="Mia Bajić - Software Engineer & Podcast Host">
             </div>
         </div>
     </section>
 
     <!-- Podcast Section -->
     <section class="podcast-section" id="podcast">
-        <div class="section-container">
+        <div class="section-container" id="behindthecommit">
             <h2 class="section-title">Behind the Commit</h2>
             <p class="section-subtitle">Meet the people shaping open-source across Europe and beyond</p>
 
             <div class="podcast-main">
                 <img src="static/logotype.svg" alt="Behind the Commit Logo" class="podcast-logo">
-                <p>Have you ever wondered who the people are behind the open source technologies you use every day? Behind the Commit explores the stories and technologies shaping open source across Europe—from the tools being built to the challenges of maintaining them in a constantly evolving ecosystem. We speak with maintainers about what they're building, why it matters, and how open source is changing in the age of AI.</p>
+                <p>Have you ever wondered who the people are behind the open source technologies you use every day? Behind the Commit explores the stories and technologies shaping open source across Europe—from the tools being built to the challenges of maintaining them in a constantly evolving ecosystem. I speak with maintainers about what they're building, why it matters, and how open source is changing in the age of AI.</p>
             </div>
 
             <div class="episodes-preview">
-                <h4>Full Episodes Coming Soon!</h4>
+                <h3>Latest Episode</h3>
+                <div class="episode">
+                    <a href="episodes/cpython-release-management.html" class="episode-thumbnail-link">
+                        <img src="static/static/release-managers-thumbnail.png" alt="Behind the Python Release" class="episode-thumbnail">
+                    </a>
+                    <div class="episode-content">
+                        <h4><a href="episodes/cpython-release-management.html">Behind the Python Release: Motivation, Fails & Rituals with Łukasz, Pablo & Hugo</a></h4>
+                        <p>I talk with Hugo van Kemenade, Pablo Galindo Salgado, and Łukasz Langa about CPython release management—from the evolution of the release process to becoming a Release Manager and sustainable open source funding.</p>
+                        <div class="episode-links">
+                            <a href="https://www.youtube.com/@BehindtheCommit" class="episode-link">Watch on YouTube</a>
+                            <a href="https://open.spotify.com/show/2Z9EwkdBv8EV9HBC1seNcR" class="episode-link">Listen on Spotify</a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="acknowledgments">
-                <h4>🙏 Acknowledgments</h4>
-                <p>This podcast wouldn't exist without the amazing people who've helped along the way. Huge thanks to my guests for sharing their stories, the conferences that let me record talks, and everyone who's supported this community project.</p>
+                <h4>Acknowledgments</h4>
+                <p>Behind the Commit wouldn't exist without the people who've contributed along the way.</p>
 
                 <div class="thanks-grid">
                     <div class="thanks-section">
-                        <h5>Conferences</h5>
+                        <h5>Guests</h5>
+                        <p>Hugo van Kemenade<br>Łukasz Langa<br>Pablo Galindo Salgado</p>
+                    </div>
+                    <div class="thanks-section">
+                        <h5>Recorded At</h5>
                         <p>EuroPython 2025</p>
                     </div>
                     <div class="thanks-section">
                         <h5>Special Thanks</h5>
-                        <p>Artur Czepiel for all the amazing ideas, Anna-Paula Marie Cederholn for marketing advice, Marcin Wierzbanowski for logo design, Piotr Gnus for A/V advice and recording</p>
+                        <p>Artur Czepiel for all the amazing ideas and inspiration<br>Anna-Paula Marie Cederholn for marketing advice<br>Honza Král for connecting me with speakers<br>Marcin Wierzbanowski for logo design<br>Piotr Gnus for A/V advice and recording</p>
                     </div>
                 </div>
             </div>
@@ -429,22 +814,43 @@
 
     <!-- Other Sections -->
     <section class="other-sections">
-        <div class="section-container">
+        <div class="section-container" id="blog">
             <div class="sections-grid">
                 <div class="section-card">
-                    <h4>📝 TIL Blog</h4>
+                    <h4>TIL Blog</h4>
                     <p>I write about my tech learnings and community work.</p>
                     <a href="https://clytaemnestra.github.io/tech-blog/" class="section-link">Browse posts →</a>
                 </div>
                 <div class="section-card">
-                    <h4>🤝 Community Work</h4>
+                    <h4>Community Work</h4>
                     <p>I'm Vice Chair of EuroPython Society and I co-organize local events in Prague.</p>
                     <a href="https://clytaemnestra.github.io/tech-blog/tags#community" class="section-link">Browse posts about community →</a>
                 </div>
-                <div class="section-card">
-                    <h4>🎤 Talks</h4>
+                <div class="section-card" id="talks">
+                    <h4>Talks</h4>
                     <p>I regularly give talks on technical topics</p>
                     <a href="https://github.com/clytaemnestra/talks" class="section-link">See all my talks →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="section-container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-subtitle">Have feedback, suggestions, or want to collaborate? I'd love to hear from you!</p>
+
+            <div class="contact-content">
+                <a href="mailto:mia@europython.eu" class="contact-email">
+                    mia@europython.eu
+                </a>
+
+                <div class="contact-socials">
+                    <a href="https://www.linkedin.com/in/mia-bajic/" class="social-link">LinkedIn</a>
+                    <a href="https://bsky.app/profile/clytaemnestra.bsky.social" class="social-link">Bluesky</a>
+                    <a href="https://www.instagram.com/miabajic.dev/" class="social-link">Instagram</a>
+                    <a href="https://www.tiktok.com/@miabajic.dev" class="social-link">TikTok</a>
                 </div>
             </div>
         </div>

@@ -574,6 +574,60 @@
             text-shadow: 0 0 15px rgba(0, 255, 249, 0.8);
         }
 
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #001529 0%, #003a5c 100%);
+            padding: 5rem 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-section .section-title {
+            color: #00fff9;
+            text-shadow: 0 0 20px rgba(0, 255, 249, 0.5);
+        }
+
+        .contact-section .section-subtitle {
+            color: #d4dce6;
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-email {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.2rem;
+            color: #ff69b4;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            background: rgba(255, 105, 180, 0.1);
+            border-radius: 30px;
+            border: 2px solid rgba(255, 105, 180, 0.5);
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+            text-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+        }
+
+        .contact-email:hover {
+            background: rgba(255, 105, 180, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255, 105, 180, 0.3);
+            text-shadow: 0 0 15px rgba(255, 105, 180, 0.8);
+        }
+
+        .contact-socials {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
         /* Footer */
         .footer {
             background: #001529;
@@ -677,6 +731,7 @@
                 <li class="nav-item"><a href="#podcast">Podcast</a></li>
                 <li class="nav-item"><a href="https://github.com/clytaemnestra/talks">Talks</a></li>
                 <li class="nav-item"><a href="https://clytaemnestra.github.io/tech-blog/">Blog</a></li>
+                <li class="nav-item"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -692,6 +747,8 @@
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/mia-bajic/" class="social-link">LinkedIn</a>
                     <a href="https://bsky.app/profile/clytaemnestra.bsky.social" class="social-link">Bluesky</a>
+                    <a href="https://www.instagram.com/miabajic.dev/" class="social-link">Instagram</a>
+                    <a href="https://www.tiktok.com/@miabajic.dev" class="social-link">TikTok</a>
                     <a href="https://www.youtube.com/@BehindtheCommit" class="social-link">YouTube</a>
                     <a href="https://open.spotify.com/show/2Z9EwkdBv8EV9HBC1seNcR" class="social-link">Spotify</a>
                     <a href="https://podcasts.apple.com/podcast/id1845604486" class="social-link">Apple Podcasts</a>
@@ -773,6 +830,27 @@
                     <h4>Talks</h4>
                     <p>I regularly give talks on technical topics</p>
                     <a href="https://github.com/clytaemnestra/talks" class="section-link">See all my talks →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="section-container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-subtitle">Have feedback, suggestions, or want to collaborate? I'd love to hear from you!</p>
+
+            <div class="contact-content">
+                <a href="mailto:mia@europython.eu" class="contact-email">
+                    mia@europython.eu
+                </a>
+
+                <div class="contact-socials">
+                    <a href="https://www.linkedin.com/in/mia-bajic/" class="social-link">LinkedIn</a>
+                    <a href="https://bsky.app/profile/clytaemnestra.bsky.social" class="social-link">Bluesky</a>
+                    <a href="https://www.instagram.com/miabajic.dev/" class="social-link">Instagram</a>
+                    <a href="https://www.tiktok.com/@miabajic.dev" class="social-link">TikTok</a>
                 </div>
             </div>
         </div>

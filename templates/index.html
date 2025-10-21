@@ -321,6 +321,54 @@
             color: #764ba2;
         }
 
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a3a 100%);
+            padding: 5rem 0;
+        }
+
+        .contact-section .section-title {
+            color: #fff;
+        }
+
+        .contact-section .section-subtitle {
+            color: #ccc;
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-email {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.2rem;
+            color: #64ffda;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            background: rgba(100, 255, 218, 0.1);
+            border-radius: 30px;
+            border: 1px solid rgba(100, 255, 218, 0.3);
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-email:hover {
+            background: rgba(100, 255, 218, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .contact-socials {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
         /* Footer */
         .footer {
             background: #0f0f23;
@@ -369,6 +417,7 @@
                 <li class="nav-item"><a href="#podcast">Podcast</a></li>
                 <li class="nav-item"><a href="#projects">Projects</a></li>
                 <li class="nav-item"><a href="#blog">Blog</a></li>
+                <li class="nav-item"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -445,6 +494,26 @@
                     <h4>🎤 Talks</h4>
                     <p>I regularly give talks on technical topics</p>
                     <a href="https://github.com/clytaemnestra/talks" class="section-link">See all my talks →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="section-container">
+            <h2 class="section-title">Contact Me</h2>
+            <p class="section-subtitle">I'm happy to hear your feedback!</p>
+
+            <div class="contact-content">
+                <a href="mailto:mia@europython.eu" class="contact-email">
+                    📧 mia@europython.eu
+                </a>
+
+                <div class="contact-socials">
+                    <a href="https://www.linkedin.com/in/mia-bajic/" class="social-link">💼 LinkedIn</a>
+                    <a href="https://bsky.app/profile/clytaemnestra.bsky.social" class="social-link">🦋 Bluesky</a>
+                    <a href="https://www.youtube.com/@BehindtheCommit" class="social-link">📺 YouTube</a>
                 </div>
             </div>
         </div>
