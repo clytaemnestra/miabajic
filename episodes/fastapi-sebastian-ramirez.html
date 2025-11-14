@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why FastAPI Became Python's Fastest‑Growing Framework – Chat with Sebastián Ramírez - Behind the Commit</title>
+    <meta name="description" content="Sebastián Ramírez, creator of FastAPI, discusses how FastAPI became one of Python's fastest-growing frameworks, the roadmap for its future, and the story behind FastAPI Labs and FastAPI Cloud.">
+    <link rel="icon" type="image/svg+xml" href="../static/logo_btc_6.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Rajdhani', 'Tahoma', sans-serif;
+            line-height: 1.8;
+            color: #00fff9;
+            background: linear-gradient(135deg, #001529 0%, #003a5c 50%, #001529 100%);
+            min-height: 100vh;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 21, 41, 0.95);
+            backdrop-filter: blur(15px);
+            border-bottom: 2px solid #00fff9;
+            box-shadow: 0 0 15px rgba(0, 255, 249, 0.5);
+            padding: 1rem 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #00fff9;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .episode-container {
+            max-width: 900px;
+            margin: 120px auto 4rem;
+            padding: 0 2rem;
+        }
+
+        .episode-header-thumbnail {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid rgba(0, 255, 249, 0.5);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            color: #00fff9;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .episode-meta {
+            color: #ff69b4;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .description {
+            font-size: 1.2rem;
+            color: #d4dce6;
+            margin-bottom: 2rem;
+            line-height: 1.9;
+        }
+
+        .listen-links {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .listen-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.8rem 1.3rem;
+            background: rgba(255, 105, 180, 0.2);
+            color: #ff69b4;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 2px solid #ff69b4;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .listen-link:hover {
+            background: rgba(0, 255, 249, 0.2);
+            border-color: #00fff9;
+            color: #00fff9;
+            box-shadow: 0 0 15px rgba(0, 255, 249, 0.5);
+        }
+
+        .section {
+            background: rgba(0, 58, 92, 0.4);
+            padding: 2.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            border: 2.5px solid rgba(0, 255, 249, 0.5);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #ff69b4;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: #00fff9;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        p, li {
+            color: #d4dce6;
+            font-size: 1.1rem;
+            line-height: 1.9;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            margin-left: 2rem;
+        }
+
+        .timestamp {
+            color: #ff69b4;
+            font-weight: 600;
+        }
+
+        a {
+            color: #00fff9;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #ff69b4;
+        }
+
+        .footer {
+            background: #001529;
+            color: #00fff9;
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(0, 255, 249, 0.3);
+        }
+
+        .footer p {
+            color: #d4dce6;
+            font-size: 1rem;
+        }
+
+        /* Transcript Section */
+        .transcript-section {
+            background: rgba(0, 58, 92, 0.4);
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            border: 2.5px solid rgba(0, 255, 249, 0.5);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .transcript-section details {
+            cursor: pointer;
+        }
+
+        .transcript-section summary {
+            padding: 2.5rem;
+            font-size: 2rem;
+            color: #ff69b4;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            user-select: none;
+        }
+
+        .transcript-section summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .transcript-section summary::after {
+            content: '▼';
+            font-size: 1.5rem;
+            color: #00fff9;
+            transition: transform 0.3s ease;
+        }
+
+        .transcript-section details[open] summary::after {
+            transform: rotate(180deg);
+        }
+
+        .transcript-section summary:hover {
+            background: rgba(0, 255, 249, 0.05);
+        }
+
+        .transcript-content {
+            padding: 0 2.5rem 2.5rem;
+            max-height: 600px;
+            overflow-y: auto;
+            border-top: 1px solid rgba(0, 255, 249, 0.2);
+        }
+
+        .transcript-content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .transcript-content::-webkit-scrollbar-track {
+            background: rgba(0, 21, 41, 0.5);
+            border-radius: 4px;
+        }
+
+        .transcript-content::-webkit-scrollbar-thumb {
+            background: rgba(0, 255, 249, 0.5);
+            border-radius: 4px;
+        }
+
+        .transcript-content::-webkit-scrollbar-thumb:hover {
+            background: rgba(0, 255, 249, 0.7);
+        }
+
+        .transcript-entry {
+            margin-bottom: 1.5rem;
+        }
+
+        .transcript-timestamp {
+            color: #ff69b4;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+            display: inline-block;
+        }
+
+        .transcript-speaker {
+            color: #00fff9;
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+
+        .transcript-text {
+            color: #d4dce6;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .episode-container {
+                margin-top: 100px;
+                padding: 0 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+
+            .transcript-section summary {
+                padding: 1.5rem;
+                font-size: 1.5rem;
+            }
+
+            .transcript-content {
+                padding: 0 1.5rem 1.5rem;
+                max-height: 400px;
+            }
+
+            .listen-links {
+                flex-direction: column;
+            }
+
+            .listen-link {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="../index.html" class="logo">Behind the Commit</a>
+        </nav>
+    </header>
+
+    <main class="episode-container">
+        <h1>Why FastAPI Became Python's Fastest‑Growing Framework – Chat with Sebastián Ramírez</h1>
+
+        <img src="../static/static/sebastian-thumbnail.png" alt="FastAPI with Sebastián Ramírez" class="episode-header-thumbnail">
+
+        <p class="description">In this episode, I'm chatting with Sebastián Ramírez — the creator of FastAPI, Typer, and SQLModel, and founder of FastAPI Labs — to explore how FastAPI became one of Python's fastest-growing web frameworks and what's next on the roadmap.</p>
+
+        <div class="listen-links">
+            <a href="https://www.youtube.com/@BehindtheCommit" class="listen-link">Watch on YouTube</a>
+            <a href="https://open.spotify.com/show/2Z9EwkdBv8EV9HBC1seNcR" class="listen-link">Listen on Spotify</a>
+            <a href="https://podcasts.apple.com/podcast/id1845604486" class="listen-link">Apple Podcasts</a>
+            <a href="https://media.rss.com/behindthecommit/feed.xml" class="listen-link">RSS Feed</a>
+        </div>
+
+        <div class="section">
+            <h2>About the Guest</h2>
+
+            <h3>Sebastián Ramírez</h3>
+            <p>Creator of FastAPI, Typer, and SQLModel. Founder of FastAPI Labs, building FastAPI Cloud—a new way to deploy FastAPI applications. Sebastián is known for creating developer-friendly tools with excellent documentation and a focus on developer experience.</p>
+        </div>
+
+        <div class="section">
+            <h2>Episode Outline</h2>
+            <ul>
+                <li><span class="timestamp">0:00</span> Why FastAPI Became So Popular</li>
+                <li><span class="timestamp">1:43</span> The Philosophy Behind FastAPI Development</li>
+                <li><span class="timestamp">3:18</span> Challenges of Maintaining a Popular Open Source Project</li>
+                <li><span class="timestamp">5:50</span> Community Contributions & Recognition System</li>
+                <li><span class="timestamp">8:42</span> FastAPI Roadmap</li>
+                <li><span class="timestamp">11:13</span> Amazing Use Cases - From Particle Accelerators to Space Research</li>
+                <li><span class="timestamp">12:29</span> FastAPI's Performance Architecture & Python Core Team</li>
+                <li><span class="timestamp">15:19</span> Meeting Your Heroes & Being Popular in the Community</li>
+                <li><span class="timestamp">16:30</span> Dealing with Negative Comments & Online Criticism</li>
+                <li><span class="timestamp">23:25</span> FastAPI Cloud & FastAPI Labs Announcement</li>
+                <li><span class="timestamp">28:08</span> Deployment Challenges & Platform as a Service Solution</li>
+                <li><span class="timestamp">31:17</span> The SQLModel Challenge - Combining Old and New Magic</li>
+                <li><span class="timestamp">34:29</span> Thoughts on Education & Self-Taught Development</li>
+                <li><span class="timestamp">40:22</span> How to Contribute to FastAPI</li>
+                <li><span class="timestamp">42:33</span> Closing Thoughts</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Links & Resources</h2>
+            <ul>
+                <li><a href="https://www.jetbrains.com/lp/devecosystem-2023/python/#python_web_libs_two_years">JetBrains Developers Survey 2023</a></li>
+                <li><a href="https://fastapi.tiangolo.com">FastAPI documentation</a></li>
+                <li><a href="https://tiangolo.com">Sebastián Ramírez's website</a></li>
+                <li><a href="https://fastapilabs.com/">FastAPI Labs (FastAPI Cloud)</a></li>
+                <li><a href="https://www.youtube.com/watch?v=WGXXxGLBVF4">Savannah's keynote</a></li>
+            </ul>
+        </div>
+
+        <div class="transcript-section">
+            <details>
+                <summary>Full Transcript</summary>
+                <div class="transcript-content">
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[00:00]</div>
+                        <p class="transcript-text">I didn't imagine it would grow that much. I was thinking maybe this is going to be one of those hipster frameworks that 50 people around the world rave about and no one else knows what they are talking about. And so many things that I never even imagined. They are like simulating galaxies</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[00:10]</div>
+                        <p class="transcript-text">using this, the great building blocks that are already there that are built by great people and just like figuring out how to combine those things together to take advantage of like all the things, all the powerful things that are already there. It's very cool to I think it's very cool to meet</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[00:26]</div>
+                        <p class="transcript-text">your heroes if you don't go to the university. Like I didn't go and I would like to say I'm fine I guess and it just keeps happening like I keep seeing like new jobs like when I got when I had like 3.5 years of having built FastAPI they were requesting five years of experience in FastAPI.</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[00:48]</div>
+                        <p class="transcript-text">Why is FastAPI so popular? To find out, I spoke with its creator, Sebastián Ramírez, also known as Tiangolo. Sebastián has built FastAPI, Typer, SQLModel, and many other open source tools. He's also the founder of FastAPI Labs, where he and his team are building FastAPI</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[01:07]</div>
+                        <p class="transcript-text">Cloud, a new way to deploy FastAPI apps. We talked about the rise of FastAPI, what's on the roadmap, how recent Python performance work affects it, the story behind his company, what Sebastian thinks about software developers, and even how he deals with negative comments online.</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[01:23]</div>
+                        <p class="transcript-text">FastAPI is one of the fastest growing Python frameworks. According to the JetBrains survey 2023, in 2021, it was used by 14% of responders. In 2023, it was 25% of responders. What made it so popular? I don't know. I think I well I mean I wasn't trying to make a popular thing.</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[01:38]</div>
+                        <p class="transcript-text">I didn't imagine it would grow that much. I was thinking maybe this is going to be one of those hipster frameworks that 50 people around the world rave about and no one else knows what they are talking about. And it happened that these random mix of things that I was doing that were it wasn't like I had a formula. It wasn't like a big</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[01:57]</div>
+                        <p class="transcript-text">strategy about like what I have to do for things to become popular is just there's a problem here. So I'm going to try to solve it myself. And I see that this cool tool exists. So I'm going to try to use it. And then I'm going to document it. So I don't have to be redoing the same code and so that the next time I can copy</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[02:14]</div>
+                        <p class="transcript-text">paste like from like this code that I had written here and figure out oh I have to use this function. Let me document it for the version of myself that forgets about this when I need to use it like a couple of months from now. And it happened that it resonated with a lot of people. And so that was it kind of. But is</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[02:31]</div>
+                        <p class="transcript-text">there like how would you like describe FastAPI to someone who's never heard of it? What problem does it solve in the ecosystem? Yeah, so FastAPI it's like main thing is making it very easy for you to just write your Python code and just immediately say like this is going to be a web</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[02:50]</div>
+                        <p class="transcript-text">application like in the internet. So I write this code it has a couple of annotations. It says what type of data goes in there. And like almost immediately like I can call that in my phone in my browser. And then that whole thing will be running on the cloud somewhere. And there will be these random like external users calling your code</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[03:08]</div>
+                        <p class="transcript-text">all the time so that it just runs for them. So it's like it's to make it very simple to take your Python code and then expose it to the internet and like to call it for you and also for others. And it helps you with a lot of things around that. So it helps you with things like authentication with handling</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[03:26]</div>
+                        <p class="transcript-text">errors with documenting because you need to like think about like how do we communicate with the frontend? How do we communicate with the external users? And the code already has like the type annotations so it can automatically extract that and generate interactive docs for you. It makes it easy to test because you have a very like clean set of inputs</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[03:44]</div>
+                        <p class="transcript-text">that comes from the user and outputs that go back. So it's easy to write tests. Okay, this is the input. This is the output. Let's verify that. And then there's a lot of things that it integrates with like authentication, security and all that. And so you can handle things and write your own Python code for that. How would you balance the tradeoff of</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[04:03]</div>
+                        <p class="transcript-text">like I see Python a lot focusing on beginners and it makes it like very approachable for beginners. But at the same time you also like care about the performance and you also care about advanced features. How do you balance that? So you mentioned that like it's Python a lot of focus on beginners and everything. One</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[04:18]</div>
+                        <p class="transcript-text">thing that I I mean FastAPI also does is to make it super easy and friendly for you if you're new. And there's a tutorial that like walks you through everything. There's a lot of videos. There's a lot of documentation and everything. And if you don't know how something works, there's probably an example there. It's probably documented. So</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[04:35]</div>
+                        <p class="transcript-text">the idea is to make it very simple for new people but also make it very easy to grow so you can start super simple and then you can add a lot of things and there's concepts that you can learn. So like maybe you are new to web development so you don't know about web security. So there's a section</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[04:51]</div>
+                        <p class="transcript-text">about security. And there there's like a mini kind of like this is the intro to security. This is how you do this specific thing of OAuth, et cetera. And there's like a bunch of docs kind of like teaching you about those concepts. So the idea is that you can get started super simple and you can keep growing. But there might be a point where you just</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[05:09]</div>
+                        <p class="transcript-text">need to like, okay, this is now a problem of web security. So like this is not FastAPI anymore. So I have to go and learn about this so that I can make decisions. So how do you come up with ideas for features when building FastAPI? Like do they come from you using it? Or do you actually look at issues</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[05:26]</div>
+                        <p class="transcript-text">that other people report and maybe like see patterns? Or do you just try to learn what other frameworks do? Kind of all of the above, I think. So there are some issues that like people ask about. And then there's like there's a lot that I would like to do that would be cool. And I have to prioritize. Like I can't do everything</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[05:44]</div>
+                        <p class="transcript-text">at once. And there's a lot of things that I learned from like reading like issues and like discussions in Discord or in GitHub that people have. And they're like I would like to do this thing. And then like I'm trying and I can't. And then I realized like oh but there's like a pattern here. So there's like a way that we</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[06:00]</div>
+                        <p class="transcript-text">could make this possible like more easily. So it's like a combination of my, my ideas and problems. And also like patterns from people and usage. Like when you're working on an open source project, how do you decide what feedback to listen to and what feedback, like not to listen to? For example, yeah. So one thing that</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[06:19]</div>
+                        <p class="transcript-text">helped a lot was to, to like really hear a lot of the feedback and like see all the issues. So I have like pretty much read almost all the issues. And I would, I probably like, I don't remember everything because there's a lot and I don't have, I'm not an LLM. I'm a, I'm a limited context window person. But so</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[06:37]</div>
+                        <p class="transcript-text">yeah, yeah. I'm not, I'm not quite an LLM yet. But yeah, but if like I read something, I probably remember the topic and then like if I see a similar problem, oh, I have already seen this. So let me go to GitHub and search for it. And then it's there. So for that to work, one thing that has been super</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[06:54]</div>
+                        <p class="transcript-text">useful is to have a lot of people helping with issues and questions and everything. And then there's like these automatic processes that like kind of clean and label issues. So right now there's like, I think there's something like, I think it was like 500 something open issues. So like of those half or</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[07:12]</div>
+                        <p class="transcript-text">something like that are waiting for the author to respond. Because you ask them like, oh can you tell me like, is this still happening? Can you reproduce this? Can you show me like a minimum example? So a lot of like the issues that are open are kind of like automatically. The code is like making sure that we are</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[07:28]</div>
+                        <p class="transcript-text">not just like, oh I didn't solve it. And then in reality it's like, oh there wasn't anything to solve. It was like a question. It was already solved. It was a duplicate. It was something else. And then for like the ones that are there, they have like labels that can help. Like if there's someone new to the project that like they want to help or</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[07:43]</div>
+                        <p class="transcript-text">they're like, oh I like FastAPI but I have been like, you know, thinking about like if I should help or not. But I'm not sure. And they're like, oh but this one has like a label that says, oh yeah, help wanted and pro tips. And this is like a good first issue. Okay. So it's probably not too complicated. It's not like I need</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[08:01]</div>
+                        <p class="transcript-text">to rewrite half of the project or something. And there's enough information and I can try. So there's like a bunch of things that kind of help filtering that. And then also people helping because a lot of the issues are like very similar. Like, ah, but did you try like doing this thing? Like did you</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[08:17]</div>
+                        <p class="transcript-text">try reading this part of the documentation? And there's already like a lot of the same questions. And so people like, oh I just went through that problem. So let me like try to point him to, to that section. So I saw on your GitHub that you have this approach where people have to like contribute and give enough comments</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[08:33]</div>
+                        <p class="transcript-text">before they can open a PR. Can you talk to us about that approach? How did you come up with it? What were the challenges before you had it? Okay. So in the beginning there was a lot of, like people would, that's a problem that a lot of open source projects have. But like someone opens a PR. They</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[08:51]</div>
+                        <p class="transcript-text">want to help. It's like, oh thank you so much. Let me review your code. Wait, but this has a problem. Oh wait, you're right. Let me just, I will fix it. Oh but now there's this other thing. Oh but, oh yeah, but my, my thinking about that part was, was this thing, this other thing. And then you spend like I don't know like two hours</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[09:08]</div>
+                        <p class="transcript-text">reviewing the code and like writing about the thing. And then it turns out like, oh, but you know what? This thing already exists. It's just that like it was documented in this other way or like it was hidden in the docs or something. And oh, so all that work was not useful. And I like the, the contribution was, I mean, amazing</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[09:24]</div>
+                        <p class="transcript-text">that they spent the time but like it was not super useful. And then like the person is kind of disappointed because they spent the time and I had to tell them like, ah, sorry. And I'm also kind of disappointed because I spent the time like reviewing and like oh like now I have to explain why I can't merge it. And then</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[09:40]</div>
+                        <p class="transcript-text">maybe it's because they don't know the project well enough or don't understand the solution space or something. So they are kind of disappointed. So everyone ends up like disappointed. And so the idea with like kind of putting a little bit of friction is just have people, before they write code,</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[09:56]</div>
+                        <p class="transcript-text">talk about it like, oh I can write code for this thing and that thing. And it's like oh you know what? Great idea. Let's do it. But have you read this part of the docs? Or like that thing? Like that already exists. Like there's already a way to do it. So just like please look at this section. And like before, like writing the</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[10:11]</div>
+                        <p class="transcript-text">PR, make sure that you have that. And I don't remember, I think it's something like 10, something 10 reactions on a comment. So it can be the person that asks that like, oh let me like write this thing. And I'm like, oh that's an interesting idea. So right, I don't know, like the idea is to make sure</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[10:28]</div>
+                        <p class="transcript-text">that there's at least some people that have looked at it and like, yes, that makes sense. Like that's a good idea. So if I like do like a thumbs up and a couple of others do a thumbs up and then it can go. So it's not like waiting for like infinite time or like something super difficult. It's just making sure that we have at least a conversation</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[10:45]</div>
+                        <p class="transcript-text">before we like start reviewing code. So then when, when there's a code, it's more clear. We, we want to have it. We know it doesn't exist already. And then we just talk about the implementation. And like, oh that, oh that works. Oh, can you, can you change this thing? Can you have the tests</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[11:01]</div>
+                        <p class="transcript-text">and everything else? Okay. Oh, okay. Yeah. Let's merge this. Thanks. Like everyone is like, oh cool. And it works well. Are there things on FastAPI's roadmap that you're excited about? So right now the FastAPI, the main branch, the main like framework is pretty much</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[11:19]</div>
+                        <p class="transcript-text">feature complete. Like I think that we're at a point where like most things that people need, they can just build it or they can integrate it with some existing library that exists already. So right now the, the stuff that I'm more focused on is like FastAPI Cloud, which is like to actually make it simple, super simple to deploy</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[11:36]</div>
+                        <p class="transcript-text">FastAPI applications because I see, I see like the experience. Oh yeah, let me run this locally and I do this thing and I run the code and boom, I have this running and now let me make it public so that other people can call it. And how do I do that? Oh, I need to go to Docker and I need to learn about Docker. Oh, but I</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[11:53]</div>
+                        <p class="transcript-text">actually don't even want to like use Docker. I want to use like something else or I want to use some like serverless functions or whatever. So like I'm more focused now on, on making sure that a lot of people can deploy very easily and that they can like from the beginning already deploy that and maybe start monetizing with very little</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[12:10]</div>
+                        <p class="transcript-text">effort without having to think about like, okay, what's the, what's the infra here? Like how does it work? Like it's just that. Oh, and then I also want to, to like get feedback from people about like what's missing in the main FastAPI or if there's some things that I want to add. So like I can focus a bit more on that. What are some</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[12:28]</div>
+                        <p class="transcript-text">cool things you've seen people build with FastAPI? There's a lot. I honestly, like sometimes I see things and I, I still like remember that like, oh yeah, I worked on this thing. Like I did this and I built this. And like I think it's probably not like, I don't know. And so many things that I never even imagined. They</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[12:46]</div>
+                        <p class="transcript-text">are like simulating galaxies using this. They are using it in space for research. They are like using it to like synchronize, I don't remember like, like what part of like a particle accelerator or something like that. I don't even know what that is. Like all these things are super impressive. And</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[13:05]</div>
+                        <p class="transcript-text">yeah, it's super cool. It's super humbling. How do Python's performance improvements like with the JIT work, et cetera, how do they impact FastAPI? Because I was always under the impression because you use things under the hood that are built in C like Pydantic and Starlette, that you won't really benefit</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[13:24]</div>
+                        <p class="transcript-text">from that as much. So for, for FastAPI in particular, and I think for a lot of web, like API kind of frameworks, like the actual Python code, it's probably not the bottleneck. Like it's normally the, the database or the connection to the database or like something else and like the querying and some, some</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[13:44]</div>
+                        <p class="transcript-text">other part. Normally. So like, I mean, I'm, I'm happy that it gets faster and faster because yes, like at some point, yes, you, you benefit like a little bit. Like if, if I just have like pure Python code or maybe some like synchronous code then like, yes, it's faster. It's better. But for the most part, like I think for</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[14:01]</div>
+                        <p class="transcript-text">these like frameworks, it's probably a small improvement. But yeah, there, there are other like types of applications where I think it benefits a lot. Like if you're doing some like very heavy computation or if you're doing like some like machine learning and stuff. So like, I don't know the use cases for that. And, and also like that work is amazing</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[14:19]</div>
+                        <p class="transcript-text">for Python in general because like it's making Python like stay relevant and like, oh it can be much faster and like, so people, other people can consider it as an alternative like to other things. Like, oh I had to go to Go because of the performance. Oh, but now I can stay in Python. So</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[14:34]</div>
+                        <p class="transcript-text">like it's very cool. That's, it's very cool. And is it helpful though? Like the async story where if you're reading a database, you're free and do other things? Yeah. So for like, for FastAPI actually, so, so yes, it's super important. So I think that, I mean, if you're using like an ASGI server like Uvicorn</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[14:54]</div>
+                        <p class="transcript-text">and if you have like, like all that, all those layers, you have a bunch of things there. You have the web server. So you have like an Nginx or like some other, some other thing like Traefik. And that probably has like more power. It's using more CPUs than what you have for your Python processes</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[15:13]</div>
+                        <p class="transcript-text">below. And that can handle a lot of requests. And then those, those requests start like hitting your, your Python application. But each time they hit, they have to wait for something external. Like they have to wait for the, for the response from another, another API, or they have to wait for the database to reply or something</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[15:31]</div>
+                        <p class="transcript-text">like that. So in those cases, if you have like concurrency with async stuff, then you can have like one single Python process handling like maybe 500 concurrent requests because they're all waiting and this one is handling just the events. So when, when this thing replies, oh okay, like let me continue with that. And</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[15:49]</div>
+                        <p class="transcript-text">then like all the, the work of waiting for the database or waiting for the other external service is kind of like it's, it's happening somewhere else. The process is just waiting for the event. Like, oh, this thing already finished. Let me, let me continue. So for that particular use case, like for, for web APIs, it's</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[16:06]</div>
+                        <p class="transcript-text">super important. Like it's, it's super useful to have that. And then what the JIT can help with is once all those things are ready. Like the events are there, they have their data. Just before you give it back to the user, you need to like validate the data. You need to make sure like it, it has all the things and you do your, your</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[16:24]</div>
+                        <p class="transcript-text">Python code with the business logic. Like, oh, but is the user allowed? And did the user like pay or something? So like your, your Python code, if it gets faster, it's also going to benefit. But I, I expect it to not be as, as much as like these things that are very computation, computation heavy. But yeah, I think it's like, I'm super</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[16:43]</div>
+                        <p class="transcript-text">happy that like Python keeps getting faster and faster. And the Python core dev team is doing an amazing job. Yeah. And I saw you contributed to CPython. How was that experience? Yeah. So, so it was, I think it was like, it was super humbling because like, I have been like using Python since</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[17:02]</div>
+                        <p class="transcript-text">I started writing code and like using these tools. And these are like, these people are like, I don't know, like there was like Guido in there and like Brett and like, like all these people. And it's like, oh, these are like the people that like build the tools that I'm using and that I love. And so</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[17:18]</div>
+                        <p class="transcript-text">like meeting them is like, oh yeah, these are like, I, I don't even know how to say it. I think it's, it's very cool to meet your heroes. Like I would say that. Like if you have like someone that like, you, you admire and you meet them and they are cool. It's like, oh wow, that's, that's actually like. fulfilling some</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[17:36]</div>
+                        <p class="transcript-text">part of like what, what I was imagining and it's cool. And so contributing to CPython is like, the code is actually not that complicated. It's mainly C code and some, some Python code and it's, I think it's understandable. One thing that is a bit like annoying is how to actually like run</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[17:54]</div>
+                        <p class="transcript-text">the tests and like, like know how to build CPython itself and like that, that's, I think that's one of the things that I would like to improve that like there's better tooling and like better docs and everything so that it's easier to contribute to CPython itself. So would you say it's a good idea to meet your heroes? I think</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[18:11]</div>
+                        <p class="transcript-text">so. Like in my, in my experience, it's been very cool. I don't know. So I, I saw like a post from you about like how you got recognized at a conference and like, and like you seemed very excited about it. But at the same time, I feel like it can be stressful because if you put something out there in open</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[18:28]</div>
+                        <p class="transcript-text">source, you do all this amazing, you get a lot of positive praise, but you also get a lot of negative comments and you're probably not in the same environment as your coworkers where you can just like walk up to them and complain or like anything happens. So how do you like deal with the negative criticism? It's, it's difficult. I mean,</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[18:46]</div>
+                        <p class="transcript-text">I would say like the, the main takeaway would be like, try to focus on the positive things like more and also like for me, like having people that like support you and like that like you, you value and you like you trust. So it's not necessarily like work colleagues</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[19:04]</div>
+                        <p class="transcript-text">could be friends or like your partner or like someone like that. And they're like, ah you're doing fine. Like don't like listen to that person. Like they're just like, they don't even know what they're talking about. And it's, it's easier like with someone like that. Like with support like that. So</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[19:19]</div>
+                        <p class="transcript-text">that helps a lot. And like trying to like focus on the positives. So I don't know, like if for every, for every 1000 users, like 10 are negative, focus on the 990 that were not negative. Like they, they like it. They are using it. It's helping them. And then like try to like, when there's criticism, understand like if</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[19:39]</div>
+                        <p class="transcript-text">it's constructive criticism or not. If it's not, just forget about it. Like if someone is just like trying to like, you know, just like attack you or something, then like just ignore it. Like it's not worth it. Just put your effort in something else. And if it's like constructive criticism, so if they're</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[19:54]</div>
+                        <p class="transcript-text">like saying, oh but there's this thing that like it doesn't work like this. And like, oh you like. talk too much about like burritos or ice cream or whatever in your docs. Like, okay, that's, that's good feedback. So like, let me see like if, if this was actually affecting them and like if I can improve it or maybe</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[20:10]</div>
+                        <p class="transcript-text">it's not even an issue. Like they just don't like it. But like it, but it doesn't really affect them. So like, I can just leave it like that. So it's, it's trying to find like the nuance there. Like what is, what is like actually affecting them? Can I, can I do something? And then if, if, if I can, maybe I do it.</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[20:26]</div>
+                        <p class="transcript-text">If not, like it's, it's just a comment and I can't do anything about it. I saw like a screenshot of like a comment on like a blog post that was like something like FastAPI can handle some web development tasks but like clearly not for like people with experience or something like that. Like it was very</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[20:45]</div>
+                        <p class="transcript-text">condescending. How do you react to those? Did you react like when you first read that or like, I mean, I, I got like a little bit sad, I guess. Like, but then I realized like, but this, like this thing is helping people like every day. And that I know. So there's, there's probably like people that are in</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[21:04]</div>
+                        <p class="transcript-text">production with like thousands and thousands of requests like all the time. And it's helping them and it's helping them ship like their business. Like, so like this is like not even, like, it's not a problem that it's not for professionals or, or that kind of stuff. It's like, it's, it</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[21:20]</div>
+                        <p class="transcript-text">is. It's just that like this person has a different opinion. And like it, it could be that like I did something that offended them or like that made them sad or like something. I don't know. Like I didn't intend to. It's just that like, that's what happened. So like I'm, I'm just going to continue on what, what I'm doing because I</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[21:37]</div>
+                        <p class="transcript-text">know it's helping. And that's, that's like what matters. And can you think about any criticism on FastAPI that you actually think is like valid? I am sure that there are a lot. Like I, I don't think I, I'm just super bad at keeping track of all the</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[21:53]</div>
+                        <p class="transcript-text">things. And like if I, if I'm not like that very moment writing it down or like working on it, I probably forgot. I think there's, there was something like someone mentioned like several months ago that like, oh like I read the docs but I, I couldn't like figure out this part. And like, I think this could be like improved in like</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[22:12]</div>
+                        <p class="transcript-text">the docs. And that's like valid. I just haven't fixed that yet. Like, but I would like to, or there's, there's features that like, oh this feature like only works halfway. Like it's not like complete or something. And I would like to like complete it, but I haven't had the time. But like it's, it's super valid that like it's, it's still like halfway. Can</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[22:31]</div>
+                        <p class="transcript-text">you think about the moment in your open source career that was like the most fulfilling? That was like, oh, this is actually like paying off and like it was like worth it. Oh yeah. I think, I think like kind of like now recently when I was making the announcement for like FastAPI Cloud. And like I</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[22:50]</div>
+                        <p class="transcript-text">went through the whole process of like, okay, like I have been like doing this open source thing. And like I learned a lot about like working with communities and like how to like, like make docs and like, like all these things. And these, there was a point where like, oh like this can turn into a business. And like I want to, like I</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[23:08]</div>
+                        <p class="transcript-text">want to try that. And like for like many months I was, I was working on that. So I spent quite some time like building. And before I had to like figure out how to, how do I start a company? Like how does it work? And like I talked to some investors and like I got funding and I have a team and we are</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[23:27]</div>
+                        <p class="transcript-text">building this and we are making progress. So like, it feels like super fulfilling. Like, oh I'm doing this thing. I'm helping people in, in open source and also like through that I can, I can like pay my bills and I have a team and like we are like building other cool things and everyone gets to like pay their</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[23:44]</div>
+                        <p class="transcript-text">bills. So that's like, that's super cool. How did you decide that you wanted to start a company out of this? There, there were several like steps. Like at some point I had the idea like, oh I would like to do like this company with, with FastAPI. And I didn't even know like how to like approach it or like what</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[24:03]</div>
+                        <p class="transcript-text">to do. And I kind of just like tried to learn. And at some point I talked to investors and like I read a little bit about it. And like I, I still didn't even like I wasn't like convinced that like, oh yeah, I'm going to like quit my job and I'm going to do this thing. I don't know. Like, no. And</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[24:20]</div>
+                        <p class="transcript-text">then there was a point where one of the investors that like we had like several conversations that we're like, oh this is like very interesting. And I like FastAPI and I like the project. Like at some point they were ready. Like they're like, okay, yeah. So like if you, if you are ready to, to like move forward, like we're in. And it's like, okay, well, like I guess like I, I can try. Like this is, this is like</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[24:39]</div>
+                        <p class="transcript-text">a good opportunity. Let's, let's do it. And then I, I quit my, my previous job. And that was like, that was kind of like nerve wracking. But also like super exciting. Like, oh yeah, like this can actually like turn into something. That's amazing. What does it feel like to have other people care about your project enough to</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[24:57]</div>
+                        <p class="transcript-text">like invest money in it? I mean, it's, it's humbling. It's, I don't know. I'm, I'm not sure how to, how to like say it. Like it's, it feels like there's, I don't know if it's like a responsibility or if it's like a sense of like, oh yeah, I'm like I'm worth it, something like</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[25:14]</div>
+                        <p class="transcript-text">that. I don't know. It just feels like very cool. Like I, I don't, I don't even know how to describe it. Like it's, it's yeah, it's, it's cool. And can you tell us a bit more about what FastAPI Cloud does and maybe walk us through like the story behind it or like how you came up with the idea? Yeah.</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[25:31]</div>
+                        <p class="transcript-text">So the, the main idea is to make it, make it very simple to deploy your, your FastAPI applications. And I see a lot of people like struggling with like, okay, I, I wrote the code. I have it locally. It's working. I love it. Like how do I make it public so that like other people can use it? And they</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[25:48]</div>
+                        <p class="transcript-text">try different alternatives and like they do like tutorials to deploy to like AWS or to do like tutorials to deploy somewhere else. And then like there's like tons of steps that they have to do. There's like concepts that they need to learn. Like it's very complicated. So the main idea is like you just like write the code. You push your code to GitHub and then</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[26:06]</div>
+                        <p class="transcript-text">we, we connect it to, to FastAPI Cloud. And then you have like a public URL that you can already share. Like boom, that's it. And then like you don't need to worry about like, okay, but what about like the certificates and the, and the like HTTPS and the, and the Docker and the scaling. And like if, if there's a lot of requests, like what do</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[26:24]</div>
+                        <p class="transcript-text">I do? Or if there's like very few requests, like what do I do? Like all of that is like handled. You just write your Python code and then you deploy and you have like a public URL. And then from there you can like start monetizing or like doing something else. But at least you don't have to worry about like, okay, now I have to go and like spend</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[26:41]</div>
+                        <p class="transcript-text">like two weeks learning about like infrastructure and Docker and like Kubernetes and AWS and like all these things. So like it's just like, let me, let me do like the exciting part. Like write the code. Like write the Python part that I love. And then like deploy and like I can share it. And what's the difference</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[26:58]</div>
+                        <p class="transcript-text">between you and like a Heroku or Railway or something like that? So, so most of those like platforms, they, they can support like any type of application. So you could deploy like a, like a React frontend or a Node.js backend or like a database or like maybe a Java service or a Go service. And they, they can</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[27:19]</div>
+                        <p class="transcript-text">handle all those things. In our case, we are like very opinionated. So like, we are very focused on FastAPI. So like the only thing that you can deploy is a FastAPI application. And because of that, like we can, we can optimize for that. So for example, when you deploy to Heroku, you need to have a profile. You need to have a requirements</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[27:36]</div>
+                        <p class="transcript-text">.txt. You need to like define a lot of things, a lot of configuration. In our case, you just have a main .py with your FastAPI app. That's it. And then like we, we automatically detect it and we deploy it. So you don't have to define like the requirements or like the, the port or like any of that stuff. Like</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[27:53]</div>
+                        <p class="transcript-text">it's just taken care of. And also like we can provide like FastAPI specific features like, oh like because we know that like you're using like path operations and like, like all the like requests go through these, these specific endpoints, we can provide you with analytics that are specific to that. So like, oh this path operation was called like</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[28:13]</div>
+                        <p class="transcript-text">50 times and it takes like this amount of time. And this other one was called like a thousand times and it takes like that other amount of time. So like maybe that's like what you need to optimize or like that's like, where's your like thing? So we can provide like that level of like specific information for, for FastAPI. And do you have</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[28:31]</div>
+                        <p class="transcript-text">any paying customers or is it like in closed or open beta or something like that? It's, it's in open beta. Everyone can, can access and use it for free. There's, there's already like some people that like are already using like paid plans. But like the, the plan is like to, to launch like</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[28:49]</div>
+                        <p class="transcript-text">officially kind of like soon. So like it's still like open beta, but like there's already like people using it. Like there's like, I don't know, like maybe 600, 800 people or something like that that have already signed up. So it's, it's starting, like it's still early, but yeah. Why did you decide to create a SQL model</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[29:07]</div>
+                        <p class="transcript-text">instead of like using an existing ORM like SQLAlchemy or an existing validator like Pydantic? Well, so SQL model is actually combining those two. So it, it's built on SQLAlchemy and Pydantic. So the idea was like, I want to use Pydantic for</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[29:24]</div>
+                        <p class="transcript-text">validation and like for converting to JSON and converting from JSON. And I want to use SQLAlchemy for like the database and like all the querying and everything. But I want to declare my models once. I don't want to declare them like twice. So SQLModel is a way to, to have the same</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[29:42]</div>
+                        <p class="transcript-text">class inherit from like these things and like combine the two. So it's like the old like classical magic and like the new magic. And it's like making them like work together. And then like you can have like models that are Pydantic and they can serialize to JSON and they can like validate. But also they can like come from the</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[29:59]</div>
+                        <p class="transcript-text">database and they have like the session and like all those things. So it's like combining the, the two. And it's, it's, I, I think it's super powerful. It's, it's easier to use than like, than having to declare everything twice. The thing that I, I didn't expect is that it's, it's super</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[30:17]</div>
+                        <p class="transcript-text">difficult to maintain because you're combining like two monsters, two like very complicated, like beasts. And then like trying to make them play nicely together is, is very difficult. So like I would say like SQL model is, is taking like more time than I expected. And also like I'm currently like building FastAPI</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[30:36]</div>
+                        <p class="transcript-text">Cloud. So like I don't have as much time. Seems like a painful experience. Like it's a very, like it is, it is cool. And like when it works, when, when you're like using it, it's, it's super simple. Like it's a very pleasant experience and like you can do things very easily.</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[30:53]</div>
+                        <p class="transcript-text">But like figuring out how to, how to do things internally is, is tricky. Like there's like some type hinting things that like I had to do that like are super complicated. But like I think like when, when I go back to it and I can like finish it, I, I think it's going to be like very cool. Like it's going to, it's going to</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[31:10]</div>
+                        <p class="transcript-text">help a lot. But like yeah, I should probably had like thought more about it before I started. I mean, you can still deliver something that like works great. It's just that like internally it's not as, it's not as like simple as I would like it to be. How is your approach to documentation and tutorials?</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[31:28]</div>
+                        <p class="transcript-text">Like do you start writing documentation right away when writing a new feature? Or do you like wait until it's stable and then add it? It kind of depends. I think like ideally I would like to write like documentation like immediately or like at the same time. And I would, I, I think I have</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[31:45]</div>
+                        <p class="transcript-text">done that like most of the time. But like sometimes it's like, okay, I, I wrote this like quick like workaround or like this feature and then like, let me finish this first and then like let me like let me add the docs. But like most of the time I, I think I try to write the docs like at the same time. So</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[32:01]</div>
+                        <p class="transcript-text">like ideally I would like to have like docs for everything. And yeah. And how much time do you spend on documentation? Like as a ratio to like the feature work? I, I honestly I haven't like tracked it. I, I think I spend quite some time. Like I think I probably spent like, I don't know, maybe like half</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[32:21]</div>
+                        <p class="transcript-text">the time or maybe more like in docs. Like just because like I want to make sure that like it's clear and like that people can use it and that there's examples. And also like I want to make sure that it's like fun to read. So like I, I put like, like I talk about like pizzas and like ice cream or whatever or like cookies or like whatever</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[32:40]</div>
+                        <p class="transcript-text">random thing. So like trying to make it like more like fun and like engaging. And did you get any pushback from that? I think, I think some. Like I think there was like one or two people that like, oh like I, I don't like that. But like most people seem to like it. So like I, I just</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[32:58]</div>
+                        <p class="transcript-text">like continue with that. It's like a very like distinct like personality. Like as soon as you like see FastAPI docs, it's like, oh yeah, this is like Sebastián. Like this is like FastAPI. Like it's, it's, it's very like clear. So like I think that's like a good thing. Do you think there's things that</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[33:13]</div>
+                        <p class="transcript-text">you could still improve about FastAPI documentation? For sure. So like there's, there's a lot of like advanced features and there's some parts that are not documented. And like I would like to like document those and like make them like more accessible. And I would like to improve like the, like the search and like some</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[33:31]</div>
+                        <p class="transcript-text">of the like, like the the navigation and like that, that kind of stuff. And also I would like to have like more like real world examples. Like right now, most of the examples are like very simple, like focused on one thing. But I would like to have like a bigger like application that like shows like how do you like build like an entire</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[33:51]</div>
+                        <p class="transcript-text">thing from scratch. Like with like the database and like authentication and like all those things. So like that's something that I would like to add. Why do you put so much effort on documentation? I think the main reason is because I, I want to like I want people to be able to use it and I want them to have a</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[34:08]</div>
+                        <p class="transcript-text">good experience. And like if I, if I just write the code and like I don't document it, then like they're going to be like, oh like what do I do with this? Or like how do I use it? And then like they're going to have a bad experience. And like they're probably going to just like leave and like use something else. So like I</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[34:22]</div>
+                        <p class="transcript-text">want to make sure that like they can use it and that they have like a good time. And I think that comes from like having used tools that like don't have docs or that have like very like sparse docs. And I'm like, oh this is like so annoying. Like I just want to like do this thing and like I can't figure it out. So you</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[34:39]</div>
+                        <p class="transcript-text">mentioned earlier like you didn't go to university. Is that something you wish you did do or are you glad you didn't go? If you don't go to the university, like I didn't go and I would like to say I'm fine, I guess. But like there's a couple of things that I</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[34:57]</div>
+                        <p class="transcript-text">noticed that are like, like there's, there's a bias. Like people have a bias and like so like when I was trying to like get jobs and stuff, like it was more difficult and like now it's, it's like, it's, it doesn't really matter. Like I don't think anyone cares. So</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[35:14]</div>
+                        <p class="transcript-text">like at some point it, it stops mattering. Like once you have enough experience and you have projects and you have things. So in my case, like right now, like no one, no one, no one like looks at that. Like, oh you didn't go to like, like where did you study? Like what degree? Like, no, like people just like, oh like</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[35:29]</div>
+                        <p class="transcript-text">you built this thing? That's cool. Let's talk. So like now it doesn't, it doesn't matter. But like it did matter like at the beginning. And it's, it's kind of like sad. Like if I, if I could like travel back in time and tell myself like, hey like just go to university. Like it's probably going to be easier for you</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[35:46]</div>
+                        <p class="transcript-text">like later. Like I probably would. But like I didn't. So like that's, that's what it is. And like I'm fine with it. Like it worked out. Do you wish you like learned something at university that you like don't know? Or do you think like you did a good job like learning on your own? I think I</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[36:03]</div>
+                        <p class="transcript-text">did okay learning on my own. Like I think there's, there's a lot that I still need to learn. Like, and I keep learning all the time. Like, so it's not like I'm done. Like, oh I know everything. No, like there's like tons of things that I don't know. But like I think I, I did okay. Like I learned enough to like, to like build these</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[36:20]</div>
+                        <p class="transcript-text">things and like to like work and like be useful. So like it's, it's fine. I think the one thing that I would say is that like if you, if you don't go to university or if you like learn on your own, like you need to be very like disciplined and like you need to like make sure that you're actually learning and that you're</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[36:38]</div>
+                        <p class="transcript-text">like building things. And like it's, it's not just like, oh I'm going to like watch a couple of videos and like I'm done. Like no, like you need to like actually like practice and like build stuff and like try things and like break things and like learn from that. So like it's, it's a lot of like active work. And is there any</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[36:57]</div>
+                        <p class="transcript-text">specific resources that you would recommend to like people who are learning? I, I think like the main thing would be like to just like try to build things. Like whatever thing that you're interested in, like try to build it. Like if you like games, like try to build a game. If you like</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[37:13]</div>
+                        <p class="transcript-text">websites, like try to build a website. If you like like data analysis or like machine learning, like try to do that. Like just like pick something and like try to build it. And then like you're going to encounter problems and then you're going to have to like figure out how to solve them. And that's like how you learn. So like</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[37:31]</div>
+                        <p class="transcript-text">I think that's like the main thing. And then like for specific resources, like I think like there's like a lot of good like tutorials and like courses and like everything. But like I think the main thing is like to actually like do the work and like build things. Did you ever feel like you had impostor</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[37:47]</div>
+                        <p class="transcript-text">syndrome? Oh yeah. All the time. Like I still do. Like I think like most people do. Like I think it's, it's, it's very common. And like I think it's, it's okay. Like I think the main thing is like to, to just like try to like focus on what you're doing and like on the things that like you can do and</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[38:05]</div>
+                        <p class="transcript-text">like not compare yourself to others too much. Because like there's always going to be someone that like knows more than you or that like has done more things or whatever. So like if you, if you compare yourself to them, you're always going to feel bad. So like just like try to like focus on your own like progress and like on what you're doing. And like</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[38:22]</div>
+                        <p class="transcript-text">celebrate like your wins and like your progress. So one thing that I find super funny is like the job postings requiring like five years of experience in FastAPI and you only like built it like 3.5 years ago. Is that still happening? It just keeps happening. Like I keep seeing like new jobs. Like when I got</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[38:40]</div>
+                        <p class="transcript-text">when I had like 3.5 years of having built FastAPI, they were requesting five years of experience in FastAPI. And now like seven years later, like there's still like jobs that are like, oh we need like 10 years of experience in FastAPI. And it's like, but it doesn't exist for that long. So like it's, it's, it's funny. Like</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[38:58]</div>
+                        <p class="transcript-text">I think people just like they, they don't really know what they're asking for. Like they're just like, oh we need someone with a lot of experience. So like let me just like put a number there. And they don't like check if it's, if it makes sense or not. What would you say to people who are thinking about contributing</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[39:16]</div>
+                        <p class="transcript-text">to FastAPI but are not sure where to start? I would say like the main thing is like to start small. Like don't try to like rewrite half of the project or like don't try to like add like a huge feature. Like just like try to find like a small thing that you can do. Like maybe there's like</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[39:33]</div>
+                        <p class="transcript-text">a typo in the docs or like there's like a small like bug that you found or like there's like something that like you think could be improved. And just like try that. And then like you're going to learn about like the project and like how it works. And then like you can do more things. And also like if you're not sure, like</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[39:49]</div>
+                        <p class="transcript-text">you can ask questions in the discussions or in Discord or whatever. Like people are very helpful. Like there's like a lot of people that are very welcoming and that like want to help. So like don't be afraid to ask. So I saw that you have like this entire like FastAPI experts</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[40:06]</div>
+                        <p class="transcript-text">program. Can you tell us a bit more about that? Yeah. So the idea with that is like I wanted to have like a way to like recognize people that are like helping a lot. Like that are answering questions and that are like contributing and that are like doing things for the community. And so like the FastAPI</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[40:23]</div>
+                        <p class="transcript-text">experts is like a program where like if you, if you contribute and if you help, like you get like recognized. And like there's like a badge and like you get like listed in like the docs. And it's, it's a way to like say thank you and to like recognize the work that people are doing. Because like I think it's super important to like</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[40:42]</div>
+                        <p class="transcript-text">recognize the people that are helping and that are like making the project better. What are your thoughts on like AI coding assistants? I, I use them like all the time. Like I use like Copilot and like I use like ChatGPT and like other tools. And I think they're, they're super</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[40:59]</div>
+                        <p class="transcript-text">useful. Like they help me like write code faster. They help me like, like think about things. And like sometimes like they give me like ideas that I wouldn't have thought about. So like I think they're, they're very cool. And I think like they're going to keep getting better and better. So like I'm</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[41:16]</div>
+                        <p class="transcript-text">excited about that. Do you think they're going to make like software developers like obsolete? No. I think like they're going to make us like more productive. Like I think like the, the way I see it is like they're like a tool. Like they're like a very powerful tool. But like you still need to like know what</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[41:33]</div>
+                        <p class="transcript-text">you're doing and you still need to like understand the problem and like figure out like what to build. And like the tool can help you like write the code faster. But like you still need to like review it and like make sure it's correct and like make sure it does what you want. So like I think like it's, it's</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[41:49]</div>
+                        <p class="transcript-text">going to make us more productive, but like we're still going to be needed. What advice would you give to like people who are early in their career and are thinking about like whether they should specialize in like one area or like try to be more like generalist? I, I think it depends like on</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[42:06]</div>
+                        <p class="transcript-text">what you like and like on what you want to do. Like I think like if you, if you like really love like one specific thing, like if you love like databases or if you love like frontend or if you love like something very specific, like you can specialize in that and like become like very good at it. And like that can</p>
+                    </div>
+
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[42:22]</div>
+                        <p class="transcript-text">be very valuable. But like if you're not sure or if you like many things, like I think it's, it's okay to like be more like generalist and like to try different things and like to learn about different areas. And like that can also be very valuable. So like I think it depends on like on you and like on what you want. And is there
