@@ -11,7 +11,7 @@ image: static/host-original.png
 job_title: Staff Software Engineer
 employer: SentinelOne
 employer_url: https://www.sentinelone.com
-work_focus: backend, infrastructure and Kubernetes for AI-built applications, and MCP-server infrastructure
+work_focus: backend, infrastructure and Kubernetes for AI-built applications
 
 headline: Staff Software Engineer, PSF Fellow and host of Behind the Commit
 
@@ -21,10 +21,11 @@ location_country: Czech Republic
 
 roles:
   - Staff Software Engineer at SentinelOne, working on backend, infrastructure and Kubernetes
-  - Fellow of the Python Software Foundation (PSF)
-  - Vice Chair of the EuroPython Society
+  - Fellow of the Python Software Foundation (PSF), since 2026
+  - Vice Chair of the EuroPython Society, 2024–2026
   - Host of the podcast Behind the Commit
-  - Co-organizer of Pyvo Prague, PyCon CZ 2023 and Python Pizza Prague
+  - Co-organizer of Pyvo Prague (since 2022) and PyCon CZ 2023
+  - Main organizer of Python Pizza Prague 2024
 
 # <meta name="description"> of the homepage; search engines show about 160 characters.
 meta_description: >-
@@ -36,7 +37,7 @@ bio:
   - >-
     Mia Bajić is a Staff Software Engineer at SentinelOne, where she works on backend and
     infrastructure: she takes applications built with AI tools and turns them into production
-    services deployed on Kubernetes, and works on MCP-server infrastructure. She is a Fellow of the Python Software Foundation, Vice Chair
+    services deployed on Kubernetes. She is a Fellow of the Python Software Foundation, Vice Chair
     of the EuroPython Society, and the host of the podcast Behind the Commit. Mia Bajić is
     based in Prague.
   - >-
@@ -44,17 +45,19 @@ bio:
     PyCon US (2024, 2025, 2026), EuroPython, FOSDEM, PyCon UK, PyCon Ireland, PyCon France,
     PyCon Italia, PyCon Namibia, DjangoCon Europe, OpenFest and WebExpo.
   - >-
-    She has co-organized Pyvo Prague, PyCon CZ 2023 and Python Pizza Prague, and helped bring
-    EuroPython to Prague. Her background is in backend development with Django, FastAPI and
-    Flask, including work in the data domain at Ataccama and full-stack development at Cocuma.
+    She has co-organized Pyvo Prague since 2022, co-organized PyCon CZ 2023, and was the main
+    organizer of Python Pizza Prague 2024.
 
 topics:
   - Python internals and the standard library
   - Open source communities and maintainer psychology
   - Software bugs and failures
-  - FastAPI and Django
+  - FastAPI
+  - Django
   - Developer experience
-  - AI in the open-source ecosystem
+  - AI and developer productivity
+  - Kubernetes and infrastructure
+  - Taking AI-built applications to production
 
 # schema.org knowsAbout (short keywords, used in JSON-LD only)
 knows_about:
@@ -66,7 +69,6 @@ knows_about:
   - Django
   - FastAPI
   - Developer experience
-  - Model Context Protocol (MCP)
   - Kubernetes
   - Backend development
   - Flask
@@ -76,25 +78,30 @@ knows_about:
 availability: Available for conference talks, keynotes and podcasts.
 open_to:
   - Conference talks and keynotes
-  - Podcast guesting
+  - Appearing as a guest on other podcasts
+  - Guest suggestions for Behind the Commit
   - Collaboration
+
+# Contact line on the homepage and /speaking/ (next to the email address).
+contact_line: >-
+  Contact Mia Bajić about conference talks and keynotes, about appearing as a guest on your podcast,
+  or if you would like to be a guest on Behind the Commit.
 
 # Homepage "Community Work" card.
 community:
-  - Vice Chair of the EuroPython Society
-  - Fellow of the Python Software Foundation
-  - Co-organizer of Pyvo Prague
+  - Vice Chair of the EuroPython Society (2024–2026)
+  - Fellow of the Python Software Foundation (since 2026)
+  - Co-organizer of Pyvo Prague (since 2022)
   - Co-organizer of PyCon CZ 2023
-  - Co-organizer of Python Pizza Prague
-  - Helped bring EuroPython to Prague
+  - Main organizer of Python Pizza Prague 2024
 
 organizations:
   - name: Python Software Foundation
     url: https://www.python.org/psf/
-    role: Fellow
+    role: Fellow (since 2026)
   - name: EuroPython Society
     url: https://www.europython-society.org
-    role: Vice Chair
+    role: Vice Chair (2024–2026)
 
 # public: false → kept here for reference, not linked from the site or JSON-LD sameAs.
 links:
