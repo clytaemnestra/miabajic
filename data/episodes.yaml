@@ -1,30 +1,777 @@
-# episodes:
-#   - title: "Building Open Source Communities"
-#     guest: "Sarah Chen"
-#     date: "2024-12-15"
-#     description: "Discussion about fostering inclusive and thriving open source communities."
+# Behind the Commit episodes, newest first. Single source of truth for /podcast/ pages.
+# Source: RSS feed + YouTube channel (Oct 2026). Chapters and links copied from the published descriptions.
+#
+# date: earliest public release of the full episode (YouTube or RSS).
+# topic: completes the sentence "Mia Bajić talks with <guests> about <topic>."
+# guests: names must match data/guests.yaml.
+# Transcript: data/transcripts/<slug>.vtt (optional). transcript_fixes: [wrong, right] pairs applied when
+#   rendering, for auto-caption errors in names.
+# Any value starting with "TODO" is treated as missing by generate.py.
 
-#   - title: "The Future of Remote Work"
-#     guest: "Marcus Rivera"
-#     date: "2024-12-08"
-#     description: "Exploring how remote work is evolving and what the future holds."
-
-#   - title: "From Startup to Scale"
-#     guest: "Alex Thompson"
-#     date: "2024-12-01"
-#     description: "Journey from founding a startup to scaling it successfully."
-
-#   - title: "Design Thinking in Practice"
-#     guest: "Maya Patel"
-#     date: "2024-11-24"
-#     description: "How design thinking transforms product development."
-
-#   - title: "AI Ethics in Modern Development"
-#     guest: "Dr. James Wilson"
-#     date: "2024-11-17"
-#     description: "Navigating the ethical challenges of AI in software development."
-
-#   - title: "Building Resilient Systems"
-#     guest: "Lisa Park"
-#     date: "2024-11-10"
-#     description: "Architecture patterns for building systems that can handle failure."
+- slug: fakeredis-daniel-moran
+  number: 13
+  title: 'Daniel Moran | 40M+ Monthly Downloads: The Solo Maintainer Behind FakeRedis'
+  date: '2026-09-08'
+  youtube_id: IbWrIhW3iZw
+  rss_url: https://rss.com/podcasts/behindthecommit/3136670
+  duration_seconds: 1793
+  guests:
+  - Daniel Moran
+  topic: >-
+    maintaining FakeRedis, a package downloaded more than 40 million times a month, in his free time
+  summary: >-
+    Daniel Moran is the solo maintainer of FakeRedis, a pure-Python Redis-compatible implementation used
+    for testing, compatibility checks and server-agnostic development. They discuss how FakeRedis grew
+    from a personal solution into a project supporting Redis, Valkey and Dragonfly, maintaining a 73-variation
+    CI matrix, AI-generated pull requests, avoiding burnout, monetizing a JetBrains GitHub Actions plugin,
+    Django Commons, and the future of FakeRedis.
+  chapters:
+  - time: '00:00'
+    title: FakeRedis in numbers
+  - time: '00:24'
+    title: What is FakeRedis?
+  - time: '02:32'
+    title: Redis license changes
+  - time: '04:48'
+    title: New use cases
+  - time: '06:21'
+    title: Supporting Redis, Valkey, and Dragonfly
+  - time: '07:50'
+    title: The 73-variation test matrix
+  - time: '10:45'
+    title: Maintaining open source in your free time
+  - time: '16:10'
+    title: AI and open-source maintenance
+  - time: '20:45'
+    title: Building a JetBrains plugin
+  - time: '24:42'
+    title: Django Commons
+  - time: '27:10'
+    title: The future of FakeRedis
+  - time: '29:19'
+    title: Connect with Daniel
+  links:
+  - title: GitHub Actions Manager Plugin
+    url: https://plugins.jetbrains.com/plugin/19347-github-actions-manager
+  - title: Django Commons
+    url: https://django-commons.org/
+  - title: Daniel's LinkedIn profile
+    url: https://www.linkedin.com/in/daniel-moran-8a096a15/
+- slug: cpython-emily-morehouse
+  number: 12
+  title: 'Emily Morehouse: Becoming a CPython Core Dev, the Walrus Operator and Chairing PyCon'
+  date: '2026-08-25'
+  youtube_id: r-h3HI3PgSw
+  rss_url: https://rss.com/podcasts/behindthecommit/3095142
+  duration_seconds: 921
+  guests:
+  - Emily Morehouse
+  topic: becoming a CPython core developer, implementing the walrus operator and chairing PyCon US
+  summary: >-
+    Emily Morehouse is a CPython core developer, former Python Steering Council member, PSF Fellow, and
+    co-founder and director of engineering at Cuttlesoft. She holds degrees in theater, computer science
+    and criminology. After Guido van Rossum said at a Python conference that he wanted more women in CPython
+    core development, she emailed him, and he mentored her. She implemented the walrus operator (:=),
+    one of the most controversial features in Python's history and one of the events that led Guido van
+    Rossum to step down as BDFL. She chaired PyCon US for three years, two of which were held online during
+    the pandemic.
+  chapters:
+  - time: '0:00'
+    title: Episode highlights
+  - time: '0:26'
+    title: Introduction
+  - time: '1:02'
+    title: '"If someone told you 10 years ago you''d be a core developer…"'
+  - time: '1:47'
+    title: 'Three degrees: theater, CS, and criminology'
+  - time: '1:54'
+    title: Journey into core development
+  - time: '2:43'
+    title: Guido's call for female core developers
+  - time: '3:08'
+    title: '"My husband was elbowing me in the side"'
+  - time: '3:20'
+    title: What were you afraid of?
+  - time: '3:57'
+    title: She emailed Guido — and he said yes
+  - time: '4:34'
+    title: 'First language summit: realizing experts are human'
+  - time: '5:08'
+    title: What it's actually like to be mentored by Guido
+  - time: '5:43'
+    title: The async Friday ritual with Guido and Eric Snow
+  - time: '6:22'
+    title: Why there's no low-hanging fruit in CPython
+  - time: '7:10'
+    title: Implementing the Walrus operator (:=)
+  - time: '8:27'
+    title: Support from the core developer community
+  - time: '8:32'
+    title: How to inspire more people into core development
+  - time: '9:38'
+    title: People still reach out years later
+  - time: '10:04'
+    title: Chairing PyCon US through a pandemic
+  - time: '11:05'
+    title: What community work teaches you about leadership
+  - time: '12:54'
+    title: How parenthood changed her relationship with open source
+  - time: '13:59'
+    title: Practical first steps to contribute to CPython
+  - time: '14:56'
+    title: Outro
+  links:
+  - title: CPython dev guide
+    url: https://devguide.python.org
+  - title: Cuttlesoft
+    url: https://cuttlesoft.com
+  - title: Emily on GitHub
+    url: https://github.com/emilyemorehouse
+- slug: privacy-kushal-das
+  number: 11
+  title: Is Your Vacuum Cleaner Spying on You? Kushal Das on Privacy and Digital Rights
+  date: '2026-07-17'
+  youtube_id: lt6ShhGu0jg
+  rss_url: https://rss.com/podcasts/behindthecommit/3006189
+  duration_seconds: 2458
+  guests:
+  - Kushal Das
+  topic: privacy and digital rights
+  summary: >-
+    Kushal Das is a public interest technologist, core team member at the Tor Project, CPython core developer
+    and director at the Python Software Foundation. He founded dgplug and maintains SecureDrop, the platform
+    journalists use to communicate securely with whistleblowers. They discuss why privacy is increasingly
+    hard to protect, cameras in robot vacuum cleaners, stalkerware, Cambridge Analytica, encryption, and
+    what developers can do to build privacy-respecting software.
+  chapters:
+  - time: '0:00'
+    title: Episode highlights
+  - time: '0:17'
+    title: Introduction
+  - time: '0:38'
+    title: '"Privacy is a human right" — is it?'
+  - time: '1:22'
+    title: What turned Kushal from technologist to privacy advocate
+  - time: '2:57'
+    title: 'SecureDrop: what it is and who it protects'
+  - time: '3:33'
+    title: How SecureDrop works in practice
+  - time: '5:36'
+    title: Biggest technical challenges building SecureDrop
+  - time: '6:35'
+    title: Helping people living under authoritarian regimes
+  - time: '10:38'
+    title: Vacuum cleaner cameras and the toilet photo incident
+  - time: '11:44'
+    title: The year hackers took over vacuum cleaners and shouted at owners
+  - time: '13:44'
+    title: Why Kushal removed Alexa from his home
+  - time: '16:08'
+    title: Social media as a surveillance tool
+  - time: '18:24'
+    title: 'Stalkerware: when someone close to you is tracking your every move'
+  - time: '19:31'
+    title: Cambridge Analytica, the Great Hack, and election manipulation
+  - time: '21:43'
+    title: Are governments fast enough to regulate technology?
+  - time: '22:55'
+    title: Once you upload something to the internet, it never comes back
+  - time: '25:20'
+    title: AI tools and what happens to the data you share with them
+  - time: '35:15'
+    title: '"If you break encryption, it will be broken for everyone"'
+  - time: '37:36'
+    title: How to fight for privacy
+  - time: '40:04'
+    title: EFF, Tor Project, and where to get involved
+  links:
+  - title: Tor Project
+    url: https://www.torproject.org
+  - title: SecureDrop
+    url: https://securedrop.org
+  - title: EFF
+    url: https://www.eff.org
+  - title: Stop Stalkerware
+    url: https://stopstalkerware.org
+  - title: dgplug
+    url: https://dgplug.org
+  - title: Kushal's blog
+    url: https://kushaldas.in
+- slug: qt-for-python-cristian-maureira-fredes
+  number: 10
+  title: 'The Best of Two Languages: Connecting C++ & Python with Cristián Maureira-Fredes'
+  date: '2026-07-09'
+  youtube_id: YNn5fdKI_KQ
+  rss_url: https://rss.com/podcasts/behindthecommit/2974746
+  duration_seconds: 676
+  guests:
+  - Cristián Maureira-Fredes
+  topic: connecting C++ and Python with Qt for Python
+  summary: >-
+    Cristián Maureira-Fredes holds a PhD in astrophysics and is Research and Development Principal Manager
+    at The Qt Company, where he leads the Qt for Python (PySide6) team and the Qt Core team. They discuss
+    the open source history of Qt, why C++ code is not simply rewritten in Rust, how PySide bindings work,
+    finding new C++ contributors, the impact of LLMs on understanding complex code, where Qt is used,
+    why Qt uses Gerrit instead of GitHub, and where the name Qt comes from.
+  chapters:
+  - time: '00:00'
+    title: The persistence of C++ in industry
+  - time: '00:14'
+    title: 'Introducing Cristián: From Astrophysics to Qt'
+  - time: '01:13'
+    title: The history and Open Source roots of Qt
+  - time: '02:58'
+    title: Why we can’t just "rewrite" C++ in Rust
+  - time: '03:52'
+    title: How PySide (Qt for Python) bindings work
+  - time: '05:07'
+    title: The challenge of finding new C++ contributors
+  - time: '06:17'
+    title: Impact of LLMs on understanding complex code
+  - time: '07:34'
+    title: 'Qt in the real world: NASA, cars, and coffee machines'
+  - time: '08:50'
+    title: Why Qt uses Gerrit instead of GitHub
+  - time: '10:36'
+    title: Where does the name "Qt" come from?
+  - time: '11:15'
+    title: Conclusion
+  links: []
+- slug: mentorship-manivannan-selvaraj
+  number: 9
+  title: 'Why Every Engineer Needs a Mentor: Manivannan Selvaraj on Mentorship and Burnout'
+  date: '2026-06-11'
+  youtube_id: xnAil3y1yNg
+  rss_url: 'TODO(mia): not in the RSS feed — audio version published?'
+  duration_seconds: 1189
+  guests:
+  - Manivannan Selvaraj
+  topic: mentorship, imposter syndrome and burnout
+  summary: >-
+    Manivannan Selvaraj is a software engineer who has worked at PayPal, Slack and Experian, where he
+    is a principal engineer. They discuss managing imposter syndrome, what good mentorship looks like,
+    why engineers need both a mentor and a mentee, building trust through vulnerability, and how to spot
+    burnout, including in remote teams.
+  chapters:
+  - time: '0:00'
+    title: Episode highlights
+  - time: '0:20'
+    title: Introduction
+  - time: '0:47'
+    title: 'Career background: from Silicon Valley startup to PayPal, Slack, Experian'
+  - time: '3:09'
+    title: '"Forget about beginnings. I still have imposter syndrome."'
+  - time: '4:12'
+    title: How to manage imposter syndrome
+  - time: '4:25'
+    title: The power of being vulnerable
+  - time: '4:57'
+    title: Why you need both a mentor AND a mentee
+  - time: '5:38'
+    title: Finding your first mentor
+  - time: '6:57'
+    title: What inspired him to start mentoring others
+  - time: '8:16'
+    title: Most common topics with mentees
+  - time: '9:26'
+    title: Bill Gates, Warren Buffett — and why everybody needs a mentor
+  - time: '9:58'
+    title: How mentorship works in practice
+  - time: '11:18'
+    title: Mentees come up with their own homework
+  - time: '11:59'
+    title: What makes a good mentor-mentee match
+  - time: '13:56'
+    title: Building trust through vulnerability
+  - time: '15:12'
+    title: Early signs of burnout
+  - time: '17:45'
+    title: Spotting burnout in remote teams
+  - time: '19:58'
+    title: One piece of advice to your younger self
+  links: []
+- slug: pypi-maria-ashna
+  number: 8
+  title: 'Inside PyPI: Maria Ashna on Supporting Python''s Package Index'
+  date: '2026-06-05'
+  youtube_id: OGIznDrFa2U
+  rss_url: https://rss.com/podcasts/behindthecommit/2889918
+  duration_seconds: 1036
+  guests:
+  - Maria Ashna
+  topic: supporting the Python Package Index (PyPI)
+  summary: >-
+    Maria Ashna is the PyPI support specialist at the Python Software Foundation and founder of Magic
+    Lightbulb, a tech and product consulting firm. PyPI serves nearly a million users and is run by a
+    team of four. They discuss her day-to-day work, clearing a backlog of more than 500 support tickets
+    delayed by over a year, PEP 541, what happens when a package maintainer passes away, mandatory two-factor
+    authentication, and PyPI Organizations.
+  chapters:
+  - time: '0:00'
+    title: Episode highlights
+  - time: '0:45'
+    title: Introduction to Maria Ashna
+  - time: '1:11'
+    title: What does a PyPI support specialist actually do?
+  - time: '2:07'
+    title: The history of PyPI — born in 2003, formerly "the cheese shop"
+  - time: '2:47'
+    title: How many people work on PyPI?
+  - time: '3:27'
+    title: 'Most common support issues: account recovery and 2FA'
+  - time: '3:48'
+    title: 2FA is now 100% mandatory on PyPI
+  - time: '4:10'
+    title: Clearing a 500+ ticket backlog delayed by over a year
+  - time: '6:14'
+    title: What is PEP 541?
+  - time: '7:01'
+    title: What happens when users don't respond?
+  - time: '8:07'
+    title: 'The edge case nobody thinks about: users who have passed away'
+  - time: '8:30'
+    title: How to open a ticket with the PyPI team
+  - time: '10:43'
+    title: 'PyPI Organizations: what are they and who are they for?'
+  - time: '13:17'
+    title: Is PyPI going commercial? (No)
+  - time: '15:01'
+    title: Nearly 1 million users, team of 4
+  - time: '15:38'
+    title: How do you actually pronounce PyPI?
+  - time: '16:13'
+    title: Where to find Maria online
+  links:
+  - title: PyPI
+    url: https://pypi.org
+  - title: PEP 541
+    url: https://peps.python.org/pep-0541/
+  - title: Maria on GitHub
+    url: https://github.com/despy-brain
+  - title: Contact Maria
+    url: mailto:maria@python.org
+- slug: spy-antonio-cuni
+  number: 7
+  title: 'Why Python is Slow: Antonio Cuni on SPy and Statically Compiled Python'
+  date: '2026-04-30'
+  youtube_id: CV2tYMPmMWc
+  rss_url: https://rss.com/podcasts/behindthecommit/2781176
+  duration_seconds: 1590
+  guests:
+  - Antonio Cuni
+  topic: why Python is slow and SPy, a statically compiled variant of Python
+  summary: >-
+    Antonio Cuni is a principal engineer at Anaconda, the author of SPy, a developer of PyScript and PyPy,
+    and co-founder of the HPy project. SPy aims to be as fast as C while staying Pythonic. They discuss
+    the trade-off between dynamic features and performance, SPy's red and blue code model, the SPy compilation
+    pipeline, why PyPy struggles with C extensions, garbage collection in SPy, and what "Pythonic" means.
+  chapters:
+  - time: '00:00'
+    title: Episode highlights and introduction
+  - time: '00:40'
+    title: Why is Python so slow?
+  - time: '01:31'
+    title: Would a static Python be fast?
+  - time: '02:13'
+    title: What is SPy?
+  - time: '02:28'
+    title: 'What motivated you to create SPy? (Spoiler: frustration)'
+  - time: '03:52'
+    title: Which ideas from PyPy and HPy went into SPy?
+  - time: '06:36'
+    title: Biggest challenges of building SPy
+  - time: '07:49'
+    title: What does "Pythonic" actually mean?
+  - time: '10:39'
+    title: Current roadmap and the two-level language idea
+  - time: '12:24'
+    title: Walking through the SPy compilation pipeline
+  - time: '13:57'
+    title: Red-shifting and the blue/red AST nodes
+  - time: '14:40'
+    title: Why blue and red? (No, it's not from The Matrix)
+  - time: '15:52'
+    title: 'PyPy vs SPy: when to use which'
+  - time: '19:34'
+    title: C extensions and the C API problem
+  - time: '20:04'
+    title: How to actually make your Python code faster
+  - time: '23:34'
+    title: Memory management and garbage collection in SPy
+  - time: '24:44'
+    title: When will SPy be production-ready?
+  - time: '25:44'
+    title: How to contribute to SPy
+  - time: '26:26'
+    title: Where does the name "SPy" come from?
+  links:
+  - title: SPy on GitHub
+    url: https://github.com/spylang/spy
+  - title: PyPy
+    url: https://pypy.org/
+  - title: HPy project
+    url: https://hpyproject.org/
+  - title: PyScript
+    url: https://pyscript.net/
+  - title: Anaconda
+    url: https://www.anaconda.com/
+  - title: decorators in SPy
+    url: https://github.com/spylang/spy/pull/225
+  - title: SPy roadmap
+    url: https://github.com/spylang/spy/blob/main/ROADMAP.md
+  - title: list type in SPy
+    url: https://github.com/spylang/spy/blob/main/stdlib/_list.spy
+  - title: garbage collector in SPy
+    url: https://github.com/spylang/spy/pull/390
+  - title: SPy documentation
+    url: https://spylang.github.io/docs/dev/
+  - title: series of blog posts on SPy
+    url: https://antocuni.eu/2025/10/29/inside-spy-part-1-motivations-and-goals/
+- slug: pre-commit-anthony-sottile
+  number: 6
+  title: 'Maintaining 80 OSS Projects: Anthony Sottile on pre-commit and Developer Tooling'
+  date: '2026-03-30'
+  youtube_id: 5TWqXO5VP-Y
+  rss_url: https://rss.com/podcasts/behindthecommit/2674913
+  duration_seconds: 973
+  guests:
+  - Anthony Sottile
+  topic: pre-commit, developer tooling and maintaining around 80 open source projects
+  summary: >-
+    Anthony Sottile created pre-commit, is the primary maintainer of flake8, a core contributor to pytest
+    and a GitHub Star, and streams live coding on Twitch as "anthonywritescode". They discuss the all-repos
+    tool, the origin of pre-commit, bugs found in npm and Git, open source funding, the psychological
+    side of maintenance, and how to start contributing to open source.
+  chapters:
+  - time: '00:00'
+    title: Episode highlights & Intro
+  - time: '0:59'
+    title: The all-repos tool — distributed refactoring across repos
+  - time: '2:04'
+    title: Where the idea came from (Yelp's microservices explosion)
+  - time: '2:42'
+    title: Tools for managing multiple repositories
+  - time: '3:34'
+    title: How pre-commit got started (a college group project)
+  - time: '4:15'
+    title: Rewriting pre-commit for Yelp in 2018
+  - time: '4:46'
+    title: 'Hardest technical challenge: supporting 13 programming languages'
+  - time: '6:07'
+    title: Surprising bugs found in NPM and Git
+  - time: '7:05'
+    title: GitHub Stars and open source funding
+  - time: '8:10'
+    title: How Sentry approaches funding open source
+  - time: '8:43'
+    title: The psychological challenges of open source maintenance
+  - time: '10:06'
+    title: What would you tell your past self?
+  - time: '11:32'
+    title: How to start contributing to open source
+  - time: '13:05'
+    title: Why Anthony started streaming on Twitch
+  - time: '13:52'
+    title: What motivates him to keep streaming
+  - time: '14:58'
+    title: Has community interaction changed how you design code?
+  - time: '15:48'
+    title: Where to find Anthony online
+  links:
+  - title: pre-commit
+    url: https://pre-commit.com
+  - title: all-repos
+    url: https://github.com/asottile/all-repos
+  - title: Anthony's YouTube
+    url: https://www.youtube.com/@anthonywritescode
+  - title: Anthony's Twitch
+    url: https://www.twitch.tv/anthonywritescode
+- slug: ai-agents-armin-ronacher
+  number: 5
+  title: 'AI-Written Code: Armin Ronacher on AI Agents and the Future of Programming'
+  date: '2026-02-13'
+  youtube_id: 4zlHCW0Yihg
+  rss_url: https://rss.com/podcasts/behindthecommit/2545303
+  duration_seconds: 2218
+  guests:
+  - Armin Ronacher
+  topic: AI agents and the future of programming
+  summary: >-
+    Armin Ronacher created Flask, was previously VP of Platform at Sentry, and founded the startup Earendil,
+    where 90% of the code is AI-generated. They discuss which programming languages work best with AI
+    agents, why Python's ecosystem makes this harder, how to steer and monitor agents, licensing of AI-generated
+    open source code, the future of programming jobs, and which skills programmers need to stay relevant.
+  chapters:
+  - time: '00:00'
+    title: Episode highlights and introduction
+  - time: '0:43'
+    title: How much code do you write yourself vs AI agents?
+  - time: '2:03'
+    title: What kind of problems are suitable for AI and what do you solve yourself?
+  - time: '4:02'
+    title: Why do AI agents work better with certain languages like Go vs Python?
+  - time: '7:15'
+    title: How to steer AI agents in certain directions?
+  - time: '12:01'
+    title: What patterns can AI agents handle well?
+  - time: '15:28'
+    title: When starting a new project, what language do you use now?
+  - time: '16:27'
+    title: Do you monitor agents and what safeguards do you have?
+  - time: '18:48'
+    title: How do you handle parallelization with multiple agents?
+  - time: '19:34'
+    title: How should we handle licenses for AI-generated open source libraries?
+  - time: '24:07'
+    title: What is the future of programming jobs?
+  - time: '26:31'
+    title: What skills should programmers learn to stay competitive?
+  - time: '31:05'
+    title: Tips on how to get started with AI agents?
+  - time: '33:44'
+    title: How to stay up to date with all the recent changes?
+  - time: '36:16'
+    title: Where can people find you online?
+  links:
+  - title: Claude Code
+    url: https://claude.ai/
+  - title: UV (Python package manager)
+    url: https://github.com/astral-sh/uv
+  - title: Simon Willison's blog
+    url: https://simonwillison.net/
+  - title: Armin's blog
+    url: https://lucumr.pocoo.org/
+- slug: ai-music-mateusz-modrzejewski
+  number: 4
+  title: 'AI-Generated Music: Tech, Copyright & Real-World Applications with Mateusz Modrzejewski'
+  date: '2025-12-03'
+  youtube_id: FMMf_hejxfU
+  rss_url: https://rss.com/podcasts/behindthecommit/2365278
+  duration_seconds: 1907
+  guests:
+  - Mateusz Modrzejewski
+  recorded_at: PyWaw, Venture Café, Warsaw (live)
+  topic: AI-generated music
+  summary: >-
+    Mateusz Modrzejewski is a professional musician, AI researcher and assistant professor at the Warsaw
+    University of Technology. They discuss how AI music generation works, what professional musicians
+    think about it, data scraping and data poisoning research, copyright questions, the AI Song Contest,
+    and where AI tools can support the creative process. The episode was recorded live at Venture Café
+    at PyWaw in Warsaw.
+  chapters:
+  - time: '00:00'
+    title: Episode highlights and introduction
+  - time: '00:49'
+    title: Thoughts on AI-generated music
+  - time: '02:09'
+    title: The good sides of AI
+  - time: '03:40'
+    title: The bad sides of AI
+  - time: '04:43'
+    title: How do professional musicians feel?
+  - time: '08:03'
+    title: The data scraping problem and data poisoning research
+  - time: '11:33'
+    title: How AI music generation actually works
+  - time: '15:04'
+    title: How to start experimenting with AI music
+  - time: '18:26'
+    title: Future of the music industry
+  - time: '25:22'
+    title: The AI song contest
+  - time: '29:15'
+    title: Resources to learn more
+  links:
+  - title: AI song contest
+    url: https://www.aisongcontest.com/
+  - title: Librosa library
+    url: https://github.com/librosa/librosa
+  - title: Pedalboard library
+    url: https://github.com/spotify/pedalboard
+  - title: Intelligent Instruments Lab
+    url: https://iil.is/
+  - title: PanGenerator
+    url: https://pangenerator.com/
+  - title: Pyo library
+    url: https://github.com/belangeo/pyo
+  - title: ISMIR tutorials
+    url: https://ismir.net/resources/tutorials/
+  - title: Beyond supervised learning book
+    url: https://music-classification.github.io/tutorial/landing-page.html
+  - title: Fundamentals of Music Processing book
+    url: https://www.researchgate.net/publication/288774112_Fundamentals_of_Music_Processing
+  - title: NIME conference
+    url: https://www.nime.org/
+  - title: ZAiKS Lab
+    url: https://www.zaikslab.tech
+  - title: Warsaw University of Technology
+    url: https://www.pw.edu.pl
+- slug: sustainable-web-thibaud-colas
+  number: 3
+  title: How To Make Web More Sustainable? – Chat with Thibaud Colas
+  date: '2025-11-14'
+  youtube_id: t4B11C2oGNc
+  rss_url: https://rss.com/podcasts/behindthecommit/2327892
+  duration_seconds: 1059
+  guests:
+  - Thibaud Colas
+  topic: digital sustainability and the carbon footprint of the web
+  summary: >-
+    Thibaud Colas is Product Lead and Engineering Manager at Torchbox, Wagtail product lead, and, at the
+    time of recording, President of the Django Software Foundation. They discuss why the internet's energy
+    use matters, how to measure a website's carbon footprint, how performance relates to emissions, whether
+    the choice of programming language makes a difference, Django's and Wagtail's plans to reduce their
+    footprint, and what AI companies and cloud providers should be more transparent about.
+  chapters:
+  - time: '0:00'
+    title: Episode highlights
+  - time: '0:58'
+    title: Guest intro
+  - time: '1:21'
+    title: Is carbon footprint a popular topic among developers?
+  - time: '3:44'
+    title: What’s the carbon impact of the web and software in general?
+  - time: '5:35'
+    title: How can we measure a website’s carbon footprint?
+  - time: '8:26'
+    title: What are Django’s and Wagtail’s plans to reduce their footprint?
+  - time: '9:35'
+    title: Does the programming language we use (e.g., Python or Rust) make a difference?
+  - time: '11:42'
+    title: What practical steps can developers take to lower their software’s impact?
+  - time: '12:25'
+    title: How do we raise awareness and make sustainability a mainstream topic in tech?
+  - time: '15:34'
+    title: Should businesses be accountable for their software’s footprint?
+  - time: '16:59'
+    title: What should AI companies and cloud providers be more transparent about?
+  links:
+  - title: Sustainable Web Design (methodology)
+    url: https://sustainablewebdesign.org/
+  - title: Wagtail CMS (Torchbox)
+    url: https://wagtail.org/
+  - title: Django Software Foundation
+    url: https://www.djangoproject.com/foundation/
+  - title: Climate Action Tech community
+    url: https://climateaction.tech/
+  - title: W3C work on web sustainability
+    url: https://w3c.github.io/sustainableweb-wsg/
+- slug: fastapi-sebastian-ramirez
+  number: 2
+  title: Why FastAPI Became Python's Fastest‑Growing Framework – Chat with Sebastián Ramírez
+  date: '2025-10-30'
+  youtube_id: iaDRYUQ0OMM
+  rss_url: https://rss.com/podcasts/behindthecommit/2299830
+  duration_seconds: 2556
+  guests:
+  - Sebastián Ramírez
+  recorded_at: EuroPython 2025
+  thumbnail: static/sebastian-thumbnail.png
+  topic: >-
+    how FastAPI became one of Python's fastest-growing web frameworks and what is next on its roadmap
+  summary: >-
+    Sebastián Ramírez created FastAPI, Typer and SQLModel and founded FastAPI Labs. According to the JetBrains
+    Python Developers Survey, FastAPI use grew from 14% of respondents in 2021 to 25% in 2023. The conversation
+    covers developer experience, maintaining a popular open source project, FastAPI's performance architecture,
+    FastAPI Labs and FastAPI Cloud, the design of SQLModel, self-taught development, and how to contribute
+    to FastAPI.
+  chapters:
+  - time: '0:00'
+    title: Why FastAPI Became So Popular
+  - time: '1:43'
+    title: The Philosophy Behind FastAPI Development
+  - time: '3:18'
+    title: Challenges of Maintaining a Popular Open Source Project
+  - time: '5:50'
+    title: Community Contributions & Recognition System
+  - time: '8:42'
+    title: FastAPI Roadmap
+  - time: '11:13'
+    title: Amazing Use Cases - From Particle Accelerators to Space Research
+  - time: '12:29'
+    title: FastAPI's Performance Architecture & Python Core Team
+  - time: '15:19'
+    title: Meeting Your Heroes & Being Popular in the Community
+  - time: '16:30'
+    title: Dealing with Negative Comments & Online Criticism
+  - time: '23:25'
+    title: FastAPI Cloud & FastAPI Labs Announcement
+  - time: '28:08'
+    title: Deployment Challenges & Platform as a Service Solution
+  - time: '31:17'
+    title: The SQLModel Challenge - Combining Old and New Magic
+  - time: '34:29'
+    title: Thoughts on Education & Self-Taught Development
+  - time: '40:22'
+    title: How to Contribute to FastAPI
+  - time: '42:33'
+    title: Closing Thoughts
+  links:
+  - title: JetBrains Developers Survey 2023
+    url: https://www.jetbrains.com/lp/devecosystem-2023/python/#python_web_libs_two_years
+  - title: FastAPI documentation
+    url: https://fastapi.tiangolo.com
+  - title: Sebastián Ramírez’s website
+    url: https://tiangolo.com
+  - title: FastAPI Labs (FastAPI Cloud)
+    url: https://fastapilabs.com/
+  - title: Savannah's keynote
+    url: https://www.youtube.com/watch?v=WGXXxGLBVF4
+  transcript_fixes:
+  - ["Fast API", "FastAPI"]
+  - ["what Sebastian thinks", "what Sebastián thinks"]
+- slug: cpython-release-management
+  number: 1
+  title: 'Behind the Python Release: Motivation, Fails & Rituals with Łukasz, Pablo & Hugo'
+  date: '2025-10-14'
+  youtube_id: BHUWyM2cxwE
+  rss_url: https://rss.com/podcasts/behindthecommit/2268414
+  duration_seconds: 2712
+  guests:
+  - Hugo van Kemenade
+  - Pablo Galindo Salgado
+  - Łukasz Langa
+  recorded_at: EuroPython 2025
+  thumbnail: static/release-managers-thumbnail.png
+  topic: CPython release management
+  summary: >-
+    Hugo van Kemenade is the Release Manager for Python 3.14 and 3.15; Pablo Galindo Salgado managed the
+    Python 3.10 and 3.11 releases, and Łukasz Langa managed Python 3.8 and 3.9. They discuss the most
+    and least successful releases, how the release process has changed, the annual release schedule, handling
+    pull requests and reverts, how they became release managers, release rituals such as the YouTube release
+    party, and sustainable funding for open source.
+  chapters:
+  - time: '01:34'
+    title: Most & Least Successful Releases
+  - time: '05:34'
+    title: Evolution of Release Process
+  - time: '11:37'
+    title: Release Schedule and Annual Releases
+  - time: '15:05'
+    title: Handling PRs and Reverts
+  - time: '18:07'
+    title: Becoming a Python Release Manager
+  - time: '25:24'
+    title: Motivation and Time Zone Challenges
+  - time: '29:36'
+    title: Release Rituals and YouTube Party
+  - time: '35:11'
+    title: Sustainable Open Source Funding Models
+  - time: '42:10'
+    title: Getting Involved & Further Listening
+  links:
+  - title: core.py podcast
+    url: https://open.spotify.com/show/1PGRfdrLEwgXjQbPBNk1pW
+  - title: Python’s Developer Guide
+    url: https://devguide.python.org/
+  - title: PEP 101
+    url: https://peps.python.org/pep-0101/
+  transcript_fixes:
+  - ["Vukas", "Łukasz"]
+  - ["Wookie Slanga", "Łukasz Langa"]
+  - ["Lukasz", "Łukasz"]
+  - ["Hugo Van Kemenade", "Hugo van Kemenade"]
+  - ["Server and Tech Agency", "Sovereign Tech Agency"]
+  - ["like Pillar", "like Pillow"]
+  - ["3 .", "3."]
+  - ["1 .5", "1.5"]

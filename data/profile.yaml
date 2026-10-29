@@ -1,0 +1,94 @@
+# Facts about Mia. This file is the single source of truth for the homepage, /speaking/,
+# llms.txt and the Person JSON-LD on every page. Keep it factual: names, roles, dates.
+
+name: Mia Bajić
+given_name: Mia
+family_name: Bajić
+url: https://miabajic.dev
+email: mia@europython.eu
+image: static/host-original.png
+
+job_title: Staff Software Engineer
+employer: SentinelOne
+employer_url: https://www.sentinelone.com
+work_focus: AI and MCP-server infrastructure
+
+headline: Staff Software Engineer, PSF Fellow and host of Behind the Commit
+
+# Location shown everywhere (page copy, JSON-LD homeLocation, llms.txt).
+location: Prague
+location_country: Czech Republic
+
+roles:
+  - Staff Software Engineer at SentinelOne, working on AI and MCP-server infrastructure
+  - Fellow of the Python Software Foundation (PSF)
+  - Vice Chair of the EuroPython Society
+  - Host of the podcast Behind the Commit
+  - Co-organizer of Pyvo Prague, PyCon CZ 2023 and Python Pizza Prague
+
+# First text on the homepage. Assistants and search engines quote this paragraph.
+bio:
+  - >-
+    Mia Bajić is a Staff Software Engineer at SentinelOne, where she works on AI and
+    MCP-server infrastructure. She is a Fellow of the Python Software Foundation, Vice Chair
+    of the EuroPython Society, and the host of the podcast Behind the Commit. Mia Bajić is
+    based in Prague.
+  - >-
+    She has given keynotes at DjangoCon Europe 2025 and PyCon Lithuania 2026, and talks at
+    PyCon US (2024, 2025, 2026), EuroPython, FOSDEM, PyCon UK, PyCon Ireland, PyCon France,
+    PyCon Italia, PyCon Namibia, DjangoCon Europe, OpenFest and WebExpo.
+  - >-
+    She has co-organized Pyvo Prague, PyCon CZ 2023 and Python Pizza Prague, and helped bring
+    EuroPython to Prague. Her background is in developer experience and the data domain; she
+    has built SDKs, backend systems and web applications.
+
+topics:
+  - Python internals and the standard library
+  - Open source communities and maintainer psychology
+  - Software bugs and failures
+  - FastAPI and Django
+  - Developer experience
+  - AI in the open-source ecosystem
+
+# schema.org knowsAbout (short keywords, used in JSON-LD only)
+knows_about:
+  - Python
+  - CPython
+  - Python standard library
+  - Open source
+  - Open source communities
+  - Django
+  - FastAPI
+  - Developer experience
+  - Model Context Protocol (MCP)
+  - AI infrastructure
+  - Software bugs
+
+availability: Available for conference talks, keynotes and podcasts.
+open_to:
+  - Conference talks and keynotes
+  - Podcast guesting
+  - Collaboration
+
+organizations:
+  - name: Python Software Foundation
+    url: https://www.python.org/psf/
+    role: Fellow
+  - name: EuroPython Society
+    url: https://www.europython-society.org
+    role: Vice Chair
+
+# public: false → kept here for reference, not linked from the site or JSON-LD sameAs.
+links:
+  - {label: LinkedIn, url: "https://www.linkedin.com/in/mia-bajic/"}
+  - {label: Bluesky, url: "https://bsky.app/profile/clytaemnestra.bsky.social"}
+  - {label: GitHub, url: "https://github.com/clytaemnestra"}
+  - {label: Instagram, url: "https://www.instagram.com/clytaemnestra_/"}
+  - {label: Blog, url: "https://clytaemnestra.github.io/tech-blog/"}
+  - {label: Talk slides, url: "https://github.com/clytaemnestra/talks"}
+  # TODO(mia): profile is outdated (used for one conference years ago). Update bio, location
+  # and talks on sessionize.com, then set public: true.
+  - {label: Sessionize, url: "https://sessionize.com/mia-bajic/", public: false}
+
+blog_url: https://clytaemnestra.github.io/tech-blog/
+community_blog_url: https://clytaemnestra.github.io/tech-blog/tags#community

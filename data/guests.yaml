@@ -1,36 +1,91 @@
-# guests:
-#   - name: "Sarah Chen"
-#     bio: "Open source maintainer and community builder at GitHub"
-#     twitter: "@sarahc_dev"
-#     linkedin: "sarah-chen-dev"
-#     website: "https://sarahchen.dev"
+# Podcast guests, referenced from episodes.yaml by name.
+# Bios describe the guest at the time of recording, taken from the episode descriptions.
+# Any value starting with "TODO" is treated as missing by generate.py.
 
-#   - name: "Marcus Rivera"
-#     bio: "Remote work consultant and author of 'Distributed Teams'"
-#     twitter: "@marcusremote"
-#     linkedin: "marcus-rivera"
-#     website: "https://remoteworkinsights.com"
+- name: Hugo van Kemenade
+  bio: >-
+    Release Manager for Python 3.14 and 3.15, fellow at the Sovereign Tech Agency, maintainer of
+    open source projects such as Pillow, and co-organizer of local Python events in Helsinki.
+  website: https://hugovk.dev/
 
-#   - name: "Alex Thompson"
-#     bio: "Serial entrepreneur and founder of three successful SaaS companies"
-#     twitter: "@alexbuilds"
-#     linkedin: "alex-thompson-ceo"
-#     website: "https://alexthompson.io"
+- name: Pablo Galindo Salgado
+  bio: >-
+    CPython core developer in the Software Infrastructure department at Bloomberg, Release Manager
+    for Python 3.10 and 3.11, member of the Python Steering Council, and co-host of the core.py podcast.
+  website: https://pablogsal.com/
 
-#   - name: "Maya Patel"
-#     bio: "Senior Product Designer at Figma, design systems expert"
-#     twitter: "@mayauxdesign"
-#     linkedin: "maya-patel-design"
-#     website: "https://mayapatel.design"
+- name: Łukasz Langa
+  bio: >-
+    Python's Developer in Residence at the Python Software Foundation, Release Manager for Python 3.8
+    and 3.9, creator of the Black code formatter, and co-host of the core.py podcast.
+  website: https://lukasz.langa.pl/
 
-#   - name: "Dr. James Wilson"
-#     bio: "AI Ethics researcher at MIT and consultant for tech companies"
-#     twitter: "@jameswilsonai"
-#     linkedin: "james-wilson-phd"
-#     website: "https://aiethicslab.mit.edu"
+- name: Sebastián Ramírez
+  bio: >-
+    Creator of FastAPI, Typer and SQLModel, and founder of FastAPI Labs, which builds FastAPI Cloud.
+  website: https://tiangolo.com
 
-#   - name: "Lisa Park"
-#     bio: "Principal Engineer at Netflix, distributed systems architect"
-#     twitter: "@lisabuilds"
-#     linkedin: "lisa-park-engineer"
-#     website: "https://lisapark.dev"
+- name: Thibaud Colas
+  bio: >-
+    Product Lead and Engineering Manager at Torchbox, Wagtail product lead, and President of the
+    Django Software Foundation.
+  website: "TODO(mia): website or profile link"
+
+- name: Mateusz Modrzejewski
+  bio: >-
+    Professional musician, AI researcher and assistant professor at the Warsaw University of Technology.
+  website: "TODO(mia): website or profile link"
+
+- name: Armin Ronacher
+  bio: >-
+    Creator of Flask, previously VP of Platform at Sentry, and founder of the startup Earendil.
+  website: https://lucumr.pocoo.org/
+
+- name: Anthony Sottile
+  bio: >-
+    Creator of pre-commit, primary maintainer of flake8, core contributor to pytest, maintainer of
+    around 80 open source projects, GitHub Star, and live coding streamer as "anthonywritescode".
+  website: https://www.youtube.com/@anthonywritescode
+  socials:
+    - https://www.twitch.tv/anthonywritescode
+
+- name: Antonio Cuni
+  bio: >-
+    Principal engineer at Anaconda, author of SPy, developer of PyScript and PyPy, co-founder of the
+    HPy project, and creator of PDB++, Fancy Completer and VMProf.
+  website: https://antocuni.eu/
+
+- name: Maria Ashna
+  bio: >-
+    PyPI support specialist at the Python Software Foundation and founder of Magic Lightbulb, a tech
+    and product consulting firm.
+  website: https://github.com/despy-brain
+
+- name: Manivannan Selvaraj
+  bio: >-
+    Software engineer with experience at PayPal, Slack and Experian, where he works as a principal engineer.
+  website: "TODO(mia): website or profile link"
+
+- name: Cristián Maureira-Fredes
+  bio: >-
+    PhD in astrophysics; Research and Development Principal Manager at The Qt Company, leading the
+    Qt for Python (PySide6) team and the Qt Core team.
+  website: "TODO(mia): website or profile link"
+
+- name: Kushal Das
+  bio: >-
+    Public interest technologist, core team member at the Tor Project, CPython core developer,
+    director at the Python Software Foundation, founder of dgplug and maintainer of SecureDrop.
+  website: https://kushaldas.in
+
+- name: Emily Morehouse
+  bio: >-
+    CPython core developer, former Python Steering Council member, PSF Fellow, and co-founder and
+    director of engineering at Cuttlesoft. Implemented the walrus operator and chaired PyCon US for
+    three years.
+  website: https://github.com/emilyemorehouse
+
+- name: Daniel Moran
+  bio: >-
+    Solo maintainer of FakeRedis, a pure-Python Redis-compatible implementation used for testing.
+  website: https://www.linkedin.com/in/daniel-moran-8a096a15/
