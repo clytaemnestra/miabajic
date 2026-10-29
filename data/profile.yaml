@@ -11,7 +11,8 @@ image: static/host-original.png
 job_title: Staff Software Engineer
 employer: SentinelOne
 employer_url: https://www.sentinelone.com
-work_focus: backend, infrastructure and Kubernetes for AI-built applications
+# Used in llms.txt only.
+work_focus: backend, infrastructure and Kubernetes for AI-built applications, and MCP-server infrastructure
 
 headline: Staff Software Engineer, PSF Fellow and host of Behind the Commit
 
@@ -87,13 +88,13 @@ contact_line: >-
   Contact Mia Bajić about conference talks and keynotes, about appearing as a guest on your podcast,
   or if you would like to be a guest on Behind the Commit.
 
-# Homepage "Community Work" card.
+# Homepage "Community Work" card, newest first.
 community:
-  - Vice Chair of the EuroPython Society (2024–2026)
   - Fellow of the Python Software Foundation (since 2026)
-  - Co-organizer of Pyvo Prague (since 2022)
-  - Co-organizer of PyCon CZ 2023
+  - Vice Chair of the EuroPython Society (2024–2026)
   - Main organizer of Python Pizza Prague 2024
+  - Co-organizer of PyCon CZ 2023
+  - Co-organizer of Pyvo Prague (since 2022)
 
 organizations:
   - name: Python Software Foundation
