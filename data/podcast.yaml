@@ -2,12 +2,16 @@
 
 name: Behind the Commit
 host: Mia Bajić
-tagline: Meet the people shaping open source across Europe and beyond
+tagline: Conversations about open source, AI and software development
 description: >-
-  Behind the Commit is a podcast hosted by Mia Bajić about the people behind the open source
-  technologies used every day. Each episode, Mia Bajić talks with maintainers and contributors about
-  what they are building, why it matters, the challenges of maintaining it, and how open source is
-  changing in the age of AI.
+  Behind the Commit is a podcast hosted by Mia Bajić about open source and software development.
+  Each episode, Mia Bajić talks with maintainers, contributors and engineers about what they build
+  and how they work: maintaining open source projects, AI agents and AI tools in everyday development,
+  developer productivity, mentorship and careers, and how open source is changing in the age of AI.
+# <meta name="description"> of /podcast/ (about 160 characters).
+meta_description: >-
+  Behind the Commit is a podcast hosted by Mia Bajić with open source maintainers and engineers,
+  about open source, AI and developer productivity.
 language: en
 image: static/logotype.svg
 youtube: https://www.youtube.com/@BehindtheCommit

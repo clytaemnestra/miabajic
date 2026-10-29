@@ -11,7 +11,7 @@ image: static/host-original.png
 job_title: Staff Software Engineer
 employer: SentinelOne
 employer_url: https://www.sentinelone.com
-work_focus: AI and MCP-server infrastructure
+work_focus: backend, infrastructure and Kubernetes for AI-built applications, and MCP-server infrastructure
 
 headline: Staff Software Engineer, PSF Fellow and host of Behind the Commit
 
@@ -20,17 +20,23 @@ location: Prague
 location_country: Czech Republic
 
 roles:
-  - Staff Software Engineer at SentinelOne, working on AI and MCP-server infrastructure
+  - Staff Software Engineer at SentinelOne, working on backend, infrastructure and Kubernetes
   - Fellow of the Python Software Foundation (PSF)
   - Vice Chair of the EuroPython Society
   - Host of the podcast Behind the Commit
   - Co-organizer of Pyvo Prague, PyCon CZ 2023 and Python Pizza Prague
 
+# <meta name="description"> of the homepage; search engines show about 160 characters.
+meta_description: >-
+  Mia Bajić is a Staff Software Engineer at SentinelOne (backend, Kubernetes, AI), PSF Fellow,
+  Vice Chair of the EuroPython Society and host of the Behind the Commit podcast.
+
 # First text on the homepage. Assistants and search engines quote this paragraph.
 bio:
   - >-
-    Mia Bajić is a Staff Software Engineer at SentinelOne, where she works on AI and
-    MCP-server infrastructure. She is a Fellow of the Python Software Foundation, Vice Chair
+    Mia Bajić is a Staff Software Engineer at SentinelOne, where she works on backend and
+    infrastructure: she takes applications built with AI tools and turns them into production
+    services deployed on Kubernetes, and works on MCP-server infrastructure. She is a Fellow of the Python Software Foundation, Vice Chair
     of the EuroPython Society, and the host of the podcast Behind the Commit. Mia Bajić is
     based in Prague.
   - >-
@@ -39,8 +45,8 @@ bio:
     PyCon Italia, PyCon Namibia, DjangoCon Europe, OpenFest and WebExpo.
   - >-
     She has co-organized Pyvo Prague, PyCon CZ 2023 and Python Pizza Prague, and helped bring
-    EuroPython to Prague. Her background is in developer experience and the data domain; she
-    has built SDKs, backend systems and web applications.
+    EuroPython to Prague. Her background is in backend development with Django, FastAPI and
+    Flask, including work in the data domain at Ataccama and full-stack development at Cocuma.
 
 topics:
   - Python internals and the standard library
@@ -61,6 +67,9 @@ knows_about:
   - FastAPI
   - Developer experience
   - Model Context Protocol (MCP)
+  - Kubernetes
+  - Backend development
+  - Flask
   - AI infrastructure
   - Software bugs
 
