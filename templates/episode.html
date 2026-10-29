@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% from "_macros.html" import listen_links %}
 {% block content %}
-    <main class="page">
+    <main id="main" class="page">
         <p class="episode-meta"><a href="/podcast/">{{ podcast.name }}</a> · Episode {{ ep.number }} · {{ ep.date | date_long }} · {{ ep.duration_seconds | duration }}</p>
         <h1>{{ ep.title }}</h1>
         <p class="description">{{ ep.lede }}</p>

@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-    <main class="page">
+    <main id="main" class="page">
         <p class="episode-meta"><a href="/talks/">Talks</a></p>
         <h1>{{ talk.title }}</h1>
         {% set n = talk.deliveries | length %}

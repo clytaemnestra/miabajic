@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-    <main class="page wide">
+    <main id="main" class="page wide">
         <h1>Talks by {{ profile.name }}</h1>
         <p class="description">{{ profile.name }} has given {{ site.past | length }} conference talks, keynotes and panels{% if site.upcoming %}, with {{ site.upcoming | length }} more scheduled{% endif %}. The list is newest first; slides are also collected at <a href="https://github.com/clytaemnestra/talks">github.com/clytaemnestra/talks</a>. {{ profile.availability }} See <a href="/speaking/">Speaking</a>.</p>
 

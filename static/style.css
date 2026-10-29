@@ -13,6 +13,38 @@ body {
     position: relative;
 }
 
+/* Default link and focus colours, so no link falls back to the browser's dark blue.
+   Pink text uses #ff99cc (≥4.5:1 on every part of the navy background, WCAG AA);
+   the brand pink #ff69b4 stays for borders, glows and backgrounds. */
+a {
+    color: #00fff9;
+}
+
+a:hover {
+    color: #ff99cc;
+}
+
+a:focus-visible,
+summary:focus-visible {
+    outline: 2px solid #ff69b4;
+    outline-offset: 3px;
+}
+
+.skip-link {
+    position: fixed;
+    left: 1rem;
+    top: -4rem;
+    z-index: 2000;
+    padding: 0.5rem 1rem;
+    background: #001529;
+    color: #00fff9;
+    border: 2px solid #00fff9;
+}
+
+.skip-link:focus {
+    top: 1rem;
+}
+
 body::before {
     content: '';
     position: fixed;
@@ -82,7 +114,7 @@ body::before {
 }
 
 .nav-item a:hover {
-    color: #ff69b4;
+    color: #ff99cc;
     text-shadow: 0 0 10px rgba(255, 105, 180, 0.8);
 }
 
@@ -151,7 +183,7 @@ body::before {
 
 .hero-content .subtitle {
     font-size: 1.4rem;
-    color: #ff69b4;
+    color: #ff99cc;
     margin-bottom: 2rem;
     font-weight: 500;
     text-shadow: 0 0 5px rgba(255, 105, 180, 0.3);
@@ -194,7 +226,7 @@ body::before {
 .social-link:hover {
     background: rgba(255, 105, 180, 0.2);
     border-color: #ff69b4;
-    color: #ff69b4;
+    color: #ff99cc;
     box-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
     transform: translateY(-2px);
 }
@@ -317,7 +349,7 @@ body::before {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 0 0 15px rgba(0, 255, 249, 0.2);
 }
 
-.episodes-preview h3 {
+.episodes-preview .list-heading {
     font-size: 1.5rem;
     color: #00fff9;
     text-transform: uppercase;
@@ -356,20 +388,23 @@ body::before {
     flex: 1;
 }
 
-.episode h4 {
+.episode .episode-title {
     font-size: 1.3rem;
-    color: #ff69b4;
+    color: #ff99cc;
+    margin-top: 0;
     margin-bottom: 1rem;
+    text-transform: none;
+    letter-spacing: normal;
     font-weight: 600;
 }
 
-.episode h4 a {
-    color: #ff69b4;
+.episode .episode-title a {
+    color: #ff99cc;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
-.episode h4 a:hover {
+.episode .episode-title a:hover {
     color: #00fff9;
     text-shadow: 0 0 10px rgba(0, 255, 249, 0.5);
 }
@@ -398,7 +433,7 @@ body::before {
     align-items: center;
     padding: 0.6rem 1rem;
     background: rgba(255, 105, 180, 0.2);
-    color: #ff69b4;
+    color: #ff99cc;
     text-decoration: none;
     border-radius: 5px;
     border: 2px solid #ff69b4;
@@ -427,7 +462,7 @@ body::before {
 .acknowledgments h4 {
     font-size: 1.3rem;
     margin-bottom: 1.5rem;
-    color: #ff69b4;
+    color: #ff99cc;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -517,6 +552,7 @@ body::before {
     box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3), 0 0 25px rgba(255, 105, 180, 0.4);
 }
 
+.section-card h3,
 .section-card h4 {
     font-size: 1.4rem;
     margin-bottom: 1.2rem;
@@ -538,7 +574,7 @@ body::before {
 }
 
 .section-link {
-    color: #ff69b4;
+    color: #ff99cc;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
@@ -582,7 +618,7 @@ body::before {
     align-items: center;
     gap: 0.5rem;
     font-size: 1.2rem;
-    color: #ff69b4;
+    color: #ff99cc;
     text-decoration: none;
     padding: 1rem 2rem;
     background: rgba(255, 105, 180, 0.1);
@@ -694,11 +730,11 @@ body::before {
         font-size: 1.1rem;
     }
 
-    .episodes-preview h3 {
+    .episodes-preview .list-heading {
         font-size: 1.2rem;
     }
 
-    .episode h4 {
+    .episode .episode-title {
         font-size: 1.1rem;
     }
 
@@ -734,7 +770,7 @@ body::before {
 
 .page h2 {
     font-size: 2rem;
-    color: #ff69b4;
+    color: #ff99cc;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -766,7 +802,7 @@ body::before {
 }
 
 .page a:hover {
-    color: #ff69b4;
+    color: #ff99cc;
 }
 
 .page .episode-header-thumbnail {
@@ -780,7 +816,7 @@ body::before {
 }
 
 .page .episode-meta {
-    color: #ff69b4;
+    color: #ff99cc;
     font-size: 1.1rem;
     font-style: normal;
     margin-bottom: 2rem;
@@ -806,7 +842,7 @@ body::before {
     align-items: center;
     padding: 0.8rem 1.3rem;
     background: rgba(255, 105, 180, 0.2);
-    color: #ff69b4;
+    color: #ff99cc;
     text-decoration: none;
     border-radius: 5px;
     border: 2px solid #ff69b4;
@@ -839,7 +875,7 @@ body::before {
 }
 
 .timestamp {
-    color: #ff69b4;
+    color: #ff99cc;
     font-weight: 600;
     font-variant-numeric: tabular-nums;
     margin-right: 0.5rem;
@@ -890,7 +926,7 @@ body::before {
 .transcript-section summary {
     padding: 2.5rem;
     font-size: 2rem;
-    color: #ff69b4;
+    color: #ff99cc;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 600;
@@ -952,7 +988,7 @@ body::before {
 }
 
 .transcript-timestamp {
-    color: #ff69b4;
+    color: #ff99cc;
     font-weight: 600;
     font-size: 1rem;
     margin-bottom: 0.3rem;
@@ -987,7 +1023,7 @@ body::before {
 }
 
 .data-table th {
-    color: #ff69b4;
+    color: #ff99cc;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 0.9rem;
@@ -1005,7 +1041,7 @@ body::before {
     margin-left: 0.4rem;
     border: 1px solid #ff69b4;
     border-radius: 4px;
-    color: #ff69b4;
+    color: #ff99cc;
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -1068,15 +1104,26 @@ body::before {
     margin-bottom: 0.6rem;
 }
 
+.card-list a {
+    color: #00fff9;
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 255, 249, 0.4);
+    text-underline-offset: 3px;
+}
+
+.card-list a:hover {
+    color: #ff99cc;
+}
+
 .card-list .when {
-    color: #ff69b4;
+    color: #ff99cc;
     font-weight: 600;
     margin-right: 0.4rem;
 }
 
 .availability {
     font-size: 1.3rem;
-    color: #ff69b4;
+    color: #ff99cc;
     text-align: center;
     margin-bottom: 1.5rem;
 }
@@ -1124,5 +1171,5 @@ body::before {
 }
 
 .page a.timestamp {
-    color: #ff69b4;
+    color: #ff99cc;
 }

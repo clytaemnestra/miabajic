@@ -4,7 +4,7 @@
                         <img src="{{ ep.thumbnail_url }}" alt="{{ ep.title }}" class="episode-thumbnail" loading="lazy">
                     </a>
                     <div class="episode-content">
-                        <{{ heading }}><a href="{{ ep.url }}">{{ ep.link_text }}</a></{{ heading }}>
+                        <{{ heading }} class="episode-title"><a href="{{ ep.url }}">{{ ep.link_text }}</a></{{ heading }}>
                         <p class="episode-meta">Episode {{ ep.number }} · {{ ep.date | date_long }} · {{ ep.duration_seconds | duration }}</p>
                         <p>{{ ep.lede }}</p>
                         <div class="episode-links">

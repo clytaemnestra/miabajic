@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% from "_macros.html" import episode_card, delivery_line %}
 {% block content %}
+<main id="main">
     <!-- Hero Section -->
     <section class="hero" id="about">
         <div class="hero-container">
@@ -40,7 +41,7 @@
             </div>
 
             <div class="episodes-preview">
-                <h3>Latest episodes</h3>
+                <h3 class="list-heading">Latest episodes</h3>
                 <div class="episode-list">
 {% for ep in latest_episodes %}
 {{ episode_card(ep) }}
@@ -60,7 +61,7 @@
             <div class="sections-grid">
 {% if upcoming %}
                 <div class="section-card">
-                    <h4>Upcoming</h4>
+                    <h3>Upcoming</h3>
                     <ul class="card-list">
 {% for d in upcoming %}
                         <li>{{ delivery_line(d) }}</li>
@@ -69,7 +70,7 @@
                 </div>
 {% endif %}
                 <div class="section-card">
-                    <h4>Recent talks</h4>
+                    <h3>Recent talks</h3>
                     <ul class="card-list">
 {% for d in recent %}
                         <li>{{ delivery_line(d) }}</li>
@@ -78,7 +79,7 @@
                     <a href="/talks/" class="section-link">All talks →</a>
                 </div>
                 <div class="section-card">
-                    <h4>Speaking topics</h4>
+                    <h3>Speaking topics</h3>
                     <ul class="card-list">
 {% for topic in profile.topics %}
                         <li>{{ topic }}</li>
@@ -97,12 +98,12 @@
 
             <div class="sections-grid">
                 <div class="section-card">
-                    <h4>TIL Blog</h4>
+                    <h3>TIL Blog</h3>
                     <p>Mia Bajić writes about her tech learnings and community work.</p>
                     <a href="{{ profile.blog_url }}" class="section-link">Browse posts →</a>
                 </div>
                 <div class="section-card">
-                    <h4>Community Work</h4>
+                    <h3>Community Work</h3>
                     <p>Vice Chair of the EuroPython Society, PSF Fellow, and co-organizer of Python events in Prague.</p>
                     <a href="{{ profile.community_blog_url }}" class="section-link">Browse posts about community →</a>
                 </div>
@@ -129,4 +130,5 @@
             </div>
         </div>
     </section>
+</main>
 {% endblock %}

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% from "_macros.html" import episode_card, listen_links %}
 {% block content %}
-    <main class="page wide">
+    <main id="main" class="page wide">
         <h1>{{ podcast.name }}</h1>
         <p class="description">{{ podcast.description }}</p>
         <p>{{ podcast.name }} is hosted by <a href="/">{{ profile.name }}</a>. {{ site.episodes | length }} episodes have been published since {{ site.episodes[-1].date | date_long }}. Every episode page has the guest bios, chapters, links and, where available, the full transcript.</p>
@@ -9,10 +9,10 @@
 {{ listen_links() }}
 
         <div class="episodes-preview">
-            <h3>Episodes</h3>
+            <h2 class="list-heading">Episodes</h2>
             <div class="episode-list">
 {% for ep in episodes %}
-{{ episode_card(ep, heading="h2") }}
+{{ episode_card(ep, heading="h3") }}
 {% endfor %}
             </div>
         </div>
