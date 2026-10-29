@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% for pg in pages %}
+  <url>
+    <loc>{{ base_url }}{{ pg.path }}</loc>
+{% if pg.lastmod %}
+    <lastmod>{{ pg.lastmod.isoformat() }}</lastmod>
+{% endif %}
+  </url>
+{% endfor %}
+</urlset>

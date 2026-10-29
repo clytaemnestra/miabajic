@@ -1,0 +1,66 @@
+# {{ profile.name }}
+
+> {{ profile.name }} is a {{ profile.job_title }} at {{ profile.employer }} ({{ profile.work_focus }}), a Fellow of the Python Software Foundation, Vice Chair of the EuroPython Society, and the host of the podcast {{ podcast.name }}. Based in {{ profile.location }}. {{ profile.availability }}
+
+{% for paragraph in profile.bio %}
+{{ paragraph }}
+
+{% endfor %}
+## Roles
+
+{% for role in profile.roles %}
+- {{ role }}
+{% endfor %}
+
+## Speaking topics
+
+{% for topic in profile.topics %}
+- {{ topic }}
+{% endfor %}
+
+## Contact
+
+- Email: {{ profile.email }}
+- {{ profile.availability }}
+{% for item in profile.open_to %}
+- Open to: {{ item }}
+{% endfor %}
+
+## Pages
+
+- [Home]({{ base_url }}/): facts, latest episodes, talks, contact
+- [Speaking]({{ base_url }}/speaking/): topics, keynotes, availability
+- [Talks]({{ base_url }}/talks/): every talk with date, event, slides and video
+- [Podcast: {{ podcast.name }}]({{ base_url }}/podcast/): all episodes
+
+## {{ podcast.name }} episodes
+
+{% for ep in episodes %}
+- [{{ ep.title }}]({{ base_url }}{{ ep.url }}) ({{ ep.date.isoformat() }}): {{ ep.lede }}
+{% endfor %}
+
+## Talks
+
+{% for talk in talks %}
+- [{{ talk.title }}]({{ base_url }}{{ talk.url }}): {% for d in talk.deliveries | reverse %}{{ d.event }}{% if d.type != "talk" %} ({{ d.type }}){% endif %}{% if not loop.last %}, {% endif %}{% endfor %}
+
+{% endfor %}
+{% if upcoming %}
+
+## Upcoming
+
+{% for d in upcoming %}
+- {{ d.date.isoformat() }}: {{ d.talk.display_title }}, {{ d.event }}{% if d.type != "talk" %} ({{ d.type }}){% endif %}
+
+{% endfor %}
+{% endif %}
+
+## Elsewhere
+
+{% for link in links %}
+- {{ link.label }}: {{ link.url }}
+{% endfor %}
+- {{ podcast.name }} on YouTube: {{ podcast.youtube }}
+- {{ podcast.name }} on Spotify: {{ podcast.spotify }}
+- {{ podcast.name }} on Apple Podcasts: {{ podcast.apple }}
+- {{ podcast.name }} RSS feed: {{ podcast.rss }}
