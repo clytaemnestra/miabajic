@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-padding-top: 100px; /* keep anchor targets clear of the fixed header */
+}
+
 body {
     font-family: 'Rajdhani', 'Tahoma', sans-serif;
     line-height: 1.8;
@@ -144,6 +148,7 @@ body::before {
     background: linear-gradient(135deg, #001529 0%, #003a5c 50%, #001529 100%);
     position: relative;
     z-index: 2;
+    overflow: hidden; /* the 500px glow below would widen the page on phones */
 }
 
 .hero::before {
@@ -984,15 +989,15 @@ body::before {
 }
 
 .transcript-entry {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
+.page a.transcript-timestamp,
 .transcript-timestamp {
     color: #ff99cc;
     font-weight: 600;
     font-size: 1rem;
     margin-bottom: 0.3rem;
-.page a.transcript-timestamp,
     display: inline-block;
 }
 
@@ -1130,8 +1135,17 @@ body::before {
 }
 
 @media (max-width: 768px) {
+    /* The header wraps to two rows on phones (~150px). */
+    html {
+        scroll-padding-top: 170px;
+    }
+
+    .hero {
+        margin-top: 150px;
+    }
+
     .page {
-        margin-top: 140px;
+        margin-top: 175px;
         padding: 0 1rem;
     }
 
