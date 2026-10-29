@@ -29,12 +29,12 @@
   bio: >-
     Product Lead and Engineering Manager at Torchbox, Wagtail product lead, and President of the
     Django Software Foundation.
-  website: "TODO(mia): website or profile link"
+  website: https://thib.me
 
 - name: Mateusz Modrzejewski
   bio: >-
     Professional musician, AI researcher and assistant professor at the Warsaw University of Technology.
-  website: "TODO(mia): website or profile link"
+  website: https://orcid.org/0000-0002-6363-8584
 
 - name: Armin Ronacher
   bio: >-
@@ -70,7 +70,7 @@
   bio: >-
     PhD in astrophysics; Research and Development Principal Manager at The Qt Company, leading the
     Qt for Python (PySide6) team and the Qt Core team.
-  website: "TODO(mia): website or profile link"
+  website: https://maureira.dev
 
 - name: Kushal Das
   bio: >-
