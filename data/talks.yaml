@@ -142,7 +142,7 @@ talks:
         country: United States
         type: talk
         slides_url: https://github.com/clytaemnestra/talks/blob/main/fastapi-django-orm.pdf
-        video_url: https://www.youtube.com/watch?v=mllmOJFjaDc
+        # video_url: https://www.youtube.com/watch?v=mllmOJFjaDc  (private on YouTube as of Oct 2026; restore if it is public again)
 
   - slug: getting-started-with-fastapi
     title: Getting Started with FastAPI for Web Development
@@ -154,7 +154,7 @@ talks:
         city: Windhoek
         country: Namibia
         type: talk
-        slides_url: https://github.com/clytaemnestra/talks/blob/main/introduction-to-fastapi/getting-started-with-fastapi-for-web-development.pdf
+        slides_url: https://github.com/clytaemnestra/talks/blob/main/getting-started-with-fastapi-for-web-development.pdf
 
   - slug: standard-library-tour
     title: The Standard Library Tour
