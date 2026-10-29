@@ -79,6 +79,15 @@ open_to:
   - Podcast guesting
   - Collaboration
 
+# Homepage "Community Work" card.
+community:
+  - Vice Chair of the EuroPython Society
+  - Fellow of the Python Software Foundation
+  - Co-organizer of Pyvo Prague
+  - Co-organizer of PyCon CZ 2023
+  - Co-organizer of Python Pizza Prague
+  - Helped bring EuroPython to Prague
+
 organizations:
   - name: Python Software Foundation
     url: https://www.python.org/psf/

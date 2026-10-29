@@ -104,7 +104,11 @@
                 </div>
                 <div class="section-card">
                     <h3>Community Work</h3>
-                    <p>Vice Chair of the EuroPython Society, PSF Fellow, and co-organizer of Python events in Prague.</p>
+                    <ul class="card-list">
+{% for item in profile.community %}
+                        <li>{{ item }}</li>
+{% endfor %}
+                    </ul>
                     <a href="{{ profile.community_blog_url }}" class="section-link">Browse posts about community →</a>
                 </div>
             </div>
