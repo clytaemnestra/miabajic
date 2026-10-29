@@ -1,10 +1,10 @@
 {% extends "base.html" %}
-{% from "_macros.html" import delivery_line %}
+{% from "_macros.html" import talks_table %}
 {% block content %}
-    <main id="main" class="page">
+    <main id="main" class="page wide">
         <h1>Speaking</h1>
         <p class="description">{{ profile.availability }}</p>
-        <p>Contact: <a href="mailto:{{ profile.email }}">{{ profile.email }}</a></p>
+        <p>{{ profile.contact_line }} Email: <a href="mailto:{{ profile.email }}">{{ profile.email }}</a></p>
 {% for paragraph in profile.bio[:2] %}
         <p>{{ paragraph }}</p>
 {% endfor %}
@@ -27,30 +27,13 @@
             </ul>
         </div>
 
-{% if upcoming %}
-        <div class="section">
-            <h2>Upcoming</h2>
-            <ul class="card-list">
-{% for d in upcoming %}
-                <li>{{ delivery_line(d) }}</li>
-{% endfor %}
-            </ul>
-        </div>
-{% endif %}
+        <h2>Keynotes and talks</h2>
+        <p>Keynotes: {% for d in keynotes %}{{ d.talk.display_title }} ({{ d.event }}){% if not loop.last %}; {% endif %}{% endfor %}. {{ profile.name }} has given {{ talk_count }} talks, keynotes and panels{% if upcoming %}, with {{ upcoming | length }} more scheduled{% endif %}. Newest first:</p>
+        {{ talks_table(deliveries) }}
 
-        <div class="section">
-            <h2>Keynotes</h2>
-            <ul class="card-list">
-{% for d in keynotes %}
-                <li>{{ delivery_line(d) }}</li>
-{% endfor %}
-            </ul>
-            <p><a href="/talks/">All {{ talk_count }} talks and panels, with slides and videos →</a></p>
-        </div>
-
-        <div class="section">
+        <div class="section" style="margin-top: 3rem;">
             <h2>Podcast</h2>
-            <p>{{ profile.name }} hosts <a href="/podcast/">{{ podcast.name }}</a>, a podcast with maintainers and contributors from the Python and open source community ({{ site.episodes | length }} episodes).</p>
+            <p>{{ profile.name }} hosts <a href="/podcast/">{{ podcast.name }}</a>, a podcast with maintainers and contributors from the Python and open source community ({{ site.episodes | length }} episodes). She is also available as a guest on other podcasts, and welcomes suggestions for guests on Behind the Commit.</p>
         </div>
     </main>
 {% endblock %}

@@ -385,7 +385,7 @@ def build_pages(site):
             f"Speaking: {p['name']}",
             f"{p['name']} speaks about {join_names([t.lower() for t in p['topics']])}. {p['availability']}",
             [person],
-            {"upcoming": site.upcoming, "keynotes": [d for d in site.past if d["type"] == "keynote"], "talk_count": len(site.past)},
+            {"upcoming": site.upcoming, "keynotes": [d for d in site.past if d["type"] == "keynote"], "talk_count": len(site.past), "deliveries": site.deliveries},
         ),
         Page(
             "/talks/",

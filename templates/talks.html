@@ -1,26 +1,10 @@
 {% extends "base.html" %}
+{% from "_macros.html" import talks_table %}
 {% block content %}
     <main id="main" class="page wide">
         <h1>Talks by {{ profile.name }}</h1>
         <p class="description">{{ profile.name }} has given {{ site.past | length }} conference talks, keynotes and panels{% if site.upcoming %}, with {{ site.upcoming | length }} more scheduled{% endif %}. The list is newest first; slides are also collected at <a href="https://github.com/clytaemnestra/talks">github.com/clytaemnestra/talks</a>. {{ profile.availability }} See <a href="/speaking/">Speaking</a>.</p>
 
-        <div class="table-wrap">
-            <table class="data-table">
-                <thead>
-                    <tr><th>Date</th><th>Talk</th><th>Event</th><th>Slides</th><th>Video</th></tr>
-                </thead>
-                <tbody>
-{% for d in deliveries %}
-                    <tr>
-                        <td class="nowrap">{{ d.date | date_short }}</td>
-                        <td>{% if d.talk.url %}<a href="{{ d.talk.url }}">{{ d.talk.display_title }}</a>{% else %}{{ d.talk.display_title }}{% endif %}{% if d.type != "talk" %} <span class="badge">{{ d.type }}</span>{% endif %}{% if d.upcoming %} <span class="badge">upcoming</span>{% endif %}</td>
-                        <td>{{ d.event }}{% if d.city %}, {{ d.city }}{% endif %}</td>
-                        <td>{% if d.slides_url %}<a href="{{ d.slides_url }}">Slides</a>{% endif %}</td>
-                        <td>{% if d.video_url %}<a href="{{ d.video_url }}">Video</a>{% endif %}</td>
-                    </tr>
-{% endfor %}
-                </tbody>
-            </table>
-        </div>
+        {{ talks_table(deliveries) }}
     </main>
 {% endblock %}

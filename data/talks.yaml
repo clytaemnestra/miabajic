@@ -151,7 +151,7 @@ talks:
         country: United States
         type: talk
         slides_url: https://github.com/clytaemnestra/talks/blob/main/fastapi-django-orm.pdf
-        # video_url: https://www.youtube.com/watch?v=mllmOJFjaDc  (private on YouTube as of Oct 2026; restore if it is public again)
+        video_url: https://www.youtube.com/watch?v=dgV6RgybczY
 
   - slug: getting-started-with-fastapi
     title: Getting Started with FastAPI for Web Development
