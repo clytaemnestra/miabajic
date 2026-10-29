@@ -28,9 +28,6 @@
 {% endif %}
                 <a href="{{ podcast.spotify }}" class="listen-link">Spotify</a>
                 <a href="{{ podcast.apple }}" class="listen-link">Apple Podcasts</a>
-{% if ep and ep.rss_url %}
-                <a href="{{ ep.rss_url }}" class="listen-link">Listen on RSS.com</a>
-{% endif %}
                 <a href="{{ podcast.rss }}" class="listen-link">RSS Feed</a>
             </div>
 {% endmacro %}

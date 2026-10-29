@@ -53,7 +53,7 @@
                 <div class="transcript-content">
 {% for entry in ep.transcript %}
                     <div class="transcript-entry">
-                        <div class="transcript-timestamp">[{{ entry.timestamp }}]</div>
+                        <a class="transcript-timestamp" href="{{ ep.youtube_url }}&amp;t={{ entry.seconds }}s">[{{ entry.timestamp }}]</a>
                         <p class="transcript-text">{{ entry.text }}</p>
                     </div>
 {% endfor %}

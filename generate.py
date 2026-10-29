@@ -73,6 +73,7 @@ def as_date(value):
 @dataclass
 class TranscriptEntry:
     timestamp: str
+    seconds: int
     text: str
 
 
@@ -97,7 +98,8 @@ def parse_vtt(path, fixes=(), cues_per_entry=5):
         text = re.sub(r"\s+", " ", " ".join(t for _, t in group)).strip()
         for wrong, right in fixes:
             text = text.replace(wrong, right)
-        entries.append(TranscriptEntry(format_vtt_time(group[0][0]), text))
+        timestamp = format_vtt_time(group[0][0])
+        entries.append(TranscriptEntry(timestamp, chapter_seconds(timestamp), text))
     return entries
 
 
@@ -166,8 +168,9 @@ def load_site(today):
             sys.exit(f"episode {ep['slug']}: guests not in guests.yaml: {missing}")
         ep["guest_objs"] = [guests[name] for name in ep["guests"]]
         ep["guest_names"] = join_names(ep["guests"])
-        # Guest names always appear in the link text, even when the title only has first names.
-        named = all(name in ep["title"] for name in ep["guests"])
+        # Guest names appear in the link text; a title that already names every guest
+        # (first names are enough) is left as is.
+        named = all(name.split()[0] in ep["title"] for name in ep["guests"])
         ep["link_text"] = ep["title"] if named else f"{ep['title']} (with {ep['guest_names']})"
         ep["lede"] = f"Mia Bajić talks with {ep['guest_names']} about {ep['topic']}."
         ep["url"] = f"/podcast/{ep['slug']}/"

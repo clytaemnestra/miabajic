@@ -992,6 +992,7 @@ body::before {
     font-weight: 600;
     font-size: 1rem;
     margin-bottom: 0.3rem;
+.page a.transcript-timestamp,
     display: inline-block;
 }
 
