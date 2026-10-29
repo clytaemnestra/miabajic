@@ -3,12 +3,14 @@
 #
 # type: talk | keynote | panel
 # Any value starting with "TODO" is treated as missing by generate.py (not rendered, reported at build).
+# Abstracts are condensed from the published conference programmes (source in a comment above each).
 # City names were filled from public conference information, not from the README: please verify.
 
 talks:
   - slug: hash-me-if-you-can-python-dictionaries
     title: "Hash me if you can: let's talk about Python dictionaries!"
-    abstract: "TODO(mia): 1–2 line abstract"
+    # abstract condensed from https://us.pycon.org/2026/schedule/presentation/90/
+    abstract: "How hash tables work under Python dictionaries, what the 2011 \"hash flooding\" vulnerability taught about algorithmic complexity attacks, why hash seeds are randomized, and why hash(-1) == hash(-2). Ends with a tour of Bloom filters and consistent hashing."
     tags: [Python, CPython internals, dictionaries]
     deliveries:
       - event: PyCon US 2026
@@ -21,7 +23,8 @@ talks:
 
   - slug: python-public-roadmap
     title: "Your Python has a public roadmap. Most engineers never read it."
-    abstract: "TODO(mia): 1–2 line abstract"
+    # abstract condensed from https://pretalx.com/pycon-lithuania-2026/talk/WZBDEZ/
+    abstract: "Python's technical roadmap is public, yet most engineers only find out about language changes when something breaks in CI. The keynote is about learning to read that roadmap, and about the community governance that makes it public."
     tags: [Python, PEPs, CPython]
     deliveries:
       - event: PyCon Lithuania 2026
@@ -34,7 +37,8 @@ talks:
 
   - slug: most-bizarre-software-bugs-in-history
     title: The Most Bizarre Software Bugs in History
-    abstract: "TODO(mia): 1–2 line abstract"
+    # abstract condensed from https://archive.fosdem.org/2026/schedule/event/GV9PKX-most-bizzare-bugs/
+    abstract: "What happens when software isn't tested? A look at the most bizarre software bugs in history, whether \"testing more\" is always the answer, and what these failures teach about building more resilient systems."
     tags: [software bugs, software failures, history of computing]
     deliveries:
       - event: WebExpo 2026
@@ -69,7 +73,8 @@ talks:
 
   - slug: psychology-behind-communities
     title: "The Psychology Behind Communities: Why Do We Really Contribute?"
-    abstract: "TODO(mia): 1–2 line abstract"
+    # abstract condensed from FOSDEM 2025 programme
+    abstract: "Why do people get involved in community work? The motivations go deeper than networking: fast and slow thinking, the role of the amygdala, basic human needs, and the impact of collective loneliness on society."
     tags: [open source, communities, maintainer psychology]
     deliveries:
       - event: FOSDEM 2025
@@ -93,7 +98,8 @@ talks:
 
   - slug: beyond-code-build-a-community-around-your-tools
     title: "Beyond Code: How to Build a Community Around Your Tools"
-    abstract: "TODO(mia): 1–2 line abstract"
+    # abstract condensed from https://www.openfest.org/2024/en/full-schedule/
+    abstract: "How an open source project finds its users: where programmers gather, how to start and grow a community when none exists, and how to contribute to one that already does, with stories from the Python community in the Czech Republic."
     tags: [open source, communities, developer experience]
     deliveries:
       - event: OpenFest 2024
@@ -118,7 +124,8 @@ talks:
 
   - slug: django-orm-and-fastapi-in-a-single-app
     title: "Combining Django ORM & FastAPI in a Single App"
-    abstract: "TODO(mia): 1–2 line abstract"
+    # abstract condensed from https://2024.djangocon.eu/pretalx/djangocon-europe-2024/talk/NGXABE/
+    abstract: "Combining synchronous Django ORM with asynchronous FastAPI, based on a data visualization tool running in production at several companies: how the setup works in practice, and its benefits and challenges."
     tags: [Django, FastAPI, Python web development]
     deliveries:
       - event: DjangoCon Europe 2024
@@ -158,7 +165,8 @@ talks:
 
   - slug: standard-library-tour
     title: The Standard Library Tour
-    abstract: "TODO(mia): 1–2 line abstract"
+    # abstract condensed from https://program.europython.eu/europython-2023/talk/VHWTVF/
+    abstract: "A tour of Python's standard library: less-known modules that do well-known things, and well-known modules that do less-known things, including functools, itertools, collections, doctest, difflib and contextlib."
     tags: [Python, standard library]
     deliveries:
       - event: PyCon Ireland 2023
@@ -185,7 +193,8 @@ talks:
 
   - slug: myths-and-stereotypes-about-it
     title: "Panel discussion: Myths and stereotypes about IT"
-    abstract: "TODO(mia): 1–2 line abstract"
+    # abstract condensed from https://cz.pycon.org/2023/program/panels/87/ (translated from Czech)
+    abstract: "A panel (in Czech) with software engineers who work with juniors and people starting out in IT: the most common myths and stereotypes about IT, how they show up at work, and how to overcome them."
     tags: [careers, diversity in tech]
     deliveries:
       - event: PyCon CZ 2023
@@ -197,7 +206,8 @@ talks:
 
   - slug: uncovering-pythons-surprises
     title: "Uncovering Python's Surprises"
-    abstract: "TODO(mia): 1–2 line abstract"
+    # abstract condensed from pyvideo.org (PyCon France 2023)
+    abstract: "Some of Python's most counterintuitive behaviours, how they work under the hood, and why they don't always behave as expected."
     tags: [Python, Python gotchas]
     deliveries:
       - event: PyCon France 2023
