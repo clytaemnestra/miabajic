@@ -1,0 +1,36 @@
+{% macro episode_card(ep, heading="h4") %}
+                <div class="episode">
+                    <a href="{{ ep.url }}" class="episode-thumbnail-link">
+                        <img src="{{ ep.thumbnail_url }}" alt="{{ ep.title }}" class="episode-thumbnail" loading="lazy">
+                    </a>
+                    <div class="episode-content">
+                        <{{ heading }}><a href="{{ ep.url }}">{{ ep.link_text }}</a></{{ heading }}>
+                        <p class="episode-meta">Episode {{ ep.number }} · {{ ep.date | date_long }} · {{ ep.duration_seconds | duration }}</p>
+                        <p>{{ ep.lede }}</p>
+                        <div class="episode-links">
+                            <a href="{{ ep.url }}" class="episode-link">Episode page</a>
+                            <a href="{{ ep.youtube_url }}" class="episode-link">Watch on YouTube</a>
+                        </div>
+                    </div>
+                </div>
+{% endmacro %}
+
+{% macro delivery_line(d) -%}
+<span class="when">{{ d.date | date_short }}</span> {% if d.talk.url %}<a href="{{ d.talk.url }}">{{ d.talk.display_title }}</a>{% else %}{{ d.talk.display_title }}{% endif %}, {{ d.event }}{% if d.city %} ({{ d.city }}){% endif %}{% if d.type != "talk" %} <span class="badge">{{ d.type }}</span>{% endif %}
+{%- endmacro %}
+
+{% macro listen_links(ep=None) %}
+            <div class="listen-links">
+{% if ep %}
+                <a href="{{ ep.youtube_url }}" class="listen-link">Watch on YouTube</a>
+{% else %}
+                <a href="{{ podcast.youtube }}" class="listen-link">YouTube</a>
+{% endif %}
+                <a href="{{ podcast.spotify }}" class="listen-link">Spotify</a>
+                <a href="{{ podcast.apple }}" class="listen-link">Apple Podcasts</a>
+{% if ep and ep.rss_url %}
+                <a href="{{ ep.rss_url }}" class="listen-link">Listen on RSS.com</a>
+{% endif %}
+                <a href="{{ podcast.rss }}" class="listen-link">RSS Feed</a>
+            </div>
+{% endmacro %}

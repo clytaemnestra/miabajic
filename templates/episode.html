@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% from "_macros.html" import listen_links %}
+{% block content %}
+    <main class="page">
+        <p class="episode-meta"><a href="/podcast/">{{ podcast.name }}</a> · Episode {{ ep.number }} · {{ ep.date | date_long }} · {{ ep.duration_seconds | duration }}</p>
+        <h1>{{ ep.title }}</h1>
+        <p class="description">{{ ep.lede }}</p>
+        <p class="description">{{ ep.summary }}</p>
+{% if ep.recorded_at %}
+        <p>Recorded at {{ ep.recorded_at }}.</p>
+{% endif %}
+
+        <div class="video-embed">
+            <iframe src="https://www.youtube-nocookie.com/embed/{{ ep.youtube_id }}" title="{{ ep.title }}" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+{{ listen_links(ep) }}
+
+        <div class="section">
+            <h2>About the {{ "guest" if ep.guest_objs | length == 1 else "guests" }}</h2>
+{% for g in ep.guest_objs %}
+            <h3>{% if g.website %}<a href="{{ g.website }}">{{ g.name }}</a>{% else %}{{ g.name }}{% endif %}</h3>
+            <p>{{ g.bio }}</p>
+{% endfor %}
+        </div>
+
+{% if ep.chapters %}
+        <div class="section">
+            <h2>Chapters</h2>
+            <ul class="chapters">
+{% for ch in ep.chapters %}
+                <li><a href="{{ ep.youtube_url }}&amp;t={{ ch.seconds }}s" class="timestamp">{{ ch.time }}</a> {{ ch.title }}</li>
+{% endfor %}
+            </ul>
+        </div>
+{% endif %}
+
+{% if ep.links %}
+        <div class="section">
+            <h2>Links &amp; Resources</h2>
+            <ul>
+{% for link in ep.links %}
+                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+{% endfor %}
+            </ul>
+        </div>
+{% endif %}
+
+{% if ep.transcript %}
+        <div class="transcript-section">
+            <details>
+                <summary>Full Transcript</summary>
+                <div class="transcript-content">
+{% for entry in ep.transcript %}
+                    <div class="transcript-entry">
+                        <div class="transcript-timestamp">[{{ entry.timestamp }}]</div>
+                        <p class="transcript-text">{{ entry.text }}</p>
+                    </div>
+{% endfor %}
+                </div>
+            </details>
+        </div>
+{% endif %}
+
+        <p>{{ podcast.name }} is a podcast hosted by <a href="/">{{ profile.name }}</a>. <a href="/podcast/">All episodes</a>.</p>
+    </main>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% from "_macros.html" import delivery_line %}
+{% block content %}
+    <main class="page">
+        <h1>Speaking</h1>
+        <p class="description">{{ profile.availability }}</p>
+        <p>Contact: <a href="mailto:{{ profile.email }}">{{ profile.email }}</a></p>
+{% for paragraph in profile.bio[:2] %}
+        <p>{{ paragraph }}</p>
+{% endfor %}
+
+        <div class="section">
+            <h2>Topics</h2>
+            <ul>
+{% for topic in profile.topics %}
+                <li>{{ topic }}</li>
+{% endfor %}
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Open to</h2>
+            <ul>
+{% for item in profile.open_to %}
+                <li>{{ item }}</li>
+{% endfor %}
+            </ul>
+        </div>
+
+{% if upcoming %}
+        <div class="section">
+            <h2>Upcoming</h2>
+            <ul class="card-list">
+{% for d in upcoming %}
+                <li>{{ delivery_line(d) }}</li>
+{% endfor %}
+            </ul>
+        </div>
+{% endif %}
+
+        <div class="section">
+            <h2>Keynotes</h2>
+            <ul class="card-list">
+{% for d in keynotes %}
+                <li>{{ delivery_line(d) }}</li>
+{% endfor %}
+            </ul>
+            <p><a href="/talks/">All {{ talk_count }} talks and panels, with slides and videos →</a></p>
+        </div>
+
+        <div class="section">
+            <h2>Podcast</h2>
+            <p>{{ profile.name }} hosts <a href="/podcast/">{{ podcast.name }}</a>, a podcast with maintainers and contributors from the Python and open source community ({{ site.episodes | length }} episodes).</p>
+        </div>
+    </main>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+    <main class="page">
+        <p class="episode-meta"><a href="/talks/">Talks</a></p>
+        <h1>{{ talk.title }}</h1>
+        {% set n = talk.deliveries | length %}
+        <p class="description">{{ talk.title }} is a {{ "keynote and talk" if talk.deliveries | selectattr("type", "equalto", "keynote") | list and talk.deliveries | rejectattr("type", "equalto", "keynote") | list else talk.deliveries[0].type }} by <a href="/">{{ profile.name }}</a>{% if n > 1 %}, given {{ n }} times{% endif %}: {% for d in talk.deliveries | reverse %}{{ d.event }}{% if d.city %} in {{ d.city }}{% endif %} ({{ d.date | date_long }}){% if not loop.last %}, {% endif %}{% endfor %}.</p>
+{% if talk.abstract %}
+        <p class="description">{{ talk.abstract }}</p>
+{% endif %}
+{% if talk.tags %}
+        <div class="tags">
+{% for tag in talk.tags %}
+            <span class="tag">{{ tag }}</span>
+{% endfor %}
+        </div>
+{% endif %}
+
+{% for d in talk.deliveries %}
+        <div class="section">
+            <h2>{{ d.event }}{% if d.type != "talk" %} <span class="badge">{{ d.type }}</span>{% endif %}{% if d.upcoming %} <span class="badge">upcoming</span>{% endif %}</h2>
+            <p>{{ d.date | date_long }}{% if d.city %} · {{ d.city }}{% if d.country %}, {{ d.country }}{% endif %}{% endif %}</p>
+{% if d.video_url and "youtube.com/watch?v=" in d.video_url %}
+            <div class="video-embed">
+                <iframe src="https://www.youtube-nocookie.com/embed/{{ d.video_url.split('v=')[1] }}" title="{{ talk.title }} at {{ d.event }}" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+{% endif %}
+{% if d.slides_url or d.video_url or d.code_url %}
+            <div class="listen-links" style="margin-bottom: 0;">
+{% if d.video_url %}
+                <a href="{{ d.video_url }}" class="listen-link">Video</a>
+{% endif %}
+{% if d.slides_url %}
+                <a href="{{ d.slides_url }}" class="listen-link">Slides</a>
+{% endif %}
+{% if d.code_url %}
+                <a href="{{ d.code_url }}" class="listen-link">Code</a>
+{% endif %}
+            </div>
+{% endif %}
+        </div>
+{% endfor %}
+
+        <p>{{ profile.availability }} <a href="/speaking/">Speaking</a> · <a href="/talks/">All talks by {{ profile.name }}</a></p>
+    </main>
+{% endblock %}

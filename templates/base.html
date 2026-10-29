@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include "_analytics.html" %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description }}">
+    <meta name="author" content="{{ profile.name }}">
+    <link rel="canonical" href="{{ canonical }}">
+    <link rel="icon" type="image/svg+xml" href="/static/logotype.svg">
+    <link rel="alternate" type="application/rss+xml" title="{{ podcast.name }}" href="{{ podcast.rss }}">
+
+    <meta property="og:type" content="{{ page.og_type }}">
+    <meta property="og:site_name" content="{{ profile.name }}">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.description }}">
+    <meta property="og:url" content="{{ canonical }}">
+    <meta property="og:image" content="{{ og_image }}">
+    <meta property="og:locale" content="en_US">
+{% if page.og_type == "profile" %}
+    <meta property="profile:first_name" content="{{ profile.given_name }}">
+    <meta property="profile:last_name" content="{{ profile.family_name }}">
+{% endif %}
+    <meta name="twitter:card" content="{{ 'summary_large_image' if page.image else 'summary' }}">
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:description" content="{{ page.description }}">
+    <meta name="twitter:image" content="{{ og_image }}">
+
+    <script type="application/ld+json">
+{{ ld }}
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container" aria-label="Main">
+            <a href="/" class="logo" style="text-decoration: none;">{{ profile.name }}</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="/podcast/">Podcast</a></li>
+                <li class="nav-item"><a href="/talks/">Talks</a></li>
+                <li class="nav-item"><a href="/speaking/">Speaking</a></li>
+                <li class="nav-item"><a href="{{ profile.blog_url }}">Blog</a></li>
+                <li class="nav-item"><a href="/#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+{% block content %}{% endblock %}
+
+    <footer class="footer">
+        <div class="section-container">
+            <p>&copy; {{ year }} {{ profile.name }}</p>
+        </div>
+    </footer>
+</body>
+</html>
