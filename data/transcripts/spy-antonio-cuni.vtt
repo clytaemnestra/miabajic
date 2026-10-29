@@ -1,0 +1,1918 @@
+WEBVTT
+
+00:00:00.160 --> 00:00:02.960
+You said Python is slow. Why is Python
+
+00:00:02.960 --> 00:00:03.919
+so slow?
+
+00:00:03.919 --> 00:00:07.680
+>> Python is slow because many reasons. But
+
+00:00:07.680 --> 00:00:10.320
+>> motivated you to create it.
+
+00:00:10.320 --> 00:00:11.920
+>> That's a good question. I think that
+
+00:00:11.920 --> 00:00:13.679
+ultimately is like frustration.
+
+00:00:13.679 --> 00:00:15.280
+>> Why did you name them Red and Blue? Is
+
+00:00:15.280 --> 00:00:16.880
+it from Matrix?
+
+00:00:16.880 --> 00:00:18.240
+>> No, I didn't think about that.
+
+00:00:18.240 --> 00:00:20.080
+>> Everyone, have you ever wondered why Spy
+
+00:00:20.080 --> 00:00:22.240
+so slow? If so, this is the right
+
+00:00:22.240 --> 00:00:24.080
+episode for you. In this episode, I
+
+00:00:24.080 --> 00:00:26.640
+talked to Antonio Chuni. Antonio is a
+
+00:00:26.640 --> 00:00:28.560
+principal engineer at Anaconda and
+
+00:00:28.560 --> 00:00:30.400
+author of Spy. a core developer of
+
+00:00:30.400 --> 00:00:32.559
+PIScript and Pi Pi and one of the
+
+00:00:32.559 --> 00:00:34.719
+founders of the HP pi project. He is
+
+00:00:34.719 --> 00:00:36.719
+also a creator, maintainer, contributor
+
+00:00:36.719 --> 00:00:38.480
+of numerous other open source projects
+
+00:00:38.480 --> 00:00:44.320
+such as PTB++, fantasy completer and VM
+
+00:00:44.320 --> 00:00:46.719
+We talked at Pyon US about Python
+
+00:00:46.719 --> 00:00:48.320
+performance. I asked you what do you
+
+00:00:48.320 --> 00:00:50.000
+think about it and you said Python is
+
+00:00:50.000 --> 00:00:52.480
+slow. Why is Python so slow?
+
+00:00:52.480 --> 00:00:54.320
+>> Oh, that's exactly the talk which I just
+
+00:00:54.320 --> 00:00:56.079
+gave. [laughter]
+
+00:00:56.079 --> 00:00:58.000
+No, why why Python is slow? Python is
+
+00:00:58.000 --> 00:01:02.559
+slow because uh many reasons but
+
+00:01:02.559 --> 00:01:05.360
+it's very dynamic language
+
+00:01:05.360 --> 00:01:07.600
+and uh
+
+00:01:07.600 --> 00:01:10.000
+the re the fact that it's so dynam
+
+00:01:10.000 --> 00:01:11.920
+dynamic makes it very very hard for
+
+00:01:11.920 --> 00:01:13.680
+implementation to make it fast.
+
+00:01:13.680 --> 00:01:16.159
+>> Mhm. But at the same time a lot of this
+
+00:01:16.159 --> 00:01:18.640
+dynamicity is what makes Python a nice
+
+00:01:18.640 --> 00:01:21.600
+language and uh so there is this like
+
+00:01:21.600 --> 00:01:24.640
+tradeoff and tension and uh that's like
+
+00:01:24.640 --> 00:01:26.000
+they they are part
+
+00:01:26.000 --> 00:01:27.759
+>> so if the only problem is the fact that
+
+00:01:27.759 --> 00:01:30.159
+Python is dynamic does it mean that if
+
+00:01:30.159 --> 00:01:32.400
+you have a static Python where you use
+
+00:01:32.400 --> 00:01:34.159
+type annotations and everything is
+
+00:01:34.159 --> 00:01:36.720
+static that means that it will be fast.
+
+00:01:36.720 --> 00:01:38.240
+Yes, that that these languages already
+
+00:01:38.240 --> 00:01:42.799
+exist like uh Rust or Java or C++ uh
+
+00:01:42.799 --> 00:01:45.040
+like uh static statically typed
+
+00:01:45.040 --> 00:01:48.479
+languages exist but uh they tend to be
+
+00:01:48.479 --> 00:01:53.600
+harder to use or less ergonomics or well
+
+00:01:53.600 --> 00:01:55.280
+just non-Pyonic like from the point of
+
+00:01:55.280 --> 00:01:57.759
+view of what we like in Python these
+
+00:01:57.759 --> 00:02:01.040
+languages like lack some features or
+
+00:02:01.040 --> 00:02:03.520
+they just feel different. So the
+
+00:02:03.520 --> 00:02:05.360
+challenge is to make something which is
+
+00:02:05.360 --> 00:02:08.319
+like fast but pythonic.
+
+00:02:08.319 --> 00:02:10.560
+>> Spy is a variant of Python. It's
+
+00:02:10.560 --> 00:02:12.319
+relatively new and it's designed to be
+
+00:02:12.319 --> 00:02:14.959
+statically compiled but at the same time
+
+00:02:14.959 --> 00:02:16.879
+it's very familiar to Python users
+
+00:02:16.879 --> 00:02:19.680
+because it uses uh the same or very
+
+00:02:19.680 --> 00:02:21.680
+similar syntax and it provides you with
+
+00:02:21.680 --> 00:02:23.920
+the same developer experience. What
+
+00:02:23.920 --> 00:02:26.640
+motivated you to create it?
+
+00:02:26.640 --> 00:02:28.160
+>> That's a good question. I think that
+
+00:02:28.160 --> 00:02:30.879
+ultimately is like frustration.
+
+00:02:30.879 --> 00:02:35.920
+No. Okay. So uh my my like history in
+
+00:02:35.920 --> 00:02:38.319
+the Python community roots back to like
+
+00:02:38.319 --> 00:02:41.440
+20 years ago. I started doing pi and pi
+
+00:02:41.440 --> 00:02:44.959
+is like advanced implementation of
+
+00:02:44.959 --> 00:02:47.920
+Python with a JIT compiler which aim to
+
+00:02:47.920 --> 00:02:51.040
+be fast and it actually is it has other
+
+00:02:51.040 --> 00:02:53.200
+problems but that's not that's not the
+
+00:02:53.200 --> 00:02:56.560
+the the topic. Um
+
+00:02:56.560 --> 00:03:00.400
+but the problem is that somehow it feels
+
+00:03:00.400 --> 00:03:02.720
+like we are playing a puzzle game. So
+
+00:03:02.720 --> 00:03:04.879
+there are a lot of features in in Python
+
+00:03:04.879 --> 00:03:06.720
+which makes it very hard to optimize.
+
+00:03:06.720 --> 00:03:09.360
+What I was saying earlier
+
+00:03:09.360 --> 00:03:12.159
+>> they are very interesting to solve and
+
+00:03:12.159 --> 00:03:14.239
+as a language implementtor you need to
+
+00:03:14.239 --> 00:03:17.360
+work around all this strange uh crazy
+
+00:03:17.360 --> 00:03:20.159
+stuff but then you realize that in
+
+00:03:20.159 --> 00:03:23.040
+practice they are not used a lot. And so
+
+00:03:23.040 --> 00:03:24.400
+we are in this strange situation in
+
+00:03:24.400 --> 00:03:27.440
+which you you have to take them into
+
+00:03:27.440 --> 00:03:29.519
+account but then they are not used and
+
+00:03:29.519 --> 00:03:32.080
+so like your language is more like your
+
+00:03:32.080 --> 00:03:34.319
+implementation is very complex and not
+
+00:03:34.319 --> 00:03:36.480
+as fast as it could be but at the same
+
+00:03:36.480 --> 00:03:39.680
+time you cannot avoid them because if
+
+00:03:39.680 --> 00:03:43.280
+you do then 0.01% of existing program
+
+00:03:43.280 --> 00:03:44.720
+stop working and that's not what you
+
+00:03:44.720 --> 00:03:46.560
+want. So you have this.
+
+00:03:46.560 --> 00:03:48.799
+>> Yeah. So you mentioned pi and you were
+
+00:03:48.799 --> 00:03:51.840
+also in the past involved with hpi. Are
+
+00:03:51.840 --> 00:03:53.599
+there some ideas that you took from
+
+00:03:53.599 --> 00:03:55.680
+those languages or variants and you
+
+00:03:55.680 --> 00:03:57.599
+decide to implement in spy or you decide
+
+00:03:57.599 --> 00:03:59.760
+to take a very different approach and to
+
+00:03:59.760 --> 00:04:01.439
+build something very different from
+
+00:04:01.439 --> 00:04:06.879
+scratch? Um it it so spy can feel very
+
+00:04:06.879 --> 00:04:09.519
+different than pi somehow but actually a
+
+00:04:09.519 --> 00:04:11.760
+lot of the ideas come from pi like from
+
+00:04:11.760 --> 00:04:13.599
+from the experience which I had with it
+
+00:04:13.599 --> 00:04:18.000
+in particular the fact that when you
+
+00:04:18.000 --> 00:04:20.160
+okay let's do a step back you are a
+
+00:04:20.160 --> 00:04:22.160
+python interpreter that you want to make
+
+00:04:22.160 --> 00:04:25.040
+python fast uh but python is super
+
+00:04:25.040 --> 00:04:28.720
+dynamic and uh
+
+00:04:28.720 --> 00:04:30.960
+in theory there is a lot of computation
+
+00:04:30.960 --> 00:04:32.880
+that you need to do again and again and
+
+00:04:32.880 --> 00:04:36.880
+again and and and that's what like a
+
+00:04:36.880 --> 00:04:41.199
+um easy interpreter does and and it
+
+00:04:41.199 --> 00:04:43.440
+loses a lot of time redoing the same
+
+00:04:43.440 --> 00:04:45.440
+computation. So for example, if you have
+
+00:04:45.440 --> 00:04:48.160
+a loop which is doing additions on
+
+00:04:48.160 --> 00:04:50.080
+numbers on a list on numbers, you need
+
+00:04:50.080 --> 00:04:52.320
+to do the lookup for the plus
+
+00:04:52.320 --> 00:04:54.960
+implementation every time at every loop.
+
+00:04:54.960 --> 00:04:58.479
+>> What what a JIT compiler does both pipi
+
+00:04:58.479 --> 00:05:01.680
+but also the new uh um CPython jet
+
+00:05:01.680 --> 00:05:04.160
+compiler is to realize that a lot of
+
+00:05:04.160 --> 00:05:07.199
+this computation you you redo again and
+
+00:05:07.199 --> 00:05:09.520
+again. So you you think okay if this
+
+00:05:09.520 --> 00:05:11.759
+thing doesn't change I can premp compute
+
+00:05:11.759 --> 00:05:14.560
+it earlier and then uh and then save the
+
+00:05:14.560 --> 00:05:15.600
+results later
+
+00:05:15.600 --> 00:05:17.039
+>> and that's basically the bulk of it.
+
+00:05:17.039 --> 00:05:17.759
+That's how you make
+
+00:05:17.759 --> 00:05:20.639
+>> so uses the same approach that those
+
+00:05:20.639 --> 00:05:22.560
+operations which are used often that
+
+00:05:22.560 --> 00:05:24.240
+they are pre-ompiled so they don't have
+
+00:05:24.240 --> 00:05:26.400
+to be interpreted line by line but you
+
+00:05:26.400 --> 00:05:28.639
+have those templates you can reuse. Yes,
+
+00:05:28.639 --> 00:05:30.560
+the the the big difference is that in
+
+00:05:30.560 --> 00:05:32.720
+any JIT compiler which aims to implement
+
+00:05:32.720 --> 00:05:36.400
+full Python semantics is okay I think
+
+00:05:36.400 --> 00:05:40.560
+this thing is constant is uh um how can
+
+00:05:40.560 --> 00:05:42.639
+I say uh best effort
+
+00:05:42.639 --> 00:05:45.039
+>> we hope it works if it doesn't then we
+
+00:05:45.039 --> 00:05:47.120
+fall back to be slow and then for the
+
+00:05:47.120 --> 00:05:49.120
+user it becomes very hard because
+
+00:05:49.120 --> 00:05:53.360
+depending if if your program doesn't
+
+00:05:53.360 --> 00:05:55.840
+um is not fully understandable by the
+
+00:05:55.840 --> 00:05:58.400
+the VM then the VM is not able to
+
+00:05:58.400 --> 00:05:59.759
+optimize but it still works. It's slow
+
+00:05:59.759 --> 00:06:02.000
+and you don't know why and and then you
+
+00:06:02.000 --> 00:06:04.240
+have to spend hours trying to understand
+
+00:06:04.240 --> 00:06:06.560
+why the G compile didn't kick in.
+
+00:06:06.560 --> 00:06:08.479
+>> And with spy the approach is different
+
+00:06:08.479 --> 00:06:11.759
+is if the rules of the lang the rules of
+
+00:06:11.759 --> 00:06:13.120
+the language are designed in such a way
+
+00:06:13.120 --> 00:06:15.520
+that if you cannot make it fast then you
+
+00:06:15.520 --> 00:06:18.560
+get a nice error. So if this thing which
+
+00:06:18.560 --> 00:06:20.800
+the J compiler hopes it's constant in
+
+00:06:20.800 --> 00:06:22.800
+inspire you try to change it then you
+
+00:06:22.800 --> 00:06:24.240
+get an error say okay you cannot change
+
+00:06:24.240 --> 00:06:25.680
+it because there's
+
+00:06:25.680 --> 00:06:26.560
+>> and you know why
+
+00:06:26.560 --> 00:06:28.720
+>> yes that's that's the core of the idea
+
+00:06:28.720 --> 00:06:30.639
+>> and what are some biggest challenges you
+
+00:06:30.639 --> 00:06:32.880
+faced while developing spy is it only
+
+00:06:32.880 --> 00:06:35.199
+Python's dynamic nature or are there
+
+00:06:35.199 --> 00:06:36.960
+more things under the hood that we don't
+
+00:06:36.960 --> 00:06:38.880
+see that are very challenging to be
+
+00:06:38.880 --> 00:06:40.319
+implementing in spy
+
+00:06:40.319 --> 00:06:43.600
+>> so the hardest part in spy so far so spy
+
+00:06:43.600 --> 00:06:45.440
+is a very new is a very new project I
+
+00:06:45.440 --> 00:06:47.280
+mean I've been working couple of years
+
+00:06:47.280 --> 00:06:49.120
+but at the beginning not full-time and
+
+00:06:49.120 --> 00:06:52.000
+then I started doing other stuff in the
+
+00:06:52.000 --> 00:06:55.280
+last 6 months or so I'm doing it
+
+00:06:55.280 --> 00:06:57.120
+The hardest part is basically language
+
+00:06:57.120 --> 00:06:59.599
+design because
+
+00:06:59.599 --> 00:07:01.199
+you can think of it as a variant of
+
+00:07:01.199 --> 00:07:03.280
+Python or a subset of Python or
+
+00:07:03.280 --> 00:07:05.199
+something like that statically typed
+
+00:07:05.199 --> 00:07:07.680
+version of Python but in reality is a
+
+00:07:07.680 --> 00:07:10.160
+different language with different rules
+
+00:07:10.160 --> 00:07:11.840
+and you need to design them and they
+
+00:07:11.840 --> 00:07:14.960
+design them in a way that are ergonomic
+
+00:07:14.960 --> 00:07:17.520
+to the end users. The the the hard part
+
+00:07:17.520 --> 00:07:19.599
+is to design something which feels like
+
+00:07:19.599 --> 00:07:21.919
+Python. So I really want that people
+
+00:07:21.919 --> 00:07:24.479
+coming from the Python community should
+
+00:07:24.479 --> 00:07:26.720
+should find it very obvious what it does
+
+00:07:26.720 --> 00:07:28.720
+even without knowing all the details of
+
+00:07:28.720 --> 00:07:30.000
+the semantics
+
+00:07:30.000 --> 00:07:32.560
+>> and uh there isn't this tension between
+
+00:07:32.560 --> 00:07:34.319
+okay maybe I should do this but I don't
+
+00:07:34.319 --> 00:07:36.400
+want to do things too differently so
+
+00:07:36.400 --> 00:07:38.080
+let's let's try to find a
+
+00:07:38.080 --> 00:07:39.840
+>> so it was very hard to make it static
+
+00:07:39.840 --> 00:07:42.479
+but also very pythonic
+
+00:07:42.479 --> 00:07:44.160
+>> and what does it mean pythonic to you
+
+00:07:44.160 --> 00:07:47.199
+because you described spy to aim to be
+
+00:07:47.199 --> 00:07:50.080
+fast as c pythonic as python What does
+
+00:07:50.080 --> 00:07:52.160
+it mean Pythonic to you and what are
+
+00:07:52.160 --> 00:07:54.160
+some features or some qualities of
+
+00:07:54.160 --> 00:07:56.560
+Python that you that are important that
+
+00:07:56.560 --> 00:07:58.639
+you prioritize?
+
+00:07:58.639 --> 00:08:01.120
+>> That's a that's an unanswerable question
+
+00:08:01.120 --> 00:08:04.960
+like Pythonic is a very very like
+
+00:08:04.960 --> 00:08:10.080
+uh not it's not well defined. Yeah. But
+
+00:08:10.080 --> 00:08:12.560
+>> I it's it's easier to say what is
+
+00:08:12.560 --> 00:08:15.280
+unpyonic. So like if you use other
+
+00:08:15.280 --> 00:08:17.599
+languages there are a a number of
+
+00:08:17.599 --> 00:08:19.199
+patterns that in Python comes very
+
+00:08:19.199 --> 00:08:20.639
+naturally and in other languages you
+
+00:08:20.639 --> 00:08:23.840
+cannot do decorator. So in Python it
+
+00:08:23.840 --> 00:08:25.919
+it's it's very easy to add a decorator
+
+00:08:25.919 --> 00:08:28.240
+to a function and then you do automatic
+
+00:08:28.240 --> 00:08:31.440
+logging or of exceptions something like
+
+00:08:31.440 --> 00:08:34.560
+>> and uh if you want to do it in C++ well
+
+00:08:34.560 --> 00:08:39.360
+it's impossible you need to do strange
+
+00:08:39.360 --> 00:08:41.919
+and um in Java I think that you have
+
+00:08:41.919 --> 00:08:43.360
+something like similar but like it
+
+00:08:43.360 --> 00:08:48.800
+really feels not as nice and as uh um
+
+00:08:48.800 --> 00:08:51.120
+natural as it does in Pythons. And can
+
+00:08:51.120 --> 00:08:52.959
+you use decorators in spy?
+
+00:08:52.959 --> 00:08:54.399
+>> Not yet because it's work in progress,
+
+00:08:54.399 --> 00:08:56.640
+but it's it will be. Yes.
+
+00:08:56.640 --> 00:08:58.640
+>> And um
+
+00:08:58.640 --> 00:09:01.120
+>> I would say that Python is a very
+
+00:09:01.120 --> 00:09:04.720
+expressive language and it's but this
+
+00:09:04.720 --> 00:09:07.360
+expressiveness is not used by most
+
+00:09:07.360 --> 00:09:12.160
+>> Mh. So like the vast majority of like
+
+00:09:12.160 --> 00:09:15.200
+normal Python users use pre-built
+
+00:09:15.200 --> 00:09:17.200
+libraries and then they you have like
+
+00:09:17.200 --> 00:09:20.240
+Jupyter notebook or data processing
+
+00:09:20.240 --> 00:09:24.000
+script and or AI and use these libraries
+
+00:09:24.000 --> 00:09:27.040
+made by others and the libraries have an
+
+00:09:27.040 --> 00:09:29.839
+incredibly nice API which is user
+
+00:09:29.839 --> 00:09:32.720
+>> And that's why I think it's one of good
+
+00:09:32.720 --> 00:09:34.320
+reason why Python became so popular
+
+00:09:34.320 --> 00:09:36.240
+because it's very natural. You can write
+
+00:09:36.240 --> 00:09:37.360
+libraries which are very natural
+
+00:09:37.360 --> 00:09:38.320
+>> very easy to learn.
+
+00:09:38.320 --> 00:09:42.480
+>> But if you look into these libraries
+
+00:09:42.480 --> 00:09:45.440
+they use advanced features to make this
+
+00:09:45.440 --> 00:09:48.160
+API as natural as possible. advanced
+
+00:09:48.160 --> 00:09:51.839
+advanced features like meta classes,
+
+00:09:51.839 --> 00:09:54.640
+uh import time premputation,
+
+00:09:54.640 --> 00:09:57.120
+um descriptors
+
+00:09:57.120 --> 00:10:00.959
+and uh the the idea of spy is to make
+
+00:10:00.959 --> 00:10:03.519
+sure that all these patterns are still
+
+00:10:03.519 --> 00:10:05.760
+>> and that's like in in this sense they
+
+00:10:05.760 --> 00:10:09.920
+must be pyonic. Um
+
+00:10:09.920 --> 00:10:14.880
+even if you might need to change a bit
+
+00:10:14.880 --> 00:10:18.240
+of of what you used to do but like for
+
+00:10:18.240 --> 00:10:20.240
+from the point of view of power users
+
+00:10:20.240 --> 00:10:22.480
+yes you need to learn new rules of the
+
+00:10:22.480 --> 00:10:24.720
+language but from the point of view of
+
+00:10:24.720 --> 00:10:27.200
+let's say end users using libraries you
+
+00:10:27.200 --> 00:10:29.360
+should shouldn't find a lot of
+
+00:10:29.360 --> 00:10:30.959
+>> So you would like to make all those
+
+00:10:30.959 --> 00:10:32.480
+possible but they're not there yet
+
+00:10:32.480 --> 00:10:34.480
+because it's work in progress. What is
+
+00:10:34.480 --> 00:10:38.160
+the current road map of spy? So um
+
+00:10:38.160 --> 00:10:42.079
+another thing that I I'll answer another
+
+00:10:42.079 --> 00:10:46.480
+question before which is like
+
+00:10:46.480 --> 00:10:49.279
+spy also aims to be a two-level
+
+00:10:49.279 --> 00:10:50.880
+>> Mhm. in the sense that currently in
+
+00:10:50.880 --> 00:10:53.760
+Python you have this high level uh
+
+00:10:53.760 --> 00:10:56.640
+language which is relatively slow but
+
+00:10:56.640 --> 00:10:59.040
+then if you want to implement numpy or
+
+00:10:59.040 --> 00:11:01.760
+pytorch you need to go to a lower level
+
+00:11:01.760 --> 00:11:03.360
+language and so you numpy is written in
+
+00:11:03.360 --> 00:11:05.680
+C pytor is written in C++ other stuff
+
+00:11:05.680 --> 00:11:09.360
+are written in rust or in Syon and uh
+
+00:11:09.360 --> 00:11:12.320
+you have to to do the jump and change
+
+00:11:12.320 --> 00:11:14.480
+>> uh spy wants to be a two-level language
+
+00:11:14.480 --> 00:11:17.519
+so it has a low-level core which is
+
+00:11:17.519 --> 00:11:20.240
+super fast and on On top of it, you can
+
+00:11:20.240 --> 00:11:22.480
+build high level abstractions without
+
+00:11:22.480 --> 00:11:25.120
+paying extra cost. So what I have so far
+
+00:11:25.120 --> 00:11:28.320
+is that this low-level core is mostly
+
+00:11:28.320 --> 00:11:32.320
+done or very in a very good shape and
+
+00:11:32.320 --> 00:11:34.399
+now I can start building my own
+
+00:11:34.399 --> 00:11:36.000
+abstractions which means for example
+
+00:11:36.000 --> 00:11:39.440
+that I don't have list type in spy. So
+
+00:11:39.440 --> 00:11:41.760
+it's it's very work in progress but why
+
+00:11:41.760 --> 00:11:43.760
+because list will be implemented in spy
+
+00:11:43.760 --> 00:11:46.079
+itself and it's actually what I'm going
+
+00:11:46.079 --> 00:11:48.560
+to do next. So next I want to have like
+
+00:11:48.560 --> 00:11:50.720
+more built-in types like list,
+
+00:11:50.720 --> 00:11:52.079
+dictionary, arrays.
+
+00:11:52.079 --> 00:11:56.720
+>> Mhm. And um I also plan to have a
+
+00:11:56.720 --> 00:11:59.519
+initial kind of integration with uh
+
+00:11:59.519 --> 00:12:01.839
+CPython so that from a spy module you
+
+00:12:01.839 --> 00:12:03.440
+can generate a CPython extension which
+
+00:12:03.440 --> 00:12:06.240
+is fast and usable in Python programs
+
+00:12:06.240 --> 00:12:09.279
+and and I want to mod like it generally
+
+00:12:09.279 --> 00:12:11.360
+improve ergonomics of the language
+
+00:12:11.360 --> 00:12:14.000
+because right now it's like sometimes
+
+00:12:14.000 --> 00:12:16.720
+get just a crash in the interpreter and
+
+00:12:16.720 --> 00:12:18.560
+>> So you mentioned that spy has two
+
+00:12:18.560 --> 00:12:20.320
+levels. Can you walk us through the
+
+00:12:20.320 --> 00:12:22.160
+compilation pipeline? So let's say I
+
+00:12:22.160 --> 00:12:25.040
+create a file with the extension.spy. I
+
+00:12:25.040 --> 00:12:27.600
+write there I create there an array or
+
+00:12:27.600 --> 00:12:30.000
+something and I have some for loop. What
+
+00:12:30.000 --> 00:12:32.079
+happens under the hood?
+
+00:12:32.079 --> 00:12:35.680
+>> Okay. So from
+
+00:12:35.680 --> 00:12:38.000
+from a high level point of view what spy
+
+00:12:38.000 --> 00:12:42.639
+does is pretty textbook. Uh so to start
+
+00:12:42.639 --> 00:12:44.639
+with we have two modality. Spy is both
+
+00:12:44.639 --> 00:12:47.040
+an interpreter and a compiler which is
+
+00:12:47.040 --> 00:12:49.760
+super important because as a developer
+
+00:12:49.760 --> 00:12:51.360
+for developer experience you want to
+
+00:12:51.360 --> 00:12:53.200
+have an interpreter which is nicer to
+
+00:12:53.200 --> 00:12:55.839
+debug and uh get better except
+
+00:12:55.839 --> 00:12:59.120
+exceptions fast development cycle all
+
+00:12:59.120 --> 00:13:00.240
+the thing that we like in Python
+
+00:13:00.240 --> 00:13:01.839
+>> and that's the concept of the red and
+
+00:13:01.839 --> 00:13:02.959
+blue code right
+
+00:13:02.959 --> 00:13:06.880
+>> yes so the the the pipeline is that you
+
+00:13:06.880 --> 00:13:08.720
+start with source code you parse it and
+
+00:13:08.720 --> 00:13:10.480
+you get an a
+
+00:13:10.480 --> 00:13:12.320
+>> and then in the interpreter what you
+
+00:13:12.320 --> 00:13:16.800
+have is a pretty standard uh asbased uh
+
+00:13:16.800 --> 00:13:18.800
+uh interpreter which works along the a
+
+00:13:18.800 --> 00:13:22.240
+and evaluate all the nodes.
+
+00:13:22.240 --> 00:13:26.079
+The innovative part is how you go you go
+
+00:13:26.079 --> 00:13:28.800
+from interpreter to the compiler and the
+
+00:13:28.800 --> 00:13:31.200
+idea is that what I was saying before a
+
+00:13:31.200 --> 00:13:34.639
+lot of stuff can be precomputed
+
+00:13:34.639 --> 00:13:38.000
+and instead of be a best effort and
+
+00:13:38.000 --> 00:13:41.200
+hoping that stuff doesn't change inspire
+
+00:13:41.200 --> 00:13:43.120
+the type system in design in such a way
+
+00:13:43.120 --> 00:13:45.839
+that a lot of the stuff is actually
+
+00:13:45.839 --> 00:13:47.920
+provable as constant.
+
+00:13:47.920 --> 00:13:50.720
+>> Mhm. and uh and then can be optimized
+
+00:13:50.720 --> 00:13:53.360
+that way before the compilation and uh
+
+00:13:53.360 --> 00:13:55.920
+the visualization of this is this blue
+
+00:13:55.920 --> 00:13:58.880
+and red uh nodes. So you imagine to have
+
+00:13:58.880 --> 00:14:00.880
+the A which is a tree
+
+00:14:00.880 --> 00:14:03.360
+>> and then you have a step in which you
+
+00:14:03.360 --> 00:14:06.160
+color the A and you see that some mod
+
+00:14:06.160 --> 00:14:08.480
+some nodes are blue which means that
+
+00:14:08.480 --> 00:14:10.720
+they are safe to be premputeed because
+
+00:14:10.720 --> 00:14:12.480
+they are guaranteed to give the same
+
+00:14:12.480 --> 00:14:15.839
+result again and again and and so
+
+00:14:15.839 --> 00:14:17.920
+there's this process of red shifting
+
+00:14:17.920 --> 00:14:20.959
+which basically takes its color a find
+
+00:14:20.959 --> 00:14:23.360
+the blue parts premputee them and
+
+00:14:23.360 --> 00:14:26.320
+substitute this big tree with just a
+
+00:14:26.320 --> 00:14:28.160
+single node which is the
+
+00:14:28.160 --> 00:14:31.120
+And the the what what's left is a much
+
+00:14:31.120 --> 00:14:33.199
+smaller tree which is easy to compile
+
+00:14:33.199 --> 00:14:34.480
+and faster to execute.
+
+00:14:34.480 --> 00:14:36.480
+>> Right. And I wonder why did you name
+
+00:14:36.480 --> 00:14:38.959
+them red and blue? Is it from matrix?
+
+00:14:38.959 --> 00:14:40.800
+>> No, I didn't think about that. Actually,
+
+00:14:40.800 --> 00:14:42.959
+it comes from pi. You asked before. So
+
+00:14:42.959 --> 00:14:46.320
+in pi we have similar concepts. Um in
+
+00:14:46.320 --> 00:14:49.360
+the pi jet you have concept of green and
+
+00:14:49.360 --> 00:14:51.680
+red variables and that's very similar to
+
+00:14:51.680 --> 00:14:56.639
+to to to the concept in spy. Um so at
+
+00:14:56.639 --> 00:14:57.920
+the beginning I actually called them
+
+00:14:57.920 --> 00:15:00.000
+green and red but then someone pointed
+
+00:15:00.000 --> 00:15:03.360
+out that is not uh blind color friendly
+
+00:15:03.360 --> 00:15:07.680
+and and so I checked and um yeah seems
+
+00:15:07.680 --> 00:15:09.760
+that blue and red is a good combination
+
+00:15:09.760 --> 00:15:11.920
+that's why is that way
+
+00:15:11.920 --> 00:15:14.079
+>> but I think it actually having color I
+
+00:15:14.079 --> 00:15:16.000
+mean it could be like a color A and B
+
+00:15:16.000 --> 00:15:18.160
+like they they need to be two categories
+
+00:15:18.160 --> 00:15:20.720
+don't need to color but having like a
+
+00:15:20.720 --> 00:15:23.040
+colors I think it will be important
+
+00:15:23.040 --> 00:15:24.720
+later because I plan to have like
+
+00:15:24.720 --> 00:15:29.040
+visualizations or IDI ID plugins pretty
+
+00:15:29.040 --> 00:15:31.040
+printers in which you can see like you
+
+00:15:31.040 --> 00:15:32.800
+type your code and you see some code is
+
+00:15:32.800 --> 00:15:34.399
+in blue some code is in red it's
+
+00:15:34.399 --> 00:15:38.000
+immediately obvious what is like free
+
+00:15:38.000 --> 00:15:40.399
+and will not cause computation at at
+
+00:15:40.399 --> 00:15:42.000
+runtime and what will be the actual
+
+00:15:42.000 --> 00:15:44.639
+computation so I think it will be an
+
+00:15:44.639 --> 00:15:47.519
+important part of the ergonomics of the
+
+00:15:47.519 --> 00:15:49.680
+>> and when you mentioned pi let's talk
+
+00:15:49.680 --> 00:15:51.680
+about the difference between those on a
+
+00:15:51.680 --> 00:15:53.839
+practical level when should I use which
+
+00:15:53.839 --> 00:15:55.360
+one Let's say I'm starting a new
+
+00:15:55.360 --> 00:15:57.279
+project. I want to use Python because
+
+00:15:57.279 --> 00:15:59.120
+I'm a Python developer. So I don't want
+
+00:15:59.120 --> 00:16:01.839
+to learn Rust or C++ for example. But at
+
+00:16:01.839 --> 00:16:04.000
+the same time, Python is too slow for my
+
+00:16:04.000 --> 00:16:06.639
+needs. I need some scientific computing
+
+00:16:06.639 --> 00:16:08.720
+or something like that. And except of
+
+00:16:08.720 --> 00:16:10.399
+those two, there are also lots of other
+
+00:16:10.399 --> 00:16:14.000
+variants. So when should I use which
+
+00:16:14.000 --> 00:16:15.920
+>> That's a that's a a kind of a pain
+
+00:16:15.920 --> 00:16:19.680
+point. Uh because pi historically has
+
+00:16:19.680 --> 00:16:21.759
+been the most advanced Python
+
+00:16:21.759 --> 00:16:25.120
+implementation around and the fastest.
+
+00:16:25.120 --> 00:16:28.880
+Um the problem is that as soon as you
+
+00:16:28.880 --> 00:16:31.360
+execute pure Python code then pi works
+
+00:16:31.360 --> 00:16:34.399
+as a breeze. Um the pain point comes
+
+00:16:34.399 --> 00:16:35.759
+when you want to interact with
+
+00:16:35.759 --> 00:16:38.399
+extensions which are written in other
+
+00:16:38.399 --> 00:16:42.320
+languages usually C or C++ and they talk
+
+00:16:42.320 --> 00:16:45.759
+to the interpreter using the C API. And
+
+00:16:45.759 --> 00:16:48.399
+uh for reasons which are too long to
+
+00:16:48.399 --> 00:16:50.959
+explain, I can go go out for hours on
+
+00:16:50.959 --> 00:16:54.959
+this topic. Uh the C API of CPython is
+
+00:16:54.959 --> 00:16:57.040
+designed in such a way which is very
+
+00:16:57.040 --> 00:16:59.279
+tight to internal implementation.
+
+00:16:59.279 --> 00:17:01.279
+>> So if you're C Python, it's very easy to
+
+00:17:01.279 --> 00:17:04.160
+expose this API. But if you are any
+
+00:17:04.160 --> 00:17:08.319
+other uh implementation,
+
+00:17:08.319 --> 00:17:09.839
+the thing just don't match. It's like
+
+00:17:09.839 --> 00:17:13.919
+trying to to put like a a US plug into
+
+00:17:13.919 --> 00:17:15.520
+European socket. doesn't work. So you
+
+00:17:15.520 --> 00:17:16.160
+need to work
+
+00:17:16.160 --> 00:17:17.600
+>> oil and water
+
+00:17:17.600 --> 00:17:18.640
+>> same mix.
+
+00:17:18.640 --> 00:17:20.640
+>> Yes, exactly. And so you need a kind of
+
+00:17:20.640 --> 00:17:23.120
+an adapter but which we de developed in
+
+00:17:23.120 --> 00:17:26.559
+pi but it's very expensive at runtime
+
+00:17:26.559 --> 00:17:28.799
+because you need to emulate a lot of
+
+00:17:28.799 --> 00:17:31.360
+stuff that you don't have
+
+00:17:31.360 --> 00:17:35.120
+>> and and this means that in pi as long as
+
+00:17:35.120 --> 00:17:36.640
+you are in pure python everything is
+
+00:17:36.640 --> 00:17:38.640
+super fast but as as soon as you cross
+
+00:17:38.640 --> 00:17:42.880
+the border to see it um it's very very
+
+00:17:42.880 --> 00:17:45.840
+slow and it becomes like slower than c
+
+00:17:45.840 --> 00:17:47.679
+python or without a jet
+
+00:17:47.679 --> 00:17:49.520
+>> right so that means that if you if I use
+
+00:17:49.520 --> 00:17:51.919
+Python and I do for example data science
+
+00:17:51.919 --> 00:17:54.080
+where I use some libraries which are
+
+00:17:54.080 --> 00:17:58.160
+written in C pi should not be the best
+
+00:17:58.160 --> 00:18:00.880
+by default is not a safe choice.
+
+00:18:00.880 --> 00:18:04.320
+>> You can use it in ways if if you can
+
+00:18:04.320 --> 00:18:06.000
+restrict your code in such a way that
+
+00:18:06.000 --> 00:18:09.360
+like is border crossing is not too often
+
+00:18:09.360 --> 00:18:11.520
+but you need to be become very very
+
+00:18:11.520 --> 00:18:15.200
+expert in the field. I I that's why pi
+
+00:18:15.200 --> 00:18:17.360
+is less relevant than it was before
+
+00:18:17.360 --> 00:18:22.240
+because in the last latest years Python
+
+00:18:22.240 --> 00:18:24.480
+like data science and numerical
+
+00:18:24.480 --> 00:18:26.160
+computation became an incredibly
+
+00:18:26.160 --> 00:18:28.559
+important part of the Python world and
+
+00:18:28.559 --> 00:18:30.960
+uh for that you need C extensions and
+
+00:18:30.960 --> 00:18:32.400
+then they don't work well in pip
+
+00:18:32.400 --> 00:18:35.039
+>> right and spy works with C extensions
+
+00:18:35.039 --> 00:18:38.880
+>> not yet but the idea yes is that
+
+00:18:38.880 --> 00:18:40.960
+I want that's one of the problem that I
+
+00:18:40.960 --> 00:18:43.200
+want to solve like spy I will be able to
+
+00:18:43.200 --> 00:18:45.760
+integrate with CPython ecosystem uh in
+
+00:18:45.760 --> 00:18:49.360
+an easier way. Although probably a spy
+
+00:18:49.360 --> 00:18:51.440
+only program will always be faster than
+
+00:18:51.440 --> 00:18:54.480
+a spy plus extension program but it
+
+00:18:54.480 --> 00:18:56.400
+would not be as bad as a pipe.
+
+00:18:56.400 --> 00:18:58.160
+>> And are there any other projects or
+
+00:18:58.160 --> 00:19:01.520
+initiatives that I can also use
+
+00:19:01.520 --> 00:19:03.520
+>> for what? For to make your code faster
+
+00:19:03.520 --> 00:19:07.360
+>> to make my code faster. Yes.
+
+00:19:07.360 --> 00:19:09.120
+it really depends on the code. There is
+
+00:19:09.120 --> 00:19:12.799
+no silver bullet. Um the the usual
+
+00:19:12.799 --> 00:19:16.400
+suggestion is so the usual suggestion is
+
+00:19:16.400 --> 00:19:18.880
+first first of all profile you don't
+
+00:19:18.880 --> 00:19:22.240
+know why your py your code is low and if
+
+00:19:22.240 --> 00:19:24.720
+you think you know you're probably wrong
+
+00:19:24.720 --> 00:19:26.480
+and that's by experience like every time
+
+00:19:26.480 --> 00:19:28.160
+I look at some code and yeah it's
+
+00:19:28.160 --> 00:19:30.559
+obviously there then your profile is not
+
+00:19:30.559 --> 00:19:32.960
+>> so do you have any similar stories like
+
+00:19:32.960 --> 00:19:35.039
+when you thought that you knew why it
+
+00:19:35.039 --> 00:19:36.720
+was slow but then you realize that it's
+
+00:19:36.720 --> 00:19:37.919
+something different
+
+00:19:37.919 --> 00:19:40.960
+>> yes um So
+
+00:19:40.960 --> 00:19:42.480
+>> what do you think is the most common
+
+00:19:42.480 --> 00:19:44.799
+reason like why or the most common
+
+00:19:44.799 --> 00:19:46.799
+misconception where people think what
+
+00:19:46.799 --> 00:19:48.160
+people think that is slow but it
+
+00:19:48.160 --> 00:19:49.919
+actually it's not slow as they think
+
+00:19:49.919 --> 00:19:50.960
+they is.
+
+00:19:50.960 --> 00:19:54.559
+>> Uh I think that a very good expl uh
+
+00:19:54.559 --> 00:19:58.480
+candidate is memory memory copy.
+
+00:19:58.480 --> 00:20:00.480
+>> Uh copying memory on modern computer is
+
+00:20:00.480 --> 00:20:03.360
+actually fast especially compared to all
+
+00:20:03.360 --> 00:20:05.039
+the stuff that you do when executing
+
+00:20:05.039 --> 00:20:07.520
+Python code. So very often and it's a
+
+00:20:07.520 --> 00:20:10.720
+mistake which I made you you elaborate
+
+00:20:10.720 --> 00:20:13.039
+complicated data structure. So you can
+
+00:20:13.039 --> 00:20:14.960
+have something which you don't do copy
+
+00:20:14.960 --> 00:20:17.919
+and then you need to do caching and uh
+
+00:20:17.919 --> 00:20:22.080
+you you you have references and etc. And
+
+00:20:22.080 --> 00:20:24.000
+uh and then it turns out that if you
+
+00:20:24.000 --> 00:20:25.440
+just copy the whole thing and then you
+
+00:20:25.440 --> 00:20:27.039
+have a simple data structure for
+
+00:20:27.039 --> 00:20:30.799
+attribute access later it's faster. Uh
+
+00:20:30.799 --> 00:20:32.880
+back in the days I was working for a
+
+00:20:32.880 --> 00:20:35.760
+company um I don't want to enter into
+
+00:20:35.760 --> 00:20:40.320
+details but we had kind of a a a server
+
+00:20:40.320 --> 00:20:44.320
+which uh produced jobs to solve and then
+
+00:20:44.320 --> 00:20:45.440
+a lot of workers.
+
+00:20:45.440 --> 00:20:49.679
+>> Mhm. And but passing the job to the to
+
+00:20:49.679 --> 00:20:52.000
+the workers was like potentially heavy
+
+00:20:52.000 --> 00:20:56.480
+like lot of memory. And so I tried with
+
+00:20:56.480 --> 00:20:58.400
+a scheme in which you had shared memory
+
+00:20:58.400 --> 00:21:00.720
+and put the job there and so the the
+
+00:21:00.720 --> 00:21:02.559
+worker could
+
+00:21:02.559 --> 00:21:05.840
+like read into the shared memory and was
+
+00:21:05.840 --> 00:21:09.280
+very complicated and it turned out that
+
+00:21:09.280 --> 00:21:11.360
+didn't work so well. So later the second
+
+00:21:11.360 --> 00:21:13.760
+try was okay let's just write things in
+
+00:21:13.760 --> 00:21:15.679
+a way that they can be be copied as a
+
+00:21:15.679 --> 00:21:18.640
+bulk to the
+
+00:21:18.640 --> 00:21:21.520
+uh to the worker
+
+00:21:21.520 --> 00:21:23.440
+>> and that work very very well so the
+
+00:21:23.440 --> 00:21:24.799
+actually memory copying was not the
+
+00:21:24.799 --> 00:21:26.320
+bottleneck at all there were other
+
+00:21:26.320 --> 00:21:27.679
+things so that's
+
+00:21:27.679 --> 00:21:29.600
+>> and how does memory management work in
+
+00:21:29.600 --> 00:21:31.600
+spy does it work the same like in Python
+
+00:21:31.600 --> 00:21:33.360
+that you have a garbage collector and
+
+00:21:33.360 --> 00:21:34.960
+reference count or do you have a
+
+00:21:34.960 --> 00:21:35.919
+different system
+
+00:21:35.919 --> 00:21:38.799
+>> so that's currently spy is a garbage
+
+00:21:38.799 --> 00:21:41.440
+uncollected language So [laughter] no.
+
+00:21:41.440 --> 00:21:43.120
+Okay. So spy will have a garbage
+
+00:21:43.120 --> 00:21:45.919
+collector. Uh right now it's just not
+
+00:21:45.919 --> 00:21:49.200
+implemented. So uh for it's for demo
+
+00:21:49.200 --> 00:21:51.200
+purposes it works very it works well
+
+00:21:51.200 --> 00:21:54.799
+enough but it's not usable for anything
+
+00:21:54.799 --> 00:21:57.200
+>> Uh the idea is that depending on the
+
+00:21:57.200 --> 00:21:59.919
+target you should be able to plug into
+
+00:21:59.919 --> 00:22:01.679
+different memory management system. In
+
+00:22:01.679 --> 00:22:06.159
+particular, if you have a spy only um
+
+00:22:06.159 --> 00:22:10.000
+program, I plan to have uh like advanced
+
+00:22:10.000 --> 00:22:11.440
+garbage collectors like moving
+
+00:22:11.440 --> 00:22:13.280
+generational garbage collector which
+
+00:22:13.280 --> 00:22:16.640
+usually they they are faster than other
+
+00:22:16.640 --> 00:22:18.240
+>> If you want to integrate with CPython
+
+00:22:18.240 --> 00:22:20.159
+ecosystem then you are forced to use
+
+00:22:20.159 --> 00:22:22.240
+CPython memory management which means
+
+00:22:22.240 --> 00:22:25.039
+reference counting and uh and then the
+
+00:22:25.039 --> 00:22:28.240
+generational uh sorry the cycle detector
+
+00:22:28.240 --> 00:22:30.000
+of CPython.
+
+00:22:30.000 --> 00:22:32.080
+That's that that's one reason why is not
+
+00:22:32.080 --> 00:22:34.559
+full developed. I I need to understand
+
+00:22:34.559 --> 00:22:38.720
+exactly where to how to wire up things.
+
+00:22:38.720 --> 00:22:40.799
+>> Yeah. And if someone would like to try
+
+00:22:40.799 --> 00:22:43.360
+Spy or would like to use it in their
+
+00:22:43.360 --> 00:22:45.120
+projects, when do you think that it will
+
+00:22:45.120 --> 00:22:46.720
+be mature enough to be used in
+
+00:22:46.720 --> 00:22:48.640
+production? Is it a matter of months,
+
+00:22:48.640 --> 00:22:51.200
+years, many years?
+
+00:22:51.200 --> 00:22:53.679
+>> So depends depends really strongly
+
+00:22:53.679 --> 00:22:58.960
+depends on the use case. Um so
+
+00:22:58.960 --> 00:23:01.120
+okay if for something which imagine that
+
+00:23:01.120 --> 00:23:02.640
+you want to do a numerical kernel
+
+00:23:02.640 --> 00:23:04.000
+something that you can use number
+
+00:23:04.000 --> 00:23:08.320
+nowadays so like uh uh you have
+
+00:23:08.320 --> 00:23:10.880
+a single function which does numeric uh
+
+00:23:10.880 --> 00:23:14.080
+uh computation and get arrays as input
+
+00:23:14.080 --> 00:23:16.159
+and outputs I don't think we are very
+
+00:23:16.159 --> 00:23:18.480
+far from that so months
+
+00:23:18.480 --> 00:23:19.600
+>> months okay
+
+00:23:19.600 --> 00:23:21.520
+>> uh if you want but the point of spy is
+
+00:23:21.520 --> 00:23:26.159
+that we I want to be like much
+
+00:23:26.159 --> 00:23:28.159
+to support much more features than than
+
+00:23:28.159 --> 00:23:31.840
+number. So for that well it's at least
+
+00:23:31.840 --> 00:23:33.679
+one year but it's very hard to give any
+
+00:23:33.679 --> 00:23:37.120
+estimate. It's very research R&D project
+
+00:23:37.120 --> 00:23:38.880
+>> and if the community would like to get
+
+00:23:38.880 --> 00:23:40.640
+involved with it, it's an open source
+
+00:23:40.640 --> 00:23:43.760
+project, right? So, how can I get
+
+00:23:43.760 --> 00:23:48.880
+>> So, yeah, like the best way is uh GitHub
+
+00:23:48.880 --> 00:23:52.159
+spy. Um I am the point in which
+
+00:23:52.159 --> 00:23:56.080
+contributions are welcome. Uh I I I have
+
+00:23:56.080 --> 00:23:58.240
+some issues which I label as good for
+
+00:23:58.240 --> 00:24:00.400
+the issue and uh uh help wanted on
+
+00:24:00.400 --> 00:24:03.679
+GitHub and I think they're like easy
+
+00:24:03.679 --> 00:24:06.880
+enough for external people to to start
+
+00:24:06.880 --> 00:24:10.000
+getting a a grasp of both the language
+
+00:24:10.000 --> 00:24:12.080
+and implementation
+
+00:24:12.080 --> 00:24:14.880
+is not a super easy project. You need to
+
+00:24:14.880 --> 00:24:16.400
+have some experience with compilers and
+
+00:24:16.400 --> 00:24:18.720
+interpreters and language implementation
+
+00:24:18.720 --> 00:24:20.640
+at the moment.
+
+00:24:20.640 --> 00:24:23.120
+when the language mature probably it
+
+00:24:23.120 --> 00:24:24.720
+should be possible to contribute even
+
+00:24:24.720 --> 00:24:27.120
+without knowing something about
+
+00:24:27.120 --> 00:24:29.600
+compilers because you can just write
+
+00:24:29.600 --> 00:24:31.679
+standard library in spy like that there
+
+00:24:31.679 --> 00:24:33.600
+will be a lot of uh work to be done on
+
+00:24:33.600 --> 00:24:36.400
+that field so that's also a a good
+
+00:24:36.400 --> 00:24:38.559
+opportunity but at the moment I feel
+
+00:24:38.559 --> 00:24:42.559
+that we're not at so advanced yet and uh
+
+00:24:42.559 --> 00:24:44.720
+so yes github.com is
+
+00:24:44.720 --> 00:24:47.039
+>> and is everything written in C or can I
+
+00:24:47.039 --> 00:24:48.799
+contribute with Python only or for
+
+00:24:48.799 --> 00:24:50.000
+example do you need help with code
+
+00:24:50.000 --> 00:24:52.000
+reviews use or documentation as well.
+
+00:24:52.000 --> 00:24:54.159
+>> Uh documentation yes the documentation
+
+00:24:54.159 --> 00:24:56.320
+is inexistent. So [laughter]
+
+00:24:56.320 --> 00:24:59.600
+>> if someone would like to try and create
+
+00:24:59.600 --> 00:25:01.760
+>> uh I plan to write a series of blog post
+
+00:25:01.760 --> 00:25:04.159
+to explain uh motivation and
+
+00:25:04.159 --> 00:25:06.480
+technicalities of spy also because like
+
+00:25:06.480 --> 00:25:08.400
+everything is very in flux and and
+
+00:25:08.400 --> 00:25:11.279
+changing. So blog post at the moment is
+
+00:25:11.279 --> 00:25:13.440
+a better way because it doesn't need to
+
+00:25:13.440 --> 00:25:15.679
+be it can be more colloquial let's say
+
+00:25:15.679 --> 00:25:17.919
+but eventually I need to write down a
+
+00:25:17.919 --> 00:25:21.279
+real do documentation system and even
+
+00:25:21.279 --> 00:25:23.279
+even just setting up the CI and
+
+00:25:23.279 --> 00:25:27.360
+everything uh uh publishing uh I can do
+
+00:25:27.360 --> 00:25:29.120
+it I prefer to spend my time on
+
+00:25:29.120 --> 00:25:31.760
+something else. So this is the kind of
+
+00:25:31.760 --> 00:25:34.000
+uh contribution which are very
+
+00:25:34.000 --> 00:25:35.520
+>> contributions are are welcome.
+
+00:25:35.520 --> 00:25:39.120
+>> Yeah totally. Um you you I think you ask
+
+00:25:39.120 --> 00:25:40.960
+a different another question which I
+
+00:25:40.960 --> 00:25:42.799
+>> I asked about code reviews for example
+
+00:25:42.799 --> 00:25:44.480
+because that's a good way how to start
+
+00:25:44.480 --> 00:25:45.120
+for example.
+
+00:25:45.120 --> 00:25:47.360
+>> Yes right now like I don't have I mean
+
+00:25:47.360 --> 00:25:49.760
+to get I need I need a contributors
+
+00:25:49.760 --> 00:25:50.400
+first. So
+
+00:25:50.400 --> 00:25:51.712
+>> yes [laughter]
+
+00:25:51.712 --> 00:25:53.120
+[snorts] and my last question is what is
+
+00:25:53.120 --> 00:25:55.120
+the significance of the name spy? Does
+
+00:25:55.120 --> 00:25:57.520
+it officially stand for static python or
+
+00:25:57.520 --> 00:25:59.440
+is there any story about this?
+
+00:25:59.440 --> 00:26:01.440
+>> So there is a small story like it it
+
+00:26:01.440 --> 00:26:03.679
+does nothing to do with spies. uh like
+
+00:26:03.679 --> 00:26:06.799
+the S is for static Python but as we
+
+00:26:06.799 --> 00:26:09.520
+said earlier the roots are in pi world
+
+00:26:09.520 --> 00:26:12.320
+and in pi we added this implementation
+
+00:26:12.320 --> 00:26:14.400
+language which was called is still
+
+00:26:14.400 --> 00:26:17.279
+called air python for restricted python
+
+00:26:17.279 --> 00:26:20.159
+and so a spy takes a lot of inspiration
+
+00:26:20.159 --> 00:26:21.919
+from that is from some of the view air
+
+00:26:21.919 --> 00:26:25.840
+python 2.0 zero and so spy is the s
+
+00:26:25.840 --> 00:26:29.200
+after the earth. So it's this kind of
+
+00:26:29.200 --> 00:26:32.080
+>> Thank you for coming.

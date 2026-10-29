@@ -1,0 +1,1270 @@
+WEBVTT
+
+00:00:00.160 --> 00:00:04.400
+You know, like highly automated musical,
+
+00:00:04.400 --> 00:00:08.320
+generative AI, which kind of defeats the purpose.
+
+00:00:08.320 --> 00:00:10.480
+So there's either the,
+
+00:00:10.480 --> 00:00:14.480
+what we would call auto regressive neural codec models,
+
+00:00:14.480 --> 00:00:17.840
+or there's this idea of diffusion models.
+
+00:00:17.840 --> 00:00:20.640
+A generative model for lullabies
+
+00:00:20.640 --> 00:00:24.560
+and the guy trained it on, like short melodic
+
+00:00:24.560 --> 00:00:25.680
+lullabies for children,
+
+00:00:25.680 --> 00:00:30.400
+and the guy trained it on his like five or six year old
+
+00:00:30.400 --> 00:00:33.920
+daughter.
+
+00:00:33.920 --> 00:00:36.880
+Hi, we're in Warsaw at PyWaw at the Venture café,
+
+00:00:36.880 --> 00:00:38.720
+and I just caught Mateusz.
+
+00:00:38.720 --> 00:00:40.400
+Mateusz is a professional musician,
+
+00:00:40.400 --> 00:00:41.840
+software engineer, researcher,
+
+00:00:41.840 --> 00:00:44.960
+and assistant professor at the Warsaw University of Technology.
+
+00:00:44.960 --> 00:00:46.400
+Hi, everybody.
+
+00:00:46.400 --> 00:00:50.080
+Mateusz, what are your thoughts about AI and music?
+
+00:00:50.080 --> 00:00:53.200
+Yeah, well, that's the big question, right?
+
+00:00:53.200 --> 00:00:57.200
+So I have some conflicting thoughts and views on the topic,
+
+00:00:57.200 --> 00:00:58.880
+so I've been a professional musician
+
+00:00:58.880 --> 00:01:00.560
+for a lot of years,
+
+00:01:00.560 --> 00:01:03.280
+so I know what's the feeling of being on stage
+
+00:01:03.280 --> 00:01:04.880
+and practicing on your instrument,
+
+00:01:04.880 --> 00:01:11.040
+and putting your heart into music, into performance, et cetera.
+
+00:01:11.040 --> 00:01:18.480
+But then also, again, a part of my heart is at research,
+
+00:01:18.480 --> 00:01:22.560
+at machine learning, at programming, et cetera.
+
+00:01:22.560 --> 00:01:27.760
+So I think in general, my whole view of this whole hot topic
+
+00:01:27.760 --> 00:01:33.920
+that is music AI is that I really like,
+
+00:01:33.920 --> 00:01:39.520
+and I'm really interested in the parts that really empower
+
+00:01:39.520 --> 00:01:42.080
+new interfaces for musical expression,
+
+00:01:42.080 --> 00:01:44.960
+and really empower the artists.
+
+00:01:44.960 --> 00:01:52.960
+And I'm not really so much like for the highly automated
+
+00:01:52.960 --> 00:01:55.120
+musical generative AI,
+
+00:01:55.120 --> 00:02:00.880
+which defeats the purpose,
+
+00:02:00.880 --> 00:02:03.600
+it's very hard for me to find space
+
+00:02:03.600 --> 00:02:06.960
+where that would be really interesting, I think.
+
+00:02:06.960 --> 00:02:09.840
+So you said that AI has some good and bad sides,
+
+00:02:09.840 --> 00:02:12.160
+so what are the good sides of it?
+
+00:02:12.160 --> 00:02:16.800
+Well, in modern music AI,
+
+00:02:16.800 --> 00:02:20.480
+what do you use the most is neural networks.
+
+00:02:20.480 --> 00:02:25.680
+And neural networks are just these fascinating pieces
+
+00:02:25.680 --> 00:02:31.920
+of maths and programming that are kind of super flexible
+
+00:02:31.920 --> 00:02:34.960
+to learn complex data transformations,
+
+00:02:34.960 --> 00:02:37.760
+like as long as you're able to express what you're trying
+
+00:02:37.760 --> 00:02:41.600
+to learn with code and maths,
+
+00:02:41.600 --> 00:02:43.680
+and you have the data to support it,
+
+00:02:43.680 --> 00:02:49.280
+you're basically in many cases able to build a tool
+
+00:02:49.280 --> 00:02:51.840
+for that transformation, right?
+
+00:02:51.840 --> 00:02:54.800
+Oftentimes better than a human would do it, right?
+
+00:02:54.800 --> 00:02:59.600
+So if you kind of think about neural networks
+
+00:02:59.600 --> 00:03:02.320
+as these creative machines that you can use
+
+00:03:02.320 --> 00:03:04.640
+for audio style transfer,
+
+00:03:04.640 --> 00:03:09.680
+or that kind of allow you to explore or modify audio
+
+00:03:09.680 --> 00:03:13.760
+in ways that were previously unavailable,
+
+00:03:13.760 --> 00:03:15.360
+I think that's great.
+
+00:03:15.360 --> 00:03:20.480
+I think that there are also many applications in learning music,
+
+00:03:20.480 --> 00:03:24.720
+learning to play music, so automated software
+
+00:03:24.720 --> 00:03:29.280
+for vocal analysis or for tracking your piano progress
+
+00:03:29.280 --> 00:03:31.120
+or whatever.
+
+00:03:31.120 --> 00:03:35.760
+So I think the empowering side and the new interfaces side
+
+00:03:35.760 --> 00:03:38.560
+is really, really compelling.
+
+00:03:38.560 --> 00:03:40.560
+And then on the other side,
+
+00:03:40.560 --> 00:03:45.600
+like obviously there's this case for copyright.
+
+00:03:45.600 --> 00:03:51.120
+So again, as a performing artist and musician,
+
+00:03:51.120 --> 00:03:54.560
+I know how hard it is to make a living as a musician.
+
+00:03:54.560 --> 00:04:00.640
+So it's getting even harder when streams of revenue,
+
+00:04:00.640 --> 00:04:04.400
+such as royalties from your music getting played,
+
+00:04:04.400 --> 00:04:09.120
+et cetera, when that's being compromised
+
+00:04:09.120 --> 00:04:14.640
+or that model seems not to work the way it works,
+
+00:04:14.640 --> 00:04:19.600
+right, or there are these legal and ethical disputes
+
+00:04:19.600 --> 00:04:22.240
+that kind of leave you wondering.
+
+00:04:22.240 --> 00:04:28.400
+So I think as long as we think about neural networks
+
+00:04:28.400 --> 00:04:31.360
+as this kind of next step in the evolution
+
+00:04:31.360 --> 00:04:36.640
+of musical instruments, I think we're in for a lot
+
+00:04:36.640 --> 00:04:41.600
+of super interesting inventions and ways of expressions.
+
+00:04:41.600 --> 00:04:43.440
+And how do musicians feel about it?
+
+00:04:43.440 --> 00:04:46.000
+Do they do you think that they feel threatened
+
+00:04:46.000 --> 00:04:48.800
+or do you think that they also see opportunities?
+
+00:04:48.800 --> 00:04:53.440
+- Yeah, well, well,
+
+00:04:53.440 --> 00:04:58.560
+a big part of musicians, they think that the researchers
+
+00:04:58.560 --> 00:05:00.240
+are the bad guys, right?
+
+00:05:00.240 --> 00:05:03.440
+Cause the algorithms are here to,
+
+00:05:03.440 --> 00:05:07.120
+to replace blah, blah, blah, blah,
+
+00:05:07.120 --> 00:05:12.560
+it's all that, but musicians are also like super tech savvy people.
+
+00:05:12.560 --> 00:05:18.400
+And there's like so many musicians among programmers
+
+00:05:18.400 --> 00:05:23.360
+like I'm sure that people who are listening to us right now,
+
+00:05:23.360 --> 00:05:26.240
+like many of them play some sort of instrument, right?
+
+00:05:26.240 --> 00:05:28.880
+And musicians are gear heads, they love gear,
+
+00:05:28.880 --> 00:05:32.160
+they can spend hours talking to you know about guitars
+
+00:05:32.160 --> 00:05:35.680
+and strings and pedals and effects and drum bass
+
+00:05:35.680 --> 00:05:38.960
+and drum sticks and symbols and whatever.
+
+00:05:38.960 --> 00:05:42.320
+And you can argue you know for hours about that.
+
+00:05:42.320 --> 00:05:47.600
+So a part of this new technology is just basically
+
+00:05:47.600 --> 00:05:53.120
+like new cool gear that you can create like cool new sounds
+
+00:05:53.120 --> 00:05:57.760
+with and it just you know, it opens up this kind of new
+
+00:05:57.760 --> 00:06:02.560
+dimension of tinkering and kind of tweaking algorithm.
+
+00:06:02.560 --> 00:06:07.200
+Sometimes it also,
+
+00:06:07.200 --> 00:06:11.280
+it kind of requires you to have a new skill set.
+
+00:06:11.280 --> 00:06:15.280
+For instance like running Python scripts or perhaps you know,
+
+00:06:15.280 --> 00:06:19.600
+like running the training of some model or whatever,
+
+00:06:19.600 --> 00:06:22.720
+like it's hard to expect, you know,
+
+00:06:22.720 --> 00:06:27.280
+someone to like learn Python and full just to just to explore
+
+00:06:27.280 --> 00:06:30.160
+some creative possibilities, but many of these solutions,
+
+00:06:30.160 --> 00:06:32.480
+you just need to run some sort of script, right?
+
+00:06:32.480 --> 00:06:34.560
+And a couple of years ago,
+
+00:06:34.560 --> 00:06:39.360
+it wasn't super common for musicians like to do home recording
+
+00:06:39.360 --> 00:06:43.840
+or to be you know, like very knowledgeable about mixing technique.
+
+00:06:43.840 --> 00:06:46.960
+And nowadays almost everybody knows you know,
+
+00:06:46.960 --> 00:06:49.040
+like at least a little bit, right?
+
+00:06:49.040 --> 00:06:54.960
+So so that part became really like democratized and became really
+
+00:06:54.960 --> 00:06:55.840
+accessible.
+
+00:06:55.840 --> 00:07:00.000
+And I think that the cool musical technology that's that some
+
+00:07:00.000 --> 00:07:03.200
+of the neural networks offer, that's going to become like
+
+00:07:03.200 --> 00:07:06.400
+democratized and accessible as well.
+
+00:07:06.400 --> 00:07:08.240
+And do you think it's because of LLM's?
+
+00:07:08.240 --> 00:07:11.440
+Because nowadays lots of people learn programming and program
+
+00:07:11.440 --> 00:07:12.480
+thanks to LLM's.
+
+00:07:12.480 --> 00:07:16.720
+So do you think that musicians like do it just because they feel like
+
+00:07:16.720 --> 00:07:19.200
+they have to just to catch up, you know, like,
+
+00:07:19.200 --> 00:07:20.400
+try new things?
+
+00:07:20.400 --> 00:07:21.280
+Yeah, yeah, yeah, yeah.
+
+00:07:21.280 --> 00:07:25.200
+And I think also it's like easier than ever to start programming, right?
+
+00:07:25.200 --> 00:07:29.040
+So so if you're using like an LLM assistant, you can just,
+
+00:07:29.040 --> 00:07:31.280
+you know,
+
+00:07:31.280 --> 00:07:36.160
+take the the link to the repo or or or whatever, what you, you know,
+
+00:07:36.160 --> 00:07:39.920
+don't know how to do just ask an LLM like, Hey, how do I run
+
+00:07:39.920 --> 00:07:40.800
+this script?
+
+00:07:40.800 --> 00:07:44.640
+And if you get like a trace back and like a value error or you can
+
+00:07:44.640 --> 00:07:47.920
+ask like, Hey, what's this thing and how do I fix it?
+
+00:07:47.920 --> 00:07:51.760
+So I think, you know, like getting into programming has gotten
+
+00:07:51.760 --> 00:07:54.480
+like more accessible than ever.
+
+00:07:54.480 --> 00:08:00.080
+And it's a really good time to use that knowledge and that skill,
+
+00:08:00.080 --> 00:08:04.640
+you know, for, you know, maybe something creative, right?
+
+00:08:04.640 --> 00:08:10.720
+So musicians create music and AI models often are trained on this
+
+00:08:10.720 --> 00:08:11.280
+music,
+
+00:08:11.280 --> 00:08:15.200
+to publish the YouTube and Spotify, etc.
+
+00:08:15.200 --> 00:08:16.960
+Is that a problem?
+
+00:08:16.960 --> 00:08:18.560
+Yeah, that's a big problem.
+
+00:08:18.560 --> 00:08:20.960
+That's a big problem.
+
+00:08:20.960 --> 00:08:24.960
+Because, you know, there's like this huge legal gap right now that's
+
+00:08:24.960 --> 00:08:27.040
+being,
+
+00:08:27.040 --> 00:08:29.760
+it's like a melting pot right now.
+
+00:08:29.760 --> 00:08:31.920
+So there's, you know, how does it work?
+
+00:08:31.920 --> 00:08:36.000
+If I were a musician and I recorded a song and I published a
+
+00:08:36.000 --> 00:08:37.520
+YouTube and everywhere, right?
+
+00:08:37.520 --> 00:08:42.000
+How can I prevent those companies to train their models on my data?
+
+00:08:42.000 --> 00:08:46.240
+Well, there are initiatives like in the European Union,
+
+00:08:46.240 --> 00:08:50.640
+like the like the opt out mechanism, etc.
+
+00:08:50.640 --> 00:08:54.560
+But in practice, it's not working very well.
+
+00:08:54.560 --> 00:08:58.800
+So we see that if an aggressive start up wants to just
+
+00:08:58.800 --> 00:09:03.840
+scrape your stuff from whatever you wherever you put it,
+
+00:09:03.840 --> 00:09:05.600
+they just do it, right?
+
+00:09:05.600 --> 00:09:11.360
+And so there is this interesting research area that's called the data poisoning
+
+00:09:11.360 --> 00:09:11.920
+actually.
+
+00:09:11.920 --> 00:09:23.680
+So you can kind of inject like it's [...] steganography.
+
+00:09:23.680 --> 00:09:26.480
+That's how I should say, it's steganography.
+
+00:09:26.480 --> 00:09:32.720
+But in like a more kind of, you know, like deep learning modern approach,
+
+00:09:32.720 --> 00:09:33.760
+right? So you
+
+00:09:33.760 --> 00:09:42.000
+kind of inject some like poison pill that makes the data either
+
+00:09:42.000 --> 00:09:43.680
+uninformative for the model.
+
+00:09:43.680 --> 00:09:45.840
+So the model doesn't to learn anything from it.
+
+00:09:45.840 --> 00:09:50.400
+Or even you can make the model kind of learn, you know, something opposite to
+
+00:09:50.400 --> 00:09:56.720
+what you planned, but that technology is not well researched for audio.
+
+00:09:56.720 --> 00:10:00.320
+Sometimes it introduces artifacts, sometimes and it has to be
+
+00:10:00.320 --> 00:10:01.120
+notable, right?
+
+00:10:01.120 --> 00:10:02.880
+You don't want to break your music for it.
+
+00:10:02.880 --> 00:10:05.920
+Is it done by artists or is it done by those providers?
+
+00:10:05.920 --> 00:10:08.160
+For example, YouTube Spotify, et cetera.
+
+00:10:08.160 --> 00:10:12.720
+Yeah, I don't think there's there's any like data poisoning that has been,
+
+00:10:12.720 --> 00:10:15.760
+you know, put into production at scale.
+
+00:10:15.760 --> 00:10:17.520
+There's there's a lot of interest.
+
+00:10:17.520 --> 00:10:19.280
+So it's like a research area.
+
+00:10:19.280 --> 00:10:24.000
+It's more like a proof of concept or like a conference paper,
+
+00:10:24.000 --> 00:10:32.720
+a type of, you know, level of advancement, but there's no good way of
+
+00:10:32.720 --> 00:10:34.160
+defense right now, right?
+
+00:10:34.160 --> 00:10:40.160
+So there's there's a bunch of legal lawsuits going going on right now in a
+
+00:10:40.160 --> 00:10:43.840
+bunch of courts here and there.
+
+00:10:43.840 --> 00:10:49.600
+There's also no good way of reverse engineering and neural network.
+
+00:10:49.600 --> 00:10:52.160
+But this is also a research area.
+
+00:10:52.160 --> 00:10:56.080
+There are the research areas of explainability and interpretability.
+
+00:10:56.080 --> 00:11:01.040
+This is also what we do here at Warsaw University of Technology and those are
+
+00:11:01.040 --> 00:11:07.360
+super interesting topics, not only because of the effects, because you really
+
+00:11:07.360 --> 00:11:13.360
+kind of get to, you know, kind of demystify this black box and look into its
+
+00:11:13.360 --> 00:11:18.000
+internals and find, you know, like the circuits that correspond to like human
+
+00:11:18.000 --> 00:11:20.080
+interpretable concepts.
+
+00:11:20.080 --> 00:11:22.080
+But yeah, but those are still those are
+
+00:11:22.080 --> 00:11:28.640
+still like research topics and not something that someone has already put into
+
+00:11:28.640 --> 00:11:30.080
+production at scale.
+
+00:11:30.080 --> 00:11:33.680
+So you mentioned that AI music is a black box.
+
+00:11:33.680 --> 00:11:35.760
+Yeah. So can you explain how does it work?
+
+00:11:35.760 --> 00:11:41.680
+So if I have, if I type in a prompt, if I type in anything, so like what
+
+00:11:41.680 --> 00:11:43.520
+happens in the background, right?
+
+00:11:43.520 --> 00:11:44.560
+Right.
+
+00:11:44.560 --> 00:11:51.920
+So what you use nowadays is, it's like almost exclusively neural
+
+00:11:51.920 --> 00:11:52.400
+networks.
+
+00:11:52.400 --> 00:11:56.800
+So this is like the family of of AI algorithms that get that approximate
+
+00:11:56.800 --> 00:12:03.360
+complex transformations of data and it's trained on data and you use GPU.
+
+00:12:03.360 --> 00:12:07.040
+So this is why NVIDIA is worth so much, right?
+
+00:12:07.040 --> 00:12:13.040
+But what happens actually is, like, audio is a complicated modality.
+
+00:12:13.040 --> 00:12:19.840
+Like for a computer, audio is like this long, one-dimensional sequence of
+
+00:12:19.840 --> 00:12:20.320
+numbers.
+
+00:12:20.320 --> 00:12:21.520
+It's like a list, right?
+
+00:12:21.520 --> 00:12:23.520
+And it's like a super long list.
+
+00:12:23.520 --> 00:12:28.880
+If you have the, the, if your audio is like sample, that a standard sampling
+
+00:12:28.880 --> 00:12:36.560
+rate of like 44.1 kilohertz, that means each second of audio is like 44,000
+
+00:12:36.560 --> 00:12:37.440
+numbers.
+
+00:12:37.440 --> 00:12:43.120
+So in order to generate 10 seconds, you need like almost half a million numbers.
+
+00:12:43.120 --> 00:12:49.680
+The human ear is like very, it hears very little artifacts.
+
+00:12:49.680 --> 00:12:55.440
+It's much easier to fool the eye than to fool that ear.
+
+00:12:55.440 --> 00:12:59.200
+So basically when you're generating raw audio, what you're doing is your
+
+00:12:59.200 --> 00:13:04.080
+modeling, like, very complex relationships between numbers that are sometimes
+
+00:13:04.080 --> 00:13:07.600
+like hundreds of thousands numbers.
+
+00:13:07.600 --> 00:13:10.160
+So in general, it's like a very complex task.
+
+00:13:10.160 --> 00:13:15.280
+So basically, what we've come up with is this idea, and this is probably the
+
+00:13:15.280 --> 00:13:19.280
+most scientific thing I'm going to say today is this idea of the
+
+00:13:19.280 --> 00:13:21.840
+discrete representation learning.
+
+00:13:21.840 --> 00:13:28.000
+So basically you have a model that kind of compresses all possible sounds into
+
+00:13:28.000 --> 00:13:34.560
+like this alphabet that you can then kind of generate sequences off and
+
+00:13:34.560 --> 00:13:38.240
+then kind of upscale that back to audio.
+
+00:13:38.240 --> 00:13:45.120
+So basically like there's this learned latent alphabet that kind of, you
+
+00:13:45.120 --> 00:13:47.200
+know, then gets upscale to audio.
+
+00:13:47.200 --> 00:13:51.760
+That's one of the ideas and another idea that you might have heard of is this
+
+00:13:51.760 --> 00:13:53.680
+idea of diffusion.
+
+00:13:53.680 --> 00:13:58.880
+So there's either the, what we would call auto regressive neural codec
+
+00:13:58.880 --> 00:14:04.960
+models, or there's this idea of diffusion models, which in a nutshell,
+
+00:14:04.960 --> 00:14:11.520
+they take noise and they kind of distill that noise into like the precise audio
+
+00:14:11.520 --> 00:14:12.080
+you want.
+
+00:14:12.080 --> 00:14:19.680
+So these are kind of abstract and really weird ways because many people just
+
+00:14:19.680 --> 00:14:22.880
+think that neural networks just take audio and kind of cut it up like a
+
+00:14:22.880 --> 00:14:26.720
+sampling machine and rearrange the samples and like call it a day, right?
+
+00:14:26.720 --> 00:14:31.280
+So actually there's, there's a couple of very interesting mechanisms going on.
+
+00:14:31.280 --> 00:14:36.960
+Like, you know, I'm biased in how I think about this, but, but there is some
+
+00:14:36.960 --> 00:14:43.360
+like, you know, like audio understanding going on both in the, like
+
+00:14:43.360 --> 00:14:48.880
+dimension of the content and like, what is there in this music is this
+
+00:14:48.880 --> 00:14:51.760
+low voice or high voice or is this a guitar or a trumpet?
+
+00:14:51.760 --> 00:14:56.320
+And both in terms of like the signal is the signal good quality.
+
+00:14:56.320 --> 00:15:00.880
+Is it, does it have, you know, like an in noise, like, etc.
+
+00:15:00.880 --> 00:15:04.960
+So, there's a bunch of like signal understanding and content
+
+00:15:04.960 --> 00:15:06.320
+understanding going on.
+
+00:15:06.320 --> 00:15:08.960
+And what are some technologies that you use for this?
+
+00:15:08.960 --> 00:15:11.240
+So for example, can I train my own model?
+
+00:15:11.240 --> 00:15:12.640
+Yeah, like locally.
+
+00:15:12.640 --> 00:15:14.080
+Yeah, yeah, yeah.
+
+00:15:14.080 --> 00:15:22.000
+So there's if when people ask what's the first model that I could
+
+00:15:22.000 --> 00:15:27.680
+try and play with, there's this awesome model developed at IRCAM.
+
+00:15:27.680 --> 00:15:32.640
+That's, that's a research facility, like a creative machine learning signal
+
+00:15:32.640 --> 00:15:35.760
+processing type of institution in France.
+
+00:15:35.760 --> 00:15:37.840
+And there's this model called RAVE.
+
+00:15:37.840 --> 00:15:42.080
+It's real-time audio, variational auto encoder.
+
+00:15:42.080 --> 00:15:45.600
+And it's a pretty small and very fast neural network.
+
+00:15:45.600 --> 00:15:52.720
+You can train it in like a day or two, like using free online resources
+
+00:15:52.720 --> 00:15:57.040
+on like a small set of audio and it's a style transfer neural net.
+
+00:15:57.040 --> 00:16:00.960
+So then you can perhaps like sing into the net.
+
+00:16:00.960 --> 00:16:05.200
+And if you, if you trained it on, for example, like trumpet or
+
+00:16:05.200 --> 00:16:09.760
+drums or something else, it's going to try to change your voice into that
+
+00:16:09.760 --> 00:16:10.240
+instrument.
+
+00:16:10.240 --> 00:16:17.600
+And the most fun part is when you try to do like a totally out of domain
+
+00:16:17.600 --> 00:16:24.240
+style transfer, that is to kind of use an input signal that, that is as far as
+
+00:16:24.240 --> 00:16:28.480
+possible from what the neural network was trained on.
+
+00:16:28.480 --> 00:16:31.120
+So then you get kind of these weird results.
+
+00:16:31.120 --> 00:16:38.400
+And you also get this nice feature that rave models are kind of interactive and
+
+00:16:38.400 --> 00:16:39.200
+steerable.
+
+00:16:39.200 --> 00:16:45.440
+So there are ideas to encompass neural network within, a neural networks
+
+00:16:45.440 --> 00:16:50.480
+within like VST plugins, which is a very musician, friendly format.
+
+00:16:50.480 --> 00:16:54.800
+So you get your knobs, you get your keys, you get like your control surfaces
+
+00:16:54.800 --> 00:16:56.800
+you're used to.
+
+00:16:56.800 --> 00:17:00.880
+So yeah, I'd say RAVE, real-time audio, variational auto encoder.
+
+00:17:00.880 --> 00:17:09.440
+The original author is Antoine Caillot and the GitHub repo is like open,
+
+00:17:09.440 --> 00:17:10.960
+RAVE is pip installable.
+
+00:17:10.960 --> 00:17:14.160
+So, you can just, I would start over there.
+
+00:17:14.160 --> 00:17:16.960
+And most of those are using Python, right?
+
+00:17:16.960 --> 00:17:20.480
+And absolutely most of those tools are using Python.
+
+00:17:20.480 --> 00:17:26.240
+I mean, there are a couple of interesting Python libraries for audio processing.
+
+00:17:26.240 --> 00:17:30.000
+Like, there's the classical, librosa, there is, there is pedalboard,
+
+00:17:30.000 --> 00:17:33.840
+there is pyo if you need like low-level synthesizer stuff.
+
+00:17:33.840 --> 00:17:38.800
+If you're more on the scientific or like signal analysis side,
+
+00:17:38.800 --> 00:17:44.720
+you're going to use, you know, like numpy and scipy and those tools.
+
+00:17:44.720 --> 00:17:51.520
+Then, you know, then there's all of these like little weird models developed
+
+00:17:51.520 --> 00:17:59.040
+in some weird communities of people like who are in between like creative
+
+00:17:59.040 --> 00:18:04.480
+computing and programming and music and and and and so sometimes of course you
+
+00:18:04.480 --> 00:18:08.320
+spend like an hour or two or or more like trying to get like an obscure
+
+00:18:08.320 --> 00:18:13.920
+repo to work, but there are many like small models that that work out of the box.
+
+00:18:13.920 --> 00:18:18.880
+And most cases they do much more interesting things than just, you know,
+
+00:18:18.880 --> 00:18:24.160
+like consuming a prompt and spitting out some some slop, right?
+
+00:18:24.160 --> 00:18:27.200
+And what is the impact of AI on the music industry?
+
+00:18:27.200 --> 00:18:29.920
+Because I've read that the concerts are getting bigger.
+
+00:18:29.920 --> 00:18:31.760
+Yeah. On the other hand,
+
+00:18:31.760 --> 00:18:35.200
+music since done like AI and many people are afraid of it
+
+00:18:35.200 --> 00:18:36.800
+because they are threatened by it.
+
+00:18:36.800 --> 00:18:39.120
+What do you think will happen in five or ten years?
+
+00:18:39.120 --> 00:18:43.280
+Do you think that AI music will become more popular or do you think on the other hand
+
+00:18:43.280 --> 00:18:49.040
+that concerts and music produced by humans will be more popular because people
+
+00:18:49.040 --> 00:18:51.040
+just don't want AI?
+
+00:18:51.040 --> 00:18:57.040
+Yeah, well, I think that like live music is, it's going to be fine.
+
+00:18:57.040 --> 00:19:02.880
+I mean, people just like to see other people doing difficult things, right?
+
+00:19:02.880 --> 00:19:06.640
+So, so like if you go to a concert and you see like an amazing, you know,
+
+00:19:06.640 --> 00:19:11.760
+like piano player or or amazing band or whatever, like like that's that's just awesome,
+
+00:19:11.760 --> 00:19:16.320
+right? I mean, there's just some kind of inner mechanism
+
+00:19:16.320 --> 00:19:22.160
+that makes us, you know, find doing difficult stuff, especially in public,
+
+00:19:22.160 --> 00:19:24.320
+like super compelling, right?
+
+00:19:24.320 --> 00:19:26.720
+And I think that's not going away.
+
+00:19:26.720 --> 00:19:33.680
+I think there are some business applications where the threat is,
+
+00:19:33.680 --> 00:19:35.440
+is like really big.
+
+00:19:35.440 --> 00:19:40.880
+That's like, you know, like like all sorts of background music or like music for content
+
+00:19:40.880 --> 00:19:44.080
+that you don't like elevator music or like L.
+
+00:19:44.080 --> 00:19:48.240
+Yeah, and you know, and and it's all fun and good,
+
+00:19:48.240 --> 00:19:53.360
+but like there's a significant amount of people
+
+00:19:53.360 --> 00:19:58.000
+who's day job it is, you know, to to to write music like that and create music like that
+
+00:19:58.000 --> 00:20:00.320
+and there's nothing wrong with that, right?
+
+00:20:00.320 --> 00:20:06.000
+So, there are like professional groups that that feel threatened.
+
+00:20:06.000 --> 00:20:16.640
+There are people who feel, you know, injustice in terms of the royalties, right?
+
+00:20:16.640 --> 00:20:23.840
+Because because you, I mean, you know, like it might be a weird thing,
+
+00:20:23.840 --> 00:20:30.640
+but like artists like getting paid for their work, which is not obvious to everybody.
+
+00:20:30.640 --> 00:20:33.840
+It seems.
+
+00:20:33.840 --> 00:20:38.080
+So yeah, so so there is a significant amount of pushback.
+
+00:20:38.080 --> 00:20:43.600
+However, that's mostly for you know, like the most,
+
+00:20:43.600 --> 00:20:48.800
+you know, like the most superficial kind of prompt goes in,
+
+00:20:48.800 --> 00:20:53.040
+slop goes out family of solutions, right?
+
+00:20:53.040 --> 00:20:59.840
+Whenever you start presenting these topics as, you know, like a viable extension of your like
+
+00:20:59.840 --> 00:21:08.000
+creative arsenal and like of your ways of expression, you kind of start doing like the
+
+00:21:08.000 --> 00:21:13.040
+quirky, interesting stuff like like the environments for like evolutionary composition,
+
+00:21:13.040 --> 00:21:21.520
+like for instance, there's this awesome lab in in Iceland, the intelligent instruments lab
+
+00:21:21.520 --> 00:21:24.880
+and they do like a lot of these programming environments where
+
+00:21:24.880 --> 00:21:27.360
+you process media in in in different
+
+00:21:27.360 --> 00:21:36.560
+ways. or there's this Polish collective named Panganerator, which... Mr. Generator? Yeah,
+
+00:21:36.560 --> 00:21:42.400
+precisely where they build their own weird instruments that have you know,
+
+00:21:42.400 --> 00:21:43.680
+like touch sensitive
+
+00:21:43.680 --> 00:21:51.920
+surfaces or or like lasers or scientists love lasers, right? So or like you play with light
+
+00:21:51.920 --> 00:21:58.000
+or other mechanisms and there's always like a tiny bit of like machine learning or like
+
+00:21:58.000 --> 00:22:02.720
+algorithmic composition going on there and and that I think is like super important.
+
+00:22:02.720 --> 00:22:08.080
+This may not be music that you know gets played on on the radio, it's more like music you would
+
+00:22:08.080 --> 00:22:16.000
+you would hear on an you know like an experimental festival or or in venues, you know, that that kind
+
+00:22:16.000 --> 00:22:25.920
+of accept like more experimental stuff, but that community of artists I feel is like very curious,
+
+00:22:25.920 --> 00:22:30.800
+welcoming and is very fast to absorb all of the technical nuances.
+
+00:22:30.800 --> 00:22:36.960
+To me it sounds like the barrier to participate and get paid got a bit higher because if you need
+
+00:22:36.960 --> 00:22:42.560
+any kind of music like you are shopping mall for example you don't even artist anymore, right?
+
+00:22:42.560 --> 00:22:45.680
+So if you're a top artist of course you will always
+
+00:22:45.680 --> 00:22:49.280
+get paid. The question is if it's enough like when
+
+00:22:49.280 --> 00:22:51.520
+we compare it to other industries but you
+
+00:22:51.520 --> 00:22:54.160
+will always have a job right but then like if you're just
+
+00:22:54.160 --> 00:23:01.520
+an average one or below average one businesses would probably prefer just to generate some AI
+
+00:23:01.520 --> 00:23:11.680
+music then to pay artists. Yeah I know right? Yeah absolutely. And you know and apart from that
+
+00:23:11.680 --> 00:23:21.760
+like we still don't really know or understand like what are the you know like what's the legal
+
+00:23:21.760 --> 00:23:28.640
+approach is it even legally like to to you know like stream an endless stream of slop in your shop
+
+00:23:28.640 --> 00:23:35.920
+or whatever I mean if you're doing that I mean that's your problem I guess but it doesn't really
+
+00:23:35.920 --> 00:23:43.200
+sound like you know like an interesting sustainable and most of all like a fair
+
+00:23:43.200 --> 00:23:51.520
+model for the artists right? So it's always going to be no easier for
+
+00:23:51.520 --> 00:23:59.920
+the ones that are already big and we've already seen this with recommender systems right? So
+
+00:23:59.920 --> 00:24:05.600
+as people are kind of getting more and more annoyed by you know like AI slop and like the
+
+00:24:05.600 --> 00:24:11.280
+sloppification of the internet and like bots that kind of make many you know portals the
+
+00:24:11.280 --> 00:24:20.080
+glass and less usable right? It's kind there also has been like a bit of pushback
+
+00:24:20.080 --> 00:24:26.320
+for recommender systems because they are very you know kind of artificial and maybe not always
+
+00:24:26.320 --> 00:24:33.440
+you want to be served something by an algorithm maybe like this you know kind of more
+
+00:24:33.440 --> 00:24:41.200
+traditional way of like talking about music with people who sometimes are more knowledgeable about
+
+00:24:41.200 --> 00:24:46.160
+some genre and then you're more knowledgeable maybe like that's going to make a comeback in
+
+00:24:46.160 --> 00:24:49.440
+in some time but yeah but the bias is there not only
+
+00:24:49.440 --> 00:24:53.280
+in the applications of of you know like like the
+
+00:24:53.280 --> 00:24:59.040
+the most scaled up business applications of of neural networks but also you know about the way
+
+00:24:59.040 --> 00:25:08.560
+we we consume music and the bias in recommender systems so so yeah it is difficult for for the
+
+00:25:08.560 --> 00:25:15.600
+for the small artists and like every big artist was a small artist at some point right? So I think
+
+00:25:15.600 --> 00:25:23.200
+we should be definitely thinking about that more and more and more and others some fun AI projects.
+
+00:25:23.200 --> 00:25:27.120
+So I heard that there is an AI song contest,
+
+00:25:27.120 --> 00:25:30.480
+so something like Eurovision for AI. Yeah. Tell us a bit
+
+00:25:30.480 --> 00:25:36.720
+more about it. So since since a couple of years, I don't remember what was the
+
+00:25:36.720 --> 00:25:39.120
+first year actually, but since a couple of years,
+
+00:25:39.120 --> 00:25:44.480
+there's this very nice and fun AI song contest which
+
+00:25:44.480 --> 00:25:49.520
+is called the AI song contest and basically what
+
+00:25:49.520 --> 00:25:59.200
+you do there is you submit your song co-created with AI
+
+00:25:59.200 --> 00:26:06.800
+and you have to use the AI in creative ways so apart from the music itself you also
+
+00:26:06.800 --> 00:26:12.560
+you also describe how you use the AI so obviously if a prompt goes in,
+
+00:26:12.560 --> 00:26:14.640
+slop goes out, that's not a very
+
+00:26:14.640 --> 00:26:20.160
+good submission for this one. What is a good submission?One that I remember really
+
+00:26:20.160 --> 00:26:24.800
+well was called Ada's LullaBye. So it was a
+
+00:26:24.800 --> 00:26:30.320
+generative model for lullabies and the guy trained it on like
+
+00:26:30.320 --> 00:26:37.040
+short melodic lullabies for children. And the guy trained it on his like five or six year old
+
+00:26:37.040 --> 00:26:45.760
+daughter. So the melodies that were putting her to sleep the fastest those were being used in the
+
+00:26:45.760 --> 00:26:51.280
+next iteration of training and after like a couple of hundred iterations he came up with this like
+
+00:26:51.280 --> 00:26:57.840
+personalized lullaby and that's just awesome. I mean like how cool is that, right?
+
+00:26:57.840 --> 00:27:05.120
+There are also some some other ideas, like one of the winning submissions actually I think in 2022
+
+00:27:05.120 --> 00:27:14.080
+was this submission that kind of used a differentiable digital signal processing model to
+
+00:27:14.080 --> 00:27:25.280
+kind of get the tuning system from a tie ethnic instrument into into like Western
+
+00:27:25.280 --> 00:27:31.520
+instruments. And to kind of, you know, recreate the characteristics of the
+
+00:27:31.520 --> 00:27:39.280
+kind of the trills and the articulation. So like stuff that is like extremely cool and
+
+00:27:39.280 --> 00:27:43.040
+and so yeah the AI song contest is like one of
+
+00:27:43.040 --> 00:27:46.240
+those venues. And it's and it got pretty big actually.
+
+00:27:46.240 --> 00:27:52.080
+I think this year in the jury there's Jordan Rudus from Dream Theater, there's people from MIT,
+
+00:27:52.080 --> 00:27:55.520
+from Berkeley College of Music, and like a couple of other
+
+00:27:55.520 --> 00:28:00.160
+respectable institutions. So how many songs were there?
+
+00:28:00.160 --> 00:28:10.240
+Oh, I think, it's definitely in the tens or even in the hundreds but about in the final
+
+00:28:10.240 --> 00:28:17.280
+it's like about like 10 or 20 submissions. I think the community voting for this year's edition
+
+00:28:17.280 --> 00:28:24.960
+might still be going on so yeah be sure to check that out. Planning to submit a song yourself?
+
+00:28:24.960 --> 00:28:33.120
+You're a musician and an AI person, so? Yeah, it's too late this year, but next year.
+
+00:28:33.120 --> 00:28:39.520
+Who knows, who knows, maybe, maybe me, or maybe me with some colleagues, or maybe well reactivate
+
+00:28:39.520 --> 00:28:47.040
+some of our older projects, or maybe with some students. We're also kind of starting to
+
+00:28:47.040 --> 00:28:55.360
+work with the musical university here in Warsaw, the Frédéric Chopin Musical University.
+
+00:28:55.360 --> 00:28:58.000
+We're working with the Society of Author ZAIKS,
+
+00:28:58.000 --> 00:29:01.680
+we're working with with some other institutions as well.
+
+00:29:01.680 --> 00:29:11.120
+So, it may just happen, it may happen in the foreseeable future.
+
+00:29:11.120 --> 00:29:16.800
+And if someone would like to learn more about AI music, what are some interesting resources?
+
+00:29:16.800 --> 00:29:20.880
+Yeah, that's a really good question. So I think
+
+00:29:20.880 --> 00:29:27.040
+that a great place to start is the tutorials from ISMIR.
+
+00:29:27.040 --> 00:29:33.280
+So ISMIR is the International Society for Music Information Retrieval Conference. That's like the
+
+00:29:33.280 --> 00:29:38.000
+primary kind of music informatics
+
+00:29:38.000 --> 00:29:43.920
+conference and each year there's like a set of tutorials and those are
+
+00:29:43.920 --> 00:29:48.000
+always extremely high quality. So there's this one
+
+00:29:48.000 --> 00:29:53.200
+from a couple of years ago called music classification
+
+00:29:53.200 --> 00:30:03.680
+beyond supervised learning. I think that's an
+
+00:30:03.680 --> 00:30:07.200
+excellent introduction to music processing and music
+
+00:30:07.200 --> 00:30:12.080
+machine learning, in general, if you know a bit of Python and you even don't know anything about
+
+00:30:12.080 --> 00:30:16.240
+machine that's a great resource. There's a very classical book
+
+00:30:16.240 --> 00:30:19.040
+called Fundamentals of Music Processing.
+
+00:30:19.040 --> 00:30:24.960
+I know that all books that start with the word fundamentals or introduction those are very
+
+00:30:24.960 --> 00:30:32.160
+like university books but introduction to fundamentals of music processing by
+
+00:30:32.160 --> 00:30:40.160
+Meinard Müller, that's one of the like golden resources. And in general I think
+
+00:30:40.160 --> 00:30:47.440
+the tutorials and the stuff that gets published at ISMIR and equally from the more kind of
+
+00:30:47.440 --> 00:30:54.800
+artsy site. There's also this interesting conference called NIME and it stands for new
+
+00:30:54.800 --> 00:31:03.520
+interfaces for musical expression and those are more on the art site. So that's the main focus.
+
+00:31:03.520 --> 00:31:10.880
+So they are sometimes like a bit less focused on the programming, which makes the programming
+
+00:31:10.880 --> 00:31:18.960
+part more accessible.It's a bit easier sometimes, so perhaps you know like diving into some of those
+
+00:31:18.960 --> 00:31:26.400
+you know ideas that have been already turned into like you know interfaces for musical expression
+
+00:31:26.400 --> 00:31:30.960
+some of those I think that are a good place to start. And even you know like see what's
+
+00:31:30.960 --> 00:31:39.600
+possible right? So, ISMIR, NINE, book and communities of AI musicians. Absolutely,
+
+00:31:39.600 --> 00:31:45.520
+yeah. Thank you for coming. Thank you for having me. Awesome.

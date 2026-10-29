@@ -1,0 +1,982 @@
+WEBVTT
+
+00:00:00.080 --> 00:00:02.240
+Just having the browser on people's devices,
+
+00:00:02.240 --> 00:00:04.240
+and you know, the browser is very well optimized.
+
+00:00:04.240 --> 00:00:05.760
+It's written in Rust maybe.
+
+00:00:05.760 --> 00:00:06.080
+I don't know.
+
+00:00:06.080 --> 00:00:11.120
+If you actually think at the scale of our industry of Python,
+
+00:00:11.120 --> 00:00:14.480
+all of the servers that you need to have to power this software--
+
+00:00:14.480 --> 00:00:16.640
+Django in Rust?
+
+00:00:16.640 --> 00:00:18.960
+You know, we actually had this as one of our April's
+
+00:00:18.960 --> 00:00:21.040
+fools blog post ideas.
+
+00:00:21.040 --> 00:00:22.880
+And currently it's written in Python.
+
+00:00:22.880 --> 00:00:25.360
+And we think it would make a lot of sense for that
+
+00:00:25.360 --> 00:00:29.120
+specifically to be written in another language, like Rust.
+
+00:00:29.120 --> 00:00:33.040
+We know everyone loves to convert things to Rust these days.
+
+00:00:33.040 --> 00:00:35.040
+So far, we talked about web.
+
+00:00:35.040 --> 00:00:37.200
+There's the whole AI space.
+
+00:00:37.200 --> 00:00:39.520
+Lots to say about the carbon footprints of AI.
+
+00:00:39.520 --> 00:00:41.280
+And when I say those three things, again,
+
+00:00:41.280 --> 00:00:43.520
+like the big elephant in the room is AI,
+
+00:00:43.520 --> 00:00:45.760
+I think we should expect way more transparency,
+
+00:00:45.760 --> 00:00:48.720
+not from open source developers, but from those businesses
+
+00:00:48.720 --> 00:00:50.160
+that build those models.
+
+00:00:50.160 --> 00:00:53.360
+Did you know that every website has a carbon footprint?
+
+00:00:53.360 --> 00:00:55.920
+What if even the smallest code changes in tools we all use
+
+00:00:55.920 --> 00:00:57.600
+could have a big impact?
+
+00:00:57.600 --> 00:01:00.160
+In this episode, I talk with Thibaud Colas.
+
+00:01:00.160 --> 00:01:02.800
+His product lead in engineering manager at Torchbox,
+
+00:01:02.800 --> 00:01:04.480
+product lead for Wagtail, and president
+
+00:01:04.480 --> 00:01:06.400
+of the Django Software Foundation.
+
+00:01:06.400 --> 00:01:08.320
+We talked about digital sustainability
+
+00:01:08.320 --> 00:01:14.320
+and what we can do to make the web greener.
+
+00:01:14.320 --> 00:01:18.240
+Python developers are aware and care a lot about performance,
+
+00:01:18.240 --> 00:01:21.280
+but what about carbon footprint?
+
+00:01:21.280 --> 00:01:23.120
+Yeah, good question.
+
+00:01:23.120 --> 00:01:26.800
+Well, when you think of the impact of your software,
+
+00:01:26.800 --> 00:01:30.080
+think first of all as a Python dev, you think of the users,
+
+00:01:30.080 --> 00:01:32.800
+maybe devs, maybe people that aren't technical,
+
+00:01:32.800 --> 00:01:34.560
+that the software supports.
+
+00:01:34.560 --> 00:01:38.640
+But you don't necessarily think about the impacts on the planet.
+
+00:01:38.640 --> 00:01:41.440
+And I think that's because technology, software,
+
+00:01:41.440 --> 00:01:43.280
+you know, we don't really see where it runs.
+
+00:01:43.280 --> 00:01:44.800
+It's very intangible.
+
+00:01:44.800 --> 00:01:50.240
+But if you actually think at the scale of our industry of Python,
+
+00:01:50.240 --> 00:01:52.560
+all of the servers that you need to have to power
+
+00:01:52.560 --> 00:01:56.240
+this software and how much energy is needed
+
+00:01:56.240 --> 00:02:00.160
+both to create those devices and keep them on the internet,
+
+00:02:00.160 --> 00:02:02.000
+it's a lot of energy.
+
+00:02:02.000 --> 00:02:06.160
+And even though it might not be flying twice a day,
+
+00:02:06.160 --> 00:02:09.040
+levels of energy, it definitely adds up.
+
+00:02:09.040 --> 00:02:11.760
+So, yeah, when it comes to running Python code,
+
+00:02:11.760 --> 00:02:14.160
+you think of how it is, you think of the CPU,
+
+00:02:14.160 --> 00:02:18.960
+and that CPU needs the server and needs the electricity to power it.
+
+00:02:18.960 --> 00:02:19.360
+Right.
+
+00:02:19.360 --> 00:02:22.960
+And is this question that matters to a lot of developers?
+
+00:02:22.960 --> 00:02:26.400
+They often get those questions or any discussions.
+
+00:02:26.400 --> 00:02:30.000
+So, you think this is an niche topic that people don't really talk about.
+
+00:02:30.000 --> 00:02:31.920
+I ask, because this starts with performance,
+
+00:02:31.920 --> 00:02:34.880
+and every other Python dev asks,
+
+00:02:34.880 --> 00:02:36.960
+oh, should we be rewriting this in Rust?
+
+00:02:36.960 --> 00:02:40.640
+Because every dev also cares about performance.
+
+00:02:40.640 --> 00:02:45.840
+But very few people actually think about the carbon impacts.
+
+00:02:45.840 --> 00:02:48.400
+And I don't think it's necessarily because they don't care.
+
+00:02:48.400 --> 00:02:49.600
+It's just not aware.
+
+00:02:49.600 --> 00:02:53.600
+When they think of carbon, they think of flying, maybe the car,
+
+00:02:53.600 --> 00:02:55.920
+maybe if they have a company that thinks about those things,
+
+00:02:55.920 --> 00:02:58.560
+maybe they think of commuting, the office space,
+
+00:02:58.560 --> 00:03:01.200
+they don't necessarily think of the sites and apps
+
+00:03:01.200 --> 00:03:03.200
+that they build with the software.
+
+00:03:03.200 --> 00:03:07.280
+So, to me, the type of thing where, once people start to think about this,
+
+00:03:07.280 --> 00:03:11.120
+they realize that if they are software that are quite a large scale,
+
+00:03:11.120 --> 00:03:16.720
+maybe the software itself is a bigger deal than all those other aspects.
+
+00:03:16.720 --> 00:03:20.320
+One example I can give you, Mozilla, the Mozilla Foundation,
+
+00:03:20.320 --> 00:03:22.880
+they manage the Firefox browser,
+
+00:03:22.880 --> 00:03:25.520
+and they were one of the first ones to report
+
+00:03:25.520 --> 00:03:29.440
+not just the carbon footprint of the Mozilla Foundation,
+
+00:03:29.440 --> 00:03:34.560
+but also of Firefox, the browser, as it's used on people's devices.
+
+00:03:34.560 --> 00:03:40.560
+And I don't know if you can guess how much the Firefox usage is of Mozilla emissions.
+
+00:03:40.560 --> 00:03:44.480
+It's 98% of their organization footprints
+
+00:03:44.480 --> 00:03:46.720
+is just people running Firefox.
+
+00:03:46.720 --> 00:03:49.040
+So, when you start to think through that...
+
+00:03:49.040 --> 00:03:50.800
+The browser and do nothing there.
+
+00:03:50.800 --> 00:03:52.880
+Just having the browser on people's devices.
+
+00:03:52.880 --> 00:03:54.880
+And the browser is very well optimized.
+
+00:03:54.880 --> 00:03:56.480
+It's written in Rust, maybe?
+
+00:03:56.480 --> 00:04:00.480
+I don't know, but even with all of that in place,
+
+00:04:00.480 --> 00:04:03.040
+it has a big energy footprints.
+
+00:04:03.040 --> 00:04:05.200
+And it matters if you care about the climate,
+
+00:04:05.200 --> 00:04:06.960
+but also if you have it on your phone
+
+00:04:06.960 --> 00:04:09.760
+and you want a longer battery life, simple like that.
+
+00:04:09.760 --> 00:04:14.480
+And what is the impact on the web software and websites in general
+
+00:04:14.480 --> 00:04:15.520
+on carbon footprint?
+
+00:04:15.520 --> 00:04:17.680
+Because when talking about carbon footprint,
+
+00:04:17.680 --> 00:04:21.360
+we often talk about industries,
+
+00:04:21.360 --> 00:04:23.600
+flying corporations,
+
+00:04:23.600 --> 00:04:28.960
+but I wonder how much impact does software have on it?
+
+00:04:28.960 --> 00:04:31.680
+Yeah, for websites specifically,
+
+00:04:31.680 --> 00:04:35.360
+there is this quite well established methodology
+
+00:04:35.360 --> 00:04:39.120
+called Sustainable Web Design SWD.
+
+00:04:39.120 --> 00:04:42.560
+And it divides website emissions in three categories.
+
+00:04:42.560 --> 00:04:46.560
+It considers the servers, how much energy they use,
+
+00:04:46.560 --> 00:04:49.760
+the user's devices that display the website's pages
+
+00:04:49.760 --> 00:04:51.840
+and the network in between.
+
+00:04:51.840 --> 00:04:54.320
+And you realize that when you start to crunch through the numbers,
+
+00:04:54.320 --> 00:04:56.000
+that's all those things matter.
+
+00:04:56.000 --> 00:04:58.480
+And sexually, the user's devices
+
+00:04:58.480 --> 00:05:00.720
+that have the highest emissions.
+
+00:05:00.720 --> 00:05:04.800
+Because if you think about it when a server creates a page,
+
+00:05:04.800 --> 00:05:08.400
+it can cache it and display the same page for a thousand people.
+
+00:05:08.400 --> 00:05:09.680
+But when someone opens the page,
+
+00:05:09.680 --> 00:05:12.240
+they're going to do that once, maybe twice and so on.
+
+00:05:12.240 --> 00:05:14.240
+So that adds up pretty fast.
+
+00:05:14.240 --> 00:05:17.120
+For Django, for example, I'm involved with the Django Foundation
+
+00:05:17.120 --> 00:05:19.280
+as the president this year.
+
+00:05:19.280 --> 00:05:26.240
+And I estimate there's only 500 to 500,000 to a million Django projects
+
+00:05:26.240 --> 00:05:27.360
+out there.
+
+00:05:27.360 --> 00:05:29.840
+And those projects, the average footprint is only
+
+00:05:29.840 --> 00:05:32.800
+other of a ton of CO2 per year.
+
+00:05:32.800 --> 00:05:36.240
+So you can clearly see how fast the numbers add up,
+
+00:05:36.240 --> 00:05:41.920
+even though people don't necessarily think of Django as an energy intensive.
+
+00:05:41.920 --> 00:05:47.440
+So many websites that run on Django, it would be improved Django itself.
+
+00:05:47.440 --> 00:05:50.000
+Then the overall impact would be very big.
+
+00:05:50.000 --> 00:05:54.160
+And what is the current state of carbon footprint
+
+00:05:54.160 --> 00:05:56.960
+in the Django ecosystem?
+
+00:05:56.960 --> 00:06:00.160
+The current state is, I think, first and foremost,
+
+00:06:00.160 --> 00:06:05.280
+we have to have more developers invested into this and thinking about it
+
+00:06:05.280 --> 00:06:08.320
+and more companies as well.
+
+00:06:08.320 --> 00:06:11.200
+There are quite a few very big Django users
+
+00:06:11.200 --> 00:06:14.880
+out there that have quite clear climate commitments.
+
+00:06:14.880 --> 00:06:19.840
+I think of people like the NHS in the UK, the biggest UK employer.
+
+00:06:19.840 --> 00:06:24.000
+They have a very large sites with billions of billions, sorry, of page use per year.
+
+00:06:24.000 --> 00:06:26.320
+And they have climate commitments.
+
+00:06:26.320 --> 00:06:30.560
+So it's really crucial for those people that the tech they select
+
+00:06:30.560 --> 00:06:32.320
+missed those commitments.
+
+00:06:32.320 --> 00:06:34.400
+And when it comes to open source contributors,
+
+00:06:34.400 --> 00:06:38.160
+I think it's worth saying that they definitely have a clear stake
+
+00:06:38.160 --> 00:06:41.200
+and opportunities to reduce that footprint.
+
+00:06:41.200 --> 00:06:44.000
+So when you think of individual actions, there's activism,
+
+00:06:44.000 --> 00:06:46.800
+but they could also be contributing to a product like Django
+
+00:06:46.800 --> 00:06:51.120
+and reducing its footprints by improving its performance.
+
+00:06:51.120 --> 00:06:55.680
+And what are some gaps in Django or some areas for improvements?
+
+00:06:55.680 --> 00:06:56.800
+Oh, there's so many.
+
+00:06:56.800 --> 00:07:02.400
+I mean, you know, I think it's still quite early days for this industry.
+
+00:07:02.400 --> 00:07:07.520
+I think the biggest gap to start for starters is just having those methodologies
+
+00:07:07.520 --> 00:07:09.600
+to measure emissions.
+
+00:07:09.600 --> 00:07:11.600
+So far, we talked about web.
+
+00:07:11.600 --> 00:07:13.840
+There's the whole AI space.
+
+00:07:13.840 --> 00:07:16.000
+Lots to say about the carbon footprint of AI.
+
+00:07:16.000 --> 00:07:19.040
+But one thing that's really clear is that it's very easy to measure.
+
+00:07:19.040 --> 00:07:22.160
+And I think people should start to ask for those measurements a bit more.
+
+00:07:22.160 --> 00:07:23.760
+So how is it measured?
+
+00:07:23.760 --> 00:07:28.320
+If you have a website somewhere and I deploy it to cloud or anywhere,
+
+00:07:28.320 --> 00:07:32.800
+how do I measure carbon footprint of my website?
+
+00:07:32.800 --> 00:07:37.360
+The simplest way to get started if you want like a kind of approximation,
+
+00:07:37.360 --> 00:07:40.000
+is to measure the weight of the pages.
+
+00:07:40.000 --> 00:07:43.840
+And the sad truth is the number, the weight of the pages across the web is going up
+
+00:07:43.840 --> 00:07:45.680
+and up and up every year.
+
+00:07:45.680 --> 00:07:49.760
+And that's really just, you know, heavy, more heavy weight pages are slower to load
+
+00:07:49.760 --> 00:07:51.360
+on your own devices.
+
+00:07:51.360 --> 00:07:52.960
+So there's that to get started.
+
+00:07:52.960 --> 00:07:55.520
+Then if you want more precise measurements,
+
+00:07:55.520 --> 00:07:59.520
+you're going to look at measuring the CPU usage of the site,
+
+00:07:59.520 --> 00:08:02.880
+measuring the memory use, how many servers are needed,
+
+00:08:02.880 --> 00:08:06.960
+and you need to start to investigate also not just like how much resources,
+
+00:08:06.960 --> 00:08:09.520
+but also where in the world those resources are used.
+
+00:08:09.520 --> 00:08:13.760
+So you know, if you have a data center that's powered by uniable energy,
+
+00:08:13.760 --> 00:08:18.960
+it's going to emit much less carbon than one powered by gas, paraphones.
+
+00:08:18.960 --> 00:08:23.600
+So going back to Django, what are some future plans about it?
+
+00:08:23.600 --> 00:08:26.800
+Because you said there are lots of things that can be improved.
+
+00:08:26.800 --> 00:08:29.760
+Do you have any road make or any plan to improve it?
+
+00:08:29.760 --> 00:08:30.800
+Or...
+
+00:08:30.800 --> 00:08:35.280
+My wish, my dream, would be to get the whole Python community
+
+00:08:35.280 --> 00:08:37.840
+to align on this and make it happen.
+
+00:08:37.840 --> 00:08:42.640
+For Django itself, I'm actually part of another project called the Wactel CMS,
+
+00:08:42.640 --> 00:08:45.120
+where we did produce a roadmap.
+
+00:08:45.120 --> 00:08:48.480
+So Wagtail is just one of many Django packages.
+
+00:08:48.480 --> 00:08:53.360
+Wagtail powers on the order of 20,000 sites, including the NHS one.
+
+00:08:53.360 --> 00:08:57.120
+And for Wagtail, we spend some time creating a roadmap of 10 items,
+
+00:08:57.120 --> 00:09:00.640
+which we think are the most important to make progress on this.
+
+00:09:00.640 --> 00:09:03.920
+And those 10 items, roughly speaking, I believe there is six
+
+00:09:03.920 --> 00:09:06.640
+that are improvements to Wagtail itself.
+
+00:09:06.640 --> 00:09:09.840
+There is the rest that are about awareness in the community.
+
+00:09:09.840 --> 00:09:13.360
+So something I'd like to see for Django in particular,
+
+00:09:13.360 --> 00:09:16.960
+we have ways to make Django much smaller and still very useful.
+
+00:09:16.960 --> 00:09:20.240
+You know, these days, people really like frameworks like FastAPI
+
+00:09:20.240 --> 00:09:24.160
+that are much smaller in footprints, from the series energy use,
+
+00:09:24.160 --> 00:09:25.760
+but just amount of code.
+
+00:09:25.760 --> 00:09:28.160
+And I think Django could address that need better
+
+00:09:28.160 --> 00:09:30.560
+and lower is footprint at the same time.
+
+00:09:30.560 --> 00:09:32.080
+And what about languages?
+
+00:09:32.080 --> 00:09:35.120
+Different languages have different footprint, right?
+
+00:09:35.120 --> 00:09:36.080
+For sure.
+
+00:09:36.080 --> 00:09:41.200
+And Python is one of the worst ones, isn't it?
+
+00:09:41.200 --> 00:09:45.840
+Does it mean that we should consider using more other languages?
+
+00:09:45.840 --> 00:09:47.280
+It's a good question.
+
+00:09:47.280 --> 00:09:51.360
+I definitely think that, you know, if you do data processing,
+
+00:09:51.360 --> 00:09:56.160
+it makes sense to convert some of that code into C or Rust.
+
+00:09:56.160 --> 00:09:59.920
+We know everyone loves to convert things to Rust these days.
+
+00:09:59.920 --> 00:10:02.720
+And, but the thing is, we already know that,
+
+00:10:02.720 --> 00:10:05.200
+because we already care about improving performance,
+
+00:10:05.200 --> 00:10:07.360
+yeah, about reducing costs.
+
+00:10:07.360 --> 00:10:09.440
+But I think when it comes to reducing the footprints,
+
+00:10:09.440 --> 00:10:12.960
+there's lots of room to do things in Python still.
+
+00:10:12.960 --> 00:10:15.760
+So if you want an example, one I really like,
+
+00:10:15.760 --> 00:10:20.320
+is image processing and reducing the size of images.
+
+00:10:20.320 --> 00:10:23.200
+Of course, you're going to use a C library to do that.
+
+00:10:23.200 --> 00:10:24.960
+That's very well optimized.
+
+00:10:24.960 --> 00:10:27.760
+But the integration from that to Python,
+
+00:10:27.760 --> 00:10:30.080
+we have to have it written in Python.
+
+00:10:30.080 --> 00:10:33.680
+And having those integrations with those newer formats for images
+
+00:10:33.680 --> 00:10:37.760
+is a type of thing that makes a difference.
+
+00:10:37.760 --> 00:10:41.840
+So you're not planning to rewrite Django in Rust?
+
+00:10:41.840 --> 00:10:44.640
+You know, we actually had this as one of our April's fools,
+
+00:10:44.640 --> 00:10:46.240
+blog post ideas.
+
+00:10:46.240 --> 00:10:48.880
+And we thought it was just like slightly too,
+
+00:10:48.880 --> 00:10:51.040
+you know, it might feel quite real for people.
+
+00:10:51.040 --> 00:10:54.480
+So I guess for Django in Rust, we actually have concrete plans.
+
+00:10:54.480 --> 00:10:57.200
+I can't say like plans as in we have any commitments.
+
+00:10:57.200 --> 00:10:59.360
+But definitely interests.
+
+00:10:59.360 --> 00:11:01.760
+I don't know if you know when it comes to serving Django,
+
+00:11:01.760 --> 00:11:03.840
+you combine it with a web server.
+
+00:11:03.840 --> 00:11:06.480
+There's one called Granian, as written in Rust,
+
+00:11:06.480 --> 00:11:11.360
+and has a fair bit more optimized footprints than others.
+
+00:11:11.360 --> 00:11:14.320
+And another thing is the Django template language,
+
+00:11:14.320 --> 00:11:16.000
+currently is written in Python.
+
+00:11:16.000 --> 00:11:18.880
+And we think it would make a lot of sense for that specifically
+
+00:11:18.880 --> 00:11:22.160
+to be written in another language like Rust.
+
+00:11:22.160 --> 00:11:25.680
+So Lilly Foote, one of Django's steering council members,
+
+00:11:25.680 --> 00:11:26.640
+she's working on that.
+
+00:11:26.640 --> 00:11:29.280
+At the moment, I believe it's more of a side project.
+
+00:11:29.280 --> 00:11:34.080
+But definitely one that we could see moving to Django core in the future.
+
+00:11:34.080 --> 00:11:39.520
+So what are some other tips how to reduce it except of Rust?
+
+00:11:39.520 --> 00:11:43.360
+I mean, you know, I don't know if in your personal life,
+
+00:11:43.360 --> 00:11:45.600
+some people spend lots of time about this,
+
+00:11:45.600 --> 00:11:49.840
+you know, there's the reduce, reuse, recycle, mantra.
+
+00:11:49.840 --> 00:11:53.280
+So definitely this is the right mindset in my opinion.
+
+00:11:53.280 --> 00:11:56.000
+And I think I would add one before in our case,
+
+00:11:56.000 --> 00:12:01.120
+which is measure just to have a sense of where any change might move the needle.
+
+00:12:01.120 --> 00:12:04.800
+And when we say reduce, I think it's really important to be clear that
+
+00:12:04.800 --> 00:12:09.360
+we're not necessarily asking people to completely scale down and stop doing technology,
+
+00:12:09.360 --> 00:12:13.520
+just thinking of where the tech is most useful, focus on that,
+
+00:12:13.520 --> 00:12:16.560
+and the bloats that just makes your device run slower,
+
+00:12:16.560 --> 00:12:20.320
+that makes your battery drain faster, like remove those bits.
+
+00:12:20.320 --> 00:12:22.240
+And how can we raise awareness?
+
+00:12:22.240 --> 00:12:25.600
+Because if you go to conferences, if you read blogs,
+
+00:12:25.600 --> 00:12:30.560
+this is not really a topic for mainstream tech media.
+
+00:12:30.560 --> 00:12:34.320
+I think it's starting to get mainstream in the context of AI actually,
+
+00:12:34.320 --> 00:12:38.000
+because people really see the buildup in data centers,
+
+00:12:38.000 --> 00:12:42.200
+and how the big cloud players, you know, they had those quite clear net zero commitments
+
+00:12:42.200 --> 00:12:44.400
+that are starting to get watered down a bit.
+
+00:12:44.400 --> 00:12:47.280
+And I think that's actually a space where awareness is raising.
+
+00:12:47.280 --> 00:12:50.640
+But I guess to your point in the Python world,
+
+00:12:50.640 --> 00:12:54.960
+I think what actually works is aligning this with performance concerns.
+
+00:12:54.960 --> 00:12:59.040
+So I mentioned images, things like the A with image formats,
+
+00:12:59.040 --> 00:13:00.800
+it has SEO benefits.
+
+00:13:00.800 --> 00:13:04.400
+It makes your users really happy if the sites load faster.
+
+00:13:04.400 --> 00:13:06.080
+So lots of good reasons to do this.
+
+00:13:06.080 --> 00:13:09.120
+And the carbon, lower carbon is just one of them.
+
+00:13:09.120 --> 00:13:13.440
+I think the other thing is things like Python performance improvements.
+
+00:13:13.440 --> 00:13:17.840
+So in Python 3.11, I believe, we had quite good performance bumps
+
+00:13:17.840 --> 00:13:20.560
+across pretty much any Python projects.
+
+00:13:20.560 --> 00:13:24.400
+When we talk about those things, also talking about the reduced energy
+
+00:13:24.400 --> 00:13:29.440
+use, which again is good for costs in the servers, but also the climates.
+
+00:13:29.440 --> 00:13:33.840
+And I don't know if you follow with the latest 3.14 Python developments,
+
+00:13:33.840 --> 00:13:36.880
+there's a free threading walk in the way.
+
+00:13:36.880 --> 00:13:38.800
+That as well could have a big impact.
+
+00:13:38.800 --> 00:13:45.040
+So I think combining that walk with benchmarks on energy use, go a long way.
+
+00:13:45.040 --> 00:13:48.560
+And if I would like to learn more just to get started,
+
+00:13:48.560 --> 00:13:51.920
+or if I were a maintainer having my own project,
+
+00:13:51.920 --> 00:13:55.120
+where can I read about it more?
+
+00:13:55.120 --> 00:14:01.040
+My favorite resource by far is knowing the Python world.
+
+00:14:01.040 --> 00:14:04.400
+You come for the tech and you stay for the community, I think.
+
+00:14:04.400 --> 00:14:09.760
+And there's a community for software practitioners who care about climates.
+
+00:14:09.760 --> 00:14:12.240
+It's called climate action tech.
+
+00:14:12.240 --> 00:14:15.280
+It's an online community that's very easy to join, completely free.
+
+00:14:15.280 --> 00:14:19.600
+And you're just in this server with like-minded people
+
+00:14:19.600 --> 00:14:22.080
+to chat about those different topics.
+
+00:14:22.080 --> 00:14:23.840
+And you're there with the experts,
+
+00:14:23.840 --> 00:14:26.960
+and other people who are interested, and who share the right resources.
+
+00:14:26.960 --> 00:14:29.760
+So climate action tech would be my go-to.
+
+00:14:29.760 --> 00:14:33.360
+And I think the other one I would recommend is lots of people these days.
+
+00:14:33.360 --> 00:14:34.960
+They care about AI.
+
+00:14:34.960 --> 00:14:39.280
+There's excellent reporting on the carbon footprint of AI from Stanford,
+
+00:14:39.280 --> 00:14:42.080
+but I think people will find it really interesting.
+
+00:14:42.080 --> 00:14:47.360
+And if I would like to contribute somehow, is there anything that I can do?
+
+00:14:47.360 --> 00:14:51.120
+I would love for us all to coordinate more.
+
+00:14:51.120 --> 00:14:57.280
+And in my mind, the best way would be for you to find those folks on the climate action tech,
+
+00:14:57.280 --> 00:15:02.480
+get in touch with them and discuss for your specific projects what moves the needle.
+
+00:15:02.480 --> 00:15:05.040
+So right now, if I think of contributing,
+
+00:15:05.040 --> 00:15:09.280
+there is this, I don't know if you know the W3C who do accessibility standards.
+
+00:15:09.280 --> 00:15:11.920
+They're also working on a sustainability standard.
+
+00:15:11.920 --> 00:15:15.360
+And I think they could really use feedback from web devs.
+
+00:15:15.360 --> 00:15:18.640
+And being able to be part of those standards is also a big opportunity for people.
+
+00:15:18.640 --> 00:15:22.400
+It's quite a new field. I think it's a lot of room to grow your query in that.
+
+00:15:22.400 --> 00:15:25.520
+So yeah, climate action tech, reviewing those standards,
+
+00:15:25.520 --> 00:15:28.480
+giving the feedback and just connecting with people.
+
+00:15:28.480 --> 00:15:32.480
+And you mentioned that there are some standards, but is there anyway,
+
+00:15:32.480 --> 00:15:40.160
+how can we make open source developers or in general, developers accountable for the footprint
+
+00:15:40.160 --> 00:15:43.520
+of the tools they create?
+
+00:15:43.520 --> 00:15:45.600
+Accountability, that's a tough topic, Mia.
+
+00:15:45.600 --> 00:15:49.120
+I don't know if we can definitely make people accountable because you know,
+
+00:15:49.120 --> 00:15:50.320
+when you put software
+
+00:15:50.320 --> 00:15:54.960
+out there as open source, you don't necessarily think a lot about
+
+00:15:54.960 --> 00:15:58.480
+any commitments to your users afterwards.
+
+00:15:58.480 --> 00:16:01.200
+I think it's definitely worth thinking of what you can do,
+
+00:16:01.200 --> 00:16:07.040
+but I would say it as in more think through how people will use the software and try and set them
+
+00:16:07.040 --> 00:16:13.040
+on the happy path. So to me, if you want to start to move totally towards accountability,
+
+00:16:13.040 --> 00:16:16.880
+what's the most helpful actually is just transparency and sharing
+
+00:16:16.880 --> 00:16:18.480
+the results and sharing the numbers.
+
+00:16:18.480 --> 00:16:24.800
+So for Wactel, for example, we try hard to publish our footprints, not just of our project
+
+00:16:24.800 --> 00:16:29.360
+organization, but also the Wactel sites up there, but we start on a yearly basis.
+
+00:16:29.360 --> 00:16:33.360
+I would expect the same from Django because we have quite a serious foundation.
+
+00:16:33.360 --> 00:16:36.960
+And eventually I'd love to see the same from Python as well.
+
+00:16:36.960 --> 00:16:40.960
+And when I say those three things, again, like the big elephant in the room is AI,
+
+00:16:40.960 --> 00:16:44.880
+I think we should expect way more transparency, not from open source developers,
+
+00:16:44.880 --> 00:16:48.560
+but from those businesses that build those models that change our society.
+
+00:16:48.560 --> 00:16:55.120
+And is there anything that we can do in regards to businesses, big tech, corporations,
+
+00:16:55.120 --> 00:16:56.480
+cloud providers?
+
+00:16:56.480 --> 00:17:02.720
+Yeah, I think it's just, you know, understanding the benefits of those providers and the tools
+
+00:17:02.720 --> 00:17:05.040
+they provide and of their AI models,
+
+00:17:05.040 --> 00:17:09.680
+but also understanding the impact on the planet, the society,
+
+00:17:09.680 --> 00:17:12.800
+and I guess asking for more, raising your standards.
+
+00:17:12.800 --> 00:17:17.360
+When it comes to AI, for example, I try and push people towards local models
+
+00:17:17.360 --> 00:17:21.440
+because it really forces them to be more aware of the, I guess,
+
+00:17:21.440 --> 00:17:26.640
+how big of a server you have to have to run them and also how much energy it takes to run them.
+
+00:17:26.640 --> 00:17:31.840
+And once you have that kind of feedback loop of actually wanting to reduce those numbers,
+
+00:17:31.840 --> 00:17:33.920
+you naturally do it.
+
+00:17:33.920 --> 00:17:34.960
+Thank you for coming.
+
+00:17:34.960 --> 00:17:37.440
+Thanks for having me.

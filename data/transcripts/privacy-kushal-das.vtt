@@ -1,0 +1,3265 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:01.320
+He was
+
+00:00:01.320 --> 00:00:03.280
+sharing photos
+
+00:00:03.280 --> 00:00:06.400
+of a woman who was in toilet. If that is
+
+00:00:06.400 --> 00:00:08.120
+not bizarre enough, I don't know what it
+
+00:00:08.120 --> 00:00:10.000
+is. Right now, even for Europe, it's a
+
+00:00:10.000 --> 00:00:11.760
+big challenge because it is again and
+
+00:00:11.760 --> 00:00:13.240
+again things like chat controller are
+
+00:00:13.240 --> 00:00:14.880
+coming back with a different name.
+
+00:00:14.880 --> 00:00:17.320
+>> Is your vacuum cleaner spying on you?
+
+00:00:17.320 --> 00:00:19.600
+Sounds like a joke, but it's not.
+
+00:00:19.600 --> 00:00:21.160
+In this episode, I had the chance to
+
+00:00:21.160 --> 00:00:23.800
+talk to Kushal Das. Kushal is a public
+
+00:00:23.800 --> 00:00:25.280
+interest technologist and core team
+
+00:00:25.280 --> 00:00:27.200
+member at the Tor Project, core
+
+00:00:27.200 --> 00:00:29.480
+developer of CPython, and director of
+
+00:00:29.480 --> 00:00:31.680
+the Python Software Foundation.
+
+00:00:31.680 --> 00:00:33.880
+We talked about privacy, surveillance,
+
+00:00:33.880 --> 00:00:35.680
+and what it actually takes to protect
+
+00:00:35.680 --> 00:00:38.040
+people online.
+
+00:00:38.040 --> 00:00:39.400
+On your t-shirt, it's written that
+
+00:00:39.400 --> 00:00:42.880
+privacy is a human right. Is it?
+
+00:00:42.880 --> 00:00:45.840
+>> Yes, we believe so, and it's extremely
+
+00:00:45.840 --> 00:00:47.920
+important that many people actually get
+
+00:00:47.920 --> 00:00:50.200
+reminded again and again because in the
+
+00:00:50.200 --> 00:00:52.360
+modern world and thanks to this thing
+
+00:00:52.360 --> 00:00:54.520
+called computer and all the new
+
+00:00:54.520 --> 00:00:56.600
+technologies we're building around, it's
+
+00:00:56.600 --> 00:00:58.080
+like it's
+
+00:00:58.080 --> 00:01:00.320
+keeping it as a saying human right is
+
+00:01:00.320 --> 00:01:02.520
+becoming a very difficult. And many of
+
+00:01:02.520 --> 00:01:04.360
+the parts of the world we actually do
+
+00:01:04.360 --> 00:01:07.800
+not have that as a right.
+
+00:01:07.800 --> 00:01:10.040
+I I believe so firmly.
+
+00:01:10.040 --> 00:01:11.640
+>> And what sparked your passion for
+
+00:01:11.640 --> 00:01:14.240
+privacy? In the past, you were focused
+
+00:01:14.240 --> 00:01:16.200
+on technologies, but nowadays you're
+
+00:01:16.200 --> 00:01:18.480
+focusing on freedom and privacy. How did
+
+00:01:18.480 --> 00:01:20.360
+it all started?
+
+00:01:20.360 --> 00:01:23.400
+>> So, as you mentioned, yes, I was more
+
+00:01:23.400 --> 00:01:25.200
+interested about technology in general,
+
+00:01:25.200 --> 00:01:27.000
+like learning things, how to build or
+
+00:01:27.000 --> 00:01:29.960
+how to break. All of them were fun, but
+
+00:01:29.960 --> 00:01:32.440
+at the very I would say the beginning of
+
+00:01:32.440 --> 00:01:34.080
+my technology journey,
+
+00:01:34.080 --> 00:01:36.120
+I was lucky enough to meet few or made
+
+00:01:36.120 --> 00:01:38.920
+few friends from Chaos Computer Club
+
+00:01:38.920 --> 00:01:41.320
+Berlin. And a lot of ideas have about
+
+00:01:41.320 --> 00:01:43.760
+hacking, how technology works, how to
+
+00:01:43.760 --> 00:01:46.640
+make things better for the world comes
+
+00:01:46.640 --> 00:01:49.960
+from there. But also along with the
+
+00:01:49.960 --> 00:01:51.920
+started, you know, you started growing
+
+00:01:51.920 --> 00:01:54.120
+mentally a little bit, read more, learn
+
+00:01:54.120 --> 00:01:56.520
+more what happened before in the world.
+
+00:01:56.520 --> 00:01:58.400
+And I was lucky enough to get married to
+
+00:01:58.400 --> 00:02:00.840
+a lawyer, Anwesha, my wife. I mean,
+
+00:02:00.840 --> 00:02:03.160
+she's lawyer by degree. So, after the
+
+00:02:03.160 --> 00:02:05.280
+marriage, started learning a lot more,
+
+00:02:05.280 --> 00:02:07.640
+things I had no clue about how world
+
+00:02:07.640 --> 00:02:10.360
+works. I almost spoke Bengali, but yeah.
+
+00:02:10.360 --> 00:02:12.040
+And that's when like more and more
+
+00:02:12.040 --> 00:02:14.640
+slowly I was like like I think it
+
+00:02:14.640 --> 00:02:17.080
+started at home. And then like I was
+
+00:02:17.080 --> 00:02:19.360
+getting more and more focused on like at
+
+00:02:19.360 --> 00:02:20.800
+first maybe in the security side, but
+
+00:02:20.800 --> 00:02:22.280
+then it like oh
+
+00:02:22.280 --> 00:02:23.760
+like we need more people looking at
+
+00:02:23.760 --> 00:02:26.760
+privacy and rights and like freedom.
+
+00:02:26.760 --> 00:02:28.320
+It's very easy to say that we are free,
+
+00:02:28.320 --> 00:02:31.000
+but if we start like are we? When people
+
+00:02:31.000 --> 00:02:33.080
+ask, then start looking at things. So,
+
+00:02:33.080 --> 00:02:35.120
+that's how I slowly moved more and more
+
+00:02:35.120 --> 00:02:36.920
+like oh, we need more people who can
+
+00:02:36.920 --> 00:02:39.400
+understand or do things. So, that's how
+
+00:02:39.400 --> 00:02:41.240
+jumped from technology to privacy and
+
+00:02:41.240 --> 00:02:43.400
+security like things. And focusing more
+
+00:02:43.400 --> 00:02:45.760
+on privacy, helping people out.
+
+00:02:45.760 --> 00:02:48.080
+And I believe I think as you said like
+
+00:02:48.080 --> 00:02:49.600
+in the beginning like
+
+00:02:49.600 --> 00:02:51.440
+things are becoming very complex. So,
+
+00:02:51.440 --> 00:02:53.400
+having that rights or understanding is
+
+00:02:53.400 --> 00:02:55.080
+very difficult right now.
+
+00:02:55.080 --> 00:02:57.600
+>> One of the projects you were working on
+
+00:02:57.600 --> 00:02:59.880
+and maintaining for a long time is
+
+00:02:59.880 --> 00:03:01.680
+SecureDrop. Can you tell us something a
+
+00:03:01.680 --> 00:03:03.440
+bit more about this project?
+
+00:03:03.440 --> 00:03:06.440
+>> Yes. So, SecureDrop it started long time
+
+00:03:06.440 --> 00:03:09.080
+ago as a different name by
+
+00:03:09.080 --> 00:03:11.480
+Aaron Swartz, who is sadly no longer
+
+00:03:11.480 --> 00:03:13.400
+with us anymore. But after he passed
+
+00:03:13.400 --> 00:03:15.480
+away, it
+
+00:03:15.480 --> 00:03:17.120
+it was I think that then it was named
+
+00:03:17.120 --> 00:03:18.959
+was DeadDrop, if I remember correctly.
+
+00:03:18.959 --> 00:03:21.440
+But then Freedom of the Press Foundation
+
+00:03:21.440 --> 00:03:23.400
+took over the project and it became
+
+00:03:23.400 --> 00:03:25.800
+SecureDrop, became much bigger. It's an
+
+00:03:25.800 --> 00:03:28.560
+open slow open-source whistleblower
+
+00:03:28.560 --> 00:03:31.519
+platform. Which is used across the world
+
+00:03:31.519 --> 00:03:33.320
+where people can, you know, leak
+
+00:03:33.320 --> 00:03:34.840
+information without the fear of any
+
+00:03:34.840 --> 00:03:37.920
+three-letter agency. It's written in
+
+00:03:37.920 --> 00:03:40.080
+Python. It uses the same technology we
+
+00:03:40.080 --> 00:03:42.480
+use like day in our daily life, same
+
+00:03:42.480 --> 00:03:44.519
+tools which we used to build our other
+
+00:03:44.519 --> 00:03:47.840
+corporate projects. And it also uses the
+
+00:03:47.840 --> 00:03:50.360
+privacy aspect which comes from the Tor
+
+00:03:50.360 --> 00:03:52.920
+project itself. And along with all the
+
+00:03:52.920 --> 00:03:54.960
+different things and more
+
+00:03:54.960 --> 00:03:57.040
+particular focus on security, it helps
+
+00:03:57.040 --> 00:03:58.800
+people to, you know, become a
+
+00:03:58.800 --> 00:04:00.600
+whistleblower and leak and talk to the
+
+00:04:00.600 --> 00:04:02.160
+journalist in a better way.
+
+00:04:02.160 --> 00:04:04.080
+>> So, how does it work? If I were a
+
+00:04:04.080 --> 00:04:05.480
+journalist, for example, or a
+
+00:04:05.480 --> 00:04:07.800
+whistleblower in a country with a very
+
+00:04:07.800 --> 00:04:11.080
+oppressive regime, how could I talk to
+
+00:04:11.080 --> 00:04:13.480
+someone by using SecureDrop?
+
+00:04:13.480 --> 00:04:16.000
+>> So, generally the organizations, there
+
+00:04:16.000 --> 00:04:17.120
+are [snorts] multiple place, one is
+
+00:04:17.120 --> 00:04:19.320
+SecureDrop. They have like there is also
+
+00:04:19.320 --> 00:04:21.079
+in the website there is a directory.
+
+00:04:21.079 --> 00:04:23.400
+Many news orgs, when they run in their
+
+00:04:23.400 --> 00:04:25.000
+main newspaper, if they have physical
+
+00:04:25.000 --> 00:04:26.919
+newspaper or in their website, they
+
+00:04:26.919 --> 00:04:29.040
+provide the URL or they give a page
+
+00:04:29.040 --> 00:04:31.360
+where they talk about SecureDrop. Like
+
+00:04:31.360 --> 00:04:33.360
+the idea is generally you do use
+
+00:04:33.360 --> 00:04:37.000
+something called Tails, if possible.
+
+00:04:37.000 --> 00:04:40.720
+If nothing else and or a normal uh
+
+00:04:40.720 --> 00:04:43.400
+Tor browser, connect open that dot onion
+
+00:04:43.400 --> 00:04:44.880
+site, which is the
+
+00:04:44.880 --> 00:04:47.160
+like Tor service.
+
+00:04:47.160 --> 00:04:49.080
+And after you open that onion address,
+
+00:04:49.080 --> 00:04:50.960
+you you can actually create your first
+
+00:04:50.960 --> 00:04:53.320
+time. When you create your account first
+
+00:04:53.320 --> 00:04:55.320
+time or when you say that I want to log
+
+00:04:55.320 --> 00:04:57.000
+in first time, you get a one-time
+
+00:04:57.000 --> 00:04:59.160
+password, which is also both your
+
+00:04:59.160 --> 00:05:01.280
+username and password at the same time.
+
+00:05:01.280 --> 00:05:03.240
+And that's what I I will remember. I did
+
+00:05:03.240 --> 00:05:05.960
+not look into the new like UI, if there
+
+00:05:05.960 --> 00:05:08.600
+is any more changes. And then you can
+
+00:05:08.600 --> 00:05:10.640
+what you can do is you can upload
+
+00:05:10.640 --> 00:05:13.160
+documents your you can write down text
+
+00:05:13.160 --> 00:05:15.080
+and journalists
+
+00:05:15.080 --> 00:05:18.440
+they have a special Qubes OS based uh
+
+00:05:18.440 --> 00:05:20.200
+which is a Linux based operating system
+
+00:05:20.200 --> 00:05:22.000
+where every app can run a separate VM
+
+00:05:22.000 --> 00:05:24.520
+and they can connect to via Tor to their
+
+00:05:24.520 --> 00:05:26.440
+server in a different interface and they
+
+00:05:26.440 --> 00:05:29.360
+can decrypt it in a safe environment and
+
+00:05:29.360 --> 00:05:31.480
+see the messages.
+
+00:05:31.480 --> 00:05:32.240
+>> And what were the [clears throat]
+
+00:05:32.240 --> 00:05:34.480
+biggest technical challenges when you
+
+00:05:34.480 --> 00:05:37.160
+were implementing it?
+
+00:05:37.160 --> 00:05:38.960
+>> I'll say like keep
+
+00:05:38.960 --> 00:05:40.600
+one thing in general, not only for
+
+00:05:40.600 --> 00:05:43.200
+SecureDrop or any project which talks
+
+00:05:43.200 --> 00:05:45.360
+about security and privacy and then the
+
+00:05:45.360 --> 00:05:47.800
+word other term is usability. I think
+
+00:05:47.800 --> 00:05:49.400
+that's always a big challenge. We can
+
+00:05:49.400 --> 00:05:51.640
+make things really secure. I guess like
+
+00:05:51.640 --> 00:05:53.320
+the always we always joke about it that
+
+00:05:53.320 --> 00:05:55.000
+computer which never boots the thing
+
+00:05:55.000 --> 00:05:57.120
+that's the best secure computer. So
+
+00:05:57.120 --> 00:05:58.680
+that's always a challenge like how can
+
+00:05:58.680 --> 00:06:01.360
+you keep security and privacy of people
+
+00:06:01.360 --> 00:06:04.040
+and data while
+
+00:06:04.040 --> 00:06:06.440
+it's me keeping it usable.
+
+00:06:06.440 --> 00:06:08.720
+>> So I think at the big like long time ago
+
+00:06:08.720 --> 00:06:10.480
+it was I discovered that the project
+
+00:06:10.480 --> 00:06:12.280
+that like the journalist what they see
+
+00:06:12.280 --> 00:06:14.320
+and how they do, they can do it far
+
+00:06:14.320 --> 00:06:16.680
+better if they have only like in from
+
+00:06:16.680 --> 00:06:19.600
+Qubes OS in instead of going into a
+
+00:06:19.600 --> 00:06:21.720
+secure room using on one particular
+
+00:06:21.720 --> 00:06:23.680
+computer with Tails.
+
+00:06:23.680 --> 00:06:25.800
+But maybe using Qubes is a easier
+
+00:06:25.800 --> 00:06:28.520
+solution for them. So I mean it enables
+
+00:06:28.520 --> 00:06:31.000
+us the community enables us to do this
+
+00:06:31.000 --> 00:06:33.720
+>> And how did you earn trust for people
+
+00:06:33.720 --> 00:06:36.280
+living in those regimes because I guess
+
+00:06:36.280 --> 00:06:37.960
+that for those people they were
+
+00:06:37.960 --> 00:06:43.040
+basically risking their life by
+
+00:06:43.040 --> 00:06:45.360
+Um how did you earn their trust? Have
+
+00:06:45.360 --> 00:06:47.960
+you ever had any issues with people for
+
+00:06:47.960 --> 00:06:50.520
+example not trusting you or being afraid
+
+00:06:50.520 --> 00:06:52.440
+to use it?
+
+00:06:52.440 --> 00:06:54.640
+>> So here is a good thing about SecureDrop
+
+00:06:54.640 --> 00:06:56.200
+or the project itself. The project
+
+00:06:56.200 --> 00:06:58.040
+people don't have anything to do with
+
+00:06:58.040 --> 00:07:00.800
+the actual whistleblowing itself. They
+
+00:07:00.800 --> 00:07:02.400
+when people whistleblow, they
+
+00:07:02.400 --> 00:07:03.600
+whistleblow a particular news
+
+00:07:03.600 --> 00:07:06.480
+organization. They are talking to the
+
+00:07:06.480 --> 00:07:08.480
+So the community generally trust
+
+00:07:08.480 --> 00:07:10.120
+SecureDrop. They can because it's open
+
+00:07:10.120 --> 00:07:11.720
+source code they can read and verify how
+
+00:07:11.720 --> 00:07:14.200
+the code works. But normal people don't.
+
+00:07:14.200 --> 00:07:16.520
+They only can trust the news org they
+
+00:07:16.520 --> 00:07:18.560
+are talking to. So most of the time they
+
+00:07:18.560 --> 00:07:19.919
+may not even know that they are using
+
+00:07:19.919 --> 00:07:22.040
+SecureDrop. They just know that the
+
+00:07:22.040 --> 00:07:24.200
+organization said that use this website,
+
+00:07:24.200 --> 00:07:26.320
+use this store and talk to us.
+
+00:07:26.320 --> 00:07:28.440
+So it's not about SecureDrop or any
+
+00:07:28.440 --> 00:07:30.360
+project itself, but it's trusting the
+
+00:07:30.360 --> 00:07:32.560
+journalist, correct?
+
+00:07:32.560 --> 00:07:34.320
+>> I one thing I always say to many people
+
+00:07:34.320 --> 00:07:36.360
+that our job is to help some other
+
+00:07:36.360 --> 00:07:38.680
+people at doing their things done. We
+
+00:07:38.680 --> 00:07:41.160
+talk a lot about like you know
+
+00:07:41.160 --> 00:07:42.800
+data science,
+
+00:07:42.800 --> 00:07:45.480
+Rust, speed, performance, but that's
+
+00:07:45.480 --> 00:07:47.160
+most of the time it's not helping other
+
+00:07:47.160 --> 00:07:49.400
+developers. But the final end product is
+
+00:07:49.400 --> 00:07:50.600
+to build something which is going to
+
+00:07:50.600 --> 00:07:52.720
+make other human lives better.
+
+00:07:52.720 --> 00:07:55.120
+So, uh that same thing goes here. It's
+
+00:07:55.120 --> 00:07:58.160
+like we are only building tools so that
+
+00:07:58.160 --> 00:07:59.640
+journalists and the people who are
+
+00:07:59.640 --> 00:08:01.560
+actually working on human rights, or
+
+00:08:01.560 --> 00:08:04.000
+lawyers, their life becomes better. They
+
+00:08:04.000 --> 00:08:07.040
+people can talk to them safely.
+
+00:08:07.040 --> 00:08:08.640
+that's the answer for that.
+
+00:08:08.640 --> 00:08:10.360
+>> And you also mentioned Tor, the
+
+00:08:10.360 --> 00:08:12.600
+mainstream media always focuses on
+
+00:08:12.600 --> 00:08:15.400
+negative aspects of it and on on all
+
+00:08:15.400 --> 00:08:17.080
+negative things that you can find there.
+
+00:08:17.080 --> 00:08:19.800
+Do you think that Tor is very bad
+
+00:08:19.800 --> 00:08:21.880
+technology, or are there any positive
+
+00:08:21.880 --> 00:08:23.760
+sides of it, and what can we do to
+
+00:08:23.760 --> 00:08:26.919
+challenge that narrative that it's only
+
+00:08:26.919 --> 00:08:28.720
+>> So, that's a good question because
+
+00:08:28.720 --> 00:08:30.919
+discussions like this can help to change
+
+00:08:30.919 --> 00:08:33.039
+the narrative. That's where it starts.
+
+00:08:33.039 --> 00:08:35.280
+Many people completely misunderstand
+
+00:08:35.280 --> 00:08:37.919
+what Tor is, how it works, like even the
+
+00:08:37.919 --> 00:08:40.240
+basics of the idea, because as you said,
+
+00:08:40.240 --> 00:08:42.000
+people who can control media, or people
+
+00:08:42.000 --> 00:08:44.160
+who can control the narrative, they have
+
+00:08:44.160 --> 00:08:46.880
+everything. So, when we tell people that
+
+00:08:46.880 --> 00:08:48.160
+Tor Project, the code base and
+
+00:08:48.160 --> 00:08:49.640
+everything is open source, many people
+
+00:08:49.640 --> 00:08:51.360
+look at us and it's like and it's open
+
+00:08:51.360 --> 00:08:54.640
+network. And then we tell that it's
+
+00:08:54.640 --> 00:08:57.720
+nonprofit which is based upon US and it
+
+00:08:57.720 --> 00:08:59.800
+works just like many other nonprofits
+
+00:08:59.800 --> 00:09:03.360
+work around the world. Many people have
+
+00:09:03.360 --> 00:09:04.720
+And that's where I believe that
+
+00:09:04.720 --> 00:09:06.560
+controlling that narrative, pointing the
+
+00:09:06.560 --> 00:09:09.280
+people that how Tor enables people to
+
+00:09:09.280 --> 00:09:11.560
+connect to information
+
+00:09:11.560 --> 00:09:12.920
+across the world. I think that's much
+
+00:09:12.920 --> 00:09:15.000
+more important. Many times over the
+
+00:09:15.000 --> 00:09:17.160
+talks it was shown like in so many
+
+00:09:17.160 --> 00:09:18.600
+countries social media is blocked,
+
+00:09:18.600 --> 00:09:20.520
+correct? Or you cannot even read the
+
+00:09:20.520 --> 00:09:23.520
+news organizations reports, many things.
+
+00:09:23.520 --> 00:09:25.520
+And Tor enables those people in a safe
+
+00:09:25.520 --> 00:09:28.200
+way to browse those websites and
+
+00:09:28.200 --> 00:09:31.160
+access information. So, it's still it's
+
+00:09:31.160 --> 00:09:32.880
+the narrative. It's like who can control
+
+00:09:32.880 --> 00:09:34.480
+the information, who can who are allowed
+
+00:09:34.480 --> 00:09:36.839
+to read or not. I think long time ago,
+
+00:09:36.839 --> 00:09:39.040
+if I remember correctly like books
+
+00:09:39.040 --> 00:09:41.080
+people were scared of because books can
+
+00:09:41.080 --> 00:09:42.840
+spread knowledge and people were really
+
+00:09:42.840 --> 00:09:44.680
+scared like oh my god people will have
+
+00:09:44.680 --> 00:09:46.840
+knowledge and that can change the world.
+
+00:09:46.840 --> 00:09:49.280
+So, I believe that's has to happen with
+
+00:09:49.280 --> 00:09:51.440
+all of us together. Just pointing out
+
+00:09:51.440 --> 00:09:55.000
+people that Tor and how it works and why
+
+00:09:55.000 --> 00:09:57.320
+it's good for privacy and why you should
+
+00:09:57.320 --> 00:09:59.680
+support any project like this.
+
+00:09:59.680 --> 00:10:01.920
+>> And let's talk about why is privacy
+
+00:10:01.920 --> 00:10:04.480
+important and let's talk about some
+
+00:10:04.480 --> 00:10:08.840
+cases when bad things happen because in
+
+00:10:08.840 --> 00:10:11.000
+the tools that all of us are using or
+
+00:10:11.000 --> 00:10:15.080
+some of us, there were vulnerabilities.
+
+00:10:15.080 --> 00:10:18.280
+Uh so, let's talk about some appliances.
+
+00:10:18.280 --> 00:10:21.400
+Uh how about robot vacuum cleaners? I
+
+00:10:21.400 --> 00:10:23.800
+heard that they might be unsafe as well.
+
+00:10:23.800 --> 00:10:26.360
+Do you have any bizarre stories about
+
+00:10:26.360 --> 00:10:28.360
+>> Yes, actually a couple of years ago uh
+
+00:10:28.360 --> 00:10:30.120
+it came up uh
+
+00:10:30.120 --> 00:10:31.280
+I think on
+
+00:10:31.280 --> 00:10:34.560
+There was a news report that some
+
+00:10:34.560 --> 00:10:37.800
+employees of a company uh they were
+
+00:10:37.800 --> 00:10:39.720
+sharing photos
+
+00:10:39.720 --> 00:10:45.200
+of a woman who was in toilet.
+
+00:10:45.200 --> 00:10:47.000
+If that is not bizarre enough, I don't
+
+00:10:47.000 --> 00:10:48.839
+know what it is. I never knew before
+
+00:10:48.839 --> 00:10:50.440
+that that there are cameras pointing
+
+00:10:50.440 --> 00:10:51.680
+upwards in the vacuum cleaner.
+
+00:10:51.680 --> 00:10:54.800
+>> cameras were on the robot vacuum cleaner
+
+00:10:54.800 --> 00:10:55.960
+that was there.
+
+00:10:55.960 --> 00:10:57.800
+>> Exactly. So,
+
+00:10:57.800 --> 00:11:00.839
+in this case it was like one company but
+
+00:11:00.839 --> 00:11:02.880
+it later it was figured out like okay
+
+00:11:02.880 --> 00:11:04.360
+more and more companies started doing
+
+00:11:04.360 --> 00:11:05.480
+the same.
+
+00:11:05.480 --> 00:11:08.320
+They are not using only
+
+00:11:08.320 --> 00:11:10.120
+normal sensors. They have cameras not
+
+00:11:10.120 --> 00:11:13.000
+only pointing down up uh down wards also
+
+00:11:13.000 --> 00:11:14.280
+upwards. They want to identify
+
+00:11:14.280 --> 00:11:16.000
+everything in the room. They don't
+
+00:11:16.000 --> 00:11:18.360
+secure the services properly enough. The
+
+00:11:18.360 --> 00:11:20.360
+systems are not good enough to make sure
+
+00:11:20.360 --> 00:11:22.320
+others don't have access or even within
+
+00:11:22.320 --> 00:11:24.760
+company. That's how these photos from a
+
+00:11:24.760 --> 00:11:27.160
+robot vacuum cleaner which was in the
+
+00:11:27.160 --> 00:11:29.320
+got leaked to companies
+
+00:11:29.320 --> 00:11:31.520
+or maybe the cheapest uh contract
+
+00:11:31.520 --> 00:11:34.400
+workers and they were happily
+
+00:11:34.400 --> 00:11:35.880
+selling photos. And if it was not
+
+00:11:35.880 --> 00:11:38.520
+enough, I think last year 2024 around
+
+00:11:38.520 --> 00:11:40.800
+October in US, there a particular
+
+00:11:40.800 --> 00:11:42.960
+another brands vacuum cleaners got
+
+00:11:42.960 --> 00:11:44.960
+hacked. At first, I think they were
+
+00:11:44.960 --> 00:11:46.600
+chasing the dogs and the cats in the
+
+00:11:46.600 --> 00:11:48.560
+house and then they started using a lot
+
+00:11:48.560 --> 00:11:51.280
+of vulgar words shouting at the owners,
+
+00:11:51.280 --> 00:11:53.080
+house owners, and they were fighting
+
+00:11:53.080 --> 00:11:55.160
+like shouting back at the robot vacuum
+
+00:11:55.160 --> 00:11:56.920
+cleaner. So, you can imagine like
+
+00:11:56.920 --> 00:11:59.040
+constant fight between like human versus
+
+00:11:59.040 --> 00:12:01.640
+hackers on vacuum cleaner. So,
+
+00:12:01.640 --> 00:12:03.240
+it sounds very It's very useful
+
+00:12:03.240 --> 00:12:05.280
+technology as a vacuum cleaner, but at
+
+00:12:05.280 --> 00:12:06.640
+the same time,
+
+00:12:06.640 --> 00:12:07.960
+we are not supposed to worry about
+
+00:12:07.960 --> 00:12:09.280
+vacuum cleaner, you know, taking
+
+00:12:09.280 --> 00:12:11.680
+pictures when it's not supposed to. So,
+
+00:12:11.680 --> 00:12:13.240
+I think that's a nightmare we are living
+
+00:12:13.240 --> 00:12:14.880
+in right now.
+
+00:12:14.880 --> 00:12:17.600
+>> And how about mobile phones?
+
+00:12:17.600 --> 00:12:19.480
+>> Of course, our favorite spying devices
+
+00:12:19.480 --> 00:12:21.440
+which we all carry even right now. Maybe
+
+00:12:21.440 --> 00:12:24.280
+>> anyone listening to us now?
+
+00:12:24.280 --> 00:12:27.480
+Except of the listeners.
+
+00:12:27.480 --> 00:12:29.920
+>> Who knows? Like that's another sad part
+
+00:12:29.920 --> 00:12:31.680
+that we cannot even guarantee that this
+
+00:12:31.680 --> 00:12:33.800
+doesn't work out. Uh
+
+00:12:33.800 --> 00:12:35.920
+previously, we thought only people with
+
+00:12:35.920 --> 00:12:37.760
+bad intention they can get into a phone
+
+00:12:37.760 --> 00:12:40.240
+and listen, but I think last year only
+
+00:12:40.240 --> 00:12:42.440
+there was at least one whistleblowing
+
+00:12:42.440 --> 00:12:44.720
+happened to another news organization.
+
+00:12:44.720 --> 00:12:46.200
+By the way, you should check them out
+
+00:12:46.200 --> 00:12:48.480
+404 media.
+
+00:12:48.480 --> 00:12:51.240
+amazing journalism. If you go read their
+
+00:12:51.240 --> 00:12:53.240
+stories, you'll find that one company's
+
+00:12:53.240 --> 00:12:55.800
+media information was leaked.
+
+00:12:55.800 --> 00:12:58.360
+Uh sorry, marketing media was leaked to
+
+00:12:58.360 --> 00:13:00.360
+the journalist where you can clearly see
+
+00:13:00.360 --> 00:13:01.880
+how you can build applications for your
+
+00:13:01.880 --> 00:13:04.520
+TV, mobile phone, and other appliances
+
+00:13:04.520 --> 00:13:06.240
+which can help the company to listen to
+
+00:13:06.240 --> 00:13:10.520
+their customers all the time.
+
+00:13:10.520 --> 00:13:11.960
+is anyone listening to my our
+
+00:13:11.960 --> 00:13:13.800
+conversation other than the YouTube or
+
+00:13:13.800 --> 00:13:16.240
+wherever the original video is? We do
+
+00:13:16.240 --> 00:13:19.120
+not know. So, that's and we all are
+
+00:13:19.120 --> 00:13:21.000
+carrying mobile phones and other device
+
+00:13:21.000 --> 00:13:22.960
+with us. If not, we are standing in
+
+00:13:22.960 --> 00:13:25.720
+front of a TV or camera or other places.
+
+00:13:25.720 --> 00:13:28.160
+>> And how do personal assistants on phones
+
+00:13:28.160 --> 00:13:30.200
+work? Because if I have an iPhone and I
+
+00:13:30.200 --> 00:13:33.240
+say, "Hey Siri." or "Hey Alexa."
+
+00:13:33.240 --> 00:13:36.320
+it replies back. Does it listen to me
+
+00:13:36.320 --> 00:13:40.000
+all the time or how does it work
+
+00:13:40.000 --> 00:13:42.360
+>> So, Alexa is very special case in this
+
+00:13:42.360 --> 00:13:44.400
+uh I try if I see any Alexa or ask
+
+00:13:44.400 --> 00:13:47.040
+around if any of those such devices are
+
+00:13:47.040 --> 00:13:49.920
+nearby, I try to speak less because it's
+
+00:13:49.920 --> 00:13:52.640
+now well known in again thanks to court
+
+00:13:52.640 --> 00:13:55.480
+cases in US where the judge asked the
+
+00:13:55.480 --> 00:13:57.360
+Amazon to give recordings of a house for
+
+00:13:57.360 --> 00:13:59.040
+48 hours, I think if I remember
+
+00:13:59.040 --> 00:14:00.920
+correctly, because there was a murder.
+
+00:14:00.920 --> 00:14:02.560
+Or there are other cases where we now
+
+00:14:02.560 --> 00:14:05.640
+clearly know that those Amazon devices
+
+00:14:05.640 --> 00:14:08.760
+will upload all the audio recordings to
+
+00:14:08.760 --> 00:14:10.400
+their servers so that they can process
+
+00:14:10.400 --> 00:14:13.480
+better and in most general cases that
+
+00:14:13.480 --> 00:14:16.040
+always means the cheapest contractor in
+
+00:14:16.040 --> 00:14:17.800
+some other part of the world where there
+
+00:14:17.800 --> 00:14:19.760
+are no such laws or the word privacy
+
+00:14:19.760 --> 00:14:21.760
+does not exist will go through and
+
+00:14:21.760 --> 00:14:23.480
+listen to all of our conversation and
+
+00:14:23.480 --> 00:14:25.280
+note down the comments which are
+
+00:14:25.280 --> 00:14:28.520
+important for them.
+
+00:14:28.520 --> 00:14:33.360
+yes, they help in many cases, but it's
+
+00:14:33.360 --> 00:14:36.440
+scary. Uh one another example was like
+
+00:14:36.440 --> 00:14:39.240
+uh I think Gemini Nano, that was the
+
+00:14:39.240 --> 00:14:41.760
+thing Google released for the phone,
+
+00:14:41.760 --> 00:14:43.280
+Android phones which can actually go
+
+00:14:43.280 --> 00:14:45.360
+through the listen to the call, can help
+
+00:14:45.360 --> 00:14:48.360
+to detect whether it's a scam uh call
+
+00:14:48.360 --> 00:14:51.880
+spam calls or not. But, that's now.
+
+00:14:51.880 --> 00:14:53.800
+And as we are discussing a lot of things
+
+00:14:53.800 --> 00:14:55.920
+depends on what is legal, what is moral
+
+00:14:55.920 --> 00:14:59.080
+in those questions. And if the company
+
+00:14:59.080 --> 00:15:03.520
+wants or by legal in quotation uh from a
+
+00:15:03.520 --> 00:15:05.200
+big country, you know which country we
+
+00:15:05.200 --> 00:15:06.839
+are talking about, that they will be
+
+00:15:06.839 --> 00:15:09.200
+asked to provide those information, they
+
+00:15:09.200 --> 00:15:11.240
+just may have to change their
+
+00:15:11.240 --> 00:15:13.280
+you know, turn a knob like change some
+
+00:15:13.280 --> 00:15:15.200
+configuration and maybe the phones
+
+00:15:15.200 --> 00:15:16.920
+instead of processing them locally, they
+
+00:15:16.920 --> 00:15:19.520
+will happy to upload to internet. And
+
+00:15:19.520 --> 00:15:20.920
+none of us
+
+00:15:20.920 --> 00:15:22.680
+almost none of us are in a position
+
+00:15:22.680 --> 00:15:24.600
+where we can identify what all things
+
+00:15:24.600 --> 00:15:25.720
+are happening.
+
+00:15:25.720 --> 00:15:27.080
+I don't know if you have a smart TV at
+
+00:15:27.080 --> 00:15:29.280
+home, but if you have and then if you
+
+00:15:29.280 --> 00:15:31.360
+can see your network router, the calls
+
+00:15:31.360 --> 00:15:34.040
+going out or the IP addresses are
+
+00:15:34.040 --> 00:15:36.040
+getting accessed, you will
+
+00:15:36.040 --> 00:15:37.880
+certainly see that every time you are
+
+00:15:37.880 --> 00:15:39.880
+turning on your TV or turning off your
+
+00:15:39.880 --> 00:15:42.400
+TV, all of that are getting
+
+00:15:42.400 --> 00:15:44.960
+data getting sent back to the company. I
+
+00:15:44.960 --> 00:15:47.280
+wonder why the heck my TV company wants
+
+00:15:47.280 --> 00:15:49.280
+to know when I'm turning on the TV or
+
+00:15:49.280 --> 00:15:51.480
+what I'm watching on or not.
+
+00:15:51.480 --> 00:15:54.160
+So, all these devices, every time it's a
+
+00:15:54.160 --> 00:15:56.480
+surveillance industry and it's booming
+
+00:15:56.480 --> 00:15:57.560
+across the world.
+
+00:15:57.560 --> 00:16:00.000
+>> And you were talking about cases where
+
+00:16:00.000 --> 00:16:01.960
+people are using some devices and they
+
+00:16:01.960 --> 00:16:05.000
+are not aware that someone is using
+
+00:16:05.000 --> 00:16:07.720
+their data. But how what are your
+
+00:16:07.720 --> 00:16:09.400
+thoughts about social media? Because
+
+00:16:09.400 --> 00:16:11.200
+social media is different in a way that
+
+00:16:11.200 --> 00:16:13.560
+people voluntarily
+
+00:16:13.560 --> 00:16:16.200
+put their photos there, photos of their
+
+00:16:16.200 --> 00:16:20.400
+kids, lots of information, travel
+
+00:16:20.400 --> 00:16:23.240
+Um what happens with our data once we
+
+00:16:23.240 --> 00:16:25.600
+upload a photo on Instagram or or
+
+00:16:25.600 --> 00:16:28.800
+Facebook? How can someone misused
+
+00:16:28.800 --> 00:16:30.960
+um large amount of data?
+
+00:16:30.960 --> 00:16:33.680
+>> Yeah, and so, that answer is actually
+
+00:16:33.680 --> 00:16:35.640
+pretty big also in one way because there
+
+00:16:35.640 --> 00:16:37.040
+are so many things happening at the same
+
+00:16:37.040 --> 00:16:39.240
+time. Number one is the company we are
+
+00:16:39.240 --> 00:16:40.960
+uploading data to, the provider of
+
+00:16:40.960 --> 00:16:43.240
+social media. They are scraping that
+
+00:16:43.240 --> 00:16:44.720
+data. They have the data. They don't
+
+00:16:44.720 --> 00:16:46.680
+have to scrape in that way. And they are
+
+00:16:46.680 --> 00:16:48.080
+processing it. They are selling that
+
+00:16:48.080 --> 00:16:49.000
+information to other
+
+00:16:49.000 --> 00:16:51.240
+business-to-business providers. You will
+
+00:16:51.240 --> 00:16:52.960
+find thousands of such companies who are
+
+00:16:52.960 --> 00:16:55.400
+selling among data each other. They have
+
+00:16:55.400 --> 00:16:57.480
+every details about a house, about
+
+00:16:57.480 --> 00:16:59.080
+person, what you want to eat, what you
+
+00:16:59.080 --> 00:17:00.720
+like, what you don't like, what are
+
+00:17:00.720 --> 00:17:03.320
+going on in your life right now. Uh it's
+
+00:17:03.320 --> 00:17:06.560
+funny enough that even last night uh on
+
+00:17:06.560 --> 00:17:09.360
+Twitter, I saw a post where a particular
+
+00:17:09.360 --> 00:17:12.280
+video where previous FTC chair, Lina
+
+00:17:12.280 --> 00:17:14.640
+Khan, I think she was making a pointing
+
+00:17:14.640 --> 00:17:17.000
+out the fact that with this surveillance
+
+00:17:17.000 --> 00:17:18.760
+industry, with the surveillance pricing,
+
+00:17:18.760 --> 00:17:21.079
+how companies are trying to jack up the
+
+00:17:21.079 --> 00:17:23.079
+prices based upon
+
+00:17:23.079 --> 00:17:26.120
+your scenario, each person individual.
+
+00:17:26.120 --> 00:17:28.720
+Example, if you received an email or a
+
+00:17:28.720 --> 00:17:30.800
+message that your someone's one of your
+
+00:17:30.800 --> 00:17:33.240
+family member died, then suddenly if you
+
+00:17:33.240 --> 00:17:35.160
+go and search your, you know, ticket
+
+00:17:35.160 --> 00:17:36.920
+price in the flight, you will get
+
+00:17:36.920 --> 00:17:38.280
+completely different pricing than the
+
+00:17:38.280 --> 00:17:40.800
+person who just totally bored when may
+
+00:17:40.800 --> 00:17:43.320
+want to go somewhere or not.
+
+00:17:43.320 --> 00:17:45.280
+So, and we already know that that
+
+00:17:45.280 --> 00:17:47.320
+happened before also, like one place
+
+00:17:47.320 --> 00:17:48.840
+where you can actually use Tor browser
+
+00:17:48.840 --> 00:17:50.920
+and search about medical terms because
+
+00:17:50.920 --> 00:17:53.080
+it's private enough for you to search
+
+00:17:53.080 --> 00:17:55.080
+and read about learn about things. But
+
+00:17:55.080 --> 00:17:56.200
+there are companies who are trying to
+
+00:17:56.200 --> 00:17:59.040
+see if they can get that information and
+
+00:17:59.040 --> 00:18:02.520
+increase the medical insurance pricing.
+
+00:18:02.520 --> 00:18:05.240
+And particularly for women, it's it's
+
+00:18:05.240 --> 00:18:07.000
+another level of insanity going on.
+
+00:18:07.000 --> 00:18:09.640
+There are already stories how, like I
+
+00:18:09.640 --> 00:18:11.400
+think an actress
+
+00:18:11.400 --> 00:18:12.800
+was killed
+
+00:18:12.800 --> 00:18:14.800
+because someone I managed to identify
+
+00:18:14.800 --> 00:18:19.440
+from the photos where she lives.
+
+00:18:19.440 --> 00:18:21.600
+that also brings us to the another part
+
+00:18:21.600 --> 00:18:22.920
+of the industry which is known as
+
+00:18:22.920 --> 00:18:24.680
+stalkerware, which is a particular
+
+00:18:24.680 --> 00:18:27.280
+application or the way when someone
+
+00:18:27.280 --> 00:18:29.680
+known tries to, you know,
+
+00:18:29.680 --> 00:18:32.000
+get access to your maybe mobile phone
+
+00:18:32.000 --> 00:18:34.720
+and then try to stalk a known person
+
+00:18:34.720 --> 00:18:37.600
+where they are and location and all the
+
+00:18:37.600 --> 00:18:39.920
+And we keep seeing more and more such
+
+00:18:39.920 --> 00:18:41.760
+use cases happening across the world.
+
+00:18:41.760 --> 00:18:44.960
+Our friend Eva from EFF
+
+00:18:44.960 --> 00:18:47.120
+she actually get particular amazing
+
+00:18:47.120 --> 00:18:48.840
+talks which are available on internet on
+
+00:18:48.840 --> 00:18:50.840
+this topic. And there is also a
+
+00:18:50.840 --> 00:18:56.360
+coalition of organizations in the
+
+00:18:56.360 --> 00:18:57.880
+If I remember correctly, that's the name
+
+00:18:57.880 --> 00:18:59.840
+of the organization. So, people should
+
+00:18:59.840 --> 00:19:00.920
+check it out.
+
+00:19:00.920 --> 00:19:04.320
+>> Those cases are terrible.
+
+00:19:04.320 --> 00:19:06.080
+And most of those that you mentioned are
+
+00:19:06.080 --> 00:19:08.440
+individual cases when something happens
+
+00:19:08.440 --> 00:19:11.200
+an individual. But I wonder what happens
+
+00:19:11.200 --> 00:19:13.880
+if governments and political parties
+
+00:19:13.880 --> 00:19:16.880
+have merely data of millions or billions
+
+00:19:16.880 --> 00:19:19.160
+of people? They can influence elections,
+
+00:19:19.160 --> 00:19:20.840
+for example.
+
+00:19:20.840 --> 00:19:23.880
+That's a good one.
+
+00:19:23.880 --> 00:19:28.040
+if people love another company called
+
+00:19:28.040 --> 00:19:29.720
+and watch movies and documentaries
+
+00:19:29.720 --> 00:19:31.000
+there, you will find already a
+
+00:19:31.000 --> 00:19:34.320
+documentary there called The Great Hack.
+
+00:19:34.320 --> 00:19:36.480
+Which talks about Facebook and their
+
+00:19:36.480 --> 00:19:39.160
+usage of technology and a company called
+
+00:19:39.160 --> 00:19:42.400
+Cambridge Analytica. How the companies
+
+00:19:42.400 --> 00:19:45.600
+can actually fetch data from the social
+
+00:19:45.600 --> 00:19:49.000
+media without people's notice on like
+
+00:19:49.000 --> 00:19:51.400
+knowledge and use that information to
+
+00:19:51.400 --> 00:19:54.800
+change how the outcome of an election.
+
+00:19:54.800 --> 00:19:56.720
+As simple as that. And it was not the
+
+00:19:56.720 --> 00:19:59.040
+only place like in US it was used. There
+
+00:19:59.040 --> 00:20:01.320
+are in this documentary and more the
+
+00:20:01.320 --> 00:20:02.760
+other whistleblowing happened. You can
+
+00:20:02.760 --> 00:20:04.640
+see that many other countries tried to
+
+00:20:04.640 --> 00:20:07.160
+use the same data and so that they can,
+
+00:20:07.160 --> 00:20:09.800
+you know, very slowly and
+
+00:20:09.800 --> 00:20:11.880
+under the radar can change people's
+
+00:20:11.880 --> 00:20:15.320
+idea. It's all about controlling that
+
+00:20:15.320 --> 00:20:17.400
+>> They basically use the data to segment
+
+00:20:17.400 --> 00:20:19.680
+people into different groups, right? And
+
+00:20:19.680 --> 00:20:22.040
+they pick the group of people who were
+
+00:20:22.040 --> 00:20:24.360
+undecided who to vote for because they
+
+00:20:24.360 --> 00:20:26.200
+didn't want to
+
+00:20:26.200 --> 00:20:28.960
+influence people who already knew who to
+
+00:20:28.960 --> 00:20:30.720
+vote for, but they decided to pick this
+
+00:20:30.720 --> 00:20:32.360
+group who were undecided because for
+
+00:20:32.360 --> 00:20:34.240
+them it was the easiest to target this
+
+00:20:34.240 --> 00:20:36.200
+group. And then they sold this data to
+
+00:20:36.200 --> 00:20:38.560
+political parties and they targeted this
+
+00:20:38.560 --> 00:20:40.040
+group with information.
+
+00:20:40.040 --> 00:20:42.240
+>> That's one of the ways. And then if you
+
+00:20:42.240 --> 00:20:44.520
+keep repeating one lie enough number of
+
+00:20:44.520 --> 00:20:47.920
+times, then that lie becomes truth.
+
+00:20:47.920 --> 00:20:49.440
+You just have to make sure that you have
+
+00:20:49.440 --> 00:20:51.160
+to repeat it enough number of times. It
+
+00:20:51.160 --> 00:20:52.640
+should be everywhere.
+
+00:20:52.640 --> 00:20:54.480
+And that's that's more than enough for
+
+00:20:54.480 --> 00:20:55.760
+this to happen.
+
+00:20:55.760 --> 00:20:57.720
+And it's it's happening across the
+
+00:20:57.720 --> 00:20:59.760
+world. And that's why I mentioned that
+
+00:20:59.760 --> 00:21:01.560
+the whole surveillance
+
+00:21:01.560 --> 00:21:04.120
+industry and the amount of data we have
+
+00:21:04.120 --> 00:21:06.040
+about each other, which we publish
+
+00:21:06.040 --> 00:21:07.880
+sometimes they script.
+
+00:21:07.880 --> 00:21:09.720
+There's another company I
+
+00:21:09.720 --> 00:21:13.160
+Clearview AI who scrap billions of
+
+00:21:13.160 --> 00:21:14.720
+photos from internet without anyone's
+
+00:21:14.720 --> 00:21:16.080
+permission and then selling that
+
+00:21:16.080 --> 00:21:18.080
+information to the law enforcement
+
+00:21:18.080 --> 00:21:20.600
+agencies across the world or who knows
+
+00:21:20.600 --> 00:21:23.280
+to whom. I think whoever has money
+
+00:21:23.280 --> 00:21:25.800
+to do these things.
+
+00:21:25.800 --> 00:21:27.960
+So, many countries are now trying to
+
+00:21:27.960 --> 00:21:29.560
+figure out many people when people are
+
+00:21:29.560 --> 00:21:31.080
+slowly figuring out this is happening.
+
+00:21:31.080 --> 00:21:32.720
+They're trying to you know go on the
+
+00:21:32.720 --> 00:21:34.680
+only option we have is the legal and we
+
+00:21:34.680 --> 00:21:37.560
+hope that the governments will help. In
+
+00:21:37.560 --> 00:21:39.440
+few places it's still working like
+
+00:21:39.440 --> 00:21:41.640
+people are trying to fight back.
+
+00:21:41.640 --> 00:21:43.360
+>> Are governments
+
+00:21:43.360 --> 00:21:44.880
+fast enough?
+
+00:21:44.880 --> 00:21:46.240
+Because if you are there are lots of
+
+00:21:46.240 --> 00:21:48.680
+different technologies being developed
+
+00:21:48.680 --> 00:21:51.080
+and the IT world is very fast. Are
+
+00:21:51.080 --> 00:21:54.680
+governments as fast as technology is?
+
+00:21:54.680 --> 00:21:57.200
+>> Uh obvious answer is no because even we
+
+00:21:57.200 --> 00:21:58.920
+are not fast enough for the technology.
+
+00:21:58.920 --> 00:22:01.280
+Like we go to one night go to bed
+
+00:22:01.280 --> 00:22:02.720
+thinking that I know the command line
+
+00:22:02.720 --> 00:22:04.680
+option of this command. Tomorrow morning
+
+00:22:04.680 --> 00:22:06.960
+next new release completely changed. So,
+
+00:22:06.960 --> 00:22:08.440
+of course government is not ready to
+
+00:22:08.440 --> 00:22:10.160
+handle this much of changes and how
+
+00:22:10.160 --> 00:22:12.080
+technology actually works and that's why
+
+00:22:12.080 --> 00:22:13.720
+we need more people who understand
+
+00:22:13.720 --> 00:22:16.000
+technology to come over and explain
+
+00:22:16.000 --> 00:22:17.960
+these things to explain people how
+
+00:22:17.960 --> 00:22:19.840
+different small technology or big
+
+00:22:19.840 --> 00:22:21.640
+technology works.
+
+00:22:21.640 --> 00:22:24.240
+Because today we can say that legally
+
+00:22:24.240 --> 00:22:26.760
+a doing X and Y one after another is
+
+00:22:26.760 --> 00:22:29.280
+wrong. But by the time that law will go
+
+00:22:29.280 --> 00:22:32.120
+in effect they might have changed to AX
+
+00:22:32.120 --> 00:22:35.560
+Z and Y mixing completely different
+
+00:22:35.560 --> 00:22:37.320
+order together which is perfectly legal
+
+00:22:37.320 --> 00:22:38.840
+to do.
+
+00:22:38.840 --> 00:22:42.520
+>> So, if I upload my photos somewhere for
+
+00:22:42.520 --> 00:22:45.360
+um and if I remove it
+
+00:22:45.360 --> 00:22:48.760
+is is there any way how to have your
+
+00:22:48.760 --> 00:22:52.520
+data removed from all other places that
+
+00:22:52.520 --> 00:22:54.960
+scrape the basically or once you upload
+
+00:22:54.960 --> 00:22:57.480
+something to the internet it's gone it's
+
+00:22:57.480 --> 00:22:59.560
+scraped by very different companies
+
+00:22:59.560 --> 00:23:01.360
+providers and you will never be able to
+
+00:23:01.360 --> 00:23:02.920
+get your data
+
+00:23:02.920 --> 00:23:04.440
+>> Yeah, so there are a couple of companies
+
+00:23:04.440 --> 00:23:06.360
+and organizations uh my brain is totally
+
+00:23:06.360 --> 00:23:08.360
+empty right now that who helps you to
+
+00:23:08.360 --> 00:23:10.760
+delete data from many such places.
+
+00:23:10.760 --> 00:23:11.960
+But at the same time the question is
+
+00:23:11.960 --> 00:23:13.640
+that we have to trust the company that
+
+00:23:13.640 --> 00:23:15.520
+they're actually deleting. Maybe they
+
+00:23:15.520 --> 00:23:17.560
+are deleting, but maybe it also went to
+
+00:23:17.560 --> 00:23:20.000
+that cheapest contractor in other part
+
+00:23:20.000 --> 00:23:23.320
+of the world, but where you don't have
+
+00:23:23.320 --> 00:23:24.960
+legal and like
+
+00:23:24.960 --> 00:23:26.760
+possibility for you to go and ask them
+
+00:23:26.760 --> 00:23:29.120
+to delete or maybe don't even care.
+
+00:23:29.120 --> 00:23:30.600
+Maybe it's already scraped by the
+
+00:23:30.600 --> 00:23:33.040
+companies. We can see there are big new
+
+00:23:33.040 --> 00:23:35.400
+uh like court cases going on between
+
+00:23:35.400 --> 00:23:38.080
+companies like all the big companies we
+
+00:23:38.080 --> 00:23:40.400
+can name. Maybe many of the sponsors
+
+00:23:40.400 --> 00:23:42.160
+like they're like doing court cases
+
+00:23:42.160 --> 00:23:44.280
+against each other about who is scraping
+
+00:23:44.280 --> 00:23:45.920
+whose website.
+
+00:23:45.920 --> 00:23:48.360
+Like I forgot the person, but Cory
+
+00:23:48.360 --> 00:23:50.720
+Doctorow mentions it many of the times
+
+00:23:50.720 --> 00:23:53.320
+in his talks about like how the world of
+
+00:23:53.320 --> 00:23:55.840
+internet became like five big websites
+
+00:23:55.840 --> 00:23:57.440
+like in taking screenshots of each
+
+00:23:57.440 --> 00:24:00.400
+other. I think that's the way he was
+
+00:24:00.400 --> 00:24:02.720
+>> And scraping data from other websites is
+
+00:24:02.720 --> 00:24:05.120
+a very popular topic nowadays with
+
+00:24:05.120 --> 00:24:08.920
+ChatGPT and all of those LLMs that were
+
+00:24:08.920 --> 00:24:11.400
+that were taught on the whole internet.
+
+00:24:11.400 --> 00:24:16.240
+What are your thoughts about AI and
+
+00:24:16.240 --> 00:24:17.800
+>> The most favorite topic of the world
+
+00:24:17.800 --> 00:24:19.240
+right now.
+
+00:24:19.240 --> 00:24:21.240
+Instantly scared again for the whole
+
+00:24:21.240 --> 00:24:24.240
+term. Um if you go and read the amount
+
+00:24:24.240 --> 00:24:26.200
+of stories going on around the world
+
+00:24:26.200 --> 00:24:28.520
+like how they're being used or being
+
+00:24:28.520 --> 00:24:31.800
+pushed to use at everything.
+
+00:24:31.800 --> 00:24:33.640
+It's scary.
+
+00:24:33.640 --> 00:24:35.760
+People do not understand how technology
+
+00:24:35.760 --> 00:24:37.480
+works and they want to use technology
+
+00:24:37.480 --> 00:24:39.200
+for everything. So there are already
+
+00:24:39.200 --> 00:24:41.360
+examples of very basic thing which they
+
+00:24:41.360 --> 00:24:43.240
+are supposed to be good at translations
+
+00:24:43.240 --> 00:24:46.520
+where in Facebook person's
+
+00:24:46.520 --> 00:24:48.440
+good morning message got translated into
+
+00:24:48.440 --> 00:24:49.960
+something else and people landed in
+
+00:24:49.960 --> 00:24:51.880
+jail. They're already happened many
+
+00:24:51.880 --> 00:24:54.160
+years ago. Even in the modern cases
+
+00:24:54.160 --> 00:24:56.720
+where doctors used AI to transcribe
+
+00:24:56.720 --> 00:24:59.040
+where this AI decided to hallucinate and
+
+00:24:59.040 --> 00:25:01.600
+add a lot of random things in those or
+
+00:25:01.600 --> 00:25:04.080
+people like I think I judge is getting
+
+00:25:04.080 --> 00:25:06.040
+extremely fed up that
+
+00:25:06.040 --> 00:25:08.960
+AI is create helping the lawyers to
+
+00:25:08.960 --> 00:25:10.440
+create the reports where it's
+
+00:25:10.440 --> 00:25:12.400
+continuously mentioning cases which
+
+00:25:12.400 --> 00:25:16.360
+never happened.
+
+00:25:16.360 --> 00:25:19.200
+we will see how bad it can go, but
+
+00:25:19.200 --> 00:25:21.560
+things doesn't seem that well right now
+
+00:25:21.560 --> 00:25:23.920
+in my mind that people are believing
+
+00:25:23.920 --> 00:25:25.640
+that computers would but it's on
+
+00:25:25.640 --> 00:25:27.720
+internet or it's told by a computer it
+
+00:25:27.720 --> 00:25:28.960
+cannot be wrong.
+
+00:25:28.960 --> 00:25:31.680
+>> And another problem is that people often
+
+00:25:31.680 --> 00:25:34.600
+enter sensitive data into chat GPT and
+
+00:25:34.600 --> 00:25:37.040
+all of those tools. And you can see that
+
+00:25:37.040 --> 00:25:39.960
+for example there was a screenshot on
+
+00:25:39.960 --> 00:25:43.880
+the socials that if you type in API key
+
+00:25:43.880 --> 00:25:46.440
+equals that there's auto completion and
+
+00:25:46.440 --> 00:25:49.360
+then offers you some random API key.
+
+00:25:49.360 --> 00:25:51.480
+What happens if I enter some sensitive
+
+00:25:51.480 --> 00:25:55.320
+data into chat GPT or cloud or any other
+
+00:25:55.320 --> 00:25:58.280
+LLM? Is it forever gone?
+
+00:25:58.280 --> 00:26:01.200
+>> So, see I don't use these tools that
+
+00:26:01.200 --> 00:26:04.080
+much so I just tried how they work
+
+00:26:04.080 --> 00:26:06.120
+seeing the very basic. But in general,
+
+00:26:06.120 --> 00:26:08.240
+if you read the fine prints of all these
+
+00:26:08.240 --> 00:26:10.480
+things, you will find that they own the
+
+00:26:10.480 --> 00:26:12.320
+questions. They own all the information
+
+00:26:12.320 --> 00:26:13.920
+you're uploading to them.
+
+00:26:13.920 --> 00:26:15.480
+And they will use that to train their
+
+00:26:15.480 --> 00:26:17.960
+own models. So, it's just like uploading
+
+00:26:17.960 --> 00:26:20.000
+your picture to an website open website
+
+00:26:20.000 --> 00:26:21.360
+and just saying like, "Okay, it's for
+
+00:26:21.360 --> 00:26:23.040
+the whole internet to have."
+
+00:26:23.040 --> 00:26:25.200
+So, it's it will it will require require
+
+00:26:25.200 --> 00:26:26.720
+a lot more training. It will require a
+
+00:26:26.720 --> 00:26:28.480
+lot more explanation. It will require a
+
+00:26:28.480 --> 00:26:31.960
+lot more I think legal side to make sure
+
+00:26:31.960 --> 00:26:33.920
+that these things are built for security
+
+00:26:33.920 --> 00:26:35.960
+or privacy. I hope someday we'll have a
+
+00:26:35.960 --> 00:26:38.480
+little bit better world with that. But
+
+00:26:38.480 --> 00:26:41.080
+right now everyone loves to upload
+
+00:26:41.080 --> 00:26:42.600
+everything to
+
+00:26:42.600 --> 00:26:45.720
+whichever possible favorite AI tooling.
+
+00:26:45.720 --> 00:26:47.640
+It can be any one of them. And yeah,
+
+00:26:47.640 --> 00:26:49.200
+people are uploading their private
+
+00:26:49.200 --> 00:26:51.120
+information. People are uploading their
+
+00:26:51.120 --> 00:26:53.360
+whole life. Some of them think, "Oh,
+
+00:26:53.360 --> 00:26:55.360
+they can understand me so well." Like,
+
+00:26:55.360 --> 00:26:57.800
+no, that's not how computers work.
+
+00:26:57.800 --> 00:26:59.240
+>> That's the funny thing that I saw that
+
+00:26:59.240 --> 00:27:02.880
+the most common use case for ChatGPT is
+
+00:27:02.880 --> 00:27:05.480
+therapy. That people use ChatGPT as a
+
+00:27:05.480 --> 00:27:08.560
+therapist, uh which means in fact that
+
+00:27:08.560 --> 00:27:10.760
+they enter their sensitive data and
+
+00:27:10.760 --> 00:27:12.800
+information about their lives and what's
+
+00:27:12.800 --> 00:27:14.960
+going on there.
+
+00:27:14.960 --> 00:27:17.800
+>> I can't even imagine like if you see our
+
+00:27:17.800 --> 00:27:19.680
+actual real therapist, the amount of
+
+00:27:19.680 --> 00:27:21.960
+years they have to study, the amount of
+
+00:27:21.960 --> 00:27:24.160
+experience they have need to become a
+
+00:27:24.160 --> 00:27:28.080
+therapist and deal with people's private
+
+00:27:28.080 --> 00:27:30.040
+And then we see like, "Oh, there is this
+
+00:27:30.040 --> 00:27:31.960
+app. Just let Let me just upload
+
+00:27:31.960 --> 00:27:33.360
+everything of my life to this."
+
+00:27:33.360 --> 00:27:35.440
+>> is a really good business model actually
+
+00:27:35.440 --> 00:27:38.280
+because you don't have to steal data.
+
+00:27:38.280 --> 00:27:40.360
+You don't have to spy on people. People
+
+00:27:40.360 --> 00:27:42.520
+just enter the information on their own.
+
+00:27:42.520 --> 00:27:44.720
+So, basically, those companies get it
+
+00:27:44.720 --> 00:27:46.600
+for free. They don't even have to spy.
+
+00:27:46.600 --> 00:27:48.720
+They just get the data.
+
+00:27:48.720 --> 00:27:50.920
+>> Yes, and that's that's the
+
+00:27:50.920 --> 00:27:52.600
+benefits of social media to these
+
+00:27:52.600 --> 00:27:54.040
+companies or the governments, correct?
+
+00:27:54.040 --> 00:27:56.240
+If they want to know what's happening,
+
+00:27:56.240 --> 00:27:58.840
+they can just scrap the Like, we are in
+
+00:27:58.840 --> 00:28:01.120
+EuroPython right now. So, people want,
+
+00:28:01.120 --> 00:28:03.120
+they can like We know that that can
+
+00:28:03.120 --> 00:28:04.760
+happen. That many people happily post
+
+00:28:04.760 --> 00:28:07.000
+pictures like, "Look, as a whole family,
+
+00:28:07.000 --> 00:28:09.000
+we are in EuroPython in whichever city
+
+00:28:09.000 --> 00:28:11.040
+it is." But if someone from their
+
+00:28:11.040 --> 00:28:13.080
+country, like people who want Let's say,
+
+00:28:13.080 --> 00:28:14.360
+I want to steal something from that
+
+00:28:14.360 --> 00:28:16.200
+person's house, and we see that that
+
+00:28:16.200 --> 00:28:18.920
+family is totally into another country,
+
+00:28:18.920 --> 00:28:20.520
+happily traveling there. We know the
+
+00:28:20.520 --> 00:28:23.000
+conference is going on for so long days.
+
+00:28:23.000 --> 00:28:24.400
+It's always a question, correct? Like,
+
+00:28:24.400 --> 00:28:25.960
+how much data you want to make public
+
+00:28:25.960 --> 00:28:28.480
+and how people may might want to use it.
+
+00:28:28.480 --> 00:28:31.200
+Um many times, like I live in Sweden
+
+00:28:31.200 --> 00:28:33.480
+now, many times I heard these stories uh
+
+00:28:33.480 --> 00:28:36.280
+from friends that when they like many of
+
+00:28:36.280 --> 00:28:38.840
+the friends when they went to any of the
+
+00:28:38.840 --> 00:28:41.560
+bigger shops outside of Stockholm, uh
+
+00:28:41.560 --> 00:28:43.000
+there are people who tried to break into
+
+00:28:43.000 --> 00:28:44.760
+their houses.
+
+00:28:44.760 --> 00:28:46.320
+So, and
+
+00:28:46.320 --> 00:28:48.480
+and apparently the information there is
+
+00:28:48.480 --> 00:28:50.400
+to know that those people will be gone
+
+00:28:50.400 --> 00:28:51.880
+for a week because they are at a
+
+00:28:51.880 --> 00:28:53.320
+week-long conference. So, it's you know,
+
+00:28:53.320 --> 00:28:55.480
+just to put one foot on social media and
+
+00:28:55.480 --> 00:28:57.520
+people know, okay, this house will be
+
+00:28:57.520 --> 00:28:59.200
+empty for 7 days.
+
+00:28:59.200 --> 00:29:00.600
+>> Exactly. And in this case, a couple of
+
+00:29:00.600 --> 00:29:02.320
+hours. You can like I think there is
+
+00:29:02.320 --> 00:29:04.480
+there are services where I can put in
+
+00:29:04.480 --> 00:29:07.120
+the car registration number and find the
+
+00:29:07.120 --> 00:29:09.160
+owner. So, most probably the owner's
+
+00:29:09.160 --> 00:29:10.840
+house is empty right now because the car
+
+00:29:10.840 --> 00:29:15.920
+is here 2 hours away from the city.
+
+00:29:15.920 --> 00:29:18.880
+>> thing and people with other minds, they
+
+00:29:18.880 --> 00:29:20.840
+can also figure out how technology works
+
+00:29:20.840 --> 00:29:23.720
+and use it to destroy people's life.
+
+00:29:23.720 --> 00:29:25.800
+>> And what are some very basic things that
+
+00:29:25.800 --> 00:29:27.480
+I should keep in mind as a regular
+
+00:29:27.480 --> 00:29:29.520
+developer? So, let's say I'm a Python
+
+00:29:29.520 --> 00:29:33.160
+developer, I create APIs or websites or
+
+00:29:33.160 --> 00:29:34.880
+something like that and I'm not focused
+
+00:29:34.880 --> 00:29:36.640
+on privacy per se, but I want to make
+
+00:29:36.640 --> 00:29:40.520
+sure that the tools I I use are uh
+
+00:29:40.520 --> 00:29:43.280
+private enough. What are some very basic
+
+00:29:43.280 --> 00:29:44.960
+things or low-hanging fruits that you
+
+00:29:44.960 --> 00:29:48.600
+see in on like regular websites uh
+
+00:29:48.600 --> 00:29:50.320
+that are some things that people should
+
+00:29:50.320 --> 00:29:52.080
+pay attention to?
+
+00:29:52.080 --> 00:29:55.400
+>> Uh my favorite thing always to say is
+
+00:29:55.400 --> 00:29:57.120
+because that's where Well, that's what
+
+00:29:57.120 --> 00:29:59.080
+we all love. We love to log. We love to
+
+00:29:59.080 --> 00:30:00.320
+want to see you know, all those
+
+00:30:00.320 --> 00:30:02.520
+analytics, what's going on in your app,
+
+00:30:02.520 --> 00:30:05.160
+all the data as we can. But, I think
+
+00:30:05.160 --> 00:30:06.560
+that's one of the very basic starting
+
+00:30:06.560 --> 00:30:08.720
+thing we can do. If you want to debug,
+
+00:30:08.720 --> 00:30:10.920
+we want to see debug log, that's
+
+00:30:10.920 --> 00:30:12.840
+in a very restricted environment, it's
+
+00:30:12.840 --> 00:30:15.360
+good. But, if we log extra data thinking
+
+00:30:15.360 --> 00:30:17.480
+that this will help us in future, that
+
+00:30:17.480 --> 00:30:19.280
+may not always well go well for the
+
+00:30:19.280 --> 00:30:22.000
+privacy point of view.
+
+00:30:22.000 --> 00:30:24.560
+one good example I can say to the people
+
+00:30:24.560 --> 00:30:26.680
+in the particularly the Python world is
+
+00:30:26.680 --> 00:30:29.680
+to see PyPI.org.
+
+00:30:29.680 --> 00:30:31.080
+And there is already a blog post
+
+00:30:31.080 --> 00:30:33.600
+published that how PyPI decided to
+
+00:30:33.600 --> 00:30:36.040
+remove the IP addresses of the users
+
+00:30:36.040 --> 00:30:40.280
+instead having one-way hashes so that
+
+00:30:40.280 --> 00:30:43.840
+if time comes and people try to let's
+
+00:30:43.840 --> 00:30:46.800
+for example even legally try to get in
+
+00:30:46.800 --> 00:30:49.240
+ask information for the users we only
+
+00:30:49.240 --> 00:30:51.120
+have the hashes but there is no private
+
+00:30:51.120 --> 00:30:52.960
+information leaking of those IP
+
+00:30:52.960 --> 00:30:55.520
+addresses of the users and in the blog
+
+00:30:55.520 --> 00:30:57.840
+post they explain how it's being used
+
+00:30:57.840 --> 00:31:00.560
+and like it's already deploying and
+
+00:31:00.560 --> 00:31:02.640
+like where all in the system previously
+
+00:31:02.640 --> 00:31:05.080
+people we had IP addresses but and how
+
+00:31:05.080 --> 00:31:06.760
+they figured out that's at all not
+
+00:31:06.760 --> 00:31:09.080
+required the basic information we need
+
+00:31:09.080 --> 00:31:11.120
+we can get it from firstly who is our
+
+00:31:11.120 --> 00:31:15.160
+kind CDN provider. So that's one pretty
+
+00:31:15.160 --> 00:31:17.480
+good example just in the python world
+
+00:31:17.480 --> 00:31:18.880
+and there are more other examples.
+
+00:31:18.880 --> 00:31:20.480
+>> So if I want to implement logging I
+
+00:31:20.480 --> 00:31:23.120
+should think about what is information
+
+00:31:23.120 --> 00:31:24.920
+that I need and information that I don't
+
+00:31:24.920 --> 00:31:26.640
+necessarily need but I feel like it
+
+00:31:26.640 --> 00:31:28.440
+often comes from companies that well
+
+00:31:28.440 --> 00:31:31.200
+that they want to analyze the usage of
+
+00:31:31.200 --> 00:31:34.160
+their apps so they can for example
+
+00:31:34.160 --> 00:31:37.560
+improve the UI or UX or similar so how
+
+00:31:37.560 --> 00:31:40.520
+can what can we do if we have management
+
+00:31:40.520 --> 00:31:42.440
+for example telling us that we should
+
+00:31:42.440 --> 00:31:44.280
+log more things and where is the balance
+
+00:31:44.280 --> 00:31:46.240
+between we do need some information in
+
+00:31:46.240 --> 00:31:48.640
+order to know how to improve the product
+
+00:31:48.640 --> 00:31:51.400
+but also we want to make sure that the
+
+00:31:51.400 --> 00:31:55.960
+product doesn't invade privacy of users.
+
+00:31:55.960 --> 00:31:57.760
+>> So what are some things that for example
+
+00:31:57.760 --> 00:32:00.000
+you recommend not logging and what are
+
+00:32:00.000 --> 00:32:03.520
+some things that are safe to be logged?
+
+00:32:03.520 --> 00:32:07.280
+>> Like start with bare minimum like don't
+
+00:32:07.280 --> 00:32:09.640
+start logging things which are if not
+
+00:32:09.640 --> 00:32:12.000
+required. That would be my basic thing
+
+00:32:12.000 --> 00:32:14.880
+and then slowly increase if you want.
+
+00:32:14.880 --> 00:32:16.720
+For like giving you example you
+
+00:32:16.720 --> 00:32:18.720
+particularly mention management asking
+
+00:32:18.720 --> 00:32:20.440
+and that whole surveillance industry I
+
+00:32:20.440 --> 00:32:21.920
+was talking about there are already
+
+00:32:21.920 --> 00:32:24.440
+available scripts JavaScripts which can
+
+00:32:24.440 --> 00:32:26.480
+actually monitor our mouse pointer in
+
+00:32:26.480 --> 00:32:28.920
+the web page where exactly is where
+
+00:32:28.920 --> 00:32:30.960
+spending more time in the page where are
+
+00:32:30.960 --> 00:32:32.560
+what are you reading which section where
+
+00:32:32.560 --> 00:32:34.800
+is the pointer how are we moving among a
+
+00:32:34.800 --> 00:32:37.160
+web page so it's up to that level in
+
+00:32:37.160 --> 00:32:40.640
+details. So,
+
+00:32:40.640 --> 00:32:43.160
+if I have to talk about like examples
+
+00:32:43.160 --> 00:32:46.280
+directly, so I guess
+
+00:32:46.280 --> 00:32:49.120
+personally identifiable information
+
+00:32:49.120 --> 00:32:52.040
+start doing there. Reduce as much as
+
+00:32:52.040 --> 00:32:54.680
+possible. Do we need it? Can we just get
+
+00:32:54.680 --> 00:32:57.200
+it done in our testing environment? And
+
+00:32:57.200 --> 00:32:59.680
+some people and some organizations are
+
+00:32:59.680 --> 00:33:01.440
+always like, "No, we need more data. We
+
+00:33:01.440 --> 00:33:03.360
+need to know exactly where the users
+
+00:33:03.360 --> 00:33:06.240
+are." Maybe pointing to them that there
+
+00:33:06.240 --> 00:33:08.440
+are currently a lot of court cases going
+
+00:33:08.440 --> 00:33:10.680
+on and it's not always go for the
+
+00:33:10.680 --> 00:33:12.640
+companies. People are fighting back and
+
+00:33:12.640 --> 00:33:14.760
+winning in cases. That's a good start.
+
+00:33:14.760 --> 00:33:16.760
+And also explaining to the management
+
+00:33:16.760 --> 00:33:18.360
+that if something happens, security
+
+00:33:18.360 --> 00:33:20.560
+incidents can happen to anyone.
+
+00:33:20.560 --> 00:33:22.080
+If there is any breaking happens and
+
+00:33:22.080 --> 00:33:24.280
+data gets stolen, how much, how bad that
+
+00:33:24.280 --> 00:33:26.480
+can go bad for the shareholders? I think
+
+00:33:26.480 --> 00:33:28.200
+that's a good starting point because end
+
+00:33:28.200 --> 00:33:31.560
+of the day, every company works for the
+
+00:33:31.560 --> 00:33:33.520
+>> And how about encryption? Is it an
+
+00:33:33.520 --> 00:33:35.440
+important topic that I should also pay
+
+00:33:35.440 --> 00:33:37.640
+attention to?
+
+00:33:37.640 --> 00:33:40.280
+I'm right now inside EU and
+
+00:33:40.280 --> 00:33:42.680
+even then it's a very big topic for all
+
+00:33:42.680 --> 00:33:45.800
+of us because most people in power, they
+
+00:33:45.800 --> 00:33:48.480
+want encryption to only work for them.
+
+00:33:48.480 --> 00:33:50.280
+But it's really bad when people in the
+
+00:33:50.280 --> 00:33:53.040
+world wants to use it. So,
+
+00:33:53.040 --> 00:33:55.040
+if you have like
+
+00:33:55.040 --> 00:33:56.240
+there are multiple attempts, correct,
+
+00:33:56.240 --> 00:33:58.040
+happen. It's not new. It's happening
+
+00:33:58.040 --> 00:33:59.960
+again and again the encryption war in
+
+00:33:59.960 --> 00:34:01.960
+different forms, different names. One of
+
+00:34:01.960 --> 00:34:04.560
+the modern ones in EU is chat control
+
+00:34:04.560 --> 00:34:07.160
+where they don't want to have people
+
+00:34:07.160 --> 00:34:09.040
+the same level of encryption which
+
+00:34:09.040 --> 00:34:11.000
+should provide or like which they want
+
+00:34:11.000 --> 00:34:12.879
+to have themselves. But they don't have
+
+00:34:12.879 --> 00:34:15.040
+like people making or trying to make
+
+00:34:15.040 --> 00:34:16.399
+these rules and regulations don't
+
+00:34:16.399 --> 00:34:18.919
+understand that there is no golden key
+
+00:34:18.919 --> 00:34:21.440
+rule in this. If you create a backdoor,
+
+00:34:21.440 --> 00:34:24.040
+people will find it. People will use it
+
+00:34:24.040 --> 00:34:26.360
+every time. And there are cases already,
+
+00:34:26.360 --> 00:34:28.760
+I think, in US where there are proper
+
+00:34:28.760 --> 00:34:31.399
+officially made backdoors to for the
+
+00:34:31.399 --> 00:34:33.280
+mobile telephone networks and things and
+
+00:34:33.280 --> 00:34:36.040
+then finally found that there are
+
+00:34:36.040 --> 00:34:38.360
+from China were already listening and
+
+00:34:38.360 --> 00:34:39.960
+watching what's going on using the same
+
+00:34:39.960 --> 00:34:42.399
+backdoors. So, if people think
+
+00:34:42.399 --> 00:34:45.159
+encryption will only work when we want
+
+00:34:45.159 --> 00:34:47.639
+it to work, that's not going to happen.
+
+00:34:47.639 --> 00:34:48.760
+Like there are many countries who are
+
+00:34:48.760 --> 00:34:51.000
+now trying to break encryption for let's
+
+00:34:51.000 --> 00:34:53.240
+say signal.
+
+00:34:53.240 --> 00:34:56.040
+>> But if you talk to the people who
+
+00:34:56.040 --> 00:34:57.520
+cryptography, people who are like I'm
+
+00:34:57.520 --> 00:34:59.200
+not one of them. I trust my
+
+00:34:59.200 --> 00:35:00.960
+cryptographer friends. But if you talk
+
+00:35:00.960 --> 00:35:04.080
+to them you'll understand like why it is
+
+00:35:04.080 --> 00:35:07.000
+possible in the way the lawyers think or
+
+00:35:07.000 --> 00:35:09.480
+the politicians think that cryptography
+
+00:35:09.480 --> 00:35:11.480
+will work for them.
+
+00:35:11.480 --> 00:35:13.040
+If you break it, it will be broken for
+
+00:35:13.040 --> 00:35:14.880
+everyone and we will not have privacy in
+
+00:35:14.880 --> 00:35:16.480
+our world.
+
+00:35:16.480 --> 00:35:19.000
+So, right now even for Europe it's a big
+
+00:35:19.000 --> 00:35:20.840
+challenge because it is again and again
+
+00:35:20.840 --> 00:35:22.560
+things like chat controller coming back
+
+00:35:22.560 --> 00:35:24.560
+with a different name, where the goal is
+
+00:35:24.560 --> 00:35:27.120
+to undermine encryption.
+
+00:35:27.120 --> 00:35:28.800
+But they're not getting the fact that if
+
+00:35:28.800 --> 00:35:30.560
+we take down encryption, it's going to
+
+00:35:30.560 --> 00:35:34.480
+affect everything we do right now in our
+
+00:35:34.480 --> 00:35:36.160
+And what about the last remaining bits
+
+00:35:36.160 --> 00:35:38.760
+of privacy we have?
+
+00:35:38.760 --> 00:35:40.600
+We will lose it directly.
+
+00:35:40.600 --> 00:35:42.440
+Because today maybe we have democracy,
+
+00:35:42.440 --> 00:35:44.680
+but we do not know how politics and the
+
+00:35:44.680 --> 00:35:47.360
+world will change fast.
+
+00:35:47.360 --> 00:35:50.120
+And there are always evil actors.
+
+00:35:50.120 --> 00:35:53.000
+>> How can we fight for privacy? What are
+
+00:35:53.000 --> 00:35:56.920
+some specific steps that we can do?
+
+00:35:56.920 --> 00:35:58.480
+>> Like we are in Europe I think, correct?
+
+00:35:58.480 --> 00:36:00.560
+It's the place where we have the
+
+00:36:00.560 --> 00:36:02.960
+such a huge crowd, like people from all
+
+00:36:02.960 --> 00:36:04.520
+parts of technology and outside of
+
+00:36:04.520 --> 00:36:06.760
+technology world mixing together. I
+
+00:36:06.760 --> 00:36:09.000
+guess one of the best thing is to start
+
+00:36:09.000 --> 00:36:11.680
+here, like explain people because even
+
+00:36:11.680 --> 00:36:13.280
+the people are really experienced
+
+00:36:13.280 --> 00:36:15.480
+engineers, developers, not everyone
+
+00:36:15.480 --> 00:36:17.680
+think that privacy matters or not
+
+00:36:17.680 --> 00:36:19.760
+everyone thinks that
+
+00:36:19.760 --> 00:36:21.960
+it is in danger. They think oh, it will
+
+00:36:21.960 --> 00:36:24.080
+only happen to bad people or it's not
+
+00:36:24.080 --> 00:36:26.280
+doesn't apply to us.
+
+00:36:26.280 --> 00:36:28.440
+>> Only things happen to people which is
+
+00:36:28.440 --> 00:36:30.880
+personal to us, then only we react and
+
+00:36:30.880 --> 00:36:32.400
+that's a human nature.
+
+00:36:32.400 --> 00:36:34.080
+So, I guess it's a very basic thing that
+
+00:36:34.080 --> 00:36:35.760
+we can talk about issues more, talk
+
+00:36:35.760 --> 00:36:37.880
+about how things can go wrong, talk
+
+00:36:37.880 --> 00:36:39.880
+about like if you have an Echo device
+
+00:36:39.880 --> 00:36:41.920
+and from Amazon in the house, how much
+
+00:36:41.920 --> 00:36:43.720
+it can listen to our conversation at
+
+00:36:43.720 --> 00:36:46.200
+house. Will you be okay? Will you be
+
+00:36:46.200 --> 00:36:49.080
+okay if any again random contractor from
+
+00:36:49.080 --> 00:36:51.160
+rest of the world listening to our whole
+
+00:36:51.160 --> 00:36:52.840
+day conversation
+
+00:36:52.840 --> 00:36:57.640
+or know what your kids is doing?
+
+00:36:57.640 --> 00:36:59.720
+privacy, the idea of privacy and
+
+00:36:59.720 --> 00:37:01.480
+encryption, how it works, I guess there
+
+00:37:01.480 --> 00:37:03.680
+is a pretty lot of misconception. Even
+
+00:37:03.680 --> 00:37:05.040
+though people are really good when it
+
+00:37:05.040 --> 00:37:06.840
+comes to technology, they know the
+
+00:37:06.840 --> 00:37:08.760
+technology very well, they just don't
+
+00:37:08.760 --> 00:37:11.160
+see the outcome.
+
+00:37:11.160 --> 00:37:12.720
+They think, "Oh, it only happens to a
+
+00:37:12.720 --> 00:37:15.080
+faraway country where there is no
+
+00:37:15.080 --> 00:37:17.200
+democracy." No, it can happen to anyone
+
+00:37:17.200 --> 00:37:19.400
+of us.
+
+00:37:19.400 --> 00:37:21.400
+>> And so, those that you mentioned are
+
+00:37:21.400 --> 00:37:23.320
+some very simple and straightforward
+
+00:37:23.320 --> 00:37:25.800
+things we can do. For example, spreading
+
+00:37:25.800 --> 00:37:27.920
+awareness about it. But, I wonder, do
+
+00:37:27.920 --> 00:37:32.400
+you have any experience with activism or
+
+00:37:32.400 --> 00:37:33.200
+>> Politics, no.
+
+00:37:33.200 --> 00:37:35.240
+>> organizations, for example, that people
+
+00:37:35.240 --> 00:37:39.880
+can join or any ways how to become more
+
+00:37:39.880 --> 00:37:41.240
+>> So, politics is always a big thing,
+
+00:37:41.240 --> 00:37:44.240
+correct? But, it's like
+
+00:37:44.240 --> 00:37:45.960
+it's not for me, but for many people who
+
+00:37:45.960 --> 00:37:47.760
+are good at it, they can
+
+00:37:47.760 --> 00:37:50.280
+actually help in the local politics and
+
+00:37:50.280 --> 00:37:53.080
+decide how the laws getting created,
+
+00:37:53.080 --> 00:37:56.160
+etc. But, if if nothing else, the easier
+
+00:37:56.160 --> 00:37:58.480
+way is to find the organizations which
+
+00:37:58.480 --> 00:38:00.040
+are helping for privacy, which are
+
+00:38:00.040 --> 00:38:01.960
+fighting for it. EFF I already
+
+00:38:01.960 --> 00:38:03.440
+mentioned, Tor Project, another
+
+00:38:03.440 --> 00:38:05.920
+nonprofit. Like, find the local
+
+00:38:05.920 --> 00:38:07.960
+nonprofits, there are many in each of
+
+00:38:07.960 --> 00:38:09.960
+the countries who are fighting for the
+
+00:38:09.960 --> 00:38:11.600
+privacy in that country. Find the
+
+00:38:11.600 --> 00:38:13.360
+lawyers who are fighting for people,
+
+00:38:13.360 --> 00:38:15.440
+doing those court cases for privacy. And
+
+00:38:15.440 --> 00:38:20.280
+each country has different groups. And
+
+00:38:20.280 --> 00:38:21.960
+finding your local group would be really
+
+00:38:21.960 --> 00:38:23.800
+helpful where you can you'll be much
+
+00:38:23.800 --> 00:38:26.280
+more effective in that way. But there
+
+00:38:26.280 --> 00:38:28.400
+are always larger, bigger groups, and
+
+00:38:28.400 --> 00:38:29.960
+most of them are nonprofits, and they
+
+00:38:29.960 --> 00:38:32.080
+need help both in money and voluntary
+
+00:38:32.080 --> 00:38:33.280
+time at the same time.
+
+00:38:33.280 --> 00:38:35.440
+>> Right. And are there any local groups
+
+00:38:35.440 --> 00:38:37.840
+that they are part of?
+
+00:38:37.840 --> 00:38:41.000
+>> Uh I am directly not in like Sweden or
+
+00:38:41.000 --> 00:38:43.480
+Stockholm, but I'm in a channel called
+
+00:38:43.480 --> 00:38:47.000
+Pound DFRI. That's a local nonprofit in
+
+00:38:47.000 --> 00:38:49.320
+Sweden. I just
+
+00:38:49.320 --> 00:38:51.160
+try to read the Swedish and if I can
+
+00:38:51.160 --> 00:38:53.880
+decipher a little bit of it, but that
+
+00:38:53.880 --> 00:38:56.080
+organization tries to do a lot of
+
+00:38:56.080 --> 00:38:59.360
+sessions and tries to write to the like
+
+00:38:59.360 --> 00:39:02.080
+proper way to inform the government
+
+00:39:02.080 --> 00:39:03.800
+about different laws which are trying to
+
+00:39:03.800 --> 00:39:05.600
+become up, and they try to explain to
+
+00:39:05.600 --> 00:39:08.200
+people and lawmakers and everyone like
+
+00:39:08.200 --> 00:39:10.920
+how things can go good or bad. So I know
+
+00:39:10.920 --> 00:39:12.520
+that organization in Sweden that they
+
+00:39:12.520 --> 00:39:14.880
+work very heavily into this. They try to
+
+00:39:14.880 --> 00:39:17.480
+showcase how why the new laws or any new
+
+00:39:17.480 --> 00:39:20.160
+technology can go bad or not.
+
+00:39:20.160 --> 00:39:21.960
+So that one I know in Sweden.
+
+00:39:21.960 --> 00:39:23.760
+>> And are there any international
+
+00:39:23.760 --> 00:39:28.160
+nonprofits or groups that are an
+
+00:39:28.160 --> 00:39:30.600
+umbrella organization that has multiple
+
+00:39:30.600 --> 00:39:32.280
+organizations under it, or you think
+
+00:39:32.280 --> 00:39:35.480
+that the all organizations are very
+
+00:39:35.480 --> 00:39:39.640
+decentralized and defragmented and very
+
+00:39:39.640 --> 00:39:43.560
+>> It's both. Like if you look at something
+
+00:39:43.560 --> 00:39:48.080
+let's say
+
+00:39:48.080 --> 00:39:52.240
+Human Rights Watch. H
+
+00:39:52.240 --> 00:39:55.040
+for example, Amnesty.
+
+00:39:55.040 --> 00:39:56.680
+>> They have the country-specific things,
+
+00:39:56.680 --> 00:39:58.520
+correct? So they are working even though
+
+00:39:58.520 --> 00:39:59.800
+they're a global organization, the
+
+00:39:59.800 --> 00:40:01.520
+country-specific parts are working on
+
+00:40:01.520 --> 00:40:04.440
+their own. Or if you go to like EFF,
+
+00:40:04.440 --> 00:40:06.160
+you'll find they have smaller like
+
+00:40:06.160 --> 00:40:08.280
+chapters, and they have list of other
+
+00:40:08.280 --> 00:40:11.160
+organizations who may work in the same
+
+00:40:11.160 --> 00:40:13.120
+>> Right. And if someone would like to
+
+00:40:13.120 --> 00:40:14.840
+learn more about privacy, do you have
+
+00:40:14.840 --> 00:40:18.400
+any resources or tips where to start?
+
+00:40:18.400 --> 00:40:20.440
+>> My general go-to solution is asking
+
+00:40:20.440 --> 00:40:24.800
+people to read ssd.eff.org.
+
+00:40:24.800 --> 00:40:26.600
+That's the
+
+00:40:26.600 --> 00:40:27.760
+the guide
+
+00:40:27.760 --> 00:40:29.800
+with pointing out to various parts of
+
+00:40:29.800 --> 00:40:31.680
+our privacy how privacy works, how
+
+00:40:31.680 --> 00:40:33.440
+different technology works including
+
+00:40:33.440 --> 00:40:37.920
+phone mobile phone like Android iPhone
+
+00:40:37.920 --> 00:40:41.080
+to how password managers work to how TOR
+
+00:40:41.080 --> 00:40:42.960
+works and if you want to attend a
+
+00:40:42.960 --> 00:40:44.520
+protest, what are the things you are
+
+00:40:44.520 --> 00:40:45.800
+supposed to do before going to a
+
+00:40:45.800 --> 00:40:49.080
+protest. So that explains
+
+00:40:49.080 --> 00:40:52.280
+like pretty well. So just check it out.
+
+00:40:52.280 --> 00:40:54.840
+>> Okay. Thank you very much for coming.
+
+00:40:54.840 --> 00:40:57.920
+>> Thank you for this.

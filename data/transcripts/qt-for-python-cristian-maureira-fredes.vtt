@@ -1,0 +1,511 @@
+WEBVTT
+
+00:00.000 --> 00:08.300
+And most critically, because C++ is in many industries that already have C++ code bases interacting with these things.
+
+00:08.300 --> 00:14.180
+So you will not convince, I don't know, banks or whatever other thing.
+
+00:14.180 --> 00:18.080
+Hello, everyone, and welcome to another episode of Behind the Comet.
+
+00:18.080 --> 00:25.220
+Have you ever wondered what does AstroThings have in common with the software running in your car, your coffee machine, and Astro's internal tools?
+
+00:25.220 --> 00:27.800
+In this episode, I had the chance to talk to Christian.
+
+00:27.800 --> 00:32.560
+Christian is a research and development principal manager at the Qt company.
+
+00:32.560 --> 00:39.800
+He leads the team behind Qt for Python, known as PyT6, the official Python bindings for the Qt framework.
+
+00:39.800 --> 00:48.000
+He also leads the Qt core team and a newly announced project called Qt Bridges, aims to introduce more languages to the Qt ecosystem.
+
+00:48.000 --> 00:55.880
+He has a PhD in astrophysics, but decided to leave academia and move into the software industry, eventually joining the Qt company in 2018.
+
+00:55.880 --> 01:03.600
+Beyond his day job, Christian is a vice chair of the Python Software Foundation and a serial community organizer.
+
+01:03.600 --> 01:05.740
+Involved in EuroPython, PyCon U.S.
+
+01:05.740 --> 01:11.240
+The transition of the Python documentation into Spanish and PyPI moderation.
+
+01:11.240 --> 01:13.860
+Where do you work and how does it relate to open source?
+
+01:13.860 --> 01:21.040
+I currently work at the Qt company for a long time, more than seven years, you know.
+
+01:21.040 --> 01:29.480
+And, well, it is a company, but has this nice feature in its core that it's based on an open source project.
+
+01:29.480 --> 01:35.120
+So Qt is a framework that was introduced, well, it was developed, like, in the late 80s.
+
+01:35.120 --> 01:38.480
+Like, I think that it was, the first release was in 1991.
+
+01:38.480 --> 01:46.960
+And it was solving a real problem back then that was having a UI framework that you could have similar code,
+
+01:46.960 --> 01:51.820
+compile it in different operating systems, and then getting similar results.
+
+01:51.820 --> 01:54.440
+In the sense of, like, having the native look and feel.
+
+01:54.440 --> 02:01.340
+So, mostly because of Linux, Windows, and macOS back then, they were really different.
+
+02:01.340 --> 02:04.960
+And there was no, like, you needed to have literally three different applications for that.
+
+02:04.960 --> 02:06.460
+Well, there were other options, but anyway.
+
+02:06.460 --> 02:12.240
+And the idea was an open source project since the beginning, solving a real problem.
+
+02:12.240 --> 02:15.180
+And folks that created, created a new company.
+
+02:15.180 --> 02:20.880
+And then this company kept evolving, but at some point got acquired by another company.
+
+02:20.880 --> 02:24.740
+But they always kept the open source bit in this essence.
+
+02:24.740 --> 02:26.900
+So it was acquired by Nokia.
+
+02:26.900 --> 02:29.400
+And maybe you remember Nokia.
+
+02:29.400 --> 02:31.380
+And then everything was great with Nokia.
+
+02:31.380 --> 02:32.740
+Then everything was not great with Nokia.
+
+02:32.740 --> 02:39.380
+And then they sold, as far as I know, the rights of the license, the commercial license of it,
+
+02:39.380 --> 02:43.140
+because it was always, like, open source and commercial as well, but with different licenses,
+
+02:43.140 --> 02:44.780
+to a different company called DJI.
+
+02:44.780 --> 02:46.020
+And then it was mature enough.
+
+02:46.020 --> 02:47.900
+And then their own company kind of started.
+
+02:47.900 --> 02:54.980
+So even if it's called a cute company, that means that it's a company that has the rights to sell the commercial license.
+
+02:54.980 --> 02:57.980
+But it still is open source in this world.
+
+02:57.980 --> 02:58.420
+Right.
+
+02:58.420 --> 03:01.420
+And what language is the framework written in?
+
+03:01.420 --> 03:03.340
+Or what technologies in general do you use?
+
+03:03.340 --> 03:04.960
+That's the tricky part, right?
+
+03:04.960 --> 03:07.700
+So it is a framework because it's so old.
+
+03:07.700 --> 03:14.160
+Back then it was written in the most popular language, the most complete, badly, includes language, which was C++.
+
+03:14.160 --> 03:28.340
+And considering the size of the framework and how it has been evolving, it's very difficult nowadays to kind of have a complete rewrite that we have seen recently with new languages, like, for example, Rust.
+
+03:28.340 --> 03:31.660
+People rewriting things in new languages is almost impossible.
+
+03:31.660 --> 03:40.440
+And most critically, because C++ is in many industries that already have C++ code bases interacting with these things.
+
+03:40.440 --> 03:46.840
+So you will not convince, I don't know, banks or whatever other technology to, okay, can you rewrite everything so we can do so?
+
+03:46.840 --> 03:47.100
+Yeah.
+
+03:47.100 --> 03:52.380
+So it's C++ at this course, but there are a few bindings around.
+
+03:52.380 --> 03:55.460
+And how is it working with a bindings-related project?
+
+03:55.460 --> 04:01.940
+So basically you need knowledge of C++ and knowledge of Python in order to be able to contribute, right?
+
+04:01.940 --> 04:02.500
+Yes.
+
+04:02.500 --> 04:08.340
+So with Qt, in the Qt company, we have the official set of bindings is called PySight.
+
+04:08.340 --> 04:13.540
+There is another set of bindings called PyQ that might be widely known, but it's a different company.
+
+04:13.540 --> 04:16.200
+But I can talk to you about the PySight at least.
+
+04:16.200 --> 04:19.580
+So in PySight, there are the bindings for Python.
+
+04:19.580 --> 04:22.520
+So exposing the C++ framework to Python.
+
+04:22.520 --> 04:26.860
+But we needed, as a technology, first, a binding generator.
+
+04:26.860 --> 04:29.360
+So we have our own binding generator.
+
+04:29.360 --> 04:34.740
+That's fun enough, it comes from a different set of binding burial for the Java language.
+
+04:34.740 --> 04:44.680
+But we took the essence of it, started to change the functionality, and then you need to, on a daily basis, be exposed to C++ code that is doing something.
+
+04:44.680 --> 04:48.840
+And then it gets generated into some C code to make it compatible with C Python.
+
+04:48.840 --> 04:54.080
+And after that, you compile it and have something that is importable from Python.
+
+04:54.080 --> 04:56.620
+So then, of course, it is and everything goes in Python.
+
+04:56.620 --> 05:06.140
+So you need to have this understanding of modifying the core, generating the bindings, compiling the bindings, and then using it from Python to check if something works.
+
+05:06.140 --> 05:07.580
+So it's tricky.
+
+05:07.580 --> 05:11.320
+So how often do you get contributions from people on the internet?
+
+05:11.320 --> 05:15.720
+Yeah, on Qt, I think it is very difficult nowadays.
+
+05:15.720 --> 05:22.160
+We still have, like, a stable inflow contribution from different companies and other open source enthusiasts.
+
+05:22.160 --> 05:29.040
+But I personally have seen a decrease in the C++ users around the world, like new users.
+
+05:29.040 --> 05:35.660
+So getting new contributors is something that we don't see very often, maybe a few per month.
+
+05:35.660 --> 05:37.920
+And sometimes people also get confused, right?
+
+05:37.920 --> 05:43.100
+Because if you want to, they know Python, they want to contribute to PySide, then how do they do it?
+
+05:43.100 --> 05:46.900
+Some of, most of the time, they need to contribute things through C++.
+
+05:46.900 --> 05:48.360
+So it might be tricky for them.
+
+05:48.360 --> 05:54.740
+So for solving that, we have been trying to push in the past in different events, like Hacktoberfest, for example,
+
+05:54.740 --> 06:01.000
+to have people contributing other interesting things for the project, like new examples, new tests,
+
+06:01.000 --> 06:04.880
+or even new Python functionality that we have on top.
+
+06:04.880 --> 06:09.060
+Because as it's a binding, it's a one-on-one thing of Python.
+
+06:09.060 --> 06:11.720
+We do have a lot of features that are Python only.
+
+06:11.720 --> 06:16.380
+So people could contribute to those things in a simpler way, kind of compared to C++.
+
+06:16.380 --> 06:20.240
+And you said that every year you have less contributions to C++.
+
+06:20.240 --> 06:25.680
+But I wonder, what is the impact of LLMs?
+
+06:25.680 --> 06:30.560
+Because LLMs do help people understand code and write code.
+
+06:30.560 --> 06:38.020
+And I wonder, have you seen maybe people being able to contribute or to read once LLMs started being popular?
+
+06:38.020 --> 06:47.740
+Yeah, I think we had a few cases where people was contributing fixes that once the experts on those fields were checking,
+
+06:47.740 --> 06:49.340
+was, this makes no sense.
+
+06:49.340 --> 06:49.880
+What do you mean?
+
+06:49.880 --> 06:52.840
+And then we noticed that it was generated with the LLMs.
+
+06:52.840 --> 06:58.400
+But I don't neglect the fact that, of course, those things are very useful for you to understand.
+
+06:58.400 --> 07:02.520
+I'm not a user myself, not because I don't like it or anything, but I never had the need.
+
+07:02.520 --> 07:11.060
+But I did a few tries with a couple of models out there in order for them to explain a few concepts within the Qt framework.
+
+07:11.060 --> 07:12.200
+And it was very accurate.
+
+07:12.200 --> 07:16.040
+So if you want to learn at least the idea, the implementation of things,
+
+07:16.040 --> 07:25.520
+I believe that it would be very beneficial for new developers that are not exposed to this old language to understand how things work on top.
+
+07:25.520 --> 07:31.900
+But I haven't seen people getting help from LLMs to submit their contributions, to be honest.
+
+07:31.900 --> 07:33.000
+But maybe they are.
+
+07:33.000 --> 07:34.340
+And I didn't see it.
+
+07:34.340 --> 07:41.220
+So it sounds like the most challenging part of contributing to Qt is basically C++, right?
+
+07:41.220 --> 07:43.980
+Are there any other challenges or is it only this one?
+
+07:43.980 --> 07:44.460
+No.
+
+07:44.460 --> 07:50.260
+Well, the other challenge, as I said, is that, and I'm not bragging, is the reality, Qt is used widely.
+
+07:50.260 --> 07:54.920
+Like from coffee machines into, you know, more advanced.
+
+07:54.920 --> 07:58.140
+At NASA, for example, they are using Qt everywhere for internal tools.
+
+07:58.140 --> 08:07.040
+Most of the major other tech companies, I would not say any names of tech companies, but also have a lot of Qt within even some electric cars that you have.
+
+08:07.040 --> 08:13.400
+So modifying something has a lot of implications in what is going on in the world.
+
+08:13.400 --> 08:16.440
+I mean, C++ still, believe it or not, of course, runs the world.
+
+08:16.440 --> 08:21.420
+So we do have a very, need to have a very strict process.
+
+08:21.420 --> 08:25.480
+So it's not as easy, like, I want to just maybe add a new functionality.
+
+08:25.480 --> 08:26.360
+Maybe not.
+
+08:26.360 --> 08:28.740
+But fixing bugs is something that we value the most.
+
+08:28.740 --> 08:33.640
+So fixing a bug of a super old framework is very difficult.
+
+08:33.640 --> 08:40.360
+Maybe you know it even from Python that if you go to the issue tracker and you see the oldest bugs, nobody has managed to fix it.
+
+08:40.360 --> 08:44.700
+So it's very rare for someone new to try to jump there and try to fix the bug.
+
+08:44.700 --> 08:46.980
+So, yeah, it's tricky, but still possible.
+
+08:46.980 --> 08:50.480
+We still get contribution from externals.
+
+08:50.480 --> 08:54.020
+And how can people get involved if they would like to contribute?
+
+08:54.020 --> 08:57.420
+What's the best place where they can find more information about the project?
+
+08:57.420 --> 09:04.800
+This is a good question because for many years it was a pain point for people that they didn't know what to follow, what to read to the start.
+
+09:04.800 --> 09:10.760
+So we managed to do something very simple in the URL of the project, so the open source side of things.
+
+09:10.760 --> 09:14.300
+So it's Qt, so Qt-project.org.
+
+09:14.300 --> 09:18.300
+And there we have a little text box with saying, like, oh, you want to submit a patch?
+
+09:18.300 --> 09:19.380
+First step, do this.
+
+09:19.380 --> 09:20.160
+Second step, do this.
+
+09:20.160 --> 09:26.740
+But, of course, that is the process, not, like, guiding people how to solve problems, or at least the mechanism.
+
+09:26.740 --> 09:32.340
+Because there is one feature that might be very different to other projects that you might know, which is we are not on GitHub.
+
+09:32.340 --> 09:35.960
+We have our own instance of Gerit.
+
+09:35.960 --> 09:40.260
+Gerit is a different, you know, Git-tracking kind of platform thingy.
+
+09:40.260 --> 09:42.600
+It's used by the Chromium project, for example.
+
+09:42.600 --> 09:46.660
+So that's kind of like the first wall for contributors to get there.
+
+09:46.660 --> 09:50.200
+And I wonder, what is the reasoning behind it that you are not on GitHub?
+
+09:50.200 --> 09:51.040
+Historical reasons.
+
+09:51.040 --> 09:51.680
+Historical reasons, right.
+
+09:51.680 --> 09:57.280
+Because before, there were other web interfaces for Git that we were using.
+
+09:57.280 --> 10:00.360
+Well, before, even I think before it was SVN as well.
+
+10:00.360 --> 10:02.840
+But things were moving out.
+
+10:02.840 --> 10:05.040
+But, yeah, I mean, now we see that every single project is on GitHub.
+
+10:05.040 --> 10:10.060
+But moving this huge beast of a project to a new, because everyone is there, it's super tricky.
+
+10:10.060 --> 10:11.720
+We have mirrors on GitHub.
+
+10:11.720 --> 10:13.020
+People get confused sometimes.
+
+10:13.020 --> 10:13.980
+They want to contribute there.
+
+10:13.980 --> 10:16.400
+But those are only mirrors.
+
+10:16.400 --> 10:18.640
+So that people need to seal that with the...
+
+10:18.640 --> 10:21.420
+But if you don't know it, I really invite you to try to check it out.
+
+10:21.420 --> 10:22.480
+I mean, Gary, this is...
+
+10:22.480 --> 10:23.900
+I prefer the approach.
+
+10:23.900 --> 10:26.000
+And actually, it's that you always work on the same patch.
+
+10:26.000 --> 10:29.240
+So you're always, like, committing and amending the same commits.
+
+10:29.240 --> 10:30.340
+We have versions.
+
+10:30.340 --> 10:32.360
+So then you merge the final version.
+
+10:32.360 --> 10:34.500
+So it's not like GitHub that you have many pull requests.
+
+10:34.500 --> 10:35.740
+Then you stash.
+
+10:35.740 --> 10:36.320
+Right.
+
+10:36.320 --> 10:39.180
+And what does the name Qt stand for?
+
+10:39.180 --> 10:43.320
+Because when I heard it for the first time, I thought it was Qt as in C-U-T-E.
+
+10:43.320 --> 10:45.400
+But actually, it's Qt.
+
+10:45.400 --> 10:46.120
+What does it mean?
+
+10:46.120 --> 10:50.000
+The story goes as far as I remember.
+
+10:50.000 --> 10:55.400
+There was a different framework, sorry, Windows Manager for Windows, I think.
+
+10:55.400 --> 10:55.780
+Or for...
+
+10:55.780 --> 10:56.520
+I don't remember.
+
+10:56.520 --> 10:58.960
+But it was called XT.
+
+10:58.960 --> 11:00.100
+That's the name.
+
+11:00.100 --> 11:07.360
+And one of the authors said that in the font that he was using, he really liked how the Q was rendered.
+
+11:07.360 --> 11:12.160
+So he took that thing and they said, okay, Qt, and then the name, the rest is history.
+
+11:12.160 --> 11:13.440
+Yeah, that's it.
+
+11:13.440 --> 11:15.160
+Thank you for coming.
+
+11:15.160 --> 11:15.900
+Thank you very much.
+
+11:15.900 --> 11:45.880
+Thank you.

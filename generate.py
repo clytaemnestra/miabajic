@@ -102,7 +102,8 @@ def parse_vtt(path, fixes=(), cues_per_entry=5):
 
 
 def format_vtt_time(ts):
-    h, m, s = ts.split(".")[0].split(":")
+    # WebVTT allows both hh:mm:ss.ttt and mm:ss.ttt
+    h, m, s = (["0"] + ts.split(".")[0].split(":"))[-3:]
     return f"{int(h)}:{m}:{s}" if int(h) else f"{m}:{s}"
 
 

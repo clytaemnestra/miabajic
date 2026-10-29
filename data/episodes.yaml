@@ -6,6 +6,9 @@
 # guests: names must match data/guests.yaml.
 # Transcript: data/transcripts/<slug>.vtt (optional). transcript_fixes: [wrong, right] pairs applied when
 #   rendering, for auto-caption errors in names.
+#   Transcripts added in Oct 2026 are machine-generated: YouTube captions (auto-generated, or the
+#   uploaded captions for the Mateusz and Thibaud episodes) and, where YouTube had none available,
+#   Whisper large-v3-turbo run locally on the RSS audio. They are not proofread.
 # Any value starting with "TODO" is treated as missing by generate.py.
 
 - slug: fakeredis-daniel-moran
@@ -57,6 +60,13 @@
     url: https://django-commons.org/
   - title: Daniel's LinkedIn profile
     url: https://www.linkedin.com/in/daniel-moran-8a096a15/
+  transcript_fixes:
+  - ["RedisPy", "redis-py"]
+  - ["VolkiPy", "valkey-py"]
+  - ["ValkyPy", "valkey-py"]
+  - ["Valky", "Valkey"]
+  - ["Volkey", "Valkey"]
+  - ["fake Redis", "FakeRedis"]
 - slug: cpython-emily-morehouse
   number: 12
   title: 'Emily Morehouse: Becoming a CPython Core Dev, the Walrus Operator and Chairing PyCon'
@@ -127,6 +137,9 @@
     url: https://cuttlesoft.com
   - title: Emily on GitHub
     url: https://github.com/emilyemorehouse
+  transcript_fixes:
+  - ["Guidovan", "Guido van"]
+  - ["Cpython", "CPython"]
 - slug: privacy-kushal-das
   number: 11
   title: Is Your Vacuum Cleaner Spying on You? Kushal Das on Privacy and Digital Rights
@@ -237,6 +250,11 @@
   - time: '11:15'
     title: Conclusion
   links: []
+  transcript_fixes:
+  - ["Christian", "Cristián"]
+  - ["PySight", "PySide"]
+  - ["PyQ ", "PyQt "]
+  - ["Gerit", "Gerrit"]
 - slug: mentorship-manivannan-selvaraj
   number: 9
   title: 'Why Every Engineer Needs a Mentor: Manivannan Selvaraj on Mentorship and Burnout'
@@ -350,6 +368,8 @@
     url: https://github.com/despy-brain
   - title: Contact Maria
     url: mailto:maria@python.org
+  transcript_fixes:
+  - ["Mariia", "Maria"]
 - slug: spy-antonio-cuni
   number: 7
   title: 'Why Python is Slow: Antonio Cuni on SPy and Statically Compiled Python'
@@ -427,6 +447,16 @@
     url: https://spylang.github.io/docs/dev/
   - title: series of blog posts on SPy
     url: https://antocuni.eu/2025/10/29/inside-spy-part-1-motivations-and-goals/
+  transcript_fixes:
+  - ["Antonio Chuni", "Antonio Cuni"]
+  - ["why Spy so slow", "why Python is so slow"]
+  - ["PIScript", "PyScript"]
+  - ["Pi Pi", "PyPy"]
+  - ["HP pi", "HPy"]
+  - ["hpi", "HPy"]
+  - [" pi ", " PyPy "]
+  - ["Spy", "SPy"]
+  - [" spy ", " SPy "]
 - slug: pre-commit-anthony-sottile
   number: 6
   title: 'Maintaining 80 OSS Projects: Anthony Sottile on pre-commit and Developer Tooling'
@@ -486,6 +516,9 @@
     url: https://www.youtube.com/@anthonywritescode
   - title: Anthony's Twitch
     url: https://www.twitch.tv/anthonywritescode
+  transcript_fixes:
+  - ["Satile", "Sottile"]
+  - ["premit", "pre-commit"]
 - slug: ai-agents-armin-ronacher
   number: 5
   title: 'AI-Written Code: Armin Ronacher on AI Agents and the Future of Programming'
@@ -541,6 +574,9 @@
     url: https://simonwillison.net/
   - title: Armin's blog
     url: https://lucumr.pocoo.org/
+  transcript_fixes:
+  - ["Armen Roner", "Armin Ronacher"]
+  - ["Armen", "Armin"]
 - slug: ai-music-mateusz-modrzejewski
   number: 4
   title: 'AI-Generated Music: Tech, Copyright & Real-World Applications with Mateusz Modrzejewski'
@@ -606,6 +642,9 @@
     url: https://www.zaikslab.tech
   - title: Warsaw University of Technology
     url: https://www.pw.edu.pl
+  transcript_fixes:
+  - ["Mateus z.", "Mateusz."]
+  - ["Mateus ", "Mateusz "]
 - slug: sustainable-web-thibaud-colas
   number: 3
   title: How To Make Web More Sustainable? – Chat with Thibaud Colas
@@ -656,6 +695,8 @@
     url: https://climateaction.tech/
   - title: W3C work on web sustainability
     url: https://w3c.github.io/sustainableweb-wsg/
+  transcript_fixes:
+  - ["Wactel", "Wagtail"]
 - slug: fastapi-sebastian-ramirez
   number: 2
   title: Why FastAPI Became Python's Fastest‑Growing Framework – Chat with Sebastián Ramírez

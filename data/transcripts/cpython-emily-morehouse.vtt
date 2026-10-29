@@ -1,0 +1,604 @@
+WEBVTT
+
+00:00.000 --> 00:04.560
+Really interesting point in my career where I had finished my undergraduate studies.
+
+00:04.560 --> 00:08.120
+I was getting really into language design and compilers.
+
+00:08.120 --> 00:13.720
+My now husband at the time, and he's like elbowing me in the side, like, you should do it, you should do it.
+
+00:13.720 --> 00:23.480
+Many people still say this to me, like I gave some of these talks about my journey in core development years ago.
+
+00:23.480 --> 00:26.500
+Hi, everyone, and welcome to another episode of Behind the Commit.
+
+00:26.500 --> 00:38.200
+Have you ever wondered what it takes to go from picking up Python as a college hobby to being personally mentored by Guidovan Rossum and ultimately implementing one of the most controversial features in Python history?
+
+00:38.200 --> 00:40.680
+In this episode, I had the chance of Emily Morehouse.
+
+00:40.680 --> 00:49.440
+Emily is a Cpython core developer, a former member of the Python Steering Council, ESF fellow, and the co-founder and director of Engineering at Apple Soft Development Agency.
+
+00:49.440 --> 00:57.960
+She holds three degrees from Florida State University in computer science, theater, and criminology, and got started in Python just because it was more fun than C++.
+
+00:57.960 --> 01:04.840
+If someone had told you 10 or 15 years ago that you would become a core developer, how would you react?
+
+01:04.840 --> 01:07.240
+I would be shocked.
+
+01:07.240 --> 01:15.960
+Yeah, I don't think that I would have even thought that that was a possibility or really even like known what that would have meant at the time.
+
+01:15.960 --> 01:24.140
+I actually got started programming in college, and my first courses that I took were actually in C++.
+
+01:24.140 --> 01:26.360
+Like that's what the university curriculum was taught in.
+
+01:26.360 --> 01:34.200
+And I sort of picked up Python just as a hobby and something that was much easier to build cool things with than, you know, compared to C++.
+
+01:34.200 --> 01:46.280
+And I don't think that I even like registered at the time that there was a group of people developing that language that I would ultimately fall in love with and could participate in.
+
+01:46.280 --> 01:47.360
+What did you study?
+
+01:47.360 --> 01:48.340
+Interesting question.
+
+01:48.340 --> 01:50.540
+I actually have three degrees.
+
+01:50.540 --> 01:54.480
+So I studied theater, computer science, and criminology.
+
+01:54.480 --> 01:56.780
+And what was your journey into core development?
+
+01:56.780 --> 02:00.780
+And it's kind of, it is kind of a long story, so I'll try to keep it short.
+
+02:00.780 --> 02:08.400
+But I had been attending like a couple of Python conferences in like 2014 or so.
+
+02:08.400 --> 02:13.300
+And I was at this really interesting point in my career where I had finished my undergraduate studies.
+
+02:13.300 --> 02:27.620
+I was getting really into language design and compilers and was kind of at this fork in the road of going to grad school or moving to Silicon Valley and like taking a job or starting a company.
+
+02:27.620 --> 02:33.800
+And I wound up dropping out of grad school, the little bit that I did, and started this company.
+
+02:33.800 --> 02:37.160
+We really like got involved in the Python community.
+
+02:37.160 --> 02:39.100
+It became like a really big driving force for us.
+
+02:39.100 --> 02:48.940
+And so through that involvement, it was actually at one of those conferences that Guido, during a keynote, said that he wanted more women core developers.
+
+02:48.940 --> 02:51.300
+They didn't have any female core developers at that time.
+
+02:51.300 --> 02:54.180
+He offered to personally mentor anyone who was interested.
+
+02:54.180 --> 02:58.300
+And it was around 2016 or 17, something like that, right?
+
+02:58.300 --> 03:06.440
+Yeah, I think it was like 2015 that he first made the announcement and then 2016 that he hadn't seen anybody come forth.
+
+03:06.440 --> 03:08.580
+And that's when he offered to like personally mentor people.
+
+03:08.580 --> 03:16.420
+So I just remember looking at my now husband at the time and he's like elbowing me in the side like, you should do it, you should do it.
+
+03:16.420 --> 03:19.540
+And I'm like deer in the headlights, like terrified.
+
+03:19.540 --> 03:20.840
+What was your first thought?
+
+03:20.840 --> 03:22.480
+What were you afraid of?
+
+03:22.480 --> 03:31.220
+I think that especially then Guido is very much a figurehead in the community and a little bit like godlike, right?
+
+03:31.220 --> 03:35.380
+Like this person that created this language and brought us all together.
+
+03:35.380 --> 03:42.100
+It was just very intimidating to talk to him, especially being like as early in my career as I was.
+
+03:42.100 --> 03:51.140
+I just felt like I really looked up to him and was a bit intimidated in that sense that I didn't really know what it was that I could offer to somebody like that.
+
+03:51.140 --> 03:51.400
+Right.
+
+03:51.400 --> 03:56.760
+So he made an announcement and said that we are searching for more core developers.
+
+03:56.760 --> 03:58.540
+And what did you do?
+
+03:58.540 --> 03:59.520
+I emailed him.
+
+03:59.520 --> 04:00.800
+I took him up on it.
+
+04:00.800 --> 04:06.260
+I think one of the first things he did was invited me to the language summit that they have at PyCon US.
+
+04:06.260 --> 04:16.740
+I think I was one of the first folks that, you know, was in that room and wasn't necessarily a core developer and just kind of like dove in headfirst.
+
+04:16.740 --> 04:17.240
+And then he did.
+
+04:17.240 --> 04:18.720
+I mean, he did start mentoring me.
+
+04:18.720 --> 04:22.420
+I would meet with him every few weeks and we would just kind of like work on different problems.
+
+04:22.420 --> 04:27.940
+And he would kind of help me find the right thing to work on that really got my attention.
+
+04:27.940 --> 04:33.160
+And I think that's the hardest thing about getting started is like finding where to start and what's going to interest you.
+
+04:33.160 --> 04:34.260
+So. So.
+
+04:34.260 --> 04:38.460
+And how did you feel for the first time when you went there and you saw lots of core developers?
+
+04:38.460 --> 04:41.560
+Did you feel like I do belong here?
+
+04:41.560 --> 04:42.960
+What do I do here?
+
+04:42.960 --> 04:45.080
+I don't know anything.
+
+04:45.080 --> 04:45.460
+Yeah.
+
+04:45.460 --> 04:46.900
+I mean, I think that there's a part of that.
+
+04:46.900 --> 04:56.320
+I think that it becomes a little bit less intimidating when you realize how much you can understand or how much you can learn quickly and how much people are willing to explain things to you.
+
+04:56.320 --> 04:59.140
+I do also remember just feeling like really cool.
+
+04:59.140 --> 05:04.800
+Like I got to be in the room and I think that was just like an incredible feeling.
+
+05:04.800 --> 05:08.560
+And how did you feel being mentored by Guido personally?
+
+05:08.560 --> 05:14.300
+Yeah, I think that it really kind of stripped away the pretense, right?
+
+05:14.300 --> 05:22.540
+Like the intimidation and all of that stuff because he was so welcoming and like was always the first one to say he didn't know something.
+
+05:22.540 --> 05:25.480
+And would really just be like, hey, let's figure it out together.
+
+05:25.480 --> 05:28.620
+Like, I don't remember how this old piece of code works in the parser.
+
+05:28.620 --> 05:30.320
+Like, let's sit down and walk through it together.
+
+05:30.320 --> 05:32.600
+And I was like, oh, man, like he doesn't know everything.
+
+05:32.600 --> 05:42.280
+Like I can learn from his processes and he can like help work through it with me instead of just feeling like he had to, you know, spoon feed everything.
+
+05:42.280 --> 05:43.800
+And how did the onboarding look like?
+
+05:43.800 --> 05:46.880
+Was it done async remotely or you had it in person?
+
+05:46.880 --> 05:49.320
+Yeah, it was all async.
+
+05:49.320 --> 05:52.680
+I think this was back when he was working at Dropbox.
+
+05:52.680 --> 05:58.540
+So I remember we would just do, you know, weekly or biweekly video calls just on Fridays.
+
+05:58.540 --> 06:05.300
+And that kind of became my little like open source ritual to a certain extent, whether I was working with Guido or I was working on things on my own.
+
+06:05.300 --> 06:09.440
+Or I had one other mentor named Eric Snow who really helped me out a lot in the beginning.
+
+06:09.440 --> 06:16.120
+And that was kind of like my sacred open source time where I'd go book a conference room back when we were actually in offices.
+
+06:16.120 --> 06:18.560
+Kind of hunker down.
+
+06:18.560 --> 06:19.080
+Yeah.
+
+06:19.080 --> 06:22.160
+And what were some of the first features you worked on?
+
+06:22.160 --> 06:25.980
+Did you start with bad fixes, documentation or features?
+
+06:25.980 --> 06:28.220
+Like what is a good way how to get started?
+
+06:28.220 --> 06:28.540
+Yeah.
+
+06:28.540 --> 06:32.740
+So I remember I picked up a couple of bug fixes.
+
+06:32.740 --> 06:36.540
+But I think that this is one of, again, it's so hard to find where to get started.
+
+06:36.540 --> 06:37.440
+Because there are so many possibilities.
+
+06:37.440 --> 06:39.520
+So many possibilities.
+
+06:39.520 --> 06:44.780
+And also the language is very bold, but also very well known.
+
+06:44.780 --> 06:52.720
+So a lot of the bugs that you'd find are either very easy bugs that, you know, quickly get fixed by somebody who's just like available and ready.
+
+06:52.720 --> 07:00.180
+And so when you're a newcomer and you start going through like the backlog of tickets, you're like, oh, man, like there's a reason why somebody else didn't pick up this ticket.
+
+07:00.180 --> 07:02.460
+And now you have this like puzzle.
+
+07:02.460 --> 07:03.440
+Yeah.
+
+07:03.440 --> 07:04.320
+I did that at first.
+
+07:04.320 --> 07:10.000
+And then the big thing that I was able to do was implement the walrus operator.
+
+07:10.000 --> 07:12.160
+You can edit that one.
+
+07:12.160 --> 07:15.020
+It is a very controversial feature, right?
+
+07:15.020 --> 07:16.320
+It is very controversial.
+
+07:16.320 --> 07:20.800
+The pep itself really just like broke a lot of things in the community, broke a lot of things for Guido.
+
+07:20.800 --> 07:26.060
+And that was ultimately one of the things that caused him to step down as BDFL.
+
+07:26.060 --> 07:33.180
+But for me, it was just like the perfect thing where I was really looking for something that had a lot more depth to it to really sink my teeth in.
+
+07:33.180 --> 07:36.240
+I was obviously very interested in like the language design side of it.
+
+07:36.240 --> 07:45.620
+So getting in there and messing with the tokenizer and the parser and adding new syntax to the language was just like the absolute perfect fit for me and was probably the most exciting thing that I've done in Python.
+
+07:45.620 --> 07:49.660
+Did you also feel supported by other core developers?
+
+07:49.660 --> 07:52.480
+Because you mentioned that you were working a lot with Guido.
+
+07:52.480 --> 07:57.160
+Are there any other people that you work with or you mostly work with Guido only?
+
+07:57.160 --> 08:01.240
+Yeah, I think that Guido worked with me directly on that work.
+
+08:01.240 --> 08:04.120
+I always felt very supported by other core developers.
+
+08:04.120 --> 08:05.100
+They were always very welcoming.
+
+08:05.100 --> 08:12.060
+Actually, for a certain period of time, Eric Snow and I would have these sort of like virtual working sessions like pre-pandemic.
+
+08:12.060 --> 08:16.540
+So this was kind of like an interesting thing that probably most people weren't thinking about doing.
+
+08:16.540 --> 08:23.260
+But yeah, he and I would like jump on a call and kind of use each other to walk through problems when we had it or kind of like rubber duck.
+
+08:23.260 --> 08:28.220
+So he was definitely a person that was like there with me through all of that.
+
+08:28.220 --> 08:32.260
+And how can you inspire more people, especially women, to get into core development?
+
+08:32.260 --> 08:34.500
+Lots of people feel very overwhelmed.
+
+08:34.500 --> 08:39.140
+They feel like there are no low-hanging fruits because it's a language that's been around for many years.
+
+08:39.140 --> 08:44.680
+They also feel like all those people working on the core language, they all have to be experts in the field.
+
+08:44.680 --> 08:46.500
+They have to know everything.
+
+08:46.500 --> 08:48.300
+But that's not the case.
+
+08:48.300 --> 08:55.820
+As you said, how can we inspire more people and to show them that actually it's not as bad as they think it is?
+
+08:55.820 --> 08:56.680
+Yeah, absolutely.
+
+08:56.680 --> 09:00.760
+I mean, I think that doing more like working in public is always really great.
+
+09:00.760 --> 09:10.120
+And the more people who speak about their experiences and how they got started, I think that there's also a lot of people who really want to help people.
+
+09:10.120 --> 09:17.200
+So going to conferences and getting involved in the sprints and like meeting people, I think just brings so much more color to it, right?
+
+09:17.200 --> 09:27.700
+Like when you have actually met somebody in person and can then associate a person with a GitHub username or something, you kind of know who you can reach out to and look to for support.
+
+09:27.700 --> 09:37.960
+And have you ever got feedback from anyone that they, for example, find your work very inspiring or that they saw something and they decided also to start contributing?
+
+09:37.960 --> 09:39.100
+Yeah, actually.
+
+09:39.100 --> 09:46.280
+I mean, you certainly sent me that's like very sweet email a couple of months ago that was very touching.
+
+09:46.280 --> 09:52.660
+But yeah, I'm actually, I'm very surprised at how many people still say this to me.
+
+09:52.660 --> 09:57.560
+Like I gave some of these talks about my journey in core development years ago, right?
+
+09:57.560 --> 10:03.860
+And I'm always a bit taken aback that it mattered and had that much of an impact.
+
+10:03.860 --> 10:11.620
+And except of the core development, you were also the chair of PyCon US for two years and you're also a member of the steering council.
+
+10:11.620 --> 10:13.960
+How have those influenced your career?
+
+10:13.960 --> 10:16.140
+Yeah, definitely.
+
+10:16.140 --> 10:24.360
+Actually, I wound up chairing PyCon US for three years because I was the chair when the pandemic hit and we had to move everything online.
+
+10:24.360 --> 10:31.520
+So we did two years of online and then I stuck around for a third year to be able to like actually see it come to fruition in person.
+
+10:31.520 --> 10:36.200
+But I think that for me, I don't know that it's had as direct an impact on my career.
+
+10:36.200 --> 10:42.980
+I've been running the same company that I have been since I dropped out of college to start it.
+
+10:42.980 --> 10:56.600
+But I think that it's really given me the right perspective to be confident in my skills and to figure things out and to have a strong leadership presence and to really just sort of like lean into that as a path that I could take.
+
+10:56.600 --> 11:04.700
+And then certainly the network of people and just the friends that I've made along the way, I think, have been the biggest.
+
+11:04.700 --> 11:08.120
+You know, there's some skills that you develop through your community work.
+
+11:08.120 --> 11:11.460
+So you mentioned leadership because you work with a large number of people.
+
+11:11.460 --> 11:17.080
+Are there any more other skills or other, for example, surprising things that you learn just by working in the community?
+
+11:17.080 --> 11:22.040
+I mean, community leadership and organization is hard.
+
+11:22.040 --> 11:29.700
+It takes a lot to get people on board and to keep people invested and motivated and to kind of make sure that you have the right support.
+
+11:29.700 --> 11:35.560
+And I see a lot of parallels in leading, you know, client projects in our consultancy.
+
+11:35.560 --> 11:42.740
+You're like leading a team and finding ways to really bring people together and collaborate, I think is the biggest thing.
+
+11:42.740 --> 11:45.480
+Most people organizing PyCon are volunteers, right?
+
+11:45.480 --> 11:52.100
+So that's another challenge to keep people motivated when there is no monetary incentives.
+
+11:52.100 --> 11:53.080
+Absolutely.
+
+11:53.080 --> 11:58.680
+But I mean, I think that's the biggest driving force behind Python is its community and how invested people are.
+
+11:58.680 --> 12:03.420
+And what motivated you to chair PyCon?
+
+12:03.420 --> 12:06.740
+Or to run for the steering council, for example?
+
+12:06.740 --> 12:07.320
+Yeah.
+
+12:07.320 --> 12:11.620
+So I actually had not thought about chairing PyCon US.
+
+12:11.620 --> 12:12.900
+I was invited to.
+
+12:12.900 --> 12:23.560
+And I remember having the conversation with E, who was the previous conference chair before me, being like, man, I don't know what my life is going to look like in like four or five years.
+
+12:23.560 --> 12:28.760
+Because I was I chaired a co-chaired for a couple of years and then ultimately chaired in.
+
+12:28.760 --> 12:33.140
+It's funny looking back on that conversation, because how could I have known what was coming?
+
+12:33.140 --> 12:33.260
+Right.
+
+12:33.260 --> 12:34.500
+Like we had the pandemic.
+
+12:34.500 --> 12:35.700
+I had a kid.
+
+12:35.700 --> 12:36.220
+No one.
+
+12:36.220 --> 12:38.440
+Like I had no idea.
+
+12:38.440 --> 12:47.000
+But I think that my biggest driving force behind doing it was knowing how impactful it had been on my career and how important that community was to me.
+
+12:47.000 --> 12:53.160
+Being able to continue to be the voice of that community and bringing people together was an honor.
+
+12:53.160 --> 12:55.340
+That's nice to hear.
+
+12:55.340 --> 12:57.080
+So you mentioned that you have a kid.
+
+12:57.080 --> 13:04.640
+How has parenthood impacted your career or the way you think about the open source community or work in general?
+
+13:04.640 --> 13:16.400
+Yeah, it has definitely like significantly cut down on free time and has also really just kind of reprioritized the way that I want to spend my time.
+
+13:16.400 --> 13:25.400
+I would much, much rather spend my weekends and my evenings actually hanging out with my daughter and engaging with her and spending that time while she's young.
+
+13:25.400 --> 13:27.000
+And I know that it's fleeting.
+
+13:27.000 --> 13:33.500
+And I know that one day I'll have more evenings and weekends to come back to the things that used to fill my time.
+
+13:33.500 --> 13:40.400
+But I think it also has been just really cool to have all these like friends over the years where we now come to these conferences.
+
+13:40.400 --> 13:54.760
+We catch up and either I show pictures of my kids to them or it's really cool to be at EuroPython where they actually have child care and I could bring her really easily and get people who I have known and loved for so long to actually like meet my daughter in person.
+
+13:54.760 --> 13:56.560
+It's just super cool.
+
+13:56.560 --> 13:59.580
+And how to get involved with core development.
+
+13:59.580 --> 14:04.900
+So I would like to contribute either to documentation or to the code base, for example.
+
+14:04.900 --> 14:08.900
+What are the best first steps?
+
+14:08.900 --> 14:09.380
+Yeah.
+
+14:09.380 --> 14:13.060
+So everyone sort of points you to like the dev guide online.
+
+14:13.060 --> 14:15.400
+There's a ton of resources and how to get started.
+
+14:15.400 --> 14:21.880
+Whether it's editing documentation or, you know, getting CPython built and running locally on your machine.
+
+14:21.880 --> 14:33.320
+But I would really recommend if you have the opportunity to meet people in person, go to an event and just tell people what you're interested in and find folks that are working in that area.
+
+14:33.320 --> 14:36.040
+And tell them that you're looking for a mentor.
+
+14:36.040 --> 14:41.820
+And that's really like the best first step is to have somebody that can kind of take you under their wing and lead you through the process.
+
+14:41.820 --> 14:48.780
+Ultimately, that's like you need to have somebody who's sort of like mentoring you and sponsoring you to become a core developer anyways.
+
+14:48.780 --> 14:54.900
+And it's just nice to have that person to kind of depend on and keep you, you know, keep you on the right path.
+
+14:54.900 --> 14:56.140
+Are you mentoring anyone?
+
+14:56.140 --> 14:57.840
+Can people contact you?
+
+14:57.840 --> 15:00.920
+I am not mentoring anyone currently.
+
+15:00.920 --> 15:03.520
+Definitely strapped on time these days.
+
+15:03.520 --> 15:05.320
+I would love to do that one day in the future.
+
+15:05.320 --> 15:10.120
+But I know that there are tons of folks there is like a Discord channel.
+
+15:10.120 --> 15:10.880
+There's discourse.
+
+15:10.880 --> 15:14.880
+There's, you know, tons of different ways to reach people.
+
+15:14.880 --> 15:15.440
+Okay.
+
+15:15.440 --> 15:16.560
+Thank you for coming.
+
+15:16.560 --> 15:17.500
+Thanks for having me.
