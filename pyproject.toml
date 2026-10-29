@@ -1,12 +1,10 @@
 [project]
-name = "podcast-site"
+name = "miabajic-site"
 version = "0.1.0"
-description = "Add your description here"
+description = "Static site generator for miabajic.dev"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
-
-[tool.uv.workspace]
-members = [
-    "podcast-site",
+dependencies = [
+    "jinja2>=3.1.6",
+    "pyyaml>=6.0.3",
 ]

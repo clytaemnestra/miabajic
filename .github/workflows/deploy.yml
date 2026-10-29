@@ -5,6 +5,9 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  # Weekly rebuild so talks move from "upcoming" to "past" without a commit.
+  schedule:
+    - cron: '0 6 * * 1'
   workflow_dispatch:
 
 permissions:
@@ -13,7 +16,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: "pages-${{ github.ref }}"
   cancel-in-progress: false
 
 jobs:
@@ -24,24 +27,17 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.12'
-
     - name: Install uv
-      run: curl -LsSf https://astral.sh/uv/install.sh | sh
+      uses: astral-sh/setup-uv@v6
 
     - name: Generate site
-      run: uv run python generate.py
-
-    - name: Setup Pages
-      uses: actions/configure-pages@v5
+      run: uv run --locked python generate.py
 
     - name: Upload artifact
+      if: github.ref == 'refs/heads/main'
       uses: actions/upload-pages-artifact@v3
       with:
-        path: .
+        path: site
 
   deploy:
     environment:

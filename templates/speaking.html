@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% from "_macros.html" import talks_table %}
+{% block content %}
+    <main id="main" class="page wide">
+        <h1>Speaking</h1>
+        <p class="description">{{ profile.availability }}</p>
+        <p>{{ profile.contact_line }} Email: <a href="mailto:{{ profile.email }}">{{ profile.email }}</a></p>
+{% for paragraph in profile.bio[:2] %}
+        <p>{{ paragraph }}</p>
+{% endfor %}
+
+        <div class="section">
+            <h2>Topics</h2>
+            <ul>
+{% for topic in profile.topics %}
+                <li>{{ topic }}</li>
+{% endfor %}
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Open to</h2>
+            <ul>
+{% for item in profile.open_to %}
+                <li>{{ item }}</li>
+{% endfor %}
+            </ul>
+        </div>
+
+        <h2>Keynotes and talks</h2>
+        <p>Keynotes: {% for d in keynotes %}{{ d.talk.display_title }} ({{ d.event }}){% if not loop.last %}; {% endif %}{% endfor %}. {{ profile.name }} has given {{ talk_count }} talks, keynotes and panels{% if upcoming %}, with {{ upcoming | length }} more scheduled{% endif %}. Newest first:</p>
+        {{ talks_table(deliveries) }}
+
+        <div class="section" style="margin-top: 3rem;">
+            <h2>Podcast</h2>
+            <p>{{ profile.name }} hosts <a href="/podcast/">{{ podcast.name }}</a>, a podcast with maintainers and contributors from the Python and open source community ({{ site.episodes | length }} episodes). She is also available as a guest on other podcasts, and welcomes suggestions for guests on Behind the Commit.</p>
+        </div>
+    </main>
+{% endblock %}

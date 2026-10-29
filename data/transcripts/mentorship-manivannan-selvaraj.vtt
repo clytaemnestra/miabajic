@@ -1,0 +1,1384 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:01.880
+Forget about beginners. I still have
+
+00:00:01.880 --> 00:00:04.840
+imposter syndrome. I have now learned to
+
+00:00:04.840 --> 00:00:07.200
+manage it. I won't say overcome, but I
+
+00:00:07.200 --> 00:00:08.960
+learned to manage it.
+
+00:00:08.960 --> 00:00:11.120
+He had a mentor. You know, his mentor
+
+00:00:11.120 --> 00:00:13.440
+was Warren Buffett. So, those things
+
+00:00:13.440 --> 00:00:15.760
+came to Bill Gates from his mentor,
+
+00:00:15.760 --> 00:00:17.680
+Warren Buffett. So, everybody needs a
+
+00:00:17.680 --> 00:00:19.200
+mentor, no matter where you are. There
+
+00:00:19.200 --> 00:00:20.720
+are no stupid questions.
+
+00:00:20.720 --> 00:00:22.120
+>> What is mentoring in software
+
+00:00:22.120 --> 00:00:23.600
+engineering for you?
+
+00:00:23.600 --> 00:00:25.280
+Recently, I had a chance to talk to
+
+00:00:25.280 --> 00:00:27.040
+Manimaran I Selvaraj.
+
+00:00:27.040 --> 00:00:28.240
+He is a software engineer with
+
+00:00:28.240 --> 00:00:30.120
+experience working for IT companies in
+
+00:00:30.120 --> 00:00:31.720
+Silicon Valley.
+
+00:00:31.720 --> 00:00:33.480
+His day job involved dealing with
+
+00:00:33.480 --> 00:00:35.360
+imposter syndrome when he was working at
+
+00:00:35.360 --> 00:00:38.240
+Slack as a staff software engineer. We
+
+00:00:38.240 --> 00:00:40.080
+talked about imposter syndrome and the
+
+00:00:40.080 --> 00:00:45.040
+impact of mentoring on his career.
+
+00:00:45.040 --> 00:00:46.520
+Can you tell me something about your
+
+00:00:46.520 --> 00:00:48.600
+career background?
+
+00:00:48.600 --> 00:00:50.880
+>> Yeah, of course. Thank you, Mia, for
+
+00:00:50.880 --> 00:00:56.240
+inviting me to this podcast.
+
+00:00:56.240 --> 00:00:58.720
+My career background, I
+
+00:00:58.720 --> 00:01:01.760
+started in a startup
+
+00:01:01.760 --> 00:01:03.640
+that had office in Silicon Valley. It
+
+00:01:03.640 --> 00:01:06.800
+was a services company and
+
+00:01:06.800 --> 00:01:08.800
+there was an offshore development center
+
+00:01:08.800 --> 00:01:11.680
+in India, Trivandrum. So, I started
+
+00:01:11.680 --> 00:01:14.080
+there as an entry-level engineer.
+
+00:01:14.080 --> 00:01:15.600
+Uh there
+
+00:01:15.600 --> 00:01:18.280
+we pretty much worked on whatever
+
+00:01:18.280 --> 00:01:20.800
+projects we got. It wasn't a product.
+
+00:01:20.800 --> 00:01:23.360
+So, um there I had experience about
+
+00:01:23.360 --> 00:01:25.800
+learning uh different kinds of stuff. I
+
+00:01:25.800 --> 00:01:27.920
+worked with video surveillance cameras,
+
+00:01:27.920 --> 00:01:30.120
+writing device drivers for those.
+
+00:01:30.120 --> 00:01:33.520
+Um and uh even like compiling
+
+00:01:33.520 --> 00:01:37.800
+uh code for VxWorks software. Um
+
+00:01:37.800 --> 00:01:41.440
+things like that. So, that was my
+
+00:01:41.440 --> 00:01:44.240
+start in the IT industry. Then, I worked
+
+00:01:44.240 --> 00:01:47.120
+for a company called Mettler Toledo. Uh
+
+00:01:47.120 --> 00:01:51.840
+so, which manufactures digital precision
+
+00:01:51.840 --> 00:01:54.360
+And I worked for the software division
+
+00:01:54.360 --> 00:01:56.040
+of that, where we
+
+00:01:56.040 --> 00:01:58.360
+like wrote code that would run in these
+
+00:01:58.360 --> 00:02:02.000
+instruments, um embedded devices.
+
+00:02:02.000 --> 00:02:04.560
+And after that I
+
+00:02:04.560 --> 00:02:07.200
+worked for PayPal. So there I worked in
+
+00:02:07.200 --> 00:02:09.720
+developer experience team
+
+00:02:09.720 --> 00:02:12.640
+working on I mean worked on developing
+
+00:02:12.640 --> 00:02:15.200
+continuous integration as a service team
+
+00:02:15.200 --> 00:02:18.160
+making lives of other developers better.
+
+00:02:18.160 --> 00:02:22.320
+We worked on like um Apache Mesos which
+
+00:02:22.320 --> 00:02:24.440
+was like a container orchestration
+
+00:02:24.440 --> 00:02:26.640
+system which was open source before
+
+00:02:26.640 --> 00:02:27.959
+Kubernetes. I was one of the
+
+00:02:27.959 --> 00:02:30.320
+contributors for that. We had a super
+
+00:02:30.320 --> 00:02:33.040
+good team. We built a solution that we
+
+00:02:33.040 --> 00:02:36.600
+were able to give conferences like
+
+00:02:36.600 --> 00:02:38.880
+present in conferences about that
+
+00:02:38.880 --> 00:02:41.040
+solution and lot of people adopted that
+
+00:02:41.040 --> 00:02:44.680
+design. Um after PayPal I moved to Slack
+
+00:02:44.680 --> 00:02:47.120
+which is a communication messaging
+
+00:02:47.120 --> 00:02:50.320
+system. And after Slack I
+
+00:02:50.320 --> 00:02:51.800
+right now like
+
+00:02:51.800 --> 00:02:54.520
+I right now work for Experian which is a
+
+00:02:54.520 --> 00:02:56.600
+credit bureau. I work as a principal
+
+00:02:56.600 --> 00:02:57.959
+engineer there.
+
+00:02:57.959 --> 00:03:00.080
+Uh that's pretty much like short summary
+
+00:03:00.080 --> 00:03:01.600
+of what
+
+00:03:01.600 --> 00:03:03.519
+my career is like.
+
+00:03:03.519 --> 00:03:05.480
+>> How were your beginnings? Have you ever
+
+00:03:05.480 --> 00:03:08.160
+experienced imposter syndrome or feeling
+
+00:03:08.160 --> 00:03:10.640
+that you were not good enough?
+
+00:03:10.640 --> 00:03:13.000
+>> Absolutely. Forget about beginnings. I
+
+00:03:13.000 --> 00:03:17.440
+still have imposter syndrome. So
+
+00:03:17.440 --> 00:03:20.480
+I have now learned to manage it. I won't
+
+00:03:20.480 --> 00:03:23.400
+say overcome but I learned to manage it.
+
+00:03:23.400 --> 00:03:27.320
+Initially I had imposter syndrome like
+
+00:03:27.320 --> 00:03:29.440
+when sitting in a conference room with
+
+00:03:29.440 --> 00:03:32.120
+other people in my team. I would feel
+
+00:03:32.120 --> 00:03:34.440
+like I mean I'm the only person left
+
+00:03:34.440 --> 00:03:36.800
+out. Everyone knows everything. They're
+
+00:03:36.800 --> 00:03:38.560
+all understanding things. I'm the only
+
+00:03:38.560 --> 00:03:40.360
+one who doesn't understand. Does do I
+
+00:03:40.360 --> 00:03:43.000
+even belong here? That feeling I'd get
+
+00:03:43.000 --> 00:03:44.280
+it often.
+
+00:03:44.280 --> 00:03:47.360
+And I would be afraid to ask a question
+
+00:03:47.360 --> 00:03:50.440
+thinking that I'd look stupid. What if I
+
+00:03:50.440 --> 00:03:52.760
+ask this question and people think that
+
+00:03:52.760 --> 00:03:57.440
+I'm stupid?
+
+00:03:57.440 --> 00:04:00.480
+had a mentor who helped me overcome this
+
+00:04:00.480 --> 00:04:03.120
+imposter syndrome.
+
+00:04:03.120 --> 00:04:06.040
+Uh right now um
+
+00:04:06.040 --> 00:04:08.959
+I use some strategies. Uh I can quickly
+
+00:04:08.959 --> 00:04:12.320
+summarize like what I mean how to manage
+
+00:04:12.320 --> 00:04:14.640
+imposter syndrome. One
+
+00:04:14.640 --> 00:04:18.959
+is be vulnerable. Uh don't be
+
+00:04:18.959 --> 00:04:21.720
+sharing your shiny side
+
+00:04:21.720 --> 00:04:23.520
+but all I mean I'm not saying you
+
+00:04:23.520 --> 00:04:26.160
+shouldn't share your shiny side. You
+
+00:04:26.160 --> 00:04:28.560
+should do that, but share your failures
+
+00:04:28.560 --> 00:04:31.280
+as well. Share where
+
+00:04:31.280 --> 00:04:34.880
+your weaknesses are and let people know
+
+00:04:34.880 --> 00:04:37.480
+don't be afraid to let them know that
+
+00:04:37.480 --> 00:04:39.000
+you don't know something.
+
+00:04:39.000 --> 00:04:42.440
+And that is how we grow. And don't feel
+
+00:04:42.440 --> 00:04:45.440
+bad for asking a question. So even if it
+
+00:04:45.440 --> 00:04:46.840
+is a stupid question. And of course
+
+00:04:46.840 --> 00:04:50.000
+there are no stupid question.
+
+00:04:50.000 --> 00:04:52.680
+And the other thing is have a mentor.
+
+00:04:52.680 --> 00:04:54.720
+Have a mentee. Uh what does it mean?
+
+00:04:54.720 --> 00:04:58.000
+Like having a mentor helps you like see
+
+00:04:58.000 --> 00:05:00.240
+the things that you think you are not
+
+00:05:00.240 --> 00:05:01.280
+good at.
+
+00:05:01.280 --> 00:05:04.160
+And they'll be your helpline whenever
+
+00:05:04.160 --> 00:05:06.000
+you feel like an imposter. They'll
+
+00:05:06.000 --> 00:05:09.360
+remind you that you did this. You are
+
+00:05:09.360 --> 00:05:11.560
+not an imposter. You perfectly belong
+
+00:05:11.560 --> 00:05:13.800
+here. A mentor would definitely help
+
+00:05:13.800 --> 00:05:16.360
+with that. And why having a mentee?
+
+00:05:16.360 --> 00:05:20.000
+Having a mentee is like when you mentor
+
+00:05:20.000 --> 00:05:21.760
+and that gives you a feeling that hey,
+
+00:05:21.760 --> 00:05:23.120
+I'm worthy.
+
+00:05:23.120 --> 00:05:25.040
+I'm changing someone else's life. I'm
+
+00:05:25.040 --> 00:05:27.680
+helping someone grow. And that will also
+
+00:05:27.680 --> 00:05:30.400
+help with your imposter syndrome.
+
+00:05:30.400 --> 00:05:33.160
+>> Great. And uh who was your first mentor
+
+00:05:33.160 --> 00:05:35.440
+and how did you find them? Was that
+
+00:05:35.440 --> 00:05:38.040
+person a software developer or was it a
+
+00:05:38.040 --> 00:05:41.560
+therapist, counselor?
+
+00:05:41.560 --> 00:05:45.320
+Yeah, so I found my first mentor at my
+
+00:05:45.320 --> 00:05:48.560
+work. So he was my manager.
+
+00:05:48.560 --> 00:05:52.200
+Um I mean, manager by uh I mean, work
+
+00:05:52.200 --> 00:05:55.280
+levels, but he was a great person to
+
+00:05:55.280 --> 00:05:58.800
+talk to. Um you know, those moments
+
+00:05:58.800 --> 00:06:01.480
+where I felt like I mean, what if I feel
+
+00:06:01.480 --> 00:06:04.120
+stupid asking this question?
+
+00:06:04.120 --> 00:06:06.560
+I never had that with him. Even if I
+
+00:06:06.560 --> 00:06:09.440
+asked stupid question or even if I say a
+
+00:06:09.440 --> 00:06:11.520
+stupid answer, he would listen
+
+00:06:11.520 --> 00:06:15.040
+completely and then tell his perception.
+
+00:06:15.040 --> 00:06:19.160
+Or like, did you think about this?
+
+00:06:19.160 --> 00:06:22.400
+he made me feel valued.
+
+00:06:22.400 --> 00:06:25.040
+That I am adding some value to this
+
+00:06:25.040 --> 00:06:28.440
+company. I am really valuable for
+
+00:06:28.440 --> 00:06:31.160
+the team here. I am my work is really
+
+00:06:31.160 --> 00:06:33.760
+valuable. And that was the reason I
+
+00:06:33.760 --> 00:06:36.320
+chose him as a mentor. I worked with him
+
+00:06:36.320 --> 00:06:38.400
+for a long time. That I mean, that is I
+
+00:06:38.400 --> 00:06:41.240
+mean, he's he was the person
+
+00:06:41.240 --> 00:06:44.480
+who was the manager for me um for a long
+
+00:06:44.480 --> 00:06:47.480
+time in my career. For about 11 or 12
+
+00:06:47.480 --> 00:06:49.880
+years at least.
+
+00:06:49.880 --> 00:06:52.000
+>> It's amazing that you found a mentor at
+
+00:06:52.000 --> 00:06:54.040
+work was also your manager and you had
+
+00:06:54.040 --> 00:06:55.720
+such a great manager because there are
+
+00:06:55.720 --> 00:06:58.240
+so many people who just have uh bad
+
+00:06:58.240 --> 00:07:00.120
+managers and they have to find someone
+
+00:07:00.120 --> 00:07:03.640
+from the outside um in order to support
+
+00:07:03.640 --> 00:07:05.520
+Uh you said that except of having a
+
+00:07:05.520 --> 00:07:09.320
+mentor, you were also a mentor yourself.
+
+00:07:09.320 --> 00:07:11.640
+what inspired you to become a mentor and
+
+00:07:11.640 --> 00:07:14.160
+to mentor other people?
+
+00:07:14.160 --> 00:07:17.120
+>> Yeah. So, uh when I do talk about
+
+00:07:17.120 --> 00:07:19.240
+mentor, right? I mean, my manager was my
+
+00:07:19.240 --> 00:07:21.200
+first mentor.
+
+00:07:21.200 --> 00:07:25.080
+I had a lot of mentors. I mean, not just
+
+00:07:25.080 --> 00:07:28.760
+career, but also for life. Um so,
+
+00:07:28.760 --> 00:07:30.120
+when I
+
+00:07:30.120 --> 00:07:32.520
+go for a one-on-one meeting with
+
+00:07:32.520 --> 00:07:34.360
+uh these mentors
+
+00:07:34.360 --> 00:07:36.640
+and come out of the meeting, I'd have a
+
+00:07:36.640 --> 00:07:38.120
+feeling that, "Hey,
+
+00:07:38.120 --> 00:07:40.720
+I'm really valuable. I have something to
+
+00:07:40.720 --> 00:07:44.160
+offer. And
+
+00:07:44.160 --> 00:07:47.720
+I I'm really good at this. I have to do
+
+00:07:47.720 --> 00:07:50.040
+something awesome. I am doing something
+
+00:07:50.040 --> 00:07:53.440
+awesome, but I also have to get here.
+
+00:07:53.440 --> 00:07:55.800
+This is where I belong. And those
+
+00:07:55.800 --> 00:07:59.160
+feelings I get uh every time I come out
+
+00:07:59.160 --> 00:08:01.760
+come out of this mentorship meetings.
+
+00:08:01.760 --> 00:08:04.200
+And I wanted to give that moment to
+
+00:08:04.200 --> 00:08:06.240
+other people as well. So, I want to
+
+00:08:06.240 --> 00:08:09.440
+inspire someone with my story as well.
+
+00:08:09.440 --> 00:08:11.440
+So, that is the reason I wanted to
+
+00:08:11.440 --> 00:08:12.919
+mentor, too.
+
+00:08:12.919 --> 00:08:15.000
+>> And what were the most common topics
+
+00:08:15.000 --> 00:08:16.919
+that you were dealing with with your
+
+00:08:16.919 --> 00:08:19.080
+mentees? Was it also imposter syndrome
+
+00:08:19.080 --> 00:08:21.919
+or were there any other topics that or
+
+00:08:21.919 --> 00:08:23.760
+any other issues that they were having
+
+00:08:23.760 --> 00:08:25.400
+that you helped them with?
+
+00:08:25.400 --> 00:08:28.320
+>> Um yes, imposter syndrome is one of the
+
+00:08:28.320 --> 00:08:30.840
+things. There are other topics as well
+
+00:08:30.840 --> 00:08:33.240
+that we work together like
+
+00:08:33.240 --> 00:08:35.440
+at work I have helped
+
+00:08:35.440 --> 00:08:40.080
+um people. I worked with them to help
+
+00:08:40.080 --> 00:08:43.120
+um climb up the corporate ladder like
+
+00:08:43.120 --> 00:08:46.839
+getting to senior level from junior. Um
+
+00:08:46.839 --> 00:08:49.839
+and also upskilling when they want to
+
+00:08:49.839 --> 00:08:52.880
+learn a new skill say Python. Uh I've
+
+00:08:52.880 --> 00:08:55.680
+been their mentor to like help them
+
+00:08:55.680 --> 00:08:58.280
+learn quickly and
+
+00:08:58.280 --> 00:09:00.240
+>> Right. So, mentorship is not only for
+
+00:09:00.240 --> 00:09:02.720
+early professionals, but also for
+
+00:09:02.720 --> 00:09:05.920
+basically anyone any age of any
+
+00:09:05.920 --> 00:09:08.360
+experience at any point in their life
+
+00:09:08.360 --> 00:09:11.120
+since they feel like they need some
+
+00:09:11.120 --> 00:09:14.400
+>> Absolutely. I still have mentors
+
+00:09:14.400 --> 00:09:17.600
+whom I work with.
+
+00:09:17.600 --> 00:09:20.400
+no matter wherever you are, I believe,
+
+00:09:20.400 --> 00:09:22.480
+you know, if I can quote you an example,
+
+00:09:22.480 --> 00:09:24.720
+Bill Gates had a mentor. So, once the
+
+00:09:24.720 --> 00:09:27.839
+richest person uh in the world, he had a
+
+00:09:27.839 --> 00:09:30.360
+mentor. You know, his mentor was Warren
+
+00:09:30.360 --> 00:09:32.440
+Buffett who gave him different
+
+00:09:32.440 --> 00:09:34.880
+perspectives of what about life,
+
+00:09:34.880 --> 00:09:36.880
+philanthropy it's
+
+00:09:36.880 --> 00:09:38.400
+all those things giving back to
+
+00:09:38.400 --> 00:09:40.640
+community. So, those things came to Bill
+
+00:09:40.640 --> 00:09:43.600
+Gates from his mentor, Warren Buffett.
+
+00:09:43.600 --> 00:09:46.800
+And if you see, Spider-Man has Iron Man
+
+00:09:46.800 --> 00:09:48.800
+as mentor, right? So, everybody needs a
+
+00:09:48.800 --> 00:09:50.960
+mentor, no matter where you are.
+
+00:09:50.960 --> 00:09:53.400
+>> Right. And how does mentorship look like
+
+00:09:53.400 --> 00:09:55.960
+in practice? You have some meetings? Are
+
+00:09:55.960 --> 00:09:58.920
+they online or do you meet face-to-face?
+
+00:09:58.920 --> 00:10:02.360
+>> Um yeah, I do both. So, when people are
+
+00:10:02.360 --> 00:10:05.840
+away geographically, so we do Zoom. But,
+
+00:10:05.840 --> 00:10:08.760
+when we were in office, um we used to
+
+00:10:08.760 --> 00:10:10.520
+meet one-on-one in a conference room.
+
+00:10:10.520 --> 00:10:13.600
+>> And how often do you meet?
+
+00:10:13.600 --> 00:10:16.520
+>> So, it depends. Um so, engagement is
+
+00:10:16.520 --> 00:10:20.960
+important for mentee. So, like any like
+
+00:10:20.960 --> 00:10:23.560
+think about starting a software project,
+
+00:10:23.560 --> 00:10:26.720
+um when there is a 10-people team,
+
+00:10:26.720 --> 00:10:30.120
+you would initially meet often until
+
+00:10:30.120 --> 00:10:33.760
+everyone has an understanding, they uh
+
+00:10:33.760 --> 00:10:35.160
+they're able to work on things
+
+00:10:35.160 --> 00:10:37.320
+independently. Then, there is an
+
+00:10:37.320 --> 00:10:39.000
+operating rhythm.
+
+00:10:39.000 --> 00:10:41.400
+What Once you have that, then you don't
+
+00:10:41.400 --> 00:10:43.880
+have to meet often. Maybe when you start
+
+00:10:43.880 --> 00:10:45.640
+the mentoring relationship, meeting
+
+00:10:45.640 --> 00:10:48.520
+often, maybe once a week or once in 2
+
+00:10:48.520 --> 00:10:51.920
+weeks, may be important. Once you have
+
+00:10:51.920 --> 00:10:54.200
+an operating rhythm and you know what to
+
+00:10:54.200 --> 00:10:55.400
+work on,
+
+00:10:55.400 --> 00:10:58.120
+um you can like meet less frequently.
+
+00:10:58.120 --> 00:11:00.080
+Again, it all depends on how the
+
+00:11:00.080 --> 00:11:02.720
+schedule for yourself and your mentee
+
+00:11:02.720 --> 00:11:05.800
+works, whatever works both of you.
+
+00:11:05.800 --> 00:11:08.960
+>> And do your mentees get any homework
+
+00:11:08.960 --> 00:11:11.400
+that they have to do in between and work
+
+00:11:11.400 --> 00:11:14.800
+on things on some tasks by themselves or
+
+00:11:14.800 --> 00:11:17.320
+is it only about sharing your thoughts
+
+00:11:17.320 --> 00:11:20.839
+and experiences during those meetings?
+
+00:11:20.839 --> 00:11:23.880
+>> Yeah, good question. So,
+
+00:11:23.880 --> 00:11:26.000
+I don't give homework.
+
+00:11:26.000 --> 00:11:30.600
+Uh my job as a mentor is to just ask
+
+00:11:30.600 --> 00:11:33.040
+And most of the time, mentees come up
+
+00:11:33.040 --> 00:11:34.800
+with their own homework.
+
+00:11:34.800 --> 00:11:37.000
+And we do review in the next meetings
+
+00:11:37.000 --> 00:11:38.640
+and know what were you able to do. And
+
+00:11:38.640 --> 00:11:41.640
+again, my job is to just ask questions,
+
+00:11:41.640 --> 00:11:44.480
+uh help them I mean, see a perspective
+
+00:11:44.480 --> 00:11:47.800
+which they did not see and help them
+
+00:11:47.800 --> 00:11:49.960
+work on that.
+
+00:11:49.960 --> 00:11:51.680
+>> Right. And what do you think are some
+
+00:11:51.680 --> 00:11:54.120
+qualities for a great mentor-mentee
+
+00:11:54.120 --> 00:11:56.400
+relationship? What, for example, if I
+
+00:11:56.400 --> 00:11:59.280
+find a mentor and I feel like it doesn't
+
+00:11:59.280 --> 00:12:01.760
+work for any reason that we are we have
+
+00:12:01.760 --> 00:12:03.840
+a different personalities, we don't
+
+00:12:03.840 --> 00:12:06.640
+understand each other. Uh what do you
+
+00:12:06.640 --> 00:12:08.960
+think and how do I approach finding a
+
+00:12:08.960 --> 00:12:15.160
+mentor, someone who is a good match for
+
+00:12:15.160 --> 00:12:18.440
+Of to your first question, if you
+
+00:12:18.440 --> 00:12:20.800
+start a mentoring relationship and you
+
+00:12:20.800 --> 00:12:23.360
+feel that it doesn't work for you, it's
+
+00:12:23.360 --> 00:12:25.360
+better to let them know.
+
+00:12:25.360 --> 00:12:27.240
+And then like I mean, the this is not
+
+00:12:27.240 --> 00:12:29.840
+working for me. And like we can You
+
+00:12:29.840 --> 00:12:31.640
+don't have to burn the bridges. You can
+
+00:12:31.640 --> 00:12:34.320
+save and like you can like end the
+
+00:12:34.320 --> 00:12:36.160
+mentoring relationship. That will save
+
+00:12:36.160 --> 00:12:39.000
+both your time. It's not like breakup.
+
+00:12:39.000 --> 00:12:40.760
+>> As a mentor, how do you make sure that
+
+00:12:40.760 --> 00:12:43.120
+people feel comfortable
+
+00:12:43.120 --> 00:12:45.280
+telling you that
+
+00:12:45.280 --> 00:12:47.040
+giving you some feedback or telling you
+
+00:12:47.040 --> 00:12:49.680
+that they would like to maybe change a
+
+00:12:49.680 --> 00:12:52.280
+mentor? Do you ever have test sessions
+
+00:12:52.280 --> 00:12:54.080
+where, for example, you have just one
+
+00:12:54.080 --> 00:12:55.720
+meeting and after it you ask them if
+
+00:12:55.720 --> 00:12:58.120
+they want to continue or how do you
+
+00:12:58.120 --> 00:12:59.360
+actually make sure that people feel
+
+00:12:59.360 --> 00:13:02.040
+comfortable telling you that actually
+
+00:13:02.040 --> 00:13:03.480
+they would maybe prefer a different
+
+00:13:03.480 --> 00:13:05.360
+mentor for any reason?
+
+00:13:05.360 --> 00:13:07.760
+>> You got it. Yeah. Um
+
+00:13:07.760 --> 00:13:10.280
+being open helps, being honest, being
+
+00:13:10.280 --> 00:13:14.680
+open, and also being vulnerable.
+
+00:13:14.680 --> 00:13:16.880
+The first thing in a mentoring
+
+00:13:16.880 --> 00:13:19.120
+relationship or in fact any relationship
+
+00:13:19.120 --> 00:13:22.280
+is building trust, right? Uh to build
+
+00:13:22.280 --> 00:13:24.360
+trust, being vulnerable helps. I mean,
+
+00:13:24.360 --> 00:13:26.400
+this is where I am failing, this is
+
+00:13:26.400 --> 00:13:28.760
+where I am weak. And that helps build
+
+00:13:28.760 --> 00:13:30.600
+like build trust with me. As a mentor
+
+00:13:30.600 --> 00:13:32.400
+also I will do that. I mean, I won't
+
+00:13:32.400 --> 00:13:34.200
+share the show that I'm a superhero. I
+
+00:13:34.200 --> 00:13:36.120
+know everything. I'll tell that I mean
+
+00:13:36.120 --> 00:13:39.400
+this is I'm also struggling with this. I
+
+00:13:39.400 --> 00:13:41.280
+I am I failed in this. I screwed up
+
+00:13:41.280 --> 00:13:43.720
+that. That helps build trust initially.
+
+00:13:43.720 --> 00:13:46.280
+And that helps make the mentee
+
+00:13:46.280 --> 00:13:47.920
+comfortable as well.
+
+00:13:47.920 --> 00:13:51.280
+Sharing their own weaknesses. And
+
+00:13:51.280 --> 00:13:55.040
+um about the feedback part, I ask people
+
+00:13:55.040 --> 00:13:57.000
+how they want their feedback.
+
+00:13:57.000 --> 00:13:59.680
+Do you want me to tell right away?
+
+00:13:59.680 --> 00:14:02.840
+Or do you want me to like
+
+00:14:02.840 --> 00:14:04.720
+finish what you're saying and then say
+
+00:14:04.720 --> 00:14:07.200
+it? Or do you want a separate meeting to
+
+00:14:07.200 --> 00:14:10.640
+tell your feedback? Or do you want it in
+
+00:14:10.640 --> 00:14:13.440
+instead of face-to-face? So, I ask the
+
+00:14:13.440 --> 00:14:16.480
+mentee how they prefer their feedback.
+
+00:14:16.480 --> 00:14:18.400
+That will also make them comfortable
+
+00:14:18.400 --> 00:14:20.440
+getting because giving feedback and
+
+00:14:20.440 --> 00:14:23.240
+accepting feedback those things are like
+
+00:14:23.240 --> 00:14:25.360
+difficult for people. So, I give the
+
+00:14:25.360 --> 00:14:28.800
+choice to mentee whatever they prefer
+
+00:14:28.800 --> 00:14:30.839
+to get the feedback.
+
+00:14:30.839 --> 00:14:34.520
+>> Right. And if I just started a new job,
+
+00:14:34.520 --> 00:14:37.960
+I'm very enthusiastic about it. I put in
+
+00:14:37.960 --> 00:14:40.240
+lots of hours because I really want to
+
+00:14:40.240 --> 00:14:44.600
+succeed and I really want to stay there.
+
+00:14:44.600 --> 00:14:47.960
+but I might be burning out. So, what are
+
+00:14:47.960 --> 00:14:50.160
+some early signs that someone is
+
+00:14:50.160 --> 00:14:52.920
+actually burning out and they are
+
+00:14:52.920 --> 00:14:54.760
+experiencing chronic stress in their
+
+00:14:54.760 --> 00:14:58.360
+career? How do I recognize that it's too
+
+00:14:58.360 --> 00:15:00.400
+much for me?
+
+00:15:00.400 --> 00:15:02.839
+>> Yeah. So,
+
+00:15:02.839 --> 00:15:06.480
+I can quote my
+
+00:15:06.480 --> 00:15:08.920
+beginning I mean my career beginning as
+
+00:15:08.920 --> 00:15:10.880
+an example. So,
+
+00:15:10.880 --> 00:15:13.760
+I didn't know that I had an impostor
+
+00:15:13.760 --> 00:15:16.360
+I tried to be perfect. Not perfect, but
+
+00:15:16.360 --> 00:15:17.800
+over perfect.
+
+00:15:17.800 --> 00:15:19.760
+I always tried to like
+
+00:15:19.760 --> 00:15:22.200
+overwork and make sure people don't find
+
+00:15:22.200 --> 00:15:24.280
+out that I'm an imposter. So, I would
+
+00:15:24.280 --> 00:15:27.240
+always put more effort and anything I
+
+00:15:27.240 --> 00:15:29.720
+mean you can't make something 100%
+
+00:15:29.720 --> 00:15:31.600
+perfect. There will always be small
+
+00:15:31.600 --> 00:15:34.080
+flaws. So, I'll find one, fix it, find
+
+00:15:34.080 --> 00:15:36.360
+one, fix it. Like
+
+00:15:36.360 --> 00:15:38.520
+I kept burning myself because of it and
+
+00:15:38.520 --> 00:15:40.480
+the root cause was imposter syndrome.
+
+00:15:40.480 --> 00:15:43.280
+Thinking that people might find find out
+
+00:15:43.280 --> 00:15:46.760
+that I'm an imposter.
+
+00:15:46.760 --> 00:15:49.080
+you know, when
+
+00:15:49.080 --> 00:15:51.920
+you have to see like
+
+00:15:51.920 --> 00:15:55.440
+how how much effort you are putting.
+
+00:15:55.440 --> 00:15:58.680
+always try to balance your work and
+
+00:15:58.680 --> 00:16:01.960
+always have your a mentor or your
+
+00:16:01.960 --> 00:16:04.080
+manager like
+
+00:16:04.080 --> 00:16:07.000
+tell them like this is what I'm doing.
+
+00:16:07.000 --> 00:16:09.520
+Is this right? And this is
+
+00:16:09.520 --> 00:16:11.440
+I feel like I'm
+
+00:16:11.440 --> 00:16:13.840
+over burning out. I'm putting too much
+
+00:16:13.840 --> 00:16:17.000
+effort. How can I like reduce? And keep
+
+00:16:17.000 --> 00:16:20.360
+communicating. Don't keep it for
+
+00:16:20.360 --> 00:16:22.120
+So, when you feel like you are
+
+00:16:22.120 --> 00:16:24.600
+overwhelmed, try to
+
+00:16:24.600 --> 00:16:26.839
+talk to your manager or supervisor and
+
+00:16:26.839 --> 00:16:29.000
+tell them that this is what is happening
+
+00:16:29.000 --> 00:16:31.960
+and ask for their help. And earlier the
+
+00:16:31.960 --> 00:16:34.280
+earlier you communicate when there is a
+
+00:16:34.280 --> 00:16:36.640
+problem, it's better for them to plan
+
+00:16:36.640 --> 00:16:39.000
+and like help with you.
+
+00:16:39.000 --> 00:16:40.800
+If you keep it for yourself, then it's
+
+00:16:40.800 --> 00:16:43.360
+you will be the only one overworking.
+
+00:16:43.360 --> 00:16:46.160
+So, estimates do help of course.
+
+00:16:46.160 --> 00:16:49.000
+Sometimes estimates are not I mean most
+
+00:16:49.000 --> 00:16:51.360
+of the times estimates are not accurate.
+
+00:16:51.360 --> 00:16:53.520
+Things come up. New challenges.
+
+00:16:53.520 --> 00:16:55.839
+Something might be blocking you.
+
+00:16:55.839 --> 00:16:57.800
+That's okay, but keep communicating.
+
+00:16:57.800 --> 00:17:00.600
+Don't keep it for yourself is what I
+
+00:17:00.600 --> 00:17:02.640
+>> And what if people don't communicate? If
+
+00:17:02.640 --> 00:17:04.680
+I have for example in my team an early
+
+00:17:04.680 --> 00:17:06.680
+professional, some student who is very
+
+00:17:06.680 --> 00:17:09.600
+enthusiastic, hard working. How do I
+
+00:17:09.600 --> 00:17:11.959
+recognize that person is actually
+
+00:17:11.959 --> 00:17:14.959
+struggling as a manager or as a team
+
+00:17:14.959 --> 00:17:16.959
+member who just wants to help?
+
+00:17:16.959 --> 00:17:22.920
+>> Yeah, so one thing I'd suggest is
+
+00:17:22.920 --> 00:17:25.640
+we work in remote environments as well.
+
+00:17:25.640 --> 00:17:28.160
+That makes makes this even worse, right?
+
+00:17:28.160 --> 00:17:30.000
+You don't know what that person is
+
+00:17:30.000 --> 00:17:32.560
+doing. We have like
+
+00:17:32.560 --> 00:17:34.680
+human moments are very rare in this
+
+00:17:34.680 --> 00:17:38.760
+time. So, try to have more human
+
+00:17:38.760 --> 00:17:41.160
+Have some one-on-one meetings once in a
+
+00:17:41.160 --> 00:17:45.920
+while, once in a week or something.
+
+00:17:45.920 --> 00:17:47.360
+talk to them
+
+00:17:47.360 --> 00:17:49.440
+something other than work.
+
+00:17:49.440 --> 00:17:51.720
+Make sure
+
+00:17:51.720 --> 00:17:53.400
+this is something I learned from Slack.
+
+00:17:53.400 --> 00:17:56.040
+People have one-on-ones.
+
+00:17:56.040 --> 00:17:57.960
+>> And were you working remotely in Slack
+
+00:17:57.960 --> 00:18:00.640
+or you were
+
+00:18:00.640 --> 00:18:03.480
+>> When I started work at Slack, I had to
+
+00:18:03.480 --> 00:18:06.280
+go to office, but then COVID happens,
+
+00:18:06.280 --> 00:18:09.480
+things turn 100% remote. So, I worked
+
+00:18:09.480 --> 00:18:12.120
+pretty much remote um other than the
+
+00:18:12.120 --> 00:18:13.640
+first 3 months
+
+00:18:13.640 --> 00:18:15.400
+uh in Slack like totally. I was there
+
+00:18:15.400 --> 00:18:19.200
+for about 4 and 1/2 years. So, 4 and 1/4
+
+00:18:19.200 --> 00:18:22.360
+years I was remote in Slack. And in
+
+00:18:22.360 --> 00:18:24.640
+Slack so this having this human moment
+
+00:18:24.640 --> 00:18:26.560
+once in a week, having one-on-one with
+
+00:18:26.560 --> 00:18:29.560
+people, and talking something other than
+
+00:18:29.560 --> 00:18:32.000
+work helped us connect as humans.
+
+00:18:32.000 --> 00:18:34.160
+Otherwise, I wouldn't know the other
+
+00:18:34.160 --> 00:18:36.560
+as a human, right? I would only be
+
+00:18:36.560 --> 00:18:39.200
+knowing that person as a person who or a
+
+00:18:39.200 --> 00:18:42.120
+or a robot who says status updates. That
+
+00:18:42.120 --> 00:18:44.200
+doesn't help. Like I should also see
+
+00:18:44.200 --> 00:18:47.160
+that person as a human being. He might
+
+00:18:47.160 --> 00:18:48.720
+have his priorities. He's doing
+
+00:18:48.720 --> 00:18:50.040
+something. Maybe
+
+00:18:50.040 --> 00:18:52.600
+>> find some common reason to connect.
+
+00:18:52.600 --> 00:18:55.440
+Send Netflix shows, talk about something
+
+00:18:55.440 --> 00:18:58.320
+other than work, about weekend plans,
+
+00:18:58.320 --> 00:19:00.560
+something like that, so that you connect
+
+00:19:00.560 --> 00:19:02.600
+with that person as a human. You would
+
+00:19:02.600 --> 00:19:05.160
+understand what he is going through like
+
+00:19:05.160 --> 00:19:07.280
+when the person is burning out or like
+
+00:19:07.280 --> 00:19:09.800
+overstressed, you would know when you
+
+00:19:09.800 --> 00:19:11.600
+when you do that.
+
+00:19:11.600 --> 00:19:13.800
+>> Right. And if you had one advice to
+
+00:19:13.800 --> 00:19:16.480
+younger people just starting out or to
+
+00:19:16.480 --> 00:19:22.760
+younger yourself, uh what would it be?
+
+00:19:22.760 --> 00:19:26.120
+ask questions. That is how we grow.
+
+00:19:26.120 --> 00:19:30.160
+Um like there are no stupid questions.
+
+00:19:30.160 --> 00:19:33.280
+You can ask any question, and nobody has
+
+00:19:33.280 --> 00:19:35.200
+time to judge you for a question.
+
+00:19:35.200 --> 00:19:38.720
+Everyone has like other priorities.
+
+00:19:38.720 --> 00:19:40.800
+Don't be afraid to ask questions, and
+
+00:19:40.800 --> 00:19:43.400
+that is the way you definitely grow.
+
+00:19:43.400 --> 00:19:45.200
+>> Thank you very much for coming.
+
+00:19:45.200 --> 00:19:48.200
+>> Thank you so much.

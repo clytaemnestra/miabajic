@@ -1,0 +1,1267 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:02.720
+So, hence the where the term wheel file
+
+00:00:02.720 --> 00:00:04.200
+came from.
+
+00:00:04.200 --> 00:00:06.000
+Uh the whole cheese shop thing came from
+
+00:00:06.000 --> 00:00:08.120
+the Monty Python sketch.
+
+00:00:08.120 --> 00:00:11.440
+Uh and Python Package Index was created
+
+00:00:11.440 --> 00:00:14.040
+out of a need users, you know, there's a
+
+00:00:14.040 --> 00:00:15.720
+use case where of users have sadly
+
+00:00:15.720 --> 00:00:17.480
+passed away, but there are multiple
+
+00:00:17.480 --> 00:00:19.440
+people who probably want to, you know,
+
+00:00:19.440 --> 00:00:21.400
+maintain the project or replace the
+
+00:00:21.400 --> 00:00:24.680
+project with something. So, those things
+
+00:00:24.680 --> 00:00:26.920
+uh take different kinds of courses of
+
+00:00:26.920 --> 00:00:30.320
+Wow. Yeah, yeah. I believe we are um
+
+00:00:30.320 --> 00:00:32.040
+yeah, I the last time I checked the
+
+00:00:32.040 --> 00:00:36.920
+ticker is around 945,000,
+
+00:00:36.920 --> 00:00:38.720
+you know, plus or minus a couple hundred
+
+00:00:38.720 --> 00:00:40.880
+users. So, I'm pretty sure we'll be
+
+00:00:40.880 --> 00:00:44.320
+hitting 1 million users.
+
+00:00:44.320 --> 00:00:46.120
+>> Hi everyone. Have you ever wondered what
+
+00:00:46.120 --> 00:00:48.200
+does a PyPI specialist do?
+
+00:00:48.200 --> 00:00:49.920
+Recently, I had a chance to talk to
+
+00:00:49.920 --> 00:00:52.520
+Mariia Ashna. Mariia is the PyPI support
+
+00:00:52.520 --> 00:00:55.320
+specialist at the Python Software
+
+00:00:55.320 --> 00:00:57.000
+Prior to PSF, she has worked at the
+
+00:00:57.000 --> 00:00:58.680
+Brain and Creativity Institute at the
+
+00:00:58.680 --> 00:01:00.640
+USC working with the neuro science of
+
+00:01:00.640 --> 00:01:03.160
+creativity. Mariia is also the founder
+
+00:01:03.160 --> 00:01:04.760
+of the Magic Light Bulb Attack and
+
+00:01:04.760 --> 00:01:08.720
+Product Consulting Firm.
+
+00:01:08.720 --> 00:01:12.000
+>> What does a PyPI support specialist do?
+
+00:01:12.000 --> 00:01:15.360
+>> Oh, great question. So, uh a PyPI
+
+00:01:15.360 --> 00:01:17.520
+support specialist does a lot of
+
+00:01:17.520 --> 00:01:19.160
+different things.
+
+00:01:19.160 --> 00:01:21.400
+Uh but as I've done my role for a year
+
+00:01:21.400 --> 00:01:25.360
+now, uh I realized that it's not just
+
+00:01:25.360 --> 00:01:27.640
+support in, quote unquote, what people
+
+00:01:27.640 --> 00:01:30.040
+think as tech support. Uh it's a lot
+
+00:01:30.040 --> 00:01:32.080
+more than that. If you uh create a Venn
+
+00:01:32.080 --> 00:01:35.080
+diagram of my role, uh a PyPI support
+
+00:01:35.080 --> 00:01:38.440
+specialist entails uh working with dev.
+
+00:01:38.440 --> 00:01:41.120
+So, I would even argue that it's more
+
+00:01:41.120 --> 00:01:44.280
+dev rel advocate, dev rel relations. If
+
+00:01:44.280 --> 00:01:45.400
+you look at the other side of the Venn
+
+00:01:45.400 --> 00:01:48.160
+diagram of my role,
+
+00:01:48.160 --> 00:01:50.720
+uh you can see it's also uh you know,
+
+00:01:50.720 --> 00:01:52.640
+what kind of features can we offer, what
+
+00:01:52.640 --> 00:01:54.240
+kind of other services can be offered
+
+00:01:54.240 --> 00:01:56.320
+our users through PyPI. So, I would even
+
+00:01:56.320 --> 00:01:58.320
+say it entails a bit of technical
+
+00:01:58.320 --> 00:02:02.040
+product. So, uh a whole gamut of things.
+
+00:02:02.040 --> 00:02:03.600
+>> And can you tell us something about the
+
+00:02:03.600 --> 00:02:07.320
+history of PyPI and what is PyPI in
+
+00:02:07.320 --> 00:02:09.960
+>> So, PyPI stands for the Python Package
+
+00:02:09.960 --> 00:02:13.360
+Index and it was formerly known as the
+
+00:02:13.360 --> 00:02:16.480
+Cheese Shop. So, hence where the term
+
+00:02:16.480 --> 00:02:18.760
+wheel file came from.
+
+00:02:18.760 --> 00:02:20.320
+Uh, the whole Cheese Shop thing came
+
+00:02:20.320 --> 00:02:22.600
+from the Monty Python sketch.
+
+00:02:22.600 --> 00:02:25.920
+Uh, and Python Package Index was created
+
+00:02:25.920 --> 00:02:28.400
+out of a need to better manage and
+
+00:02:28.400 --> 00:02:30.920
+distribute Python packages. So, it was
+
+00:02:30.920 --> 00:02:34.320
+officially born in 2003
+
+00:02:34.320 --> 00:02:36.560
+and I believe the first packages were
+
+00:02:36.560 --> 00:02:40.520
+hosted in 2005. So, PyPI has been around
+
+00:02:40.520 --> 00:02:44.360
+for almost 20 years.
+
+00:02:44.360 --> 00:02:47.560
+>> And how many people do work on PyPI? Are
+
+00:02:47.560 --> 00:02:49.400
+you the only person employed to work on
+
+00:02:49.400 --> 00:02:51.760
+it or are there more people in your
+
+00:02:51.760 --> 00:02:54.560
+>> Uh, so prior to me, we had lots of
+
+00:02:54.560 --> 00:02:56.560
+generous volunteers
+
+00:02:56.560 --> 00:03:00.040
+dedicating their time and expertise.
+
+00:03:00.040 --> 00:03:01.760
+Uh, but right now I'm part of the Python
+
+00:03:01.760 --> 00:03:05.600
+Software Foundation. So, I am
+
+00:03:05.600 --> 00:03:07.760
+a part of the PyPI support team along
+
+00:03:07.760 --> 00:03:10.000
+with Mike Fiedler who is a PyPI support
+
+00:03:10.000 --> 00:03:12.000
+engineer and we also have our infra
+
+00:03:12.000 --> 00:03:14.760
+folks supporting PyPI on the infra side.
+
+00:03:14.760 --> 00:03:17.080
+Uh, side. Uh, E Durban, director of
+
+00:03:17.080 --> 00:03:19.840
+infrastructure and Jacob Coffee,
+
+00:03:19.840 --> 00:03:21.760
+infrastructure engineer. Yeah. So, it's
+
+00:03:21.760 --> 00:03:23.320
+four of us.
+
+00:03:23.320 --> 00:03:25.800
+>> What are some most common issues that
+
+00:03:25.800 --> 00:03:28.000
+you're dealing with?
+
+00:03:28.000 --> 00:03:32.440
+>> So, uh, when I came on, we had a huge
+
+00:03:32.440 --> 00:03:36.000
+huge backlog of account recovery issues
+
+00:03:36.000 --> 00:03:38.440
+which entailed, you know, people not
+
+00:03:38.440 --> 00:03:40.959
+signing up for 2FA or people losing
+
+00:03:40.959 --> 00:03:43.160
+access to the recovery codes or 2FA.
+
+00:03:43.160 --> 00:03:44.760
+>> is not mandatory, right?
+
+00:03:44.760 --> 00:03:48.600
+>> 2FA is now 100% mandatory.
+
+00:03:48.600 --> 00:03:51.160
+Uh, so if you're a PyPI a and you've not
+
+00:03:51.160 --> 00:03:53.920
+signed up for Twilio yet, please do.
+
+00:03:53.920 --> 00:04:00.400
+Uh we also had a huge backlog of PEP 541
+
+00:04:00.400 --> 00:04:02.800
+So, when I talk about backlog, the
+
+00:04:02.800 --> 00:04:04.840
+backlog was delayed account recovery
+
+00:04:04.840 --> 00:04:08.280
+specifically by 5 months and PEP 541
+
+00:04:08.280 --> 00:04:10.600
+requests by a year and 4 months. But,
+
+00:04:10.600 --> 00:04:13.560
+I'm happy to say that as of now, well,
+
+00:04:13.560 --> 00:04:14.959
+with the exception of this week since
+
+00:04:14.959 --> 00:04:17.359
+I'm at EuroPython, uh the backlog for
+
+00:04:17.359 --> 00:04:19.880
+both account recovery and PEP 541
+
+00:04:19.880 --> 00:04:22.000
+requests are current with an average
+
+00:04:22.000 --> 00:04:24.520
+triage time for account recovery taking
+
+00:04:24.520 --> 00:04:28.000
+between 1 and 1/2 to 2 days versus PEP
+
+00:04:28.000 --> 00:04:30.440
+541 requests taking an average of 1 week
+
+00:04:30.440 --> 00:04:32.200
+versus what it was before, which was a
+
+00:04:32.200 --> 00:04:34.320
+year and 4 months.
+
+00:04:34.320 --> 00:04:36.120
+>> Yeah. And how many tickets do you have
+
+00:04:36.120 --> 00:04:37.800
+in your backlog just to have some sort
+
+00:04:37.800 --> 00:04:39.000
+of idea?
+
+00:04:39.000 --> 00:04:41.120
+>> When you said that it was delayed, how
+
+00:04:41.120 --> 00:04:42.440
+much of a work do you actually have?
+
+00:04:42.440 --> 00:04:45.880
+>> Oh, that's a great question.
+
+00:04:45.880 --> 00:04:48.120
+Uh if I have to go back and look at my
+
+00:04:48.120 --> 00:04:50.280
+my GitHub history,
+
+00:04:50.280 --> 00:04:52.720
+uh I would say
+
+00:04:52.720 --> 00:04:57.200
+over 500 plus that I probably probably
+
+00:04:57.200 --> 00:04:58.840
+probably close. It's probably even
+
+00:04:58.840 --> 00:05:00.800
+bigger than that, but just to just to be
+
+00:05:00.800 --> 00:05:03.240
+on the conservative side, yeah.
+
+00:05:03.240 --> 00:05:06.280
+>> And are those some very easy tasks that
+
+00:05:06.280 --> 00:05:08.480
+you can resolve immediately on your own
+
+00:05:08.480 --> 00:05:10.400
+or does it require lots of coordination,
+
+00:05:10.400 --> 00:05:12.600
+for example, with other teams or other
+
+00:05:12.600 --> 00:05:13.600
+team members?
+
+00:05:13.600 --> 00:05:15.720
+>> Uh that's a great question. It actually
+
+00:05:15.720 --> 00:05:19.040
+depends on a lot of variables. It
+
+00:05:19.040 --> 00:05:21.160
+depends on, you know, how fast the user
+
+00:05:21.160 --> 00:05:23.520
+gets back to us because uh we do have a
+
+00:05:23.520 --> 00:05:25.280
+set of processes, which I'm in the
+
+00:05:25.280 --> 00:05:29.120
+process of documenting and creating a
+
+00:05:29.120 --> 00:05:31.200
+uh to share with our users to for so
+
+00:05:31.200 --> 00:05:33.760
+that they know exactly what happens when
+
+00:05:33.760 --> 00:05:37.520
+they put in an issue, a ticket. Uh so,
+
+00:05:37.520 --> 00:05:39.240
+it really does depend on the user. If a
+
+00:05:39.240 --> 00:05:40.680
+user gets back to us with the
+
+00:05:40.680 --> 00:05:43.880
+information we requested from them,
+
+00:05:43.880 --> 00:05:46.000
+uh you know, closing the issue is fast
+
+00:05:46.000 --> 00:05:49.840
+versus if the user has any other kind of
+
+00:05:49.840 --> 00:05:52.840
+um issues or lack of information.
+
+00:05:52.840 --> 00:05:55.640
+Say we require our users to have a valid
+
+00:05:55.640 --> 00:05:58.200
+public repo of their project. So lots of
+
+00:05:58.200 --> 00:05:59.920
+times users may not have that for
+
+00:05:59.920 --> 00:06:02.240
+whatever reason. So those issues take a
+
+00:06:02.240 --> 00:06:05.280
+little bit more time in terms of account
+
+00:06:05.280 --> 00:06:07.640
+For PEP 541 the process takes a little
+
+00:06:07.640 --> 00:06:10.120
+bit longer because
+
+00:06:10.120 --> 00:06:12.280
+you know, I see you to summarize what
+
+00:06:12.280 --> 00:06:17.080
+this PEP 541 is. Yeah, sure. So a very
+
+00:06:17.080 --> 00:06:19.880
+version of a PEP 541 is say you have a
+
+00:06:19.880 --> 00:06:23.800
+project called snake rabbit and
+
+00:06:23.800 --> 00:06:25.400
+you created it. You had lots of hopes
+
+00:06:25.400 --> 00:06:27.240
+and dreams for it, but then you know
+
+00:06:27.240 --> 00:06:29.720
+life happened and then you kind of
+
+00:06:29.720 --> 00:06:33.160
+stepped away and then say I come in and
+
+00:06:33.160 --> 00:06:35.560
+I really want to name my project snake
+
+00:06:35.560 --> 00:06:38.000
+rabbit, but you already own that space.
+
+00:06:38.000 --> 00:06:39.280
+You already own the name and the
+
+00:06:39.280 --> 00:06:41.400
+project. So again, depending on the
+
+00:06:41.400 --> 00:06:43.800
+variable if I want to continue to
+
+00:06:43.800 --> 00:06:45.360
+maintain your project there's a
+
+00:06:45.360 --> 00:06:47.840
+different process versus if I want to
+
+00:06:47.840 --> 00:06:50.040
+completely replace your project, there's
+
+00:06:50.040 --> 00:06:51.400
+somewhat similar but also different
+
+00:06:51.400 --> 00:06:53.760
+process. So again, it's a nutshell a
+
+00:06:53.760 --> 00:06:56.480
+TLDR version of what a PEP 541 request
+
+00:06:56.480 --> 00:06:56.840
+looks like.
+
+00:06:56.840 --> 00:06:59.960
+>> And what if you ask user for additional
+
+00:06:59.960 --> 00:07:01.840
+information but you're unable to reach
+
+00:07:01.840 --> 00:07:04.080
+out to them for any reason? What
+
+00:07:04.080 --> 00:07:05.960
+happens? Do you just automatically close
+
+00:07:05.960 --> 00:07:08.280
+the issue after some time or what are
+
+00:07:08.280 --> 00:07:09.080
+the processes?
+
+00:07:09.080 --> 00:07:11.960
+>> I think that's also very context and
+
+00:07:11.960 --> 00:07:14.320
+issue dependent.
+
+00:07:14.320 --> 00:07:17.720
+I make sure to over communicate with our
+
+00:07:17.720 --> 00:07:20.560
+users to make sure that no matter where
+
+00:07:20.560 --> 00:07:22.680
+in the world they are, they're hearing
+
+00:07:22.680 --> 00:07:25.760
+from us
+
+00:07:25.760 --> 00:07:28.080
+you know, we completely close the issue
+
+00:07:28.080 --> 00:07:30.760
+due to you know, non response or things
+
+00:07:30.760 --> 00:07:33.280
+like that. Account recovery, it's a
+
+00:07:33.280 --> 00:07:35.040
+little easier to do because you know, if
+
+00:07:35.040 --> 00:07:37.560
+a user's no longer interested in getting
+
+00:07:37.560 --> 00:07:39.160
+their account back for whatever reason,
+
+00:07:39.160 --> 00:07:41.600
+okay, they can always open a new ticket.
+
+00:07:41.600 --> 00:07:43.640
+For PEP 541 requests is a little bit
+
+00:07:43.640 --> 00:07:46.320
+more complicated because the timeline as
+
+00:07:46.320 --> 00:07:49.840
+stated in the PEP itself and
+
+00:07:49.840 --> 00:07:52.080
+listeners or viewers to this can
+
+00:07:52.080 --> 00:07:54.280
+Google PEP 541 and the PEP will come up
+
+00:07:54.280 --> 00:07:57.280
+for some more detailed reading, but it
+
+00:07:57.280 --> 00:07:58.920
+it really depends on the context of the
+
+00:07:58.920 --> 00:08:01.360
+project and the communication
+
+00:08:01.360 --> 00:08:03.680
+because there are times where
+
+00:08:03.680 --> 00:08:06.480
+you know, users you know, there's a use
+
+00:08:06.480 --> 00:08:08.920
+case where users have sadly passed away.
+
+00:08:08.920 --> 00:08:10.480
+But there multiple people who probably
+
+00:08:10.480 --> 00:08:13.160
+want to you know, maintain the project
+
+00:08:13.160 --> 00:08:15.040
+or replace the project with something.
+
+00:08:15.040 --> 00:08:17.120
+So those things
+
+00:08:17.120 --> 00:08:19.120
+take different kinds of courses of
+
+00:08:19.120 --> 00:08:22.200
+processes and time then say two people
+
+00:08:22.200 --> 00:08:24.640
+who are amicable about oh, you can
+
+00:08:24.640 --> 00:08:27.280
+totally take over my project. So it's
+
+00:08:27.280 --> 00:08:29.080
+really context dependent.
+
+00:08:29.080 --> 00:08:30.400
+>> Right. And you mentioned opening a
+
+00:08:30.400 --> 00:08:32.320
+ticket. How do you communicate with your
+
+00:08:32.320 --> 00:08:34.680
+users? Do you have a GitHub repository
+
+00:08:34.680 --> 00:08:36.719
+where they create a ticket or do you
+
+00:08:36.719 --> 00:08:39.320
+have any sort of portal for users?
+
+00:08:39.320 --> 00:08:42.640
+>> We we have our own GitHub issue tracker
+
+00:08:42.640 --> 00:08:44.520
+and for
+
+00:08:44.520 --> 00:08:47.560
+confidential stuff, we also after say
+
+00:08:47.560 --> 00:08:50.280
+user opens a GitHub ticket for account
+
+00:08:50.280 --> 00:08:52.680
+recovery or PEP 541
+
+00:08:52.680 --> 00:08:54.160
+for any kind of sensitive information
+
+00:08:54.160 --> 00:08:57.000
+such as email or any other thing, we
+
+00:08:57.000 --> 00:08:59.280
+then our process includes
+
+00:08:59.280 --> 00:09:02.800
+you know, using our own in-house email
+
+00:09:02.800 --> 00:09:05.080
+kind of internal email system that users
+
+00:09:05.080 --> 00:09:07.080
+can email us with more information and
+
+00:09:07.080 --> 00:09:08.560
+the process goes from there.
+
+00:09:08.560 --> 00:09:10.680
+>> And do you have any self-service there
+
+00:09:10.680 --> 00:09:12.400
+where users for example, they have any
+
+00:09:12.400 --> 00:09:14.200
+issues that where they can go through
+
+00:09:14.200 --> 00:09:15.880
+some workflow on their own without
+
+00:09:15.880 --> 00:09:18.040
+having to communicate with you?
+
+00:09:18.040 --> 00:09:21.280
+>> I think it depends if
+
+00:09:21.280 --> 00:09:24.800
+they already say for example, they have
+
+00:09:24.800 --> 00:09:27.280
+to a face set up, their account is you
+
+00:09:27.280 --> 00:09:28.760
+know, you know, they still have the
+
+00:09:28.760 --> 00:09:30.280
+recovery codes but they just need a
+
+00:09:30.280 --> 00:09:32.320
+password reset. I think that is pretty
+
+00:09:32.320 --> 00:09:34.440
+self-serving, but if for whatever
+
+00:09:34.440 --> 00:09:37.720
+reason, you know, they did not sign up
+
+00:09:37.720 --> 00:09:40.920
+for 2FA, then our systems automatically
+
+00:09:40.920 --> 00:09:43.040
+unverified their email. And if your
+
+00:09:43.040 --> 00:09:45.680
+email is unverified, then you can't
+
+00:09:45.680 --> 00:09:48.200
+really do a self-serving password reset.
+
+00:09:48.200 --> 00:09:49.960
+So, just as an example. So, those are
+
+00:09:49.960 --> 00:09:52.320
+some things that then a human being has
+
+00:09:52.320 --> 00:09:54.920
+to come in and do all the checks and
+
+00:09:54.920 --> 00:09:57.280
+make sure, you know,
+
+00:09:57.280 --> 00:09:58.520
+help them out. Yeah.
+
+00:09:58.520 --> 00:10:00.240
+>> And you mentioned that most issues that
+
+00:10:00.240 --> 00:10:02.120
+now you're dealing with are related to
+
+00:10:02.120 --> 00:10:05.520
+account recovery and to an 2FA and PEP
+
+00:10:05.520 --> 00:10:08.400
+501. 501. 501. [laughter]
+
+00:10:08.400 --> 00:10:11.440
+Are there any other issues that you're
+
+00:10:11.440 --> 00:10:13.600
+also dealing with or are there any other
+
+00:10:13.600 --> 00:10:16.320
+new PEPs or new changes where you expect
+
+00:10:16.320 --> 00:10:19.040
+lots of issues incoming in the following
+
+00:10:19.040 --> 00:10:20.240
+weeks or months?
+
+00:10:20.240 --> 00:10:23.400
+>> Oh, that's a good question. I think
+
+00:10:23.400 --> 00:10:25.720
+support request that I've been tackling
+
+00:10:25.720 --> 00:10:27.680
+are file and project limit requests. We
+
+00:10:27.680 --> 00:10:30.320
+get requests to increase
+
+00:10:30.320 --> 00:10:32.440
+the limit that folks can upload their
+
+00:10:32.440 --> 00:10:34.720
+files or projects. Regarding future
+
+00:10:34.720 --> 00:10:38.200
+PEPs, I'm not aware of anything new that
+
+00:10:38.200 --> 00:10:40.960
+is coming up that might affect, but
+
+00:10:40.960 --> 00:10:42.920
+yeah, so I would say for now, I don't
+
+00:10:42.920 --> 00:10:44.920
+think so.
+
+00:10:44.920 --> 00:10:49.640
+>> One of new features is PyPI
+
+00:10:49.640 --> 00:10:51.520
+What are they and how do they work?
+
+00:10:51.520 --> 00:10:54.560
+>> Yes, so PyPI orgs was actually
+
+00:10:54.560 --> 00:10:57.880
+introduced in 2023, but it went in a bit
+
+00:10:57.880 --> 00:10:59.880
+of a hibernation.
+
+00:10:59.880 --> 00:11:02.800
+But now it's back up again and it was
+
+00:11:02.800 --> 00:11:06.080
+created to help larger communities or
+
+00:11:06.080 --> 00:11:08.520
+larger companies with big projects with
+
+00:11:08.520 --> 00:11:11.400
+multiple team members manage roles and
+
+00:11:11.400 --> 00:11:15.240
+manage projects better.
+
+00:11:15.240 --> 00:11:18.000
+we're looking into increasing some
+
+00:11:18.000 --> 00:11:19.720
+features for people who are signed up
+
+00:11:19.720 --> 00:11:22.520
+with PyPI orgs because we want to know
+
+00:11:22.520 --> 00:11:24.600
+from the community
+
+00:11:24.600 --> 00:11:26.760
+what else can we do to make PyPI orgs
+
+00:11:26.760 --> 00:11:29.200
+exciting because right now the the big
+
+00:11:29.200 --> 00:11:31.360
+feature is, you know, if you're part of
+
+00:11:31.360 --> 00:11:34.280
+a big community and you have several
+
+00:11:34.280 --> 00:11:36.160
+people who need access to the same
+
+00:11:36.160 --> 00:11:38.280
+project, you don't have to individually
+
+00:11:38.280 --> 00:11:40.480
+worry about, you know, somebody leaving,
+
+00:11:40.480 --> 00:11:43.080
+you know, uh, the project or package and
+
+00:11:43.080 --> 00:11:44.600
+and everybody scrambling to get access
+
+00:11:44.600 --> 00:11:45.920
+to it. Now, it's you know, if you're
+
+00:11:45.920 --> 00:11:48.880
+part of PyPI orgs community or company,
+
+00:11:48.880 --> 00:11:50.480
+uh, you know, it's it's seamless in
+
+00:11:50.480 --> 00:11:52.040
+terms of role and project management.
+
+00:11:52.040 --> 00:11:53.320
+>> Right. So, that means that you have an
+
+00:11:53.320 --> 00:11:55.600
+organization inside that organization,
+
+00:11:55.600 --> 00:11:58.440
+you have some users or some groups
+
+00:11:58.440 --> 00:12:00.600
+and admins and they can manage access
+
+00:12:00.600 --> 00:12:02.080
+and everything on their own without
+
+00:12:02.080 --> 00:12:03.840
+having to contact you.
+
+00:12:03.840 --> 00:12:08.560
+>> Uh, I mean, yes, unless they have a
+
+00:12:08.560 --> 00:12:10.240
+>> And what are some existing features
+
+00:12:10.240 --> 00:12:12.240
+there except of just having this
+
+00:12:12.240 --> 00:12:13.800
+organization? Are there any more
+
+00:12:13.800 --> 00:12:14.680
+features there?
+
+00:12:14.680 --> 00:12:16.560
+>> So, I'm glad you asked. So, I'm in the
+
+00:12:16.560 --> 00:12:19.600
+process of doing an outreach, a PyPI org
+
+00:12:19.600 --> 00:12:23.640
+outreach, and I want to hear from the
+
+00:12:23.640 --> 00:12:26.080
+uh, what they would like to see
+
+00:12:26.080 --> 00:12:27.840
+uh, PyPI orgs offering because as you
+
+00:12:27.840 --> 00:12:30.160
+mentioned, that is kind of the only big
+
+00:12:30.160 --> 00:12:32.360
+feature we have right now, but I think
+
+00:12:32.360 --> 00:12:35.760
+PyPI orgs can be so much more.
+
+00:12:35.760 --> 00:12:37.960
+Uh, and I don't want to
+
+00:12:37.960 --> 00:12:40.120
+uh, do any kind of leading questions or
+
+00:12:40.120 --> 00:12:42.560
+bias our users into what kind of
+
+00:12:42.560 --> 00:12:44.440
+features we can or cannot offer. So,
+
+00:12:44.440 --> 00:12:45.839
+that's why I'm not really going to
+
+00:12:45.839 --> 00:12:48.839
+mention some things that we may offer or
+
+00:12:48.839 --> 00:12:50.800
+may not offer. Uh, that's why we're
+
+00:12:50.800 --> 00:12:52.720
+doing this outreach to make sure we want
+
+00:12:52.720 --> 00:12:55.480
+to hear from our users first and uh, the
+
+00:12:55.480 --> 00:12:57.920
+bigger buy-in we get, we see from the
+
+00:12:57.920 --> 00:13:01.240
+data, oh, our users say, uh, want a
+
+00:13:01.240 --> 00:13:04.280
+bigger limit, uh, bigger increase in
+
+00:13:04.280 --> 00:13:05.720
+file limits or project size, just an
+
+00:13:05.720 --> 00:13:08.320
+example. Then, we can um, offer
+
+00:13:08.320 --> 00:13:10.920
+something there or users want some other
+
+00:13:10.920 --> 00:13:12.720
+kind of features. So, we want to just
+
+00:13:12.720 --> 00:13:15.040
+get buy-in from the community before
+
+00:13:15.040 --> 00:13:17.680
+announcing or shipping out features.
+
+00:13:17.680 --> 00:13:19.880
+>> And is it meant to be used only by
+
+00:13:19.880 --> 00:13:22.680
+commercial entities, nonprofits?
+
+00:13:22.680 --> 00:13:26.200
+>> No, so, um, I know when PyPI orgs, uh,
+
+00:13:26.200 --> 00:13:29.200
+came back on, there's some tiny chatter
+
+00:13:29.200 --> 00:13:32.440
+on discuss that, you know, oh, is uh pip
+
+00:13:32.440 --> 00:13:34.000
+it works going commercial? Blah blah
+
+00:13:34.000 --> 00:13:35.960
+blah. But no, you know, we're obviously
+
+00:13:35.960 --> 00:13:38.920
+open source and our community orgs, uh I
+
+00:13:38.920 --> 00:13:41.360
+believe last time I checked we have over
+
+00:13:41.360 --> 00:13:43.320
+2,000 community orgs. Community orgs,
+
+00:13:43.320 --> 00:13:45.600
+it's all way it's it's free. Uh we do
+
+00:13:45.600 --> 00:13:47.760
+have some company orgs and they pay a
+
+00:13:47.760 --> 00:13:50.560
+tiny tiny tiny small fee uh for the
+
+00:13:50.560 --> 00:13:53.440
+service. Um you know, because it's open
+
+00:13:53.440 --> 00:13:56.720
+source and the resources that help run
+
+00:13:56.720 --> 00:13:59.080
+PyPI, um a lot of it comes from the
+
+00:13:59.080 --> 00:14:02.080
+generosity of sponsors. Uh so, we would
+
+00:14:02.080 --> 00:14:04.800
+like to be at a place where we can still
+
+00:14:04.800 --> 00:14:08.560
+uh make sure PyPI is self-servicing and
+
+00:14:08.560 --> 00:14:10.440
+and continues to
+
+00:14:10.440 --> 00:14:14.600
+uh exist and help users. And uh we want
+
+00:14:14.600 --> 00:14:16.920
+to make sure the reason we have a
+
+00:14:16.920 --> 00:14:19.560
+company specific org because companies,
+
+00:14:19.560 --> 00:14:21.680
+compared to say community orgs, they
+
+00:14:21.680 --> 00:14:25.480
+have a lot of funding and you know, uh
+
+00:14:25.480 --> 00:14:27.720
+if they yet they get the same kind of
+
+00:14:27.720 --> 00:14:30.040
+benefits as communities do and if they
+
+00:14:30.040 --> 00:14:31.800
+have uh
+
+00:14:31.800 --> 00:14:34.640
+you know, more needs, I think it's fair
+
+00:14:34.640 --> 00:14:36.760
+for them to kind of chip in. It's it's
+
+00:14:36.760 --> 00:14:39.920
+really pennies, in my opinion, um for
+
+00:14:39.920 --> 00:14:42.880
+companies to contribute. So, uh but no,
+
+00:14:42.880 --> 00:14:45.920
+the rumors about commercialization are
+
+00:14:45.920 --> 00:14:48.440
+just that, rumors and false. So, yeah.
+
+00:14:48.440 --> 00:14:51.360
+>> Yes, PyPI is a very important and big
+
+00:14:51.360 --> 00:14:52.680
+project and it's important to think
+
+00:14:52.680 --> 00:14:55.040
+about the sustain- sustainability of it.
+
+00:14:55.040 --> 00:14:57.520
+How to make sure that it's still up and
+
+00:14:57.520 --> 00:14:59.240
+running because it's serving so many
+
+00:14:59.240 --> 00:15:01.200
+users across the globe.
+
+00:15:01.200 --> 00:15:03.520
+>> We are actually close to a million
+
+00:15:03.520 --> 00:15:07.280
+users. Wow. Yeah, yeah. I believe we are
+
+00:15:07.280 --> 00:15:09.400
+uh yeah, I the last time I checked the
+
+00:15:09.400 --> 00:15:14.360
+ticker is around 945,000
+
+00:15:14.360 --> 00:15:16.080
+you know, plus or minus couple hundred
+
+00:15:16.080 --> 00:15:18.240
+users. So, I'm pretty sure we'll be
+
+00:15:18.240 --> 00:15:20.480
+hitting 1 million users very soon.
+
+00:15:20.480 --> 00:15:23.120
+>> maintained by a very small team of a few
+
+00:15:23.120 --> 00:15:24.800
+people who [laughter] are influenced.
+
+00:15:24.800 --> 00:15:27.160
+>> Exactly. And passionate about making
+
+00:15:27.160 --> 00:15:31.040
+sure that PyPI continues to exist and
+
+00:15:31.040 --> 00:15:32.960
+serve our community.
+
+00:15:32.960 --> 00:15:34.480
+>> I wonder how often it happens that
+
+00:15:34.480 --> 00:15:38.760
+people makes PyPI, PyPA, and bye-bye.
+
+00:15:38.760 --> 00:15:40.800
+>> Oh my goodness. I mean uh during the
+
+00:15:40.800 --> 00:15:43.160
+talk that I gave, yeah, a lot of people,
+
+00:15:43.160 --> 00:15:45.160
+you know, don't even sadly still
+
+00:15:45.160 --> 00:15:48.280
+pronounce PyPI correctly. Uh and the
+
+00:15:48.280 --> 00:15:49.640
+correct pronunciation, by the way, it's
+
+00:15:49.640 --> 00:15:53.320
+pi emoji, p emoji, and i emoji. Uh I
+
+00:15:53.320 --> 00:15:54.720
+believe we have it somewhere on our
+
+00:15:54.720 --> 00:15:58.040
+website. Uh so, yeah, PyPI obviously is
+
+00:15:58.040 --> 00:16:02.240
+the Python Package Index, and PyPA, I
+
+00:16:02.240 --> 00:16:03.680
+believe, is the Python Packaging
+
+00:16:03.680 --> 00:16:05.440
+Authority, completely different thing,
+
+00:16:05.440 --> 00:16:08.000
+and I forget what PyPy is. So.
+
+00:16:08.000 --> 00:16:10.880
+>> It's a very different Python.
+
+00:16:10.880 --> 00:16:12.840
+>> And if people would like to learn more
+
+00:16:12.840 --> 00:16:15.200
+or uh to communicate with you, do you
+
+00:16:15.200 --> 00:16:17.480
+have any public documentation?
+
+00:16:17.480 --> 00:16:20.240
+>> Yes, I'm glad you asked. So, uh people
+
+00:16:20.240 --> 00:16:23.200
+can always go on pypi.org to just learn
+
+00:16:23.200 --> 00:16:25.400
+about everything about PyPI.
+
+00:16:25.400 --> 00:16:28.680
+Uh and uh if they want to uh know
+
+00:16:28.680 --> 00:16:31.520
+something about me or ask questions
+
+00:16:31.520 --> 00:16:33.480
+about PyPI directly, they can email me
+
+00:16:33.480 --> 00:16:36.080
+at maria@python.org.
+
+00:16:36.080 --> 00:16:40.839
+Um I'm also at despy-brain at GitHub. Um
+
+00:16:40.839 --> 00:16:42.680
+uh something that I've been working on
+
+00:16:42.680 --> 00:16:44.480
+that I think our users will be excited
+
+00:16:44.480 --> 00:16:47.320
+is we did not previously have any kind
+
+00:16:47.320 --> 00:16:50.800
+of documentation or clear uh public
+
+00:16:50.800 --> 00:16:53.360
+processes on what happens when a user
+
+00:16:53.360 --> 00:16:55.720
+submits a ticket for account recovery or
+
+00:16:55.720 --> 00:16:58.000
+PEP 541. So, I'm in the process of
+
+00:16:58.000 --> 00:17:01.000
+creating uh workflow and documentation
+
+00:17:01.000 --> 00:17:03.120
+that our users can see. Because I
+
+00:17:03.120 --> 00:17:04.839
+believe in transparency in an open
+
+00:17:04.839 --> 00:17:07.240
+source, it's important to be transparent
+
+00:17:07.240 --> 00:17:09.319
+and let users know what we're up to.
+
+00:17:09.319 --> 00:17:10.760
+>> So, they know what to expect.
+
+00:17:10.760 --> 00:17:12.000
+>> Exactly. Yeah.
+
+00:17:12.000 --> 00:17:13.319
+>> Thank you so much for coming.
+
+00:17:13.319 --> 00:17:16.560
+>> Yeah, thank you for having me.

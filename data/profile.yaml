@@ -1,0 +1,120 @@
+# Facts about Mia. This file is the single source of truth for the homepage, /speaking/,
+# llms.txt and the Person JSON-LD on every page. Keep it factual: names, roles, dates.
+
+name: Mia Bajić
+given_name: Mia
+family_name: Bajić
+url: https://miabajic.dev
+email: mia@europython.eu
+image: static/host-original.png
+
+job_title: Staff Software Engineer
+employer: SentinelOne
+employer_url: https://www.sentinelone.com
+# Used in llms.txt only.
+work_focus: backend, infrastructure and Kubernetes for AI-built applications, and MCP-server infrastructure
+
+headline: Staff Software Engineer, PSF Fellow and host of Behind the Commit
+
+# Location shown everywhere (page copy, JSON-LD homeLocation, llms.txt).
+location: Prague
+location_country: Czech Republic
+
+roles:
+  - Staff Software Engineer at SentinelOne, working on backend, infrastructure and Kubernetes
+  - Fellow of the Python Software Foundation (PSF), since 2026
+  - Vice Chair of the EuroPython Society, 2024–2026
+  - Host of the podcast Behind the Commit
+  - Co-organizer of Pyvo Prague (since 2022) and PyCon CZ 2023
+  - Main organizer of Python Pizza Prague 2024
+
+# <meta name="description"> of the homepage; search engines show about 160 characters.
+meta_description: >-
+  Mia Bajić is a Staff Software Engineer at SentinelOne (backend, Kubernetes, AI), PSF Fellow,
+  Vice Chair of the EuroPython Society and host of the Behind the Commit podcast.
+
+# First text on the homepage. Assistants and search engines quote this paragraph.
+bio:
+  - >-
+    Mia Bajić is a Staff Software Engineer at SentinelOne, where she works on backend and
+    infrastructure: she takes applications built with AI tools and turns them into production
+    services deployed on Kubernetes. She is a Fellow of the Python Software Foundation, Vice Chair
+    of the EuroPython Society, and the host of the podcast Behind the Commit. Mia Bajić is
+    based in Prague.
+  - >-
+    She has given keynotes at DjangoCon Europe 2025 and PyCon Lithuania 2026, and talks at
+    PyCon US (2024, 2025, 2026), EuroPython, FOSDEM, PyCon UK, PyCon Ireland, PyCon France,
+    PyCon Italia, PyCon Namibia, DjangoCon Europe, OpenFest and WebExpo.
+  - >-
+    She has co-organized Pyvo Prague since 2022, co-organized PyCon CZ 2023, and was the main
+    organizer of Python Pizza Prague 2024.
+
+topics:
+  - Python internals and the standard library
+  - Open source communities and maintainer psychology
+  - Software bugs and failures
+  - FastAPI
+  - Django
+  - Developer experience
+  - AI and developer productivity
+  - Kubernetes and infrastructure
+  - Taking AI-built applications to production
+
+# schema.org knowsAbout (short keywords, used in JSON-LD only)
+knows_about:
+  - Python
+  - CPython
+  - Python standard library
+  - Open source
+  - Open source communities
+  - Django
+  - FastAPI
+  - Developer experience
+  - Kubernetes
+  - Backend development
+  - Flask
+  - AI infrastructure
+  - Software bugs
+
+availability: Available for conference talks, keynotes and podcasts.
+open_to:
+  - Conference talks and keynotes
+  - Appearing as a guest on other podcasts
+  - Guest suggestions for Behind the Commit
+  - Collaboration
+
+# Contact line on the homepage and /speaking/ (next to the email address).
+contact_line: >-
+  Contact Mia Bajić about conference talks and keynotes, about appearing as a guest on your podcast,
+  or if you would like to be a guest on Behind the Commit.
+
+# Homepage "Community Work" card, newest first.
+community:
+  - Fellow of the Python Software Foundation (since 2026)
+  - Vice Chair of the EuroPython Society (2024–2026)
+  - Main organizer of Python Pizza Prague 2024
+  - Co-organizer of PyCon CZ 2023
+  - Co-organizer of Pyvo Prague (since 2022)
+
+organizations:
+  - name: Python Software Foundation
+    url: https://www.python.org/psf/
+    role: Fellow (since 2026)
+  - name: EuroPython Society
+    url: https://www.europython-society.org
+    role: Vice Chair (2024–2026)
+
+# public: false → kept here for reference, not linked from the site or JSON-LD sameAs.
+links:
+  - {label: LinkedIn, url: "https://www.linkedin.com/in/mia-bajic/"}
+  - {label: Bluesky, url: "https://bsky.app/profile/clytaemnestra.bsky.social"}
+  - {label: GitHub, url: "https://github.com/clytaemnestra"}
+  - {label: Instagram, url: "https://www.instagram.com/clytaemnestra_/"}
+  - {label: Blog, url: "https://clytaemnestra.github.io/tech-blog/"}
+  - {label: Talk slides, url: "https://github.com/clytaemnestra/talks"}
+  # TODO(mia): profile is outdated (used for one conference years ago). Update bio, location
+  # and talks on sessionize.com, then set public: true.
+  - {label: Sessionize, url: "https://sessionize.com/mia-bajic/", public: false}
+
+blog_url: https://clytaemnestra.github.io/tech-blog/
+community_blog_url: https://clytaemnestra.github.io/tech-blog/tags#community

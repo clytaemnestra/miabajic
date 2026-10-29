@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+{% from "_macros.html" import episode_card, delivery_line %}
+{% block content %}
+<main id="main">
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>{{ profile.name }}</h1>
+                <p class="subtitle">{{ profile.headline }}</p>
+{% for paragraph in profile.bio %}
+                <p>{{ paragraph }}</p>
+{% endfor %}
+
+                <div class="social-links">
+{% for link in links if link.label in ["LinkedIn", "Bluesky", "GitHub", "Instagram"] %}
+                    <a href="{{ link.url }}" class="social-link">{{ link.label }}</a>
+{% endfor %}
+                    <a href="{{ podcast.youtube }}" class="social-link">YouTube</a>
+                    <a href="{{ podcast.spotify }}" class="social-link">Spotify</a>
+                    <a href="{{ podcast.apple }}" class="social-link">Apple Podcasts</a>
+                    <a href="{{ podcast.rss }}" class="social-link">RSS Feed</a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="/{{ profile.image }}" alt="{{ profile.name }}, {{ profile.headline }}">
+            </div>
+        </div>
+    </section>
+
+    <!-- Podcast Section -->
+    <section class="podcast-section" id="podcast">
+        <div class="section-container" id="behindthecommit">
+            <h2 class="section-title">{{ podcast.name }}</h2>
+            <p class="section-subtitle">{{ podcast.tagline }}</p>
+
+            <div class="podcast-main">
+                <img src="/{{ podcast.image }}" alt="{{ podcast.name }} logo" class="podcast-logo">
+                <p>{{ podcast.description }}</p>
+            </div>
+
+            <div class="episodes-preview">
+                <h3 class="list-heading">Latest episodes</h3>
+                <div class="episode-list">
+{% for ep in latest_episodes %}
+{{ episode_card(ep) }}
+{% endfor %}
+                </div>
+                <p class="section-subtitle" style="margin: 2rem 0 0;"><a href="/podcast/" class="section-link">All {{ site.episodes | length }} episodes →</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Talks and speaking -->
+    <section class="other-sections" id="talks">
+        <div class="section-container">
+            <h2 class="section-title">Talks</h2>
+            <p class="section-subtitle">{{ profile.availability }}</p>
+
+            <div class="sections-grid">
+{% if upcoming %}
+                <div class="section-card">
+                    <h3>Upcoming</h3>
+                    <ul class="card-list">
+{% for d in upcoming %}
+                        <li>{{ delivery_line(d) }}</li>
+{% endfor %}
+                    </ul>
+                </div>
+{% endif %}
+                <div class="section-card">
+                    <h3>Recent talks</h3>
+                    <ul class="card-list">
+{% for d in recent %}
+                        <li>{{ delivery_line(d) }}</li>
+{% endfor %}
+                    </ul>
+                    <a href="/talks/" class="section-link">All talks →</a>
+                </div>
+                <div class="section-card">
+                    <h3>Speaking topics</h3>
+                    <ul class="card-list">
+{% for topic in profile.topics %}
+                        <li>{{ topic }}</li>
+{% endfor %}
+                    </ul>
+                    <a href="/speaking/" class="section-link">Speaking →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Sections -->
+    <section class="other-sections">
+        <div class="section-container" id="blog">
+            <h2 class="section-title">Writing and community</h2>
+
+            <div class="sections-grid">
+                <div class="section-card">
+                    <h3>TIL Blog</h3>
+                    <p>Mia Bajić writes about her tech learnings and community work.</p>
+                    <a href="{{ profile.blog_url }}" class="section-link">Browse posts →</a>
+                </div>
+                <div class="section-card">
+                    <h3>Community Work</h3>
+                    <ul class="card-list">
+{% for item in profile.community %}
+                        <li>{{ item }}</li>
+{% endfor %}
+                    </ul>
+                    <a href="{{ profile.community_blog_url }}" class="section-link">Browse posts about community →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="section-container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-subtitle">{{ profile.contact_line }}</p>
+
+            <div class="contact-content">
+                <a href="mailto:{{ profile.email }}" class="contact-email">
+                    {{ profile.email }}
+                </a>
+
+                <div class="contact-socials">
+{% for link in links if link.label in ["LinkedIn", "Bluesky", "GitHub", "Instagram"] %}
+                    <a href="{{ link.url }}" class="social-link">{{ link.label }}</a>
+{% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

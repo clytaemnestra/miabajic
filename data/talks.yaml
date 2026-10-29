@@ -1,0 +1,247 @@
+# Talks by Mia Bajić. One entry per distinct talk, with every delivery listed under it.
+# Source: https://github.com/clytaemnestra/talks README (Oct 2026).
+#
+# type: talk | keynote | panel
+# Any value starting with "TODO" is treated as missing by generate.py (not rendered, reported at build).
+# Abstracts are condensed from the published conference programmes (source in a comment above each).
+# City names were filled from public conference information, not from the README: please verify.
+
+talks:
+  - slug: hash-me-if-you-can-python-dictionaries
+    title: "Hash me if you can: let's talk about Python dictionaries!"
+    # abstract condensed from https://us.pycon.org/2026/schedule/presentation/90/
+    abstract: "How hash tables work under Python dictionaries, what the 2011 \"hash flooding\" vulnerability taught about algorithmic complexity attacks, why hash seeds are randomized, and why hash(-1) == hash(-2). Ends with a tour of Bloom filters and consistent hashing."
+    tags: [Python, CPython internals, dictionaries]
+    deliveries:
+      - event: PyCon US 2026
+        date: 2026-05-16
+        city: Long Beach
+        country: United States
+        type: talk
+        slides_url: https://github.com/clytaemnestra/talks/blob/main/dictionaries.pdf
+        video_url: https://www.youtube.com/watch?v=kHtg-2JMEgk
+
+  - slug: python-public-roadmap
+    title: "Your Python has a public roadmap. Most engineers never read it."
+    # abstract condensed from https://pretalx.com/pycon-lithuania-2026/talk/WZBDEZ/
+    abstract: "Python's technical roadmap is public, yet most engineers only find out about language changes when something breaks in CI. The keynote is about learning to read that roadmap, and about the community governance that makes it public."
+    tags: [Python, PEPs, CPython]
+    deliveries:
+      - event: PyCon Lithuania 2026
+        date: 2026-04-08
+        city: Vilnius
+        country: Lithuania
+        type: keynote
+        slides_url: https://github.com/clytaemnestra/talks/blob/main/python-roadmap.pdf
+        video_url: https://www.youtube.com/watch?v=R0yyajmDylQ
+
+  - slug: most-bizarre-software-bugs-in-history
+    title: The Most Bizarre Software Bugs in History
+    # abstract condensed from https://archive.fosdem.org/2026/schedule/event/GV9PKX-most-bizzare-bugs/
+    abstract: "What happens when software isn't tested? A look at the most bizarre software bugs in history, whether \"testing more\" is always the answer, and what these failures teach about building more resilient systems."
+    tags: [software bugs, software failures, history of computing]
+    deliveries:
+      - event: WebExpo 2026
+        date: 2026-05-28
+        city: Prague
+        country: Czech Republic
+        type: talk
+        slides_url: https://github.com/clytaemnestra/talks/blob/main/the-most-bizarre-software-bugs.pdf
+        # Session page, not a direct video link.
+        # No recording published; session page: https://webexpo.net/prague2026/sessions/the-most-bizarre-software-bugs-in-history/
+      - event: FOSDEM 2026
+        date: 2026-02-01
+        city: Brussels
+        country: Belgium
+        type: talk
+        slides_url: https://github.com/clytaemnestra/talks/blob/main/the-most-bizarre-software-bugs_US.pdf
+        video_url: https://archive.fosdem.org/2026/schedule/event/GV9PKX-most-bizzare-bugs/
+      - event: PyCon US 2025
+        date: 2025-05-16
+        city: Pittsburgh
+        country: United States
+        type: talk
+        slides_url: https://github.com/clytaemnestra/talks/blob/main/the-most-bizarre-software-bugs_US.pdf
+        video_url: https://www.youtube.com/watch?v=gM2J5plaDmw
+      - event: DjangoCon Europe 2025
+        date: 2025-04-24
+        city: Dublin
+        country: Ireland
+        type: keynote
+        slides_url: https://github.com/clytaemnestra/talks/blob/main/the-most-bizarre-software-bugs.pdf
+        video_url: https://www.youtube.com/watch?v=PBbM9pH8rQY
+
+  - slug: psychology-behind-communities
+    title: "The Psychology Behind Communities: Why Do We Really Contribute?"
+    # abstract condensed from FOSDEM 2025 programme
+    abstract: "Why do people get involved in community work? The motivations go deeper than networking: fast and slow thinking, the role of the amygdala, basic human needs, and the impact of collective loneliness on society."
+    tags: [open source, communities, maintainer psychology]
+    deliveries:
+      - event: FOSDEM 2025
+        date: 2025-02-01
+        city: Brussels
+        country: Belgium
+        type: talk
+        slides_url: https://github.com/clytaemnestra/talks/blob/main/the-psychology-behind-communities.pdf
+        video_url: https://fosdem.org/2025/schedule/event/fosdem-2025-4193-the-psychology-behind-communities-why-do-we-really-contribute-/
+
+  - slug: from-passion-to-career
+    title: From Passion to Career
+    # Generic abstract written for the site (no published programme text); edit freely.
+    abstract: "A talk for students at 42 Prague about turning an interest in programming into a career in software engineering: what the work involves day to day, how to get a first role, and how to keep growing as an engineer."
+    tags: [careers]
+    deliveries:
+      - event: 42 Prague
+        date: 2024-11-18
+        city: Prague
+        country: Czech Republic
+        type: talk
+
+  - slug: beyond-code-build-a-community-around-your-tools
+    title: "Beyond Code: How to Build a Community Around Your Tools"
+    # abstract condensed from https://www.openfest.org/2024/en/full-schedule/
+    abstract: "How an open source project finds its users: where programmers gather, how to start and grow a community when none exists, and how to contribute to one that already does, with stories from the Python community in the Czech Republic."
+    tags: [open source, communities, developer experience]
+    deliveries:
+      - event: OpenFest 2024
+        date: 2024-11-02
+        city: Sofia
+        country: Bulgaria
+        type: talk
+        slides_url: https://github.com/clytaemnestra/talks/blob/main/beyond-the-code-how-to-build-a-community-around-your-tools.pdf
+        video_url: https://www.youtube.com/watch?v=6K3kp7xEPjw
+
+  - slug: breaking-barriers
+    # README spells it "Breaking Bareers".
+    title: "Panel discussion: Breaking Barriers"
+    # Generic abstract written for the site (no published programme text); edit freely.
+    abstract: "A panel discussion about how the panelists got into tech, the obstacles they met along the way, and advice for juniors and people moving into IT from other careers."
+    tags: [diversity in tech]
+    deliveries:
+      - event: Women in Tech 2024
+        date: 2024-09-19
+        city: Prague
+        country: Czech Republic
+        type: panel
+
+  - slug: django-orm-and-fastapi-in-a-single-app
+    title: "Combining Django ORM & FastAPI in a Single App"
+    # abstract condensed from https://2024.djangocon.eu/pretalx/djangocon-europe-2024/talk/NGXABE/
+    abstract: "Combining synchronous Django ORM with asynchronous FastAPI, based on a data visualization tool running in production at several companies: how the setup works in practice, and its benefits and challenges."
+    tags: [Django, FastAPI, Python web development]
+    deliveries:
+      - event: DjangoCon Europe 2024
+        date: 2024-06-06
+        city: Vigo
+        country: Spain
+        type: talk
+        slides_url: https://github.com/clytaemnestra/talks/blob/main/django-orm-fast-api-djangocon.pdf
+        video_url: https://www.youtube.com/watch?v=AERuDe9YxWE
+        code_url: https://github.com/clytaemnestra/books-demo-app
+      - event: PyCon Italia 2024
+        date: 2024-05-23
+        city: Florence
+        country: Italy
+        type: talk
+        slides_url: https://github.com/clytaemnestra/talks/blob/main/fastapi-django-orm.pdf
+        video_url: https://www.youtube.com/watch?v=6FiSXec3V1w
+      - event: PyCon US 2024
+        date: 2024-05-18
+        city: Pittsburgh
+        country: United States
+        type: talk
+        slides_url: https://github.com/clytaemnestra/talks/blob/main/fastapi-django-orm.pdf
+        video_url: https://www.youtube.com/watch?v=dgV6RgybczY
+
+  - slug: getting-started-with-fastapi
+    title: Getting Started with FastAPI for Web Development
+    # Generic abstract written for the site (no published programme text); edit freely.
+    abstract: "An introduction to building web APIs with FastAPI: setting up a first project, defining endpoints with Python type hints, validating data with Pydantic, and using the automatically generated interactive documentation."
+    tags: [FastAPI, Python web development]
+    deliveries:
+      - event: PyCon Namibia 2024
+        date: 2024-03-07
+        city: Windhoek
+        country: Namibia
+        type: talk
+        slides_url: https://github.com/clytaemnestra/talks/blob/main/getting-started-with-fastapi-for-web-development.pdf
+
+  - slug: standard-library-tour
+    title: The Standard Library Tour
+    # abstract condensed from https://program.europython.eu/europython-2023/talk/VHWTVF/
+    abstract: "A tour of Python's standard library: less-known modules that do well-known things, and well-known modules that do less-known things, including functools, itertools, collections, doctest, difflib and contextlib."
+    tags: [Python, standard library]
+    deliveries:
+      - event: PyCon Ireland 2023
+        date: 2023-11-18
+        city: Dublin
+        country: Ireland
+        type: talk
+        slides_url: https://github.com/clytaemnestra/talks/blob/main/standard-library-tour.pdf
+        video_url: https://www.youtube.com/watch?v=ZId-JEMSCQ8
+      - event: PyCon UK 2023
+        date: 2023-09-23
+        city: Cardiff
+        country: United Kingdom
+        type: talk
+        slides_url: https://github.com/clytaemnestra/talks/blob/main/standard-library-tour.pdf
+        video_url: https://www.youtube.com/watch?v=9J3Wfizht9E
+      - event: EuroPython 2023
+        date: 2023-07-20
+        city: Prague
+        country: Czech Republic
+        type: talk
+        slides_url: https://github.com/clytaemnestra/talks/blob/main/standard-library-tour.pdf
+        video_url: https://www.youtube.com/watch?v=l4POMeXK5Wo
+
+  - slug: myths-and-stereotypes-about-it
+    title: "Panel discussion: Myths and stereotypes about IT"
+    # abstract condensed from https://cz.pycon.org/2023/program/panels/87/ (translated from Czech)
+    abstract: "A panel (in Czech) with software engineers who work with juniors and people starting out in IT: the most common myths and stereotypes about IT, how they show up at work, and how to overcome them."
+    tags: [careers, diversity in tech]
+    deliveries:
+      - event: PyCon CZ 2023
+        date: 2023-09-16
+        city: Prague
+        country: Czech Republic
+        type: panel
+        video_url: https://www.youtube.com/watch?v=V-DAAuYpysU
+
+  - slug: uncovering-pythons-surprises
+    title: "Uncovering Python's Surprises"
+    # abstract condensed from pyvideo.org (PyCon France 2023)
+    abstract: "Some of Python's most counterintuitive behaviours, how they work under the hood, and why they don't always behave as expected."
+    tags: [Python, Python gotchas]
+    deliveries:
+      - event: PyCon France 2023
+        date: 2023-02-18
+        city: Bordeaux
+        country: France
+        type: talk
+        slides_url: https://github.com/clytaemnestra/talks/blob/main/uncovering_python_surprises.pdf
+        video_url: https://pyvideo.org/pycon-fr-2023/uncovering-pythons-surprises-a-deep-dive-into-gotchas.html
+
+  # Upcoming
+
+  - slug: vibecoded-app-production-ready
+    title: How to Take a Vibecoded App and Make It Production-Ready
+    # abstract condensed from the text Mia supplied (Oct 2026)
+    abstract: "AI lets anyone build a working app in an afternoon, but working once on a screen is not the same as working in production. The talk walks through the five things AI-generated code leaves out, how to spot each one, the smallest fix that gets it to production, and how to use the same AI as security reviewer and test writer."
+    tags: [AI-assisted development, software engineering]
+    deliveries:
+      - event: Women in Tech 2026
+        date: 2026-11-10
+        city: Brno
+        country: Czech Republic
+        type: talk
+
+  - slug: gardener-biggest-building-age-of-iron
+    title: "A gardener built the biggest building in the world: what the age of iron tells us about community in the age of AI"
+    abstract: "TODO(mia): 1–2 line abstract"
+    tags: [open source communities, AI]
+    deliveries:
+      - event: PyCon España 2026
+        date: 2026-11-07
+        city: Barcelona
+        country: Spain
+        type: keynote

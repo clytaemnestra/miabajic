@@ -1,0 +1,1054 @@
+WEBVTT
+
+00:00.000 --> 00:06.960
+If before it was in the realm of like 1-2 million downloads a month, these days it's already have like more than 40 million downloads a month.
+
+00:06.960 --> 00:08.160
+So it's quite significant.
+
+00:08.160 --> 00:11.820
+The main one, which is like the matrix against like all different variations.
+
+00:11.820 --> 00:14.280
+I'm just like trying to find it now.
+
+00:14.280 --> 00:17.480
+We are talking 73 different variations.
+
+00:17.480 --> 00:24.980
+Dragonfly flavor, therefore this command is implemented and these arguments are supported.
+
+00:24.980 --> 00:28.300
+Hello everyone and welcome to another episode of Behind the Comet.
+
+00:28.300 --> 00:31.320
+My guest today is Daniel Moran.
+
+00:31.320 --> 00:40.660
+He is a maintainer of FakeRedis, a pure Python implementation of the Redis API that began as a way to write tests without standing up a real server.
+
+00:40.660 --> 00:47.880
+And now works the drop-in replacement for both RedisPy and VolkiPy, pulling over 5 million downloads a month.
+
+00:47.880 --> 00:54.040
+Beyond FakeRedis, he maintains Django Task Scheduler, built a GitHub Actions plugin for JetBrains IDEs,
+
+00:54.040 --> 01:00.380
+and helps run Django Commons, a community organization for keeping Django packages healthy.
+
+01:00.380 --> 01:01.760
+Welcome, Daniel.
+
+01:01.760 --> 01:02.800
+Thank you.
+
+01:02.800 --> 01:05.400
+And thank you for the nice introduction.
+
+01:05.400 --> 01:09.720
+So let's start with what FakeRedis actually is.
+
+01:09.720 --> 01:13.820
+Can you tell us a little more about what it does and how it all started?
+
+01:13.820 --> 01:30.180
+So initially, like I was looking for, like I wanted to run tests, like I had my software using Redis and obviously I didn't want to use like the production Redis deployment.
+
+01:30.180 --> 01:34.980
+So I was looking for a way around it.
+
+01:34.980 --> 01:43.260
+I also, at the time, it was more difficult to bring up a container of Redis for testing purposes.
+
+01:43.260 --> 01:49.820
+These days, it's like much easier, but like at the time, it was like a bit more difficult.
+
+01:49.820 --> 02:00.820
+So I was looking for a way around it and I found FakeRedis, but it wasn't maintained and it wasn't like, I think it was out of date with the latest Python version.
+
+02:00.820 --> 02:11.400
+Therefore, I adopted it and just like, at first, I just made sure that it works with the latest environment so I can actually use it.
+
+02:11.400 --> 02:18.740
+The idea is you can run, you can use it as your Redis within your own Python process.
+
+02:18.740 --> 02:20.260
+It's not an additional process.
+
+02:20.260 --> 02:21.960
+It's not an additional container.
+
+02:21.960 --> 02:28.520
+It's just like you can use it as Redis within your Python single thread.
+
+02:28.520 --> 02:29.260
+Right.
+
+02:29.260 --> 02:36.140
+And there was a big jump in adoption when Reddit implemented those changes in regards to their license.
+
+02:36.140 --> 02:38.120
+So they changed their license.
+
+02:38.120 --> 02:41.000
+There was a backlash and then they evoked part of it back.
+
+02:41.000 --> 02:48.020
+So I'm wondering as a downstream maintainer, how closely you were watching that and how did it change?
+
+02:48.020 --> 02:50.140
+How did it impact fake Redis basically?
+
+02:50.140 --> 03:02.140
+It really, I think it kind of changed the main use case from if before it was for testing purposes, just being replacement to run within the Python process.
+
+03:02.140 --> 03:15.800
+I started getting issues of it, like it doesn't implement certain Valky commands and or it's like the Valky responses are different or Dragonfly have like a command, which is like not in Redis.
+
+03:15.800 --> 03:17.620
+So it's like, can it be implemented?
+
+03:17.620 --> 03:25.420
+If before it was in the realm of like one, two million downloads a month, these days it's already have like more than 40 million downloads a month.
+
+03:25.420 --> 03:33.740
+So it's quite significant and these days it actually has multiple flavors of running.
+
+03:33.740 --> 03:39.120
+Like while it's like the package is still called fake Redis, it implements like fake Valky.
+
+03:39.120 --> 03:47.980
+It's also, if you look at the connectivity package, RedisPy or ValkyPy, it also implements both of them.
+
+03:47.980 --> 03:48.380
+Right.
+
+03:48.380 --> 03:52.660
+So one use case is for writing tests, which is how it all initially started.
+
+03:52.660 --> 03:59.240
+And then you mentioned about the case of people wanting to switch from Redis to Valky, right?
+
+03:59.240 --> 04:05.800
+So this was the tool to make sure for people to know if actually their setup is agnostic, right?
+
+04:05.800 --> 04:13.400
+Is this still the main use case or are there any other use cases how people nowadays use fake Redis?
+
+04:13.400 --> 04:22.660
+So obviously, like I cannot really tell like in particular how they use it, but I just like based on the different issues that people are opening,
+
+04:22.660 --> 04:29.180
+I can tell that people use it to determine whether they can upgrade, which is also a use case.
+
+04:29.180 --> 04:30.640
+Like it's basically changing.
+
+04:30.640 --> 04:33.060
+Also, it's like it's similar to being agnostic.
+
+04:33.060 --> 04:38.540
+Like can I upgrade or am I using a command, a Redis command, which was deprecated?
+
+04:38.540 --> 04:41.460
+Or am I agnostic?
+
+04:41.460 --> 04:43.120
+Can I switch to Dragonfly?
+
+04:43.120 --> 04:44.640
+Can I switch to Valky?
+
+04:44.640 --> 04:46.240
+Can I switch back to Redis?
+
+04:46.240 --> 04:48.320
+And so on and so forth.
+
+04:48.320 --> 04:48.740
+Right.
+
+04:48.740 --> 04:51.440
+And you can also run fake Redis as a server, right?
+
+04:51.440 --> 05:00.960
+So yeah, this is like, I would say in the past year, I added the ability to run fake Redis as TCP server in its own thread.
+
+05:00.960 --> 05:10.140
+And it will respond just like you can, depending on what flavor you instantiate it on, it will respond like Valky, Redis, like Dragonfly.
+
+05:10.140 --> 05:12.220
+Obviously, it's implemented in Python.
+
+05:12.220 --> 05:17.980
+You shouldn't expect the same performance as Redis, Valky, Dragonfly.
+
+05:17.980 --> 05:23.820
+But it does save you the time of setting up the networking between containers and so on.
+
+05:23.820 --> 05:32.620
+So if we're looking at the project, which is not really about like the performance, then it is a good solution for that.
+
+05:32.620 --> 05:44.020
+So that means basically that if I want to run Redis, but actually I don't need Redis performance and I want something that's simpler and good enough for my use case,
+
+05:44.020 --> 05:49.140
+then I could use fake Redis instead of using Redis because it would be slower.
+
+05:49.140 --> 05:52.940
+But on the other hand, for some use cases, I guess slower is okay.
+
+05:52.940 --> 05:54.600
+Sometimes you just care about simplicity.
+
+05:54.600 --> 05:57.600
+You just want to set up something and you want it to work right.
+
+05:57.600 --> 05:59.420
+So this is the use case.
+
+05:59.420 --> 06:04.560
+You're saying that people use it mostly for simplicity instead of Redis when they use it locally.
+
+06:04.560 --> 06:04.840
+Yeah.
+
+06:04.840 --> 06:15.120
+And you can also argue that if your networking setup is not that fast, then actually, like, you know, the Python performance from compute perspective, it's slower.
+
+06:15.120 --> 06:21.520
+But if your networking is slow, then actually it's better because it works within the same Python process.
+
+06:21.520 --> 06:21.920
+Right.
+
+06:21.920 --> 06:27.140
+And you said that the goal for fake Redis is actually to be server agnostic.
+
+06:27.140 --> 06:33.820
+So people can use it to test, for example, if they can switch to Redis or Volkey or any of those.
+
+06:33.820 --> 06:36.940
+So I'm wondering, how does that actually work under the hood?
+
+06:36.940 --> 06:40.480
+So does it mean that features get ported command by command?
+
+06:40.480 --> 06:42.320
+Or do you have any other way?
+
+06:42.320 --> 06:45.780
+How do you make sure that actually it is server agnostic?
+
+06:45.780 --> 06:51.920
+Meanwhile, all those tools are adding new features and bug fixes into their packages.
+
+06:51.920 --> 06:58.420
+So I am closely watching the release notes of Redis, Volkey, Dragonfly.
+
+06:58.420 --> 07:01.000
+I am implementing changes.
+
+07:01.000 --> 07:05.240
+Also, when a command is deprecated, I make sure that it's deprecated.
+
+07:05.240 --> 07:16.500
+And one good example is Dragonfly implements a command set EX, which is set expire, which is not implemented in Redis and Volkey.
+
+07:16.500 --> 07:23.100
+So when you instantiate fake Redis with the Dragonfly flavor, the command will be supported.
+
+07:23.100 --> 07:30.020
+When you instantiate fake Redis with Redis or Volkey flavor, you will get an error, just like Redis or Volkey will give you.
+
+07:30.020 --> 07:43.020
+So the CI-CD that I have set up in GitHub Action, it's testing against like different variations, different Python version, different Redis Pi version and different Redis server versions.
+
+07:43.020 --> 07:46.780
+And also Volkey Pi and Volkey versions and Dragonfly as well.
+
+07:46.780 --> 07:50.340
+Now I'm wondering how does your test matrix look like?
+
+07:50.340 --> 07:57.400
+Because you said you're testing against different Python versions and against different Redis and Dragonfly versions.
+
+07:57.400 --> 07:59.780
+So how does the matrix look like?
+
+07:59.780 --> 08:05.400
+And how do you make sure it doesn't keep on exploding when there are all the time like new versions coming in?
+
+08:05.400 --> 08:09.800
+So yeah, the test matrix, I can share my screen if you want.
+
+08:09.800 --> 08:11.000
+It's like, yeah.
+
+08:11.000 --> 08:13.800
+How many jobs do you have?
+
+08:13.800 --> 08:14.640
+One second.
+
+08:14.640 --> 08:18.640
+Is it a few or dozens or hundreds?
+
+08:18.640 --> 08:25.020
+So I do have like a few, like whether it is like formatting, linting and stuff like this.
+
+08:25.020 --> 08:29.960
+But like the main one, which is like the matrix against like all different variations.
+
+08:29.960 --> 08:32.740
+I'm just like trying to find it now.
+
+08:32.740 --> 08:36.540
+We are talking 73 different variations.
+
+08:36.540 --> 08:36.880
+Oh.
+
+08:36.880 --> 08:45.280
+Different Redis version, Python version, Redis Pi version, and also like you have Valky or ValkyPy.
+
+08:45.280 --> 08:46.060
+Yeah.
+
+08:46.060 --> 08:53.480
+And you mentioned a case of a command, if I understood you correctly, that existed in Redis, but not in Dragonfly, right?
+
+08:53.480 --> 08:54.600
+The other way around.
+
+08:54.600 --> 08:55.740
+The other way around, right.
+
+08:55.740 --> 09:04.460
+So I'm wondering when you have this case where there are two compatible servers and they disagree that there is one feature in one and not in the other, etc.
+
+09:04.460 --> 09:07.060
+How does fake Redis handle that?
+
+09:07.060 --> 09:09.980
+How do you decide what is the right behavior?
+
+09:09.980 --> 09:13.920
+Does it mean that you have features from both or only from one or the other?
+
+09:13.920 --> 09:15.460
+Or what is your approach to it?
+
+09:15.460 --> 09:38.080
+So the way that I think that's the core of fake Redis, when you want to implement the command, you have the fake Redis framework, which just like as an abstraction layers, which hide like all the socket interface of like getting basically the command as on the network.
+
+09:38.080 --> 09:52.360
+And it just like parse all the different, the command and different arguments as part of the way, like when the command is parsed, it says like, okay, I'm a fake Redis with Dragonfly flavor.
+
+09:52.360 --> 09:56.080
+Therefore, this command is implemented and these arguments are supported.
+
+09:56.080 --> 10:03.040
+Or alternatively, it's like, it's going to say, oh, I am fake Redis with Redis flavor.
+
+10:03.040 --> 10:05.880
+And therefore this command is not supported through an error.
+
+10:05.880 --> 10:06.880
+Right.
+
+10:06.880 --> 10:13.560
+So that means that users always know what is the flavor and they can pick their own flavor, right?
+
+10:13.560 --> 10:14.920
+When they instantiate.
+
+10:14.920 --> 10:15.620
+Yeah, exactly.
+
+10:15.620 --> 10:28.500
+When, when they instantiate fake Redis, I mean, the default is a Redis 7, sorry, Redis 7, but they can instantiate like with any, any flavor of like Valky, Dragonfly or Redis.
+
+10:28.500 --> 10:31.920
+And Redis is supported for version 6, 7, and 8.
+
+10:31.920 --> 10:42.440
+So also if like a command was introduced, for example, in Redis 8 and it didn't exist in Redis 7, it's going to throw an error if you instantiate it with Redis 7 flavor.
+
+10:42.440 --> 10:45.840
+And fake Redis is a very popular package.
+
+10:45.840 --> 10:53.420
+So it has around 41 millions of downloads per month and 304 millions of downloads since you adopted it.
+
+10:53.420 --> 10:57.400
+And you mentioned to me that you do this in your free time.
+
+10:57.400 --> 10:58.860
+So this is sort of your hobby.
+
+10:58.860 --> 11:02.320
+This is not your main work where you're employed to maintain it.
+
+11:02.320 --> 11:09.640
+So I'm wondering what does keep you motivate to, what does motivate you to keep maintaining it?
+
+11:09.640 --> 11:11.840
+And what was your primarily motivation?
+
+11:11.840 --> 11:14.500
+Why did you get started?
+
+11:14.500 --> 11:18.300
+So initially, like I said, it's like I had this need.
+
+11:18.300 --> 11:29.900
+I just like I didn't, I was looking for a way to not deploy a Redis container on the side and then set up like the network in between like how I run my CI CD.
+
+11:29.900 --> 11:34.160
+So that was like why I adopted it in the first place.
+
+11:34.160 --> 11:35.080
+A personal need.
+
+11:35.080 --> 11:42.820
+These days, I think just like because it's so popular, first of all, it's like it's cool to see that people use what I'm doing.
+
+11:42.820 --> 11:59.180
+And there is the technical challenge of, I mean, if you look at the test matrix of like all the different variations that people are using it and like being able to support like all the different variations because it's so popular.
+
+11:59.180 --> 12:05.400
+And it's like if now I want to introduce something new, I need to consider like all the different variations when I consider it.
+
+12:05.400 --> 12:08.240
+So there is like the technical challenge.
+
+12:08.240 --> 12:10.320
+I enjoy the technical challenge.
+
+12:10.320 --> 12:11.640
+I'm learning a lot from this.
+
+12:11.640 --> 12:24.000
+Otherwise, I also I can say it's like I had like, for example, like in one of the job interviews that I had, the interviewer said like, oh, you're the maintainer of fake Redis.
+
+12:24.000 --> 12:26.480
+Like, so I don't need to test your technical abilities.
+
+12:26.480 --> 12:28.340
+Like, obviously, you know what you're doing.
+
+12:28.340 --> 12:30.260
+So there is a value in this.
+
+12:30.260 --> 12:36.640
+Like, while maybe people are more familiar with my GitHub handle because like this is where they downloaded it from.
+
+12:36.640 --> 12:44.880
+But once they realize that this connection, there is, it gives me a sense of like some kind of credentials, like that I know what I'm doing.
+
+12:44.880 --> 12:50.060
+And it's not, let's say I didn't get like how to implement the tree in my latest interviews.
+
+12:50.060 --> 12:59.000
+Other than this, I can say that also I had like two leads, two clients that I got thanks to fake Redis.
+
+12:59.000 --> 13:00.280
+They just like approached me.
+
+13:00.280 --> 13:07.240
+One of them actually like they just saw like what I did with GitHub Action, like implementing this massive matrix of like what's going on.
+
+13:07.240 --> 13:12.580
+And they say like, yeah, we need like to do something similar in our situation, like with GitHub Actions.
+
+13:12.580 --> 13:16.960
+And you obviously like you know how to create like this matrix in GitHub Actions.
+
+13:16.960 --> 13:19.520
+So yeah, and this I did the project for them.
+
+13:19.520 --> 13:23.860
+Another one they wanted to extend actually fake Redis.
+
+13:23.860 --> 13:27.160
+So and have it support something else.
+
+13:27.160 --> 13:33.260
+So overall, I would say, yes, it is technically challenging and I enjoy this.
+
+13:33.260 --> 13:44.100
+And yeah, it does like, while it doesn't pay the bills like directly, but yeah, the fact that then interviews, like it gives me some credibility before even being interviewed.
+
+13:44.100 --> 13:46.740
+And like it gets me leads and it is valuable.
+
+13:46.740 --> 13:51.960
+Right. So basically, you're saying that it's something you enjoy doing in your free time.
+
+13:51.960 --> 13:59.060
+But also it's something that shaped your career, which I think is very nice if you're able to combine both.
+
+13:59.060 --> 14:03.460
+So actually, your hobby can also be useful to you in your professional life.
+
+14:03.460 --> 14:08.800
+So fake Redis is maintained by in total one person.
+
+14:08.800 --> 14:09.900
+You, right?
+
+14:09.900 --> 14:12.020
+You have no other team members.
+
+14:12.020 --> 14:13.860
+So you are the team of one.
+
+14:13.860 --> 14:23.660
+So I'm wondering for someone starting a popular project or inheriting it, what actually works for avoiding burnout if you are the only maintainer there?
+
+14:23.660 --> 14:31.260
+Do you have any specific rules, for example, when it comes to interaction with people on the Internet or when it comes to yourself?
+
+14:31.260 --> 14:39.420
+How do you basically prevent yourself getting exhausted because of so many issues and pull requests incoming?
+
+14:39.420 --> 14:46.300
+So I am trying to, this is generally like also what I do with work.
+
+14:46.300 --> 14:51.020
+I'm trying to, there is like inbox zero is a way of life.
+
+14:51.020 --> 14:53.520
+So that way it's like I'm never overwhelmed.
+
+14:53.520 --> 15:00.520
+And also when it comes to fake Redis, I'm trying to, so the equivalent of like inbox zero, it's like list of issues zero.
+
+15:00.520 --> 15:06.560
+So I'm trying to address it as soon as possible and make sure that the list doesn't grow.
+
+15:06.560 --> 15:20.760
+If like I'm trying to be responsive to issues, if I need like additional details or something like this, I'm also encouraging people like, okay, I mean, you, you describe the issue, you know what it is.
+
+15:20.760 --> 15:22.960
+Do you mind actually implementing the code for it?
+
+15:22.960 --> 15:27.140
+And it's like, that's where I'm also encouraging people to contribute.
+
+15:27.140 --> 15:34.360
+And if needed, I just like give them a link to the relevant part of the, the commentation of like how to do it.
+
+15:34.360 --> 15:35.800
+I am doing it in my free time.
+
+15:35.800 --> 15:39.600
+So obviously I'm making sure like to keep my priorities straight.
+
+15:39.600 --> 15:48.920
+So yes, if now I don't see it happening, but like if in theory I wake up and I see that I have like a list of like 50 new issues, it never happened.
+
+15:48.920 --> 15:54.560
+But if in theory something like this will happen, then I will just like make sure that I have my priorities straight.
+
+15:54.560 --> 16:00.320
+And like, you know, I'm, yeah, it's important, like you said, to have a balance and not to get burned out.
+
+16:00.320 --> 16:07.200
+I'll do like an issue per day or maybe like two per day, see if I can merge some of them together.
+
+16:07.200 --> 16:12.460
+And I'm wondering, it's 2026 and I cannot not to mention AI.
+
+16:12.460 --> 16:18.100
+So it's everywhere nowadays and it's in open source projects too.
+
+16:18.100 --> 16:25.320
+So I'm wondering as a maintainer of a popular open source projects, what are your thoughts about AI?
+
+16:25.320 --> 16:29.800
+Is it good or bad thing?
+
+16:29.800 --> 16:31.980
+It's both.
+
+16:31.980 --> 16:33.200
+Of course.
+
+16:33.200 --> 16:36.040
+I mean, it's, I would say it like this.
+
+16:36.040 --> 16:38.160
+It's like, it's actually related also.
+
+16:38.160 --> 16:44.500
+Like I'll start with the bad and then I'll go with the good because that's kind of like as a developer, this is how I am, I guess.
+
+16:44.500 --> 16:45.760
+You mentioned the burned out.
+
+16:45.760 --> 16:52.180
+So it's actually very recently, like you have a lot of PRs that are obviously written by AI.
+
+16:52.180 --> 16:59.400
+And because it's the documentation is, well, I'm praising myself, but I do think the documentation of fake Redis is good.
+
+16:59.400 --> 17:07.780
+So is AI, like the code quality is, it's very good, I would say, but we're talking about edge cases.
+
+17:07.780 --> 17:14.020
+For example, like what happens if the user sends, this is one of the latest PR that I got.
+
+17:14.020 --> 17:22.540
+What happens when the user sends a negative amount for like the count, which I mean, okay, it is a valid edge case.
+
+17:22.540 --> 17:29.580
+Nobody cared about it for like the past five years that I've been maintaining this package.
+
+17:29.580 --> 17:40.400
+So you can argue that it's just like created an additional overhead for me to review the code and then to maintain the code because it's just like it's code that now it's never going to leave.
+
+17:40.400 --> 17:44.300
+And if nobody cared about it for five years, then should it be there?
+
+17:44.300 --> 17:52.820
+But then again, it is a valid case because this is like I want to be like as compatible as possible with Valky, with Redis and so on.
+
+17:52.820 --> 17:54.700
+So it is a valid case.
+
+17:54.700 --> 18:06.000
+So basically you're saying that it puts some like maintenance burden on you because you have to review it and you have to maintain it, but you are not really sure if that's like worth the effort, the value that it brings.
+
+18:06.000 --> 18:09.740
+Because it's an edge case that no one complains about, if I understand it correctly.
+
+18:09.740 --> 18:10.480
+Exactly.
+
+18:10.480 --> 18:10.580
+Yeah.
+
+18:10.580 --> 18:11.060
+Right.
+
+18:11.060 --> 18:15.260
+So like it basically creates a significant overhead.
+
+18:15.260 --> 18:22.080
+I did create like the CloudMD and I did, I'm not, English isn't my first language.
+
+18:22.080 --> 18:29.640
+So obviously like having AI, reviewing the documentation, creating the fake Redis logo and so on and so forth.
+
+18:29.640 --> 18:30.560
+Absolutely amazing.
+
+18:30.560 --> 18:35.180
+If now in the recent year, I implemented the Vector Set commands.
+
+18:35.180 --> 18:38.780
+Now, whenever implementing, they're implementing a new command.
+
+18:38.780 --> 18:41.880
+I have a very good documentation, how to do it.
+
+18:41.880 --> 18:47.420
+It's still a boilerplate code that needs to be written because it's documented properly.
+
+18:47.420 --> 18:51.000
+AI is doing it very, very well.
+
+18:51.000 --> 18:56.620
+And then it leaves me with like actually implementing the data structure for like the Vector Set commands.
+
+18:56.620 --> 19:03.040
+And it's, this is basically, it takes away all the nitty gritty kind of boring work.
+
+19:03.040 --> 19:04.380
+It takes it away.
+
+19:04.380 --> 19:08.320
+And so on this side, I think AI is absolutely amazing.
+
+19:08.320 --> 19:18.800
+It's, I would say it would have taken me probably double the time to implement the Vector Set commands if it wasn't for the AI.
+
+19:18.800 --> 19:19.080
+Right.
+
+19:19.080 --> 19:20.000
+All right.
+
+19:20.000 --> 19:22.900
+So it's a useful tool that you use in your daily life.
+
+19:22.900 --> 19:24.180
+It makes you more productive.
+
+19:24.180 --> 19:30.040
+But also sometimes there's this burden of people misusing it and just sending random pull requests.
+
+19:30.040 --> 19:33.900
+I'm wondering how often do you have to deal with those random pull requests?
+
+19:33.900 --> 19:38.000
+Is this something that happens every day or once a week or once a month?
+
+19:38.000 --> 19:44.360
+So actually recently in the past month, there was quite a lot of them.
+
+19:44.360 --> 19:56.240
+I noticed that when I see multiple pull requests by the same user, I'm also looking at the user and I see that I'm not sure what's the motivation behind it.
+
+19:56.240 --> 20:05.300
+But if I see a user that is contributing to 100 packages in a week, basically having AI running and just like finding bugs and fixing them.
+
+20:05.300 --> 20:09.440
+It's like, I'm not sure what's the motivation behind it.
+
+20:09.440 --> 20:16.280
+I'm kind of, it's obviously like it creates an additional overhead and I try to discourage it.
+
+20:16.280 --> 20:26.040
+I'm saying like, you know, hey, like merge all of your PRs into one and I'll review it all at once instead of like sending every time that I close one.
+
+20:26.040 --> 20:28.040
+It's like the day after I'm getting an additional one.
+
+20:28.040 --> 20:42.900
+So, yes, I am encouraging contribution, but it's important that the contribution has value, whether it is to other people that want to contribute or to the users of fake Redis as well.
+
+20:42.900 --> 20:43.420
+Right.
+
+20:43.420 --> 20:46.000
+Because of the maintenance burden, basically.
+
+20:46.000 --> 20:53.860
+Speaking of it, so you also, except of fake Redis, you also created the GitHub actions plugin for JetBrains IDE.
+
+20:53.860 --> 21:01.580
+This is a plugin that started as open source and then you decided to monetize it because of the maintenance burden that you had with that.
+
+21:01.580 --> 21:05.820
+So, could you tell us a little bit more about how it started and what does it do?
+
+21:05.820 --> 21:19.920
+So, I was actually working for a client which had, I think it was like a project with 40 repositories and jumping from IntelliJ, like JetBrains IDE, IntelliJ, PyChamp, whatever.
+
+21:19.920 --> 21:26.460
+It's like jumping from IntelliJ to the browser to IntelliJ to the browser and having like 40 tabs open.
+
+21:26.460 --> 21:35.220
+I, basically, it drove me a bit crazy and I said like, why isn't it in the IDE as a, like, I mean, I have Git.
+
+21:35.220 --> 21:36.860
+Why don't I have GitHub actions?
+
+21:36.860 --> 21:39.820
+Like, I have, I have a terminal in the IDE.
+
+21:39.820 --> 21:41.680
+I have like connection to database.
+
+21:41.680 --> 21:43.340
+Like, this is, what is an IDE?
+
+21:43.340 --> 21:45.200
+It's an integrated development environment.
+
+21:45.200 --> 21:47.240
+You want it integrated with GitHub actions as well.
+
+21:47.240 --> 21:49.140
+It's like, it's almost a missing piece.
+
+21:49.140 --> 21:49.920
+It wasn't there.
+
+21:49.920 --> 22:00.020
+And, yeah, I just, like, I implemented it just so, basically, you don't have to jump to the browser to see GitHub actions, all the workflows and all the logs.
+
+22:00.020 --> 22:03.080
+It was open source at the beginning, like you said.
+
+22:03.080 --> 22:10.100
+Maintaining a plugin for JetBrains with SDK, they introduced, like, breaking changes, like, once a year.
+
+22:10.100 --> 22:12.020
+And it is quite difficult.
+
+22:12.020 --> 22:20.760
+And people, obviously, like, yes, I think it's, like, it reached at the time to 100,000 downloads when it was still open source.
+
+22:20.760 --> 22:29.360
+So, obviously, like, people liked it, started asking for different features, like, okay, why can I just, like, you know, trigger a workflow?
+
+22:29.360 --> 22:32.740
+Can I, like, filtering of, like, different workflows and so on and so forth.
+
+22:32.740 --> 22:34.720
+And at some point I said, like, okay, I'm in.
+
+22:34.720 --> 22:35.260
+I'm sorry.
+
+22:35.260 --> 22:44.320
+It's, like, the original feature of seeing a list of workflow runs, list of jobs for workflow runs and the logs.
+
+22:44.320 --> 22:51.020
+This is still free, but all the additional features in these days, there is a list.
+
+22:51.020 --> 22:56.300
+I mean, people can go and have a look at, like, the list of, like, different features that exist there.
+
+22:56.300 --> 22:58.900
+But all these additional features are actually paid.
+
+22:58.900 --> 23:01.760
+And, yeah, it's this subscription base.
+
+23:01.760 --> 23:07.140
+And also, I make sure that it's up-to-date and supports the latest JetBrains IDs.
+
+23:07.140 --> 23:11.300
+And so, there are some features that are still for free, right?
+
+23:11.300 --> 23:12.620
+And some of them are paid.
+
+23:12.620 --> 23:16.140
+So, I'm wondering, how did you split them?
+
+23:16.140 --> 23:28.080
+So, the original features of, like, my original problem was I don't want to jump to, from IDE to browser to view workflow runs.
+
+23:28.080 --> 23:35.820
+And then, like, when clicking on workflow run, seeing the list of jobs and then per job, like, to view the logs.
+
+23:35.820 --> 23:36.080
+Yeah.
+
+23:36.080 --> 23:40.800
+So, this is something which you basically needed three tabs to do what I just said.
+
+23:40.800 --> 23:48.580
+Like, one for the list of workflow runs, one for the list of jobs in the workflow run, and one for the logs of a single job.
+
+23:48.580 --> 23:51.380
+And multiply this by multiple repositories.
+
+23:51.380 --> 23:54.740
+So, it's, like, the number of tabs is just it grows exponentially.
+
+23:54.740 --> 23:56.160
+At some point, it's, like, it's ridiculous.
+
+23:56.160 --> 24:04.260
+This original feature, which I was aiming to solve, and I solved it in the plugin, these are still free.
+
+24:04.260 --> 24:10.740
+And I aim to keep it free unless JetBrains are going to make it very difficult to maintain it.
+
+24:10.740 --> 24:12.820
+I'm planning to keep it free forever.
+
+24:12.820 --> 24:25.940
+All the additional features that, like, just, like, got added with time, these are just, like, with the premium version that you need to pay for.
+
+24:25.940 --> 24:28.800
+I do have, these days, 700,000 downloads.
+
+24:28.800 --> 24:33.020
+Yeah, obviously, people like it, and the majority are using the free version.
+
+24:33.020 --> 24:33.780
+They're not paying.
+
+24:33.780 --> 24:34.360
+I'm not.
+
+24:34.360 --> 24:38.820
+It would have been nice to get, like, $2 a month from, like, 700,000 downloads.
+
+24:38.820 --> 24:51.000
+Yeah, and so, except the fake redis and the GitHub's plugin, you're also involved in the Django Commons project, right?
+
+24:51.000 --> 24:56.920
+So, could you tell us a little bit more about what it is?
+
+24:56.920 --> 25:06.640
+So, Django Commons, it is an organization that aims to support maintainers of Django packages.
+
+25:06.640 --> 25:08.360
+It's similar to JazzBem.
+
+25:08.360 --> 25:20.720
+The idea is to support maintainers, improve, like, the experience of, like, maintaining Django packages, whether it is, like, for the original maintainer or for contributors.
+
+25:20.720 --> 25:30.180
+Whether it is, like, to reduce the barrier to entry for new contributors, just make it easy, guiding them, documentation, explaining the best practices.
+
+25:30.180 --> 25:50.740
+And reducing some overhead for, like, package maintainers, showing, again, best practices, package, addressing security issue, having a community support where we kind of listen to what their needs are and see if we can address it in the organization level.
+
+25:50.740 --> 25:56.800
+And, you know, if one package has the problem, chances are that other packages are having similar problem.
+
+25:56.800 --> 26:06.300
+And if one package is solved, then chances are, like, that this solution can be applied to other packages in some 80% similar to solution, I would say.
+
+26:06.300 --> 26:11.600
+So, it's about sharing best practices and supporting each other, basically.
+
+26:11.600 --> 26:12.620
+Yes.
+
+26:12.620 --> 26:20.280
+And if someone would like to start contributing to fake redis tomorrow or maybe to learn a little bit more about it, where should they begin?
+
+26:20.280 --> 26:22.980
+Because you mentioned that fake redis has a really good documentation.
+
+26:22.980 --> 26:27.380
+So, is this the right place where people should start?
+
+26:27.380 --> 26:30.580
+Or is there anything else you would like to mention?
+
+26:30.580 --> 26:38.800
+I think, like, yeah, the documentation and the GitHub repository where you can see, like, issues in the documentation.
+
+26:38.800 --> 26:44.080
+Also, you can see the commands that are implemented and, obviously, like, the commands that are not implemented.
+
+26:44.080 --> 26:48.080
+So, this is, like, if you need an idea of, like, where to go first.
+
+26:48.080 --> 26:53.440
+Obviously, if you see in the documentation something which is not clear, I think the documentation are clear.
+
+26:53.440 --> 26:57.980
+But, I mean, the fact that it's clear to me doesn't mean that it is clear.
+
+26:57.980 --> 27:05.080
+So, if, like, obviously, like, I think this is just as valid contribution, if not even more important, to improve the documentation constantly.
+
+27:05.080 --> 27:07.200
+Hmm.
+
+27:07.200 --> 27:10.560
+And where would you want all of this to go next?
+
+27:10.560 --> 27:17.480
+Is there any version of done for a project like fake redis or any big vision you have?
+
+27:17.480 --> 27:19.840
+Or where do you see it in five or ten years?
+
+27:19.840 --> 27:27.620
+I would say that in my vision, I would say, is to have, like, fake redis becoming the standard for the protocol.
+
+27:27.620 --> 27:33.540
+Because Valkyve forked from, I think it was redis 7.2, if I remember correctly.
+
+27:33.540 --> 27:37.640
+And ever since, you can tell that, like, they already started diverging.
+
+27:37.640 --> 27:41.680
+And you see there are commands that are implemented in one and not the other.
+
+27:41.680 --> 27:44.760
+Dragonfly was already, like, having their own path.
+
+27:44.760 --> 27:49.280
+And, yes, they are, like, aligning with, like, the standard, but not 100%.
+
+27:49.280 --> 27:51.000
+So, there is no standard.
+
+27:51.000 --> 27:54.160
+Each implementation can do what they want.
+
+27:54.160 --> 27:55.360
+They can introduce new commands.
+
+27:55.360 --> 27:59.600
+They can introduce, like, how the response should look like.
+
+27:59.600 --> 28:05.960
+Sometimes you have examples where in some commands, like, dragonfly returns null while this returns zero.
+
+28:05.960 --> 28:07.060
+There is no right or wrong.
+
+28:07.060 --> 28:11.060
+It's just, like, different implementations.
+
+28:11.060 --> 28:20.720
+And because there is no standard, you cannot really know what to expect in certain situations, especially if you want to be agnostic.
+
+28:20.720 --> 28:22.440
+Fake redis allows you to be agnostic.
+
+28:22.440 --> 28:31.720
+And I do, if I'm looking at the term, in terms of, like, in 5, 10 years, I would love it if fake redis would be, in a way, the standard.
+
+28:31.720 --> 28:40.980
+So, if redis, dragonfly, or any other implementation that comes, like, would like to implement a new, introduce a new command, it will be, like, introduce a standard.
+
+28:40.980 --> 28:44.460
+And then others can implement this standard.
+
+28:44.460 --> 28:52.700
+That way, you can have, like, also one connectivity package instead of, like, having different ones for each implementation.
+
+28:52.700 --> 28:57.260
+Because eventually, they are, I mean, Valky is a fork of a certain version of redis.
+
+28:57.260 --> 28:59.940
+So, obviously, they are similar, very similar.
+
+28:59.940 --> 29:01.500
+You can say, like, 95%.
+
+29:01.500 --> 29:08.120
+But with time, at least the way it goes at the moment, they're going to diverge more and more.
+
+29:08.120 --> 29:08.600
+Right.
+
+29:08.600 --> 29:14.780
+So, the big vision of fake redis is becoming the standard in the ecosystem.
+
+29:14.780 --> 29:15.160
+Hopefully.
+
+29:15.160 --> 29:23.260
+And the last question for me is, if people would like to get in touch with you or follow you on social media, where can they find you?
+
+29:23.260 --> 29:29.240
+So, I would assume, like, you can put, like, obviously, they can go, like, to my GitHub profile.
+
+29:29.240 --> 29:32.940
+And, like, there you have a link to my LinkedIn and my email.
+
+29:32.940 --> 29:35.960
+And I would assume you can put, like, a link to my GitHub profile.
+
+29:35.960 --> 29:40.340
+Yes, I will put all links in the description so you can also find it there.
+
+29:40.340 --> 29:44.600
+So, yeah, like, in my LinkedIn and GitHub, that's, like, probably the best way to approach me.
+
+29:44.600 --> 29:46.420
+Thank you very much for coming.
+
+29:46.420 --> 29:47.200
+Thank you, Mia.
+
+29:47.200 --> 29:48.120
+I really appreciate it.

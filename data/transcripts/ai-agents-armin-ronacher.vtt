@@ -1,0 +1,2995 @@
+WEBVTT
+
+00:00:00.080 --> 00:00:02.320
+So I think like giving access to more
+
+00:00:02.320 --> 00:00:04.160
+people to program is a good thing and
+
+00:00:04.160 --> 00:00:05.520
+there are some people who are
+
+00:00:05.520 --> 00:00:07.919
+deliberately not using AI. The tools
+
+00:00:07.919 --> 00:00:10.080
+that programmer inhibit on the society
+
+00:00:10.080 --> 00:00:12.000
+at large for people that are not
+
+00:00:12.000 --> 00:00:14.400
+programmers are significantly worse. Hi
+
+00:00:14.400 --> 00:00:16.240
+everyone. AI agents are a huge topic
+
+00:00:16.240 --> 00:00:18.640
+right now and in July 2025 I had the
+
+00:00:18.640 --> 00:00:19.920
+chance to talk about them with Armen
+
+00:00:19.920 --> 00:00:22.000
+Roner. Armen is the founder of the
+
+00:00:22.000 --> 00:00:24.560
+startup and the former VP of platform at
+
+00:00:24.560 --> 00:00:26.560
+Sentry and many of you probably know him
+
+00:00:26.560 --> 00:00:28.560
+as the creator of Flask. We talk about
+
+00:00:28.560 --> 00:00:30.880
+AI and agents. Why agents currently work
+
+00:00:30.880 --> 00:00:32.960
+better in Go than in Python? How much
+
+00:00:32.960 --> 00:00:34.719
+code Armen still writes himself versus
+
+00:00:34.719 --> 00:00:36.640
+what's written by agents and which
+
+00:00:36.640 --> 00:00:38.879
+skills we as developers should focus on
+
+00:00:38.879 --> 00:00:43.280
+to stay competitive in the age of AI.
+
+00:00:43.280 --> 00:00:45.040
+Uh how much of code do you write
+
+00:00:45.040 --> 00:00:46.879
+yourself nowadays and how much of code
+
+00:00:46.879 --> 00:00:50.480
+is written by agents? Um so I think it
+
+00:00:50.480 --> 00:00:52.399
+depends a little bit on what kind of
+
+00:00:52.399 --> 00:00:55.760
+problem I'm solving. So
+
+00:00:55.760 --> 00:00:57.520
+when you start a new project what I
+
+00:00:57.520 --> 00:00:59.520
+found so far and uh again this might
+
+00:00:59.520 --> 00:01:00.719
+change in like a month it might change
+
+00:01:00.719 --> 00:01:02.239
+in two months you don't know this is
+
+00:01:02.239 --> 00:01:05.040
+moving very quickly but at the moment
+
+00:01:05.040 --> 00:01:07.360
+if I start a new project I I write a lot
+
+00:01:07.360 --> 00:01:08.799
+of it from hand so that I have the
+
+00:01:08.799 --> 00:01:12.240
+structure because I want it to be how I
+
+00:01:12.240 --> 00:01:15.119
+want it and have like a description of
+
+00:01:15.119 --> 00:01:17.119
+the architecture and everything
+
+00:01:17.119 --> 00:01:20.960
+>> and then then sort of it starts and and
+
+00:01:20.960 --> 00:01:22.560
+sort of I give more responsibility to
+
+00:01:22.560 --> 00:01:23.680
+the agent.
+
+00:01:23.680 --> 00:01:27.680
+And on on on the
+
+00:01:27.680 --> 00:01:29.360
+on on this latest project I'm working
+
+00:01:29.360 --> 00:01:31.200
+on, which is my startup, I think I'm
+
+00:01:31.200 --> 00:01:33.759
+guessing it's like 90% AI coded at this
+
+00:01:33.759 --> 00:01:36.960
+point. Um, mostly with the same ag and I
+
+00:01:36.960 --> 00:01:39.920
+use cloud code for the most part. Um,
+
+00:01:39.920 --> 00:01:43.040
+and then there's like a range of things
+
+00:01:43.040 --> 00:01:46.320
+that I don't know if they're going to
+
+00:01:46.320 --> 00:01:47.840
+>> but where I'm basically like trying
+
+00:01:47.840 --> 00:01:50.720
+different kinds of um experiments, even
+
+00:01:50.720 --> 00:01:52.000
+like little tooling to see like what's
+
+00:01:52.000 --> 00:01:53.840
+the data in the database look like. Um,
+
+00:01:53.840 --> 00:01:55.759
+and that is effectively 100% AI because
+
+00:01:55.759 --> 00:01:57.360
+I don't care what the quality of it
+
+00:01:57.360 --> 00:01:59.840
+because it's it's just supposed to solve
+
+00:01:59.840 --> 00:02:01.360
+a problem on the very spot. And so I
+
+00:02:01.360 --> 00:02:03.680
+treat it almost like a shell. And what
+
+00:02:03.680 --> 00:02:05.920
+kind of problems are suitable for AI and
+
+00:02:05.920 --> 00:02:08.000
+what kind of problems do you want to
+
+00:02:08.000 --> 00:02:09.679
+solve yourself? So you mentioned one of
+
+00:02:09.679 --> 00:02:11.200
+the things is when you're starting a new
+
+00:02:11.200 --> 00:02:13.760
+project so you want to have um certain
+
+00:02:13.760 --> 00:02:17.200
+structure. Um what are some other things
+
+00:02:17.200 --> 00:02:20.800
+that you don't want AI to do for you? Uh
+
+00:02:20.800 --> 00:02:22.720
+I mean like in theory I want AI to do
+
+00:02:22.720 --> 00:02:24.080
+all of it because it seems very
+
+00:02:24.080 --> 00:02:27.840
+productive. The problem seems to be um
+
+00:02:27.840 --> 00:02:31.360
+well first of all like
+
+00:02:31.360 --> 00:02:35.200
+because it is trained on
+
+00:02:35.200 --> 00:02:36.800
+there really two things that feed into
+
+00:02:36.800 --> 00:02:38.560
+this. It's it's what it's trained on and
+
+00:02:38.560 --> 00:02:40.400
+then it's sort of what's in the context
+
+00:02:40.400 --> 00:02:41.760
+>> and so there are certain types of
+
+00:02:41.760 --> 00:02:44.720
+problems at the moment where you steer
+
+00:02:44.720 --> 00:02:47.040
+it away from where it's successful and I
+
+00:02:47.040 --> 00:02:48.640
+just know where this is and then in that
+
+00:02:48.640 --> 00:02:50.959
+case I have to do it by hand. And so for
+
+00:02:50.959 --> 00:02:53.920
+instance, it likes to overcorrect on
+
+00:02:53.920 --> 00:02:55.840
+things that are very ingrained in its
+
+00:02:55.840 --> 00:02:57.360
+knowledge base. And
+
+00:02:57.360 --> 00:03:00.800
+>> if you for instance work on a very new
+
+00:03:00.800 --> 00:03:03.599
+that is on a code base that is in itself
+
+00:03:03.599 --> 00:03:06.000
+in the training set, then sometimes it
+
+00:03:06.000 --> 00:03:09.599
+it recalls older versions of this code.
+
+00:03:09.599 --> 00:03:11.040
+Um so when you work on open source
+
+00:03:11.040 --> 00:03:12.159
+libraries for instance is one of the
+
+00:03:12.159 --> 00:03:14.080
+problems that sort of start noticing
+
+00:03:14.080 --> 00:03:16.560
+over time is that these open source
+
+00:03:16.560 --> 00:03:20.000
+libraries themselves are in the in in
+
+00:03:20.000 --> 00:03:22.080
+the corpus of what it was trained on and
+
+00:03:22.080 --> 00:03:23.840
+then it doesn't get as effective on as
+
+00:03:23.840 --> 00:03:25.360
+on a new project that has never seen any
+
+00:03:25.360 --> 00:03:28.640
+code on. Um so so that's one of those
+
+00:03:28.640 --> 00:03:30.159
+cases where like out of necessity you
+
+00:03:30.159 --> 00:03:31.680
+kind of have to move it away from it.
+
+00:03:31.680 --> 00:03:32.959
+And then there are other situations
+
+00:03:32.959 --> 00:03:36.239
+where u I just care too much about this
+
+00:03:36.239 --> 00:03:37.760
+particular feature in the codebase
+
+00:03:37.760 --> 00:03:39.840
+because it's actually really critical to
+
+00:03:39.840 --> 00:03:41.680
+for instance what the company's doing.
+
+00:03:41.680 --> 00:03:43.440
+But I think this is generally like five
+
+00:03:43.440 --> 00:03:46.879
+to 10% of what you do at the company is
+
+00:03:46.879 --> 00:03:49.440
+like the really important crucial bit.
+
+00:03:49.440 --> 00:03:52.000
+And then most of it is just
+
+00:03:52.000 --> 00:03:55.599
+the the fluff around and and like the
+
+00:03:55.599 --> 00:03:57.519
+closer it gets to where the business
+
+00:03:57.519 --> 00:04:00.319
+value is being really harnessed then the
+
+00:04:00.319 --> 00:04:03.040
+more probably still care about it being
+
+00:04:03.040 --> 00:04:05.040
+>> And do you mention on your blog that AI
+
+00:04:05.040 --> 00:04:06.720
+agents work better with certain
+
+00:04:06.720 --> 00:04:10.000
+languages and uh they are less efficient
+
+00:04:10.000 --> 00:04:11.280
+with some other ones. And you mentioned
+
+00:04:11.280 --> 00:04:13.120
+that you have good experience with Go
+
+00:04:13.120 --> 00:04:16.320
+and um a worse experience with Python.
+
+00:04:16.320 --> 00:04:17.919
+Why is that?
+
+00:04:17.919 --> 00:04:20.160
+>> Um so
+
+00:04:20.160 --> 00:04:21.600
+Go is a language that people don't
+
+00:04:21.600 --> 00:04:23.040
+really have a lot of emotions to other
+
+00:04:23.040 --> 00:04:24.560
+than maybe slightly negative ones. So
+
+00:04:24.560 --> 00:04:26.960
+it's it's a language that you don't feel
+
+00:04:26.960 --> 00:04:29.040
+pride in working on I think. And so a
+
+00:04:29.040 --> 00:04:32.800
+lot of the Go code
+
+00:04:32.800 --> 00:04:34.720
+it is it is it is sort of similar to
+
+00:04:34.720 --> 00:04:37.360
+Java and is very pragmatic. It doesn't
+
+00:04:37.360 --> 00:04:40.720
+have a lot of magic in it. it doesn't
+
+00:04:40.720 --> 00:04:42.400
+doesn't really like abstractions all
+
+00:04:42.400 --> 00:04:43.440
+that much. Mhm.
+
+00:04:43.440 --> 00:04:46.479
+>> Um there's a very the goal also has this
+
+00:04:46.479 --> 00:04:48.479
+concept called um actually similar to
+
+00:04:48.479 --> 00:04:52.160
+duct typing in Python where like you can
+
+00:04:52.160 --> 00:04:55.040
+if something has a method whatever do
+
+00:04:55.040 --> 00:04:57.840
+something um then then it will conform
+
+00:04:57.840 --> 00:04:59.440
+to an interface that has written
+
+00:04:59.440 --> 00:05:00.800
+interface method to something right so
+
+00:05:00.800 --> 00:05:02.720
+it's like you can just call it and that
+
+00:05:02.720 --> 00:05:03.919
+means that the AI doesn't have to
+
+00:05:03.919 --> 00:05:05.600
+understand complex type hierarchies it
+
+00:05:05.600 --> 00:05:07.039
+doesn't have to understand subclassing
+
+00:05:07.039 --> 00:05:08.400
+just like if the thing is there and it
+
+00:05:08.400 --> 00:05:09.600
+can call it they can probably call it so
+
+00:05:09.600 --> 00:05:11.680
+so go has a lot of this it has very
+
+00:05:11.680 --> 00:05:14.320
+brittle error handling link but optimal
+
+00:05:14.320 --> 00:05:16.320
+go code also looks like that. So what
+
+00:05:16.320 --> 00:05:19.520
+the AI produces and what
+
+00:05:19.520 --> 00:05:21.039
+go code in the wild looks like is very
+
+00:05:21.039 --> 00:05:22.960
+very similar and so in Python we have a
+
+00:05:22.960 --> 00:05:24.240
+bunch of other problems. So one is the
+
+00:05:24.240 --> 00:05:25.440
+many different ecosystems. So for
+
+00:05:25.440 --> 00:05:27.680
+instance Django people write code very
+
+00:05:27.680 --> 00:05:30.160
+differently than Flask people than um
+
+00:05:30.160 --> 00:05:32.000
+machine learning people and so the eye
+
+00:05:32.000 --> 00:05:33.280
+cannot really tell that apart. So it's
+
+00:05:33.280 --> 00:05:35.520
+it's it's exposed to a lot of different
+
+00:05:35.520 --> 00:05:37.840
+competing styles of Python code and so
+
+00:05:37.840 --> 00:05:39.520
+if you don't steer it enough in one
+
+00:05:39.520 --> 00:05:41.280
+particular direction it will it will
+
+00:05:41.280 --> 00:05:42.800
+sort of switch between them. The other
+
+00:05:42.800 --> 00:05:44.880
+one is that there's a mixture of typed
+
+00:05:44.880 --> 00:05:48.160
+code and untyped code all of not all of
+
+00:05:48.160 --> 00:05:50.320
+the type checkers agree on what the
+
+00:05:50.320 --> 00:05:53.199
+enforcement of those types are. So, Thai
+
+00:05:53.199 --> 00:05:56.639
+uh rough uh not tai sorry Thai
+
+00:05:56.639 --> 00:05:58.720
+uh pylons which is the one from
+
+00:05:58.720 --> 00:06:01.360
+Microsoft um Tai is the one from UV from
+
+00:06:01.360 --> 00:06:03.520
+Astral and then my pi they have very
+
+00:06:03.520 --> 00:06:04.720
+different behaviors. My has different
+
+00:06:04.720 --> 00:06:06.720
+plugins and it gets very very confused
+
+00:06:06.720 --> 00:06:09.680
+very quickly. Um the other problem that
+
+00:06:09.680 --> 00:06:11.440
+we have with Python at the moment is
+
+00:06:11.440 --> 00:06:12.800
+also that there are so many competing
+
+00:06:12.800 --> 00:06:15.680
+ecosystems in packaging and project
+
+00:06:15.680 --> 00:06:18.160
+management. So sometimes it wants to use
+
+00:06:18.160 --> 00:06:19.440
+pip even though I've already told it to
+
+00:06:19.440 --> 00:06:21.600
+use EV just because the corpus has so
+
+00:06:21.600 --> 00:06:23.199
+much pip in it. And then sometimes it
+
+00:06:23.199 --> 00:06:24.800
+finds a file and it's like now is
+
+00:06:24.800 --> 00:06:28.240
+probably good moment to use um uh a
+
+00:06:28.240 --> 00:06:30.560
+different configuration in pi project
+
+00:06:30.560 --> 00:06:32.080
+autominal even though I already had a
+
+00:06:32.080 --> 00:06:34.400
+better one but it sort of recalled like
+
+00:06:34.400 --> 00:06:35.840
+I seen this working so it's going to
+
+00:06:35.840 --> 00:06:38.240
+with this. So, so a lot of it in the
+
+00:06:38.240 --> 00:06:39.680
+more ecosystem churn there is, the
+
+00:06:39.680 --> 00:06:41.280
+harder it is. And unfortunately, Python
+
+00:06:41.280 --> 00:06:44.560
+actually has a more ecosystem churn than
+
+00:06:44.560 --> 00:06:46.960
+would be a perfect.
+
+00:06:46.960 --> 00:06:49.199
+>> Um, but for instance, I do use Python at
+
+00:06:49.199 --> 00:06:52.240
+my company too. It's just that it is it
+
+00:06:52.240 --> 00:06:54.319
+is a smaller part of the overall PI.
+
+00:06:54.319 --> 00:06:55.840
+It's where a lot of the data science
+
+00:06:55.840 --> 00:06:57.680
+part is, a lot of the ML part is, a lot
+
+00:06:57.680 --> 00:07:01.840
+of the um the the sort of where where
+
+00:07:01.840 --> 00:07:04.160
+Python really shines at the moment. Um,
+
+00:07:04.160 --> 00:07:07.120
+and there I I found some ways to make it
+
+00:07:07.120 --> 00:07:09.199
+work, but it's not not in the same level
+
+00:07:09.199 --> 00:07:11.599
+as for as I find success in PHP and Go.
+
+00:07:11.599 --> 00:07:14.639
+>> And is there any way to steer AI agents
+
+00:07:14.639 --> 00:07:16.479
+in a certain direction? So, for example,
+
+00:07:16.479 --> 00:07:18.240
+you mentioned that Django developers
+
+00:07:18.240 --> 00:07:20.160
+write different codes than fast
+
+00:07:20.160 --> 00:07:22.639
+developers for example. So, can you
+
+00:07:22.639 --> 00:07:27.280
+instruct AI agents to write code write
+
+00:07:27.280 --> 00:07:30.479
+Django websites as if they were written
+
+00:07:30.479 --> 00:07:33.440
+in Django? So they work on their own and
+
+00:07:33.440 --> 00:07:35.759
+pick up what is the most popular option.
+
+00:07:35.759 --> 00:07:38.160
+>> So I think
+
+00:07:38.160 --> 00:07:39.680
+one way at the moment to think of AI
+
+00:07:39.680 --> 00:07:41.759
+agents is that you you're you're trying
+
+00:07:41.759 --> 00:07:43.120
+to get this tool loop going. So you're
+
+00:07:43.120 --> 00:07:46.080
+trying to make it write code, check on
+
+00:07:46.080 --> 00:07:48.960
+it, make iterations, run tests, that
+
+00:07:48.960 --> 00:07:55.120
+sort of that sort of loop. And
+
+00:07:55.120 --> 00:07:57.440
+your job to some degree of setting up an
+
+00:07:57.440 --> 00:07:59.440
+agent is to make sure that this two loop
+
+00:07:59.440 --> 00:08:01.280
+is really really good. And if this tool
+
+00:08:01.280 --> 00:08:03.759
+loop is really really good then it means
+
+00:08:03.759 --> 00:08:05.599
+that the tools that it uses are really
+
+00:08:05.599 --> 00:08:08.479
+good. And
+
+00:08:08.479 --> 00:08:10.800
+the bulk of the challenges that we're
+
+00:08:10.800 --> 00:08:13.360
+having with um different approaches in
+
+00:08:13.360 --> 00:08:15.599
+the Python ecosystem is that we have
+
+00:08:15.599 --> 00:08:17.680
+unlike the Z of Python says we have a
+
+00:08:17.680 --> 00:08:20.000
+lot of different ways of doing the same
+
+00:08:20.000 --> 00:08:22.479
+>> And so
+
+00:08:22.479 --> 00:08:24.319
+one thing that has started to happen in
+
+00:08:24.319 --> 00:08:26.000
+general is that people are now seeing
+
+00:08:26.000 --> 00:08:27.759
+that you can run an agent, you can
+
+00:08:27.759 --> 00:08:29.199
+measure how good the agent is going and
+
+00:08:29.199 --> 00:08:30.639
+then you can improve it. So the agent is
+
+00:08:30.639 --> 00:08:32.320
+doing better.
+
+00:08:32.320 --> 00:08:33.760
+But what's also happening is that this
+
+00:08:33.760 --> 00:08:35.200
+actually improves the quality of the de
+
+00:08:35.200 --> 00:08:36.959
+developer too. So the developer if the
+
+00:08:36.959 --> 00:08:40.240
+agent has more success then the
+
+00:08:40.240 --> 00:08:42.000
+developer also has more success. So
+
+00:08:42.000 --> 00:08:43.440
+there's actually not a tremendous
+
+00:08:43.440 --> 00:08:44.959
+difference between a human and and an
+
+00:08:44.959 --> 00:08:46.320
+agent when it comes to that at the
+
+00:08:46.320 --> 00:08:48.800
+moment. And so the best way for us to
+
+00:08:48.800 --> 00:08:51.760
+improve the quality of agents
+
+00:08:51.760 --> 00:08:53.200
+performance is just to make developer
+
+00:08:53.200 --> 00:08:55.519
+tools better to have fewer of them. like
+
+00:08:55.519 --> 00:08:57.600
+we should all probably decide to start
+
+00:08:57.600 --> 00:08:59.920
+using UV now because then there's not
+
+00:08:59.920 --> 00:09:01.279
+seven different choices of Python
+
+00:09:01.279 --> 00:09:04.560
+packaging management and you will not be
+
+00:09:04.560 --> 00:09:06.640
+able to fully align sort of the patterns
+
+00:09:06.640 --> 00:09:09.600
+between what if what Django developers
+
+00:09:09.600 --> 00:09:10.959
+are doing versus what fast API
+
+00:09:10.959 --> 00:09:13.760
+developers doing was was um like because
+
+00:09:13.760 --> 00:09:15.839
+like this some frameworks use async some
+
+00:09:15.839 --> 00:09:17.920
+frameworks don't use async so that we
+
+00:09:17.920 --> 00:09:24.320
+will not be fully able to solve with um
+
+00:09:24.320 --> 00:09:26.080
+with that because it is actually just
+
+00:09:26.080 --> 00:09:28.080
+different ecosystems
+
+00:09:28.080 --> 00:09:29.920
+and so really we should actually have
+
+00:09:29.920 --> 00:09:34.480
+less of those different ecosystems too.
+
+00:09:34.480 --> 00:09:36.240
+like in Python one of the problems is
+
+00:09:36.240 --> 00:09:37.680
+call it functions.
+
+00:09:37.680 --> 00:09:39.760
+>> So I I still think that asynco weight is
+
+00:09:39.760 --> 00:09:41.120
+the wrong trade-off and we should not
+
+00:09:41.120 --> 00:09:46.080
+have made it. Can we undo asynch
+
+00:09:46.080 --> 00:09:47.440
+for instance talk has started about
+
+00:09:47.440 --> 00:09:49.279
+virtual threats for instance one of the
+
+00:09:49.279 --> 00:09:50.560
+benefits of virtual threats is that for
+
+00:09:50.560 --> 00:09:51.760
+as long as you're working with virtual
+
+00:09:51.760 --> 00:09:53.519
+threats there's no difference between
+
+00:09:53.519 --> 00:09:55.360
+async and non async it sort of looks the
+
+00:09:55.360 --> 00:09:59.040
+same for both human and AI so I think
+
+00:09:59.040 --> 00:10:02.480
+what agents really make you uh Lucas was
+
+00:10:02.480 --> 00:10:03.519
+saying this and I found this really
+
+00:10:03.519 --> 00:10:07.120
+funny sort of um example like a lot of
+
+00:10:07.120 --> 00:10:08.720
+people say like an agent is like a
+
+00:10:08.720 --> 00:10:10.480
+virtual intern but I think it's like an
+
+00:10:10.480 --> 00:10:12.480
+intern learns so They call it like it's
+
+00:10:12.480 --> 00:10:14.079
+an it's a conveyor belt of infinite
+
+00:10:14.079 --> 00:10:15.680
+virtual interns. So every time we get a
+
+00:10:15.680 --> 00:10:18.160
+different intern and one of the benefits
+
+00:10:18.160 --> 00:10:19.839
+of having a different intern all the
+
+00:10:19.839 --> 00:10:23.440
+time is that you can throw a person a
+
+00:10:23.440 --> 00:10:26.320
+virtual person at a problem from
+
+00:10:26.320 --> 00:10:28.160
+scratch. They have never seen it. And so
+
+00:10:28.160 --> 00:10:30.000
+it can measure like how good does a
+
+00:10:30.000 --> 00:10:32.240
+completely new intern work on this
+
+00:10:32.240 --> 00:10:34.240
+project, right? And you can measure that
+
+00:10:34.240 --> 00:10:37.040
+and is a pretty good proxy of how access
+
+00:10:37.040 --> 00:10:38.959
+how accessible is my ecosystem, right?
+
+00:10:38.959 --> 00:10:40.320
+Right? And Python's ecosystem is
+
+00:10:40.320 --> 00:10:42.320
+measurably not very accessible.
+
+00:10:42.320 --> 00:10:43.680
+>> And now I can measure it because I can
+
+00:10:43.680 --> 00:10:44.959
+put these virtual interns on it and I
+
+00:10:44.959 --> 00:10:46.800
+can like how good are you doing this?
+
+00:10:46.800 --> 00:10:49.839
+And yes, they're like they're not really
+
+00:10:49.839 --> 00:10:51.839
+humans, but they they get text output
+
+00:10:51.839 --> 00:10:53.600
+like humans and they you can tell them
+
+00:10:53.600 --> 00:10:56.800
+to express frustration too. And and so
+
+00:10:56.800 --> 00:10:58.480
+you can measure how good is my ecosystem
+
+00:10:58.480 --> 00:11:01.519
+at at being accessible to newcomers. Um,
+
+00:11:01.519 --> 00:11:03.120
+and so I think actually we should be
+
+00:11:03.120 --> 00:11:05.279
+using them in a little bit of um of a
+
+00:11:05.279 --> 00:11:08.560
+way to say like are we putting a lot of
+
+00:11:08.560 --> 00:11:12.079
+extra steps and pressure on people. Um,
+
+00:11:12.079 --> 00:11:13.760
+and and we can actually use an agent to
+
+00:11:13.760 --> 00:11:14.640
+measure that
+
+00:11:14.640 --> 00:11:16.399
+>> because the cost of having seven
+
+00:11:16.399 --> 00:11:17.839
+different packaging solutions in Python
+
+00:11:17.839 --> 00:11:19.200
+is high.
+
+00:11:19.200 --> 00:11:21.360
+>> But we for many years got away by saying
+
+00:11:21.360 --> 00:11:22.720
+like well you just need to read this and
+
+00:11:22.720 --> 00:11:24.240
+this is your problem. But it's not
+
+00:11:24.240 --> 00:11:25.680
+really your problem. It's everybody's
+
+00:11:25.680 --> 00:11:26.880
+problem. It's like attacks on the
+
+00:11:26.880 --> 00:11:29.519
+ecosystem is having bad tooling. Um, and
+
+00:11:29.519 --> 00:11:30.720
+so I think like the way we're going to
+
+00:11:30.720 --> 00:11:32.000
+fix the agents and the way we're going
+
+00:11:32.000 --> 00:11:34.160
+to make Python better for agents is also
+
+00:11:34.160 --> 00:11:36.240
+having a very nice byproduct which is
+
+00:11:36.240 --> 00:11:38.160
+people write better documentation and
+
+00:11:38.160 --> 00:11:40.240
+people write better tools and there
+
+00:11:40.240 --> 00:11:41.519
+fewer tools that will be more agreed
+
+00:11:41.519 --> 00:11:43.600
+upon patterns. Maybe we'll finally
+
+00:11:43.600 --> 00:11:45.200
+recognize that asynch is just too
+
+00:11:45.200 --> 00:11:47.680
+expensive for for a human and for an AI
+
+00:11:47.680 --> 00:11:48.959
+to work with.
+
+00:11:48.959 --> 00:11:51.920
+>> Um, and so I I think that that it just
+
+00:11:51.920 --> 00:11:53.839
+makes it much more measurable. That will
+
+00:11:53.839 --> 00:11:56.640
+be the way out. And uh on your blog you
+
+00:11:56.640 --> 00:11:58.480
+wrote that you advise writing the
+
+00:11:58.480 --> 00:12:00.480
+dumbest possible thing that will work
+
+00:12:00.480 --> 00:12:03.279
+for agents. Uh we spoke something about
+
+00:12:03.279 --> 00:12:06.720
+patterns. What are some patterns that AI
+
+00:12:06.720 --> 00:12:11.279
+agents can handle? Well, so um there's
+
+00:12:11.279 --> 00:12:16.079
+um I I wrote um a blog post on this
+
+00:12:16.079 --> 00:12:18.639
+prior to this whole AI thing where I was
+
+00:12:18.639 --> 00:12:21.040
+referring to what I learned from Cal
+
+00:12:21.040 --> 00:12:23.680
+Henderson. He was the CTO of Flickr and
+
+00:12:23.680 --> 00:12:26.240
+then later I think of Slack. Um, at
+
+00:12:26.240 --> 00:12:27.920
+least that was his title I think. But he
+
+00:12:27.920 --> 00:12:30.079
+worked in both those companies. And they
+
+00:12:30.079 --> 00:12:32.320
+they gave a talk at one of the earliest
+
+00:12:32.320 --> 00:12:34.320
+Django conferences about why they don't
+
+00:12:34.320 --> 00:12:39.600
+like Django. Um, and
+
+00:12:39.600 --> 00:12:41.519
+it's not like this is they wrote
+
+00:12:41.519 --> 00:12:42.800
+necessarily the nicest code in the
+
+00:12:42.800 --> 00:12:45.920
+world, but they wrote some very low
+
+00:12:45.920 --> 00:12:50.480
+abstraction code where the
+
+00:12:50.480 --> 00:12:52.880
+the highest amount of agency is with the
+
+00:12:52.880 --> 00:12:54.720
+developer at any point in time
+
+00:12:54.720 --> 00:12:57.200
+>> and where if you're so for instance, one
+
+00:12:57.200 --> 00:13:00.000
+of the things that um that Cal always
+
+00:13:00.000 --> 00:13:03.839
+advocated for is writing SQL instead of
+
+00:13:03.839 --> 00:13:05.120
+using an OM
+
+00:13:05.120 --> 00:13:06.800
+And that's counterintuitive because like
+
+00:13:06.800 --> 00:13:08.639
+the ORM obviously makes it easier. But
+
+00:13:08.639 --> 00:13:09.920
+the problem of the ORM is eventually
+
+00:13:09.920 --> 00:13:11.680
+going to hit the limit of the ORM. So
+
+00:13:11.680 --> 00:13:13.920
+eventually the the possibility of you
+
+00:13:13.920 --> 00:13:15.519
+writing this code sort of hits the limit
+
+00:13:15.519 --> 00:13:16.880
+of what's there. Now you have two
+
+00:13:16.880 --> 00:13:18.480
+choices. One is you go to the ORM, you
+
+00:13:18.480 --> 00:13:19.600
+provide a patch, you add the
+
+00:13:19.600 --> 00:13:21.279
+functionality was missing or the other
+
+00:13:21.279 --> 00:13:23.040
+one is now you rewrite this particular
+
+00:13:23.040 --> 00:13:25.920
+portion in in SQL. And so nobody likes
+
+00:13:25.920 --> 00:13:28.399
+writing SQL. That's why we have ORMs.
+
+00:13:28.399 --> 00:13:31.760
+But now that an agent can write the SQL
+
+00:13:31.760 --> 00:13:34.160
+for me, the cost of SQL is not nearly as
+
+00:13:34.160 --> 00:13:36.000
+high anymore, right? Because now it's
+
+00:13:36.000 --> 00:13:38.160
+like, yes, nobody really enjoyed writing
+
+00:13:38.160 --> 00:13:41.760
+SQL, but but also nobody really enjoyed
+
+00:13:41.760 --> 00:13:42.880
+having to go through three layers of
+
+00:13:42.880 --> 00:13:46.800
+abstraction fixing the OM up. So some of
+
+00:13:46.800 --> 00:13:49.360
+the things that there's like reduce the
+
+00:13:49.360 --> 00:13:52.000
+amount of abstractions have like have
+
+00:13:52.000 --> 00:13:54.639
+less layers of of of of the onion
+
+00:13:54.639 --> 00:13:57.839
+between you and the code um was always
+
+00:13:57.839 --> 00:14:00.959
+very appealing but it was always also
+
+00:14:00.959 --> 00:14:03.760
+something that developers didn't it it
+
+00:14:03.760 --> 00:14:05.680
+requires a lot of experience in the
+
+00:14:05.680 --> 00:14:08.480
+industry knowing that
+
+00:14:08.480 --> 00:14:10.800
+there's value in writing a little bit
+
+00:14:10.800 --> 00:14:13.839
+more codes with little bit fewer
+
+00:14:13.839 --> 00:14:17.120
+>> Mh. Um, and this this comes with time,
+
+00:14:17.120 --> 00:14:18.399
+right? And so there's this this this
+
+00:14:18.399 --> 00:14:20.240
+trap of you want to have everything sort
+
+00:14:20.240 --> 00:14:22.800
+of like pretty and and neatly
+
+00:14:22.800 --> 00:14:25.199
+abstracted, but but it comes with this
+
+00:14:25.199 --> 00:14:26.639
+cost of complexity because like every
+
+00:14:26.639 --> 00:14:27.839
+time you now need to understand what's
+
+00:14:27.839 --> 00:14:29.040
+going on, there's like layers and layers
+
+00:14:29.040 --> 00:14:32.720
+of going stuff through and and LLMs are
+
+00:14:32.720 --> 00:14:35.120
+not good at handing abstractions, but
+
+00:14:35.120 --> 00:14:36.800
+they're very good at writing this sort
+
+00:14:36.800 --> 00:14:39.920
+of simple solution. Um, but it's also
+
+00:14:39.920 --> 00:14:41.920
+actually quite good for humans if they
+
+00:14:41.920 --> 00:14:43.920
+need to understand the problem because
+
+00:14:43.920 --> 00:14:46.160
+the the the trickiest thing in in in
+
+00:14:46.160 --> 00:14:47.519
+particular when you work on a company
+
+00:14:47.519 --> 00:14:49.199
+that that delivers a service for for
+
+00:14:49.199 --> 00:14:51.360
+millions of people is that eventually
+
+00:14:51.360 --> 00:14:52.399
+will break.
+
+00:14:52.399 --> 00:14:53.680
+>> And it will break in a way that you
+
+00:14:53.680 --> 00:14:57.519
+didn't foresee. And so now it's broken
+
+00:14:57.519 --> 00:14:59.360
+and every minute counts of you
+
+00:14:59.360 --> 00:15:02.480
+unbreaking it. And if there's like two
+
+00:15:02.480 --> 00:15:03.920
+layers that you have to look through to
+
+00:15:03.920 --> 00:15:05.519
+find your problem, you will be finding
+
+00:15:05.519 --> 00:15:07.199
+it much quicker than if there like seven
+
+00:15:07.199 --> 00:15:08.399
+layers of abstraction that's standing
+
+00:15:08.399 --> 00:15:10.000
+between you and your problem. And maybe
+
+00:15:10.000 --> 00:15:11.760
+now this abstraction was actually wrong.
+
+00:15:11.760 --> 00:15:13.040
+So you have to refactor the abstraction
+
+00:15:13.040 --> 00:15:16.639
+so it fixes this problem. Um so so that
+
+00:15:16.639 --> 00:15:18.639
+>> with the LLMs like that cost of like not
+
+00:15:18.639 --> 00:15:20.480
+having as much abstraction just is lower
+
+00:15:20.480 --> 00:15:22.240
+and that's what makes it appealing. And
+
+00:15:22.240 --> 00:15:24.800
+when you're now starting a new project,
+
+00:15:24.800 --> 00:15:28.959
+what language do you use? And um
+
+00:15:28.959 --> 00:15:31.519
+and what is like the main criteria now?
+
+00:15:31.519 --> 00:15:35.279
+Do you do you consider how friendly the
+
+00:15:35.279 --> 00:15:37.360
+language is for AI agents? Do you use Go
+
+00:15:37.360 --> 00:15:39.199
+for example more often than Python for
+
+00:15:39.199 --> 00:15:41.680
+that particular reason or this is not
+
+00:15:41.680 --> 00:15:46.000
+important criteria? So you know
+
+00:15:46.000 --> 00:15:48.880
+about maybe eight or nine years ago I
+
+00:15:48.880 --> 00:15:51.519
+started using a lot of rust
+
+00:15:51.519 --> 00:15:54.079
+um even at century I introduced a lot of
+
+00:15:54.079 --> 00:15:55.519
+rust into the codebase because we had
+
+00:15:55.519 --> 00:15:58.240
+already performance issues with certain
+
+00:15:58.240 --> 00:16:00.480
+parts of writing everything in Python
+
+00:16:00.480 --> 00:16:03.040
+and we didn't really quite want to write
+
+00:16:03.040 --> 00:16:05.680
+it in C++. So Rust was a good choice and
+
+00:16:05.680 --> 00:16:08.240
+so we used more and more Rust and I used
+
+00:16:08.240 --> 00:16:11.519
+more and more Rusty and when I was
+
+00:16:11.519 --> 00:16:14.079
+started my new company I was like I will
+
+00:16:14.079 --> 00:16:16.399
+now re-evaluate if Rust is the good
+
+00:16:16.399 --> 00:16:20.800
+choice here. Um because I noticed that
+
+00:16:20.800 --> 00:16:22.399
+well first of all even as a human
+
+00:16:22.399 --> 00:16:23.920
+there's only limited productivity you
+
+00:16:23.920 --> 00:16:24.959
+get in it because there's a lot of
+
+00:16:24.959 --> 00:16:27.120
+complexity and maybe the trade-off of
+
+00:16:27.120 --> 00:16:30.880
+having memory safe uh code on a on on on
+
+00:16:30.880 --> 00:16:33.279
+like on on that strict of a level was is
+
+00:16:33.279 --> 00:16:35.040
+is not the right trade-off for me. So I
+
+00:16:35.040 --> 00:16:36.320
+was looking at other languages. I was
+
+00:16:36.320 --> 00:16:39.199
+looking at Java. I was looking at Go
+
+00:16:39.199 --> 00:16:41.519
+didn't have enough experience with JVM
+
+00:16:41.519 --> 00:16:42.959
+and operating. I was like okay like
+
+00:16:42.959 --> 00:16:45.759
+maybe let's try Go. And so I used Go
+
+00:16:45.759 --> 00:16:47.600
+because of its authentic performance as
+
+00:16:47.600 --> 00:16:50.000
+a replacement for a lot of Rust code. I
+
+00:16:50.000 --> 00:16:51.440
+knew that I cannot get rid of Python
+
+00:16:51.440 --> 00:16:52.800
+because there will always be Python in
+
+00:16:52.800 --> 00:16:55.440
+it. Um, and I also knew that I couldn't
+
+00:16:55.440 --> 00:16:57.360
+get rid of TypeScript because JavaScript
+
+00:16:57.360 --> 00:16:58.560
+is there. So I already had three
+
+00:16:58.560 --> 00:17:00.639
+languages to work with. And I already
+
+00:17:00.639 --> 00:17:02.560
+see now that I will have to reintroduce
+
+00:17:02.560 --> 00:17:05.120
+ROS too because
+
+00:17:05.120 --> 00:17:08.799
+I I already have one case where um I
+
+00:17:08.799 --> 00:17:10.640
+need to use something that the Pyos
+
+00:17:10.640 --> 00:17:13.520
+doesn't do. So now I'm using pio3 to
+
+00:17:13.520 --> 00:17:15.520
+bring a rust binding into my py for code
+
+00:17:15.520 --> 00:17:18.079
+base. So I have effectively almost the
+
+00:17:18.079 --> 00:17:19.360
+same as before. I just have one extra
+
+00:17:19.360 --> 00:17:22.559
+language which is go. Um but I did pick
+
+00:17:22.559 --> 00:17:24.880
+that specifically because it felt like a
+
+00:17:24.880 --> 00:17:27.280
+better trade-off to to rust for this.
+
+00:17:27.280 --> 00:17:28.960
+And when you run agents on your
+
+00:17:28.960 --> 00:17:31.600
+computer, you mentioned that sometimes
+
+00:17:31.600 --> 00:17:34.720
+they have full permissions. Uh do you
+
+00:17:34.720 --> 00:17:37.120
+monitor them? What are some safeguards
+
+00:17:37.120 --> 00:17:38.640
+you have there to make sure that they
+
+00:17:38.640 --> 00:17:40.320
+don't do something they're not supposed
+
+00:17:40.320 --> 00:17:40.720
+to do?
+
+00:17:40.720 --> 00:17:42.000
+>> So I think it depends a little bit on
+
+00:17:42.000 --> 00:17:46.640
+the agent they're running. So um Gemini
+
+00:17:46.640 --> 00:17:48.720
+so curs originally with some of the
+
+00:17:48.720 --> 00:17:50.640
+aentic models that they were doing and
+
+00:17:50.640 --> 00:17:52.400
+sort of how they were running them did
+
+00:17:52.400 --> 00:17:55.120
+have a tendency to do things that it was
+
+00:17:55.120 --> 00:17:58.400
+not supposed to do. Um, with Claude, I
+
+00:17:58.400 --> 00:18:01.919
+found it to be I got a good enough of a
+
+00:18:01.919 --> 00:18:04.799
+feeling that I've kind of
+
+00:18:04.799 --> 00:18:07.520
+it it screws up so little that I barely
+
+00:18:07.520 --> 00:18:11.039
+watch it. Now, um, with Gemini, I
+
+00:18:11.039 --> 00:18:13.039
+noticed that it makes mistakes and it
+
+00:18:13.039 --> 00:18:15.120
+sits in the wrong folder and does this
+
+00:18:15.120 --> 00:18:18.000
+the stuff it shouldn't be doing. Um, so
+
+00:18:18.000 --> 00:18:19.919
+it's it depends a little bit and I don't
+
+00:18:19.919 --> 00:18:23.600
+really have that many safeguards because
+
+00:18:23.600 --> 00:18:25.280
+in theory it would be great to run more
+
+00:18:25.280 --> 00:18:27.120
+stuff in Docker, but it is an enormous
+
+00:18:27.120 --> 00:18:29.919
+amount of like to context switch into it
+
+00:18:29.919 --> 00:18:32.240
+to review it to to do all of that.
+
+00:18:32.240 --> 00:18:34.240
+>> Um, so I like the ability to like if I
+
+00:18:34.240 --> 00:18:36.640
+see it going wrong like interact with it
+
+00:18:36.640 --> 00:18:38.080
+and like hey now let's do it
+
+00:18:38.080 --> 00:18:39.280
+differently. Let me look at the files
+
+00:18:39.280 --> 00:18:41.520
+and admit this without having to do a
+
+00:18:41.520 --> 00:18:43.360
+lot of extra work in a way. And you
+
+00:18:43.360 --> 00:18:45.440
+mentioned that what can help with speed
+
+00:18:45.440 --> 00:18:47.280
+is parallelization because agents
+
+00:18:47.280 --> 00:18:50.000
+usually are not very fast. Um how do you
+
+00:18:50.000 --> 00:18:52.160
+make sure that if you have one codebase
+
+00:18:52.160 --> 00:18:54.240
+and multiple agents working in parallel
+
+00:18:54.240 --> 00:18:55.919
+that they are no complex that for
+
+00:18:55.919 --> 00:18:57.760
+example they don't override the same
+
+00:18:57.760 --> 00:19:00.640
+file. So it's the same as I think you
+
+00:19:00.640 --> 00:19:03.280
+would paralyze work on your own which is
+
+00:19:03.280 --> 00:19:05.919
+you cannot paralyze things that are
+
+00:19:05.919 --> 00:19:07.440
+conflicting with each other. Mhm.
+
+00:19:07.440 --> 00:19:09.600
+>> So um with cloud code for you have the
+
+00:19:09.600 --> 00:19:12.799
+ability to run um sub agents
+
+00:19:12.799 --> 00:19:15.360
+>> and certain tasks particular research
+
+00:19:15.360 --> 00:19:18.480
+tasks in a codebase don't change any
+
+00:19:18.480 --> 00:19:20.080
+>> and if nobody else writes the files
+
+00:19:20.080 --> 00:19:22.160
+right now uh you can actually make more
+
+00:19:22.160 --> 00:19:23.840
+progress on it and the biggest reason
+
+00:19:23.840 --> 00:19:25.440
+there is also not just that they can run
+
+00:19:25.440 --> 00:19:26.799
+in parallel also that they don't pollute
+
+00:19:26.799 --> 00:19:28.480
+the context quite as much. So for
+
+00:19:28.480 --> 00:19:30.480
+instance, if you have a larger refactor,
+
+00:19:30.480 --> 00:19:32.080
+you can dispatch a bunch of sub agents.
+
+00:19:32.080 --> 00:19:33.760
+You can even tell Claude to use Gemini
+
+00:19:33.760 --> 00:19:37.679
+sometimes as a sub like use Gemini as a
+
+00:19:37.679 --> 00:19:41.600
+command line to to research something um
+
+00:19:41.600 --> 00:19:43.520
+and then it comes back with some sort of
+
+00:19:43.520 --> 00:19:46.320
+answer on it. And if I really have here
+
+00:19:46.320 --> 00:19:48.000
+there's a big task I want it to work and
+
+00:19:48.000 --> 00:19:50.480
+it's going to take an hour or so and and
+
+00:19:50.480 --> 00:19:52.559
+I want to do something productive then I
+
+00:19:52.559 --> 00:19:56.960
+maybe are working on another checkout
+
+00:19:56.960 --> 00:19:58.960
+like a git work tree to do something in
+
+00:19:58.960 --> 00:20:03.280
+separate uh or I have uh one work
+
+00:20:03.280 --> 00:20:05.760
+happening on the back end and I have a
+
+00:20:05.760 --> 00:20:07.200
+different task working in the front end.
+
+00:20:07.200 --> 00:20:09.120
+They're in different folders. They have
+
+00:20:09.120 --> 00:20:11.760
+very little overlap. So I can I can do I
+
+00:20:11.760 --> 00:20:13.360
+can paralyze work that just doesn't
+
+00:20:13.360 --> 00:20:16.559
+overlap. I don't really
+
+00:20:16.559 --> 00:20:18.880
+do anything where
+
+00:20:18.880 --> 00:20:20.559
+I let it work on three different
+
+00:20:20.559 --> 00:20:22.240
+features on the same codebase and like
+
+00:20:22.240 --> 00:20:23.360
+different things because afterwards I
+
+00:20:23.360 --> 00:20:24.960
+have merge conflicts and it's just it's
+
+00:20:24.960 --> 00:20:27.039
+a lot of effort to review. So there's
+
+00:20:27.039 --> 00:20:28.240
+there some sort of trade-off in the
+
+00:20:28.240 --> 00:20:29.919
+middle of how you're going to get the
+
+00:20:29.919 --> 00:20:31.760
+most out of it because at the end you're
+
+00:20:31.760 --> 00:20:33.360
+going to be the bottleneck anyways. It's
+
+00:20:33.360 --> 00:20:34.640
+not going to be the agent.
+
+00:20:34.640 --> 00:20:37.840
+>> Okay. And recently you published a
+
+00:20:37.840 --> 00:20:39.919
+library on Pippi where the code was
+
+00:20:39.919 --> 00:20:43.200
+mostly AI generated. Um how should we
+
+00:20:43.200 --> 00:20:45.760
+handle licenses for libraries that are
+
+00:20:45.760 --> 00:20:48.000
+open source where there are
+
+00:20:48.000 --> 00:20:52.000
+contributions um of AI agents? So I mean
+
+00:20:52.000 --> 00:20:53.360
+the question is not so much how do we
+
+00:20:53.360 --> 00:20:54.799
+want to do it what is the legal system
+
+00:20:54.799 --> 00:20:58.159
+going to do with it? And I don't know.
+
+00:20:58.159 --> 00:21:01.280
+Um, I have a very simple view of open
+
+00:21:01.280 --> 00:21:05.679
+source licensing, which is
+
+00:21:05.679 --> 00:21:07.120
+you should only ever put a license on it
+
+00:21:07.120 --> 00:21:09.440
+that you're willing to defend.
+
+00:21:09.440 --> 00:21:12.480
+So that basically for me always meant
+
+00:21:12.480 --> 00:21:14.000
+have a license gives people all the
+
+00:21:14.000 --> 00:21:19.120
+rights. Um, so I don't care in many ways
+
+00:21:19.120 --> 00:21:21.200
+if I can license it under the Apache 2
+
+00:21:21.200 --> 00:21:23.520
+license or not at the end of the day
+
+00:21:23.520 --> 00:21:25.360
+because I would never go to court for
+
+00:21:25.360 --> 00:21:27.520
+any of my libraries anyways. So even if
+
+00:21:27.520 --> 00:21:29.120
+someone were to violate the licensing
+
+00:21:29.120 --> 00:21:31.600
+term of any of my open source libraries,
+
+00:21:31.600 --> 00:21:34.960
+I'm not I'm not monetizing them. I don't
+
+00:21:34.960 --> 00:21:38.799
+there's no real incentive for me to go
+
+00:21:38.799 --> 00:21:40.880
+to court on it. So if it eventually ends
+
+00:21:40.880 --> 00:21:43.200
+up this AI generated library is
+
+00:21:43.200 --> 00:21:45.919
+effectively I cannot copyright it
+
+00:21:45.919 --> 00:21:47.520
+because the legal system doesn't give me
+
+00:21:47.520 --> 00:21:49.039
+the power. It's like I actually like
+
+00:21:49.039 --> 00:21:51.679
+that outcome. It doesn't mean anything
+
+00:21:51.679 --> 00:21:55.840
+to me. Um, and I think that in general
+
+00:21:55.840 --> 00:21:58.240
+we should be sharing more things because
+
+00:21:58.240 --> 00:22:00.720
+copyright terms are way too long. The
+
+00:22:00.720 --> 00:22:02.320
+fact that we are now as an open source
+
+00:22:02.320 --> 00:22:05.760
+community leveraging copyrights to
+
+00:22:05.760 --> 00:22:08.880
+to exert rights and and and to some
+
+00:22:08.880 --> 00:22:10.240
+degree I think like people started using
+
+00:22:10.240 --> 00:22:12.640
+trademarks as a way to enforce things on
+
+00:22:12.640 --> 00:22:14.240
+it. I think also has some negative
+
+00:22:14.240 --> 00:22:16.640
+consequences. Um I think we need to be
+
+00:22:16.640 --> 00:22:18.159
+in a world where open source is open
+
+00:22:18.159 --> 00:22:21.919
+source and we find other mechanisms to
+
+00:22:21.919 --> 00:22:24.080
+um to commercialize it. So one of the
+
+00:22:24.080 --> 00:22:26.960
+things we tried at century is centry
+
+00:22:26.960 --> 00:22:28.880
+source code becomes open source after
+
+00:22:28.880 --> 00:22:31.679
+two years on a rolling basis.
+
+00:22:31.679 --> 00:22:33.520
+>> And in the first two years it is what we
+
+00:22:33.520 --> 00:22:35.440
+call fair source where there's a
+
+00:22:35.440 --> 00:22:37.600
+restriction on it for commercialization.
+
+00:22:37.600 --> 00:22:39.440
+So you can do whatever you want with it.
+
+00:22:39.440 --> 00:22:41.520
+But if you want to
+
+00:22:41.520 --> 00:22:44.880
+provide a competing
+
+00:22:44.880 --> 00:22:46.880
+um commercial service, so you want to
+
+00:22:46.880 --> 00:22:49.280
+sell Sentry the same way as we did, you
+
+00:22:49.280 --> 00:22:50.320
+cannot do that. You have to use a
+
+00:22:50.320 --> 00:22:53.039
+2-year-old Copix. Um so I think like
+
+00:22:53.039 --> 00:22:55.679
+this question is less about um how
+
+00:22:55.679 --> 00:23:00.000
+should we deal with copyrights for AI?
+
+00:23:00.000 --> 00:23:01.520
+It's like yeah it was great that it
+
+00:23:01.520 --> 00:23:02.880
+cannot be copyright but I also think
+
+00:23:02.880 --> 00:23:04.640
+that many of the stuff that humans have
+
+00:23:04.640 --> 00:23:08.159
+created should have lower copyright
+
+00:23:08.159 --> 00:23:10.320
+protections to begin with because right
+
+00:23:10.320 --> 00:23:12.799
+now if if I is a very good open source
+
+00:23:12.799 --> 00:23:14.480
+project called Sapion
+
+00:23:14.480 --> 00:23:16.720
+>> Mhm. uh or I think at least at one time
+
+00:23:16.720 --> 00:23:18.000
+it's a very good open source project and
+
+00:23:18.000 --> 00:23:20.480
+they they put it under GPL license and
+
+00:23:20.480 --> 00:23:22.640
+they lost the ability to relic it
+
+00:23:22.640 --> 00:23:24.640
+because the the right holders were some
+
+00:23:24.640 --> 00:23:26.240
+companies that didn't care about this
+
+00:23:26.240 --> 00:23:29.679
+anymore and the creators that worked on
+
+00:23:29.679 --> 00:23:31.760
+this the most actually did want to relic
+
+00:23:31.760 --> 00:23:33.679
+it at one point of BSD because they
+
+00:23:33.679 --> 00:23:35.840
+wanted to use it in a setup where the
+
+00:23:35.840 --> 00:23:38.480
+GPL was prohibitive but they know they
+
+00:23:38.480 --> 00:23:40.880
+lost that ability and the original right
+
+00:23:40.880 --> 00:23:42.240
+holders didn't care about it anymore
+
+00:23:42.240 --> 00:23:44.480
+either so it's like that was in a they
+
+00:23:44.480 --> 00:23:47.039
+harm the project for many years to come
+
+00:23:47.039 --> 00:23:50.000
+and this I think that that problem and
+
+00:23:50.000 --> 00:23:51.760
+and when will that problem ever resolve
+
+00:23:51.760 --> 00:23:53.919
+like in 100 years probably it's public
+
+00:23:53.919 --> 00:23:55.760
+domain because that's when the copyright
+
+00:23:55.760 --> 00:23:57.600
+expires like the death of the last
+
+00:23:57.600 --> 00:24:00.799
+author plus 70 years or something and
+
+00:24:00.799 --> 00:24:03.760
+that to me was a problem always before
+
+00:24:03.760 --> 00:24:05.840
+um and I think AI just gives us a good
+
+00:24:05.840 --> 00:24:08.159
+opportunity to reevaluate some of it
+
+00:24:08.159 --> 00:24:10.480
+>> with AI becoming more popular what is
+
+00:24:10.480 --> 00:24:13.440
+the future of programming jobs
+
+00:24:13.440 --> 00:24:15.600
+Um, so
+
+00:24:15.600 --> 00:24:17.440
+I always think that if you program,
+
+00:24:17.440 --> 00:24:18.720
+you're a programmer. It doesn't matter
+
+00:24:18.720 --> 00:24:20.640
+if you just wrote hello world. So that
+
+00:24:20.640 --> 00:24:22.480
+the that the like the definition of if
+
+00:24:22.480 --> 00:24:23.760
+you're writing something, it makes you a
+
+00:24:23.760 --> 00:24:26.159
+programmer. And I think if you use cloud
+
+00:24:26.159 --> 00:24:28.159
+code to write codes, then you're also
+
+00:24:28.159 --> 00:24:30.960
+programmer. Like the the there's there's
+
+00:24:30.960 --> 00:24:33.840
+no difference for me there. And so
+
+00:24:33.840 --> 00:24:35.440
+what's happening right now is that many
+
+00:24:35.440 --> 00:24:37.840
+more people are going to program.
+
+00:24:37.840 --> 00:24:41.919
+Um I I I was in a lot of conversations
+
+00:24:41.919 --> 00:24:43.600
+over the last month or so with people
+
+00:24:43.600 --> 00:24:45.760
+that have never programmed before that
+
+00:24:45.760 --> 00:24:48.400
+started using CHBT which is not amazing
+
+00:24:48.400 --> 00:24:50.000
+at programming to solve their own
+
+00:24:50.000 --> 00:24:51.760
+problems. Is that good or bad?
+
+00:24:51.760 --> 00:24:54.960
+>> I think it's very good because the the
+
+00:24:54.960 --> 00:24:58.080
+main reason we have such a high salary
+
+00:24:58.080 --> 00:24:59.760
+as software engineers compared to many
+
+00:24:59.760 --> 00:25:01.520
+other professions is because there's so
+
+00:25:01.520 --> 00:25:03.120
+much more code that the world wants to
+
+00:25:03.120 --> 00:25:05.120
+have. So there has always been a
+
+00:25:05.120 --> 00:25:09.279
+shortage of engineers and then you can
+
+00:25:09.279 --> 00:25:11.120
+take the view that okay sort of it's
+
+00:25:11.120 --> 00:25:13.760
+great like you you want to be in a
+
+00:25:13.760 --> 00:25:15.279
+shortage position because like it gives
+
+00:25:15.279 --> 00:25:17.279
+you sort of extra leverage but for
+
+00:25:17.279 --> 00:25:20.320
+society as a whole that's a bad thing
+
+00:25:20.320 --> 00:25:21.840
+if if if you're a programmer you write
+
+00:25:21.840 --> 00:25:22.960
+software for another programmer you're
+
+00:25:22.960 --> 00:25:24.080
+probably going to do a good job at it
+
+00:25:24.080 --> 00:25:25.440
+because you can put yourself in a
+
+00:25:25.440 --> 00:25:26.960
+position of that programmer. So the
+
+00:25:26.960 --> 00:25:28.480
+tools that programmers are working with
+
+00:25:28.480 --> 00:25:30.880
+are usually quite okay. The tools that
+
+00:25:30.880 --> 00:25:33.039
+programmer inhibit on the society at
+
+00:25:33.039 --> 00:25:34.720
+large for people that are not
+
+00:25:34.720 --> 00:25:36.720
+programmers are significantly worse.
+
+00:25:36.720 --> 00:25:39.039
+Like a lot of tools that are written for
+
+00:25:39.039 --> 00:25:41.679
+for industries where programmers don't
+
+00:25:41.679 --> 00:25:44.559
+care. They are really bad tools. And
+
+00:25:44.559 --> 00:25:49.039
+then there's like you're you're
+
+00:25:49.039 --> 00:25:51.679
+a secretary somewhere in a in a doctor's
+
+00:25:51.679 --> 00:25:53.600
+office. The software that you have for
+
+00:25:53.600 --> 00:25:57.200
+medical bookkeeping is horrible. It's
+
+00:25:57.200 --> 00:25:58.640
+because like no programmer goes in like
+
+00:25:58.640 --> 00:25:59.840
+yeah in the morning I wake up and I'm
+
+00:25:59.840 --> 00:26:00.720
+going to put a bunch of like
+
+00:26:00.720 --> 00:26:02.799
+appointments into calendar in in this
+
+00:26:02.799 --> 00:26:04.799
+doctor's office thing right and now you
+
+00:26:04.799 --> 00:26:06.240
+have these people that actually have to
+
+00:26:06.240 --> 00:26:07.760
+use their software who are starting to
+
+00:26:07.760 --> 00:26:09.440
+build their own software and so they are
+
+00:26:09.440 --> 00:26:10.640
+going to get a better experience out of
+
+00:26:10.640 --> 00:26:12.000
+it because they actually care about what
+
+00:26:12.000 --> 00:26:13.760
+they're doing so I think like giving
+
+00:26:13.760 --> 00:26:16.159
+access to more people to program is a
+
+00:26:16.159 --> 00:26:17.679
+good thing and Python is all about that
+
+00:26:17.679 --> 00:26:19.360
+like it's it was always about bringing
+
+00:26:19.360 --> 00:26:21.840
+more people into programming like it
+
+00:26:21.840 --> 00:26:23.200
+should be a language for everybody right
+
+00:26:23.200 --> 00:26:26.720
+and now h has just expanded that scope
+
+00:26:26.720 --> 00:26:28.720
+even more. So, we're going to see more
+
+00:26:28.720 --> 00:26:29.760
+>> And what are some skills that
+
+00:26:29.760 --> 00:26:31.520
+programmers should learn in order to
+
+00:26:31.520 --> 00:26:33.840
+stay competitive in the next?
+
+00:26:33.840 --> 00:26:35.919
+>> It's always the same. There's there's no
+
+00:26:35.919 --> 00:26:37.919
+difference. Like you you learn system
+
+00:26:37.919 --> 00:26:40.000
+architecture, you you understand things
+
+00:26:40.000 --> 00:26:42.799
+like flow control, control theory, like
+
+00:26:42.799 --> 00:26:45.840
+how how should data flow, like um you
+
+00:26:45.840 --> 00:26:47.200
+still want to understand how parsers
+
+00:26:47.200 --> 00:26:48.400
+work, you still want to understand how
+
+00:26:48.400 --> 00:26:51.600
+interpreters work. um like algorithmic
+
+00:26:51.600 --> 00:26:53.919
+complexity like the the basic of
+
+00:26:53.919 --> 00:26:55.760
+computer science they're they're still
+
+00:26:55.760 --> 00:26:57.679
+the same because just because Claude
+
+00:26:57.679 --> 00:26:58.960
+writes your code doesn't mean you can't
+
+00:26:58.960 --> 00:27:02.320
+turn off your brain and the the physical
+
+00:27:02.320 --> 00:27:04.720
+limits to what we can do because that's
+
+00:27:04.720 --> 00:27:07.520
+how nature works and and AI is not going
+
+00:27:07.520 --> 00:27:10.000
+to change anything about that so that
+
+00:27:10.000 --> 00:27:13.679
+Simon had this great um quote um Simon
+
+00:27:13.679 --> 00:27:16.720
+Willis he said um
+
+00:27:16.720 --> 00:27:18.799
+if you stop being a programmer now it's
+
+00:27:18.799 --> 00:27:20.320
+like stop being a carpenter because a
+
+00:27:20.320 --> 00:27:22.000
+table saw was invented. And I think it's
+
+00:27:22.000 --> 00:27:23.520
+exactly that. It's like it's a very very
+
+00:27:23.520 --> 00:27:25.679
+potent keyboard
+
+00:27:25.679 --> 00:27:27.200
+and it can do so much more because it
+
+00:27:27.200 --> 00:27:28.880
+can also remote control your terminal.
+
+00:27:28.880 --> 00:27:31.360
+But but all of it is the same. The
+
+00:27:31.360 --> 00:27:33.279
+reality of of how you write code is the
+
+00:27:33.279 --> 00:27:34.480
+same. The the trade-offs that you're
+
+00:27:34.480 --> 00:27:36.320
+making are the same. So it it really
+
+00:27:36.320 --> 00:27:37.760
+hasn't changed. I think the only thing
+
+00:27:37.760 --> 00:27:40.640
+that has changed is that we we're
+
+00:27:40.640 --> 00:27:42.080
+presented a little bit with a challenge
+
+00:27:42.080 --> 00:27:44.000
+right now, which is that there are some
+
+00:27:44.000 --> 00:27:47.840
+people who are deliberately not using
+
+00:27:47.840 --> 00:27:49.200
+And maybe at one point they're starting
+
+00:27:49.200 --> 00:27:50.559
+to use AI and then sort of they get
+
+00:27:50.559 --> 00:27:51.919
+locked into the experience of whatever
+
+00:27:51.919 --> 00:27:53.840
+they had at that point in time and then
+
+00:27:53.840 --> 00:27:56.399
+decide to either do it or not. And what
+
+00:27:56.399 --> 00:27:57.679
+what I've seen with a lot of programmers
+
+00:27:57.679 --> 00:27:59.679
+is they they they were very early on on
+
+00:27:59.679 --> 00:28:02.480
+on looking at this what AI can do and
+
+00:28:02.480 --> 00:28:04.080
+then they left disappointed and said
+
+00:28:04.080 --> 00:28:07.279
+like that's that that's not for me. And
+
+00:28:07.279 --> 00:28:09.679
+they have in many ways now a much worse
+
+00:28:09.679 --> 00:28:12.080
+understanding of what AI can do because
+
+00:28:12.080 --> 00:28:14.799
+their experience is stuck from a year
+
+00:28:14.799 --> 00:28:16.799
+and a half ago.
+
+00:28:16.799 --> 00:28:21.120
+And and that puts you in a very bad spot
+
+00:28:21.120 --> 00:28:22.799
+a lot has changed. A lot has changed in
+
+00:28:22.799 --> 00:28:24.559
+May. A lot has changed in April when
+
+00:28:24.559 --> 00:28:26.640
+when the agents got really really good.
+
+00:28:26.640 --> 00:28:28.640
+And if you operate under this idea of
+
+00:28:28.640 --> 00:28:30.559
+what this was like from a couple of
+
+00:28:30.559 --> 00:28:34.320
+months ago, from from last year ago,
+
+00:28:34.320 --> 00:28:36.960
+then you you're making the wrong
+
+00:28:36.960 --> 00:28:38.480
+decisions in many ways because you're
+
+00:28:38.480 --> 00:28:40.240
+you have an assumption that it's way
+
+00:28:40.240 --> 00:28:43.440
+worse than it is. Um and and that is I
+
+00:28:43.440 --> 00:28:45.679
+think is a problem because you don't
+
+00:28:45.679 --> 00:28:47.919
+want to be on the one hand you don't
+
+00:28:47.919 --> 00:28:49.360
+want to rush with every change that
+
+00:28:49.360 --> 00:28:50.880
+happens because like it's it's a
+
+00:28:50.880 --> 00:28:52.000
+distraction but at the same time you
+
+00:28:52.000 --> 00:28:53.120
+also don't want to make long-term
+
+00:28:53.120 --> 00:28:54.880
+decisions that are based on heavily
+
+00:28:54.880 --> 00:28:57.039
+outdated information. Um and I think
+
+00:28:57.039 --> 00:28:59.200
+what what's happening is that people
+
+00:28:59.200 --> 00:29:02.080
+that have the freedom and time and the
+
+00:29:02.080 --> 00:29:04.559
+urge to try it
+
+00:29:04.559 --> 00:29:06.320
+have a much better understanding of some
+
+00:29:06.320 --> 00:29:07.679
+of our best programmers in the industry
+
+00:29:07.679 --> 00:29:10.880
+because they opted against it. and and
+
+00:29:10.880 --> 00:29:13.200
+and one one thing that I always find
+
+00:29:13.200 --> 00:29:14.880
+like interesting, I don't work in a city
+
+00:29:14.880 --> 00:29:17.840
+like I I I work basically in a city that
+
+00:29:17.840 --> 00:29:19.440
+is not a tech hub, right? I work in
+
+00:29:19.440 --> 00:29:22.640
+Vienna. So a lot of my friends around me
+
+00:29:22.640 --> 00:29:25.120
+are not necessarily programmers and they
+
+00:29:25.120 --> 00:29:28.960
+all use JBD or or any of the other
+
+00:29:28.960 --> 00:29:30.399
+things. I've seen people program that
+
+00:29:30.399 --> 00:29:31.679
+are not programmers themselves with
+
+00:29:31.679 --> 00:29:34.080
+these tools. And so there's a there's a
+
+00:29:34.080 --> 00:29:35.760
+there's a every day someone wakes up in
+
+00:29:35.760 --> 00:29:37.039
+the morning becomes a programmer for the
+
+00:29:37.039 --> 00:29:39.520
+first time because they are they have a
+
+00:29:39.520 --> 00:29:42.559
+problem and they want it solved and they
+
+00:29:42.559 --> 00:29:44.559
+this they heard that this is going to
+
+00:29:44.559 --> 00:29:46.399
+help them program and they pick it up
+
+00:29:46.399 --> 00:29:48.000
+and it programs for them.
+
+00:29:48.000 --> 00:29:51.279
+>> Right. And that's they make every day
+
+00:29:51.279 --> 00:29:53.039
+sometimes more experience with
+
+00:29:53.039 --> 00:29:55.039
+programming with programming tools than
+
+00:29:55.039 --> 00:29:56.720
+some senior engineers are doing because
+
+00:29:56.720 --> 00:29:59.360
+they decided not to do it. And and I
+
+00:29:59.360 --> 00:30:00.880
+don't think that's good right. It's not
+
+00:30:00.880 --> 00:30:02.000
+good for the senior engineers and it's
+
+00:30:02.000 --> 00:30:04.000
+also not good for for the for for the
+
+00:30:04.000 --> 00:30:06.320
+people that are learning programming on
+
+00:30:06.320 --> 00:30:09.039
+their own because they don't have like a
+
+00:30:09.039 --> 00:30:10.720
+lot of these people that are now
+
+00:30:10.720 --> 00:30:12.559
+starting aic programming or web coding
+
+00:30:12.559 --> 00:30:14.640
+or whatever you want to call this, they
+
+00:30:14.640 --> 00:30:16.640
+don't find the best programmers as
+
+00:30:16.640 --> 00:30:19.440
+mentors because they themselves say no
+
+00:30:19.440 --> 00:30:21.200
+that's not for me, right? And that's
+
+00:30:21.200 --> 00:30:23.600
+that's bad because now they now they're
+
+00:30:23.600 --> 00:30:25.600
+learning from each other, right? and and
+
+00:30:25.600 --> 00:30:27.120
+they're like relearning a lot of the
+
+00:30:27.120 --> 00:30:29.039
+things that sort of serious software
+
+00:30:29.039 --> 00:30:32.320
+engineers learned before. Um so so it it
+
+00:30:32.320 --> 00:30:34.080
+would be better for our industry to be a
+
+00:30:34.080 --> 00:30:35.679
+lot more receptive of this idea that
+
+00:30:35.679 --> 00:30:37.440
+there's so many more people pouring into
+
+00:30:37.440 --> 00:30:40.559
+this and and how to how to mentor them
+
+00:30:40.559 --> 00:30:43.440
+up to be better engineers.
+
+00:30:43.440 --> 00:30:44.880
+>> And do you think that in five years
+
+00:30:44.880 --> 00:30:46.559
+there will be still programmers who
+
+00:30:46.559 --> 00:30:48.559
+don't use AI or do you think that
+
+00:30:48.559 --> 00:30:50.000
+everyone will start? I
+
+00:30:50.000 --> 00:30:51.600
+>> I'm pretty sure there will always be
+
+00:30:51.600 --> 00:30:53.600
+hold outs. How many there will be I
+
+00:30:53.600 --> 00:30:54.880
+don't know.
+
+00:30:54.880 --> 00:30:56.480
+And what are your tips how to get
+
+00:30:56.480 --> 00:30:58.159
+started? So for example, if I'm a
+
+00:30:58.159 --> 00:30:59.679
+programmer and I want to learn more
+
+00:30:59.679 --> 00:31:02.559
+about AI, how to use agents, do you have
+
+00:31:02.559 --> 00:31:05.840
+any resources or materials to recommend?
+
+00:31:05.840 --> 00:31:08.320
+Um, so a lot of it changes all the time,
+
+00:31:08.320 --> 00:31:10.720
+but I think like what is probably very
+
+00:31:10.720 --> 00:31:12.480
+very clear right now is that that the
+
+00:31:12.480 --> 00:31:15.600
+secret of doing this is um, but if you
+
+00:31:15.600 --> 00:31:17.120
+don't know anything, right, then then
+
+00:31:17.120 --> 00:31:19.279
+you you start at from the start. But the
+
+00:31:19.279 --> 00:31:21.120
+the idea is like you bring everything
+
+00:31:21.120 --> 00:31:23.200
+into the state where you really like it.
+
+00:31:23.200 --> 00:31:25.200
+And most people today already have a
+
+00:31:25.200 --> 00:31:28.720
+project. You you bring it into a spot
+
+00:31:28.720 --> 00:31:31.279
+where all the tools that you need are
+
+00:31:31.279 --> 00:31:33.840
+are in a really good spot. So uh you
+
+00:31:33.840 --> 00:31:35.840
+know you know how to how you develop on
+
+00:31:35.840 --> 00:31:37.519
+your own codebase. And then you write
+
+00:31:37.519 --> 00:31:40.000
+that down and then you go and pick an
+
+00:31:40.000 --> 00:31:42.159
+agent. Right now cloud code is the one
+
+00:31:42.159 --> 00:31:43.279
+that's probably from a financial
+
+00:31:43.279 --> 00:31:44.559
+perspective the cheapest because it's
+
+00:31:44.559 --> 00:31:46.240
+subsidized by
+
+00:31:46.240 --> 00:31:48.880
+>> the model provider behind it. Um, and
+
+00:31:48.880 --> 00:31:50.480
+then you just try a little bit yourself
+
+00:31:50.480 --> 00:31:52.240
+and then once you have a feeling for it,
+
+00:31:52.240 --> 00:31:55.039
+there are some blogs on the internet
+
+00:31:55.039 --> 00:31:57.120
+that go into it. Like obviously I wrote
+
+00:31:57.120 --> 00:31:59.200
+a bunch on my blog about how that goes.
+
+00:31:59.200 --> 00:32:01.600
+Um, but the challenge with sort like hey
+
+00:32:01.600 --> 00:32:03.440
+this is the place to go for it is that
+
+00:32:03.440 --> 00:32:06.159
+there's a lot of noise on Twitter and
+
+00:32:06.159 --> 00:32:07.679
+and the internet by people that don't
+
+00:32:07.679 --> 00:32:09.200
+actually build anything with it. They're
+
+00:32:09.200 --> 00:32:11.679
+mostly using it as a
+
+00:32:11.679 --> 00:32:13.279
+>> hey subscribe to my YouTube channel kind
+
+00:32:13.279 --> 00:32:15.360
+of thing. Um
+
+00:32:15.360 --> 00:32:18.960
+so they we it is actually I'm very
+
+00:32:18.960 --> 00:32:19.919
+careful right now of giving
+
+00:32:19.919 --> 00:32:21.279
+recommendations of how to get started
+
+00:32:21.279 --> 00:32:23.279
+because I think that we are a little bit
+
+00:32:23.279 --> 00:32:25.600
+in this problematic situation that the
+
+00:32:25.600 --> 00:32:27.760
+people that I trust the most about
+
+00:32:27.760 --> 00:32:30.320
+writing educational content are also the
+
+00:32:30.320 --> 00:32:32.799
+ones that not giving it a try. Right? So
+
+00:32:32.799 --> 00:32:34.799
+it's that there's actually there's a
+
+00:32:34.799 --> 00:32:38.000
+shockingly small number of
+
+00:32:38.000 --> 00:32:39.200
+>> people that have been in the industry
+
+00:32:39.200 --> 00:32:40.320
+for a long time that actually write
+
+00:32:40.320 --> 00:32:42.159
+really good content on this. So Simon
+
+00:32:42.159 --> 00:32:45.360
+Wilson is one of them. Um I think I at
+
+00:32:45.360 --> 00:32:46.720
+least started writing a little bit about
+
+00:32:46.720 --> 00:32:48.880
+it. Uh Peter Steinberger is a friend of
+
+00:32:48.880 --> 00:32:50.559
+mine. Margaret Se is a friend of mine.
+
+00:32:50.559 --> 00:32:53.440
+They all started sharing um how they're
+
+00:32:53.440 --> 00:32:58.080
+working on this. Um uh Cent's former
+
+00:32:58.080 --> 00:32:59.760
+founder friend of mine David Kramer also
+
+00:32:59.760 --> 00:33:00.960
+started now sharing a little bit how
+
+00:33:00.960 --> 00:33:02.720
+he's doing it. So there are some people
+
+00:33:02.720 --> 00:33:06.480
+that have both built something and an
+
+00:33:06.480 --> 00:33:09.039
+experience in a time before agentic
+
+00:33:09.039 --> 00:33:10.240
+coding that they're now picking up and
+
+00:33:10.240 --> 00:33:11.600
+they're sharing what they're doing. But
+
+00:33:11.600 --> 00:33:14.320
+it is very very hard to find really good
+
+00:33:14.320 --> 00:33:17.200
+content on it. So the the starting
+
+00:33:17.200 --> 00:33:19.120
+documentation of of cloud code in many
+
+00:33:19.120 --> 00:33:21.360
+ways is still where you would start and
+
+00:33:21.360 --> 00:33:24.159
+then yeah and then hopefully we'll bring
+
+00:33:24.159 --> 00:33:25.440
+up this content but like you also have
+
+00:33:25.440 --> 00:33:27.200
+to consider like aentic coding in this
+
+00:33:27.200 --> 00:33:29.360
+form basically only extends since
+
+00:33:29.360 --> 00:33:32.080
+December for the earliest ones
+
+00:33:32.080 --> 00:33:34.320
+May properly and it really took off in
+
+00:33:34.320 --> 00:33:36.080
+July which is we are in July right like
+
+00:33:36.080 --> 00:33:38.399
+m towards the end mid July
+
+00:33:38.399 --> 00:33:40.720
+>> so how much educational content has been
+
+00:33:40.720 --> 00:33:42.480
+created in this time not a lot of good
+
+00:33:42.480 --> 00:33:44.000
+one right and I think that's a little
+
+00:33:44.000 --> 00:33:45.039
+bit at
+
+00:33:45.039 --> 00:33:46.880
+And how do you make sure that you're up
+
+00:33:46.880 --> 00:33:48.960
+to date with all recent changes because
+
+00:33:48.960 --> 00:33:50.880
+as you said there's lots of noise but
+
+00:33:50.880 --> 00:33:52.960
+also there are lots of changes because
+
+00:33:52.960 --> 00:33:55.840
+there the agents are being developed and
+
+00:33:55.840 --> 00:33:56.640
+there are new changes.
+
+00:33:56.640 --> 00:33:58.240
+>> I think you don't have to be up to date
+
+00:33:58.240 --> 00:34:00.000
+with everything and I think that is
+
+00:34:00.000 --> 00:34:02.880
+probably also what brings you a lot more
+
+00:34:02.880 --> 00:34:04.960
+structure into the whole thing is not to
+
+00:34:04.960 --> 00:34:06.960
+have to
+
+00:34:06.960 --> 00:34:08.720
+>> feel like you have to update yourself on
+
+00:34:08.720 --> 00:34:10.960
+everything. Um I think you have to be
+
+00:34:10.960 --> 00:34:12.960
+aware of when there is a generational
+
+00:34:12.960 --> 00:34:14.159
+leap. Mhm.
+
+00:34:14.159 --> 00:34:18.960
+>> And you actually will find this out
+
+00:34:18.960 --> 00:34:20.800
+I think a lot of people are just always
+
+00:34:20.800 --> 00:34:22.800
+taking the position that like it is not
+
+00:34:22.800 --> 00:34:27.760
+one right in that is for me was um like
+
+00:34:27.760 --> 00:34:30.639
+mid May
+
+00:34:30.639 --> 00:34:32.480
+I think midmay the all of a sudden were
+
+00:34:32.480 --> 00:34:33.679
+a bunch of people talking about aentic
+
+00:34:33.679 --> 00:34:36.560
+coding right
+
+00:34:36.560 --> 00:34:39.280
+and if if I see some of people that I
+
+00:34:39.280 --> 00:34:41.200
+trust to say like hey this is really
+
+00:34:41.200 --> 00:34:44.399
+better then my default position is not
+
+00:34:44.399 --> 00:34:46.000
+you're wrong my default position is okay
+
+00:34:46.000 --> 00:34:47.839
+I'll have a look right so you get this
+
+00:34:47.839 --> 00:34:49.599
+critical mass automat atically, but what
+
+00:34:49.599 --> 00:34:51.520
+you have a lot is that there all of a
+
+00:34:51.520 --> 00:34:53.040
+sudden whenever that happens, there's a
+
+00:34:53.040 --> 00:34:54.720
+whole crowd of people pushing back on it
+
+00:34:54.720 --> 00:34:56.720
+like no, it's the same, right? And there
+
+00:34:56.720 --> 00:34:58.240
+were a lot of blog posts about like, no,
+
+00:34:58.240 --> 00:35:00.000
+I'm I'm not going to give a coding a try
+
+00:35:00.000 --> 00:35:02.400
+or or AI tooling a try like I opt out of
+
+00:35:02.400 --> 00:35:04.560
+it. And it's usually always at that
+
+00:35:04.560 --> 00:35:06.320
+moment when most people talk about it,
+
+00:35:06.320 --> 00:35:07.839
+right? When you when you can notice
+
+00:35:07.839 --> 00:35:10.720
+there's a critical mass building
+
+00:35:10.720 --> 00:35:13.760
+and you just need to look at when is so
+
+00:35:13.760 --> 00:35:16.400
+much hype on something, then don't take
+
+00:35:16.400 --> 00:35:19.760
+the position as nonsense. just see maybe
+
+00:35:19.760 --> 00:35:21.280
+something changed, right? And I think
+
+00:35:21.280 --> 00:35:24.240
+that that's that's really in this case
+
+00:35:24.240 --> 00:35:26.160
+right now of the the right way of going
+
+00:35:26.160 --> 00:35:28.400
+about it is like if you see that a lot
+
+00:35:28.400 --> 00:35:30.800
+of people started
+
+00:35:30.800 --> 00:35:33.520
+like not just for like 48 hours but like
+
+00:35:33.520 --> 00:35:35.839
+for like 2 weeks 3 weeks that that topic
+
+00:35:35.839 --> 00:35:38.000
+doesn't go away then then probably
+
+00:35:38.000 --> 00:35:39.040
+there's something there right like
+
+00:35:39.040 --> 00:35:41.200
+deepseek is a good example. Did you have
+
+00:35:41.200 --> 00:35:44.480
+to use deepseek on the first day? No.
+
+00:35:44.480 --> 00:35:46.079
+But the fact that Deepseek didn't get
+
+00:35:46.079 --> 00:35:48.480
+out of the new cycle for three weeks
+
+00:35:48.480 --> 00:35:50.240
+meant that yeah that model is probably
+
+00:35:50.240 --> 00:35:52.079
+good you know it's an open model that
+
+00:35:52.079 --> 00:35:53.119
+probably means there will be more
+
+00:35:53.119 --> 00:35:56.240
+innovation coming from right um that
+
+00:35:56.240 --> 00:35:59.119
+cloud code is keeping up in the news for
+
+00:35:59.119 --> 00:36:01.040
+like weeks and weeks and weeks probably
+
+00:36:01.040 --> 00:36:03.920
+means there's something behind it um
+
+00:36:03.920 --> 00:36:05.839
+like otherwise like if you can hype up
+
+00:36:05.839 --> 00:36:07.680
+something really quickly but if but then
+
+00:36:07.680 --> 00:36:09.280
+it will also die down right and then you
+
+00:36:09.280 --> 00:36:11.280
+you just skip that so like you you
+
+00:36:11.280 --> 00:36:13.200
+smooth your way over those but if it
+
+00:36:13.200 --> 00:36:14.880
+doesn't go out of the new cycle then
+
+00:36:14.880 --> 00:36:17.680
+yeah it's just probably worth trying.
+
+00:36:17.680 --> 00:36:20.640
+>> If people would like to uh read more
+
+00:36:20.640 --> 00:36:23.280
+about your thoughts about AI where can
+
+00:36:23.280 --> 00:36:24.880
+they find you on the internet? Which
+
+00:36:24.880 --> 00:36:27.119
+social media channels do you use?
+
+00:36:27.119 --> 00:36:30.160
+>> So um my handle is mitziko that's on
+
+00:36:30.160 --> 00:36:33.760
+Twitter blue sky and I sometimes still
+
+00:36:33.760 --> 00:36:37.839
+post on on masttodon but um the the
+
+00:36:37.839 --> 00:36:41.119
+discord is master not amazing. Um and
+
+00:36:41.119 --> 00:36:43.040
+then I have a blog which uh you can find
+
+00:36:43.040 --> 00:36:45.920
+if you just Google for it. Um my name
+
+00:36:45.920 --> 00:36:48.560
+the I will not dare to pronounce my
+
+00:36:48.560 --> 00:36:51.440
+domain because it's very old one but uh
+
+00:36:51.440 --> 00:36:52.960
+if you just Google for my name you will
+
+00:36:52.960 --> 00:36:55.760
+find my blog and a YouTube channel.
+
+00:36:55.760 --> 00:36:57.440
+>> Thank you for coming. Thank you for
+
+00:36:57.440 --> 00:37:00.000
+having me.
