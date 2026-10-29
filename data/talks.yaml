@@ -48,7 +48,7 @@ talks:
         type: talk
         slides_url: https://github.com/clytaemnestra/talks/blob/main/the-most-bizarre-software-bugs.pdf
         # Session page, not a direct video link.
-        video_url: https://webexpo.net/prague2026/sessions/the-most-bizarre-software-bugs-in-history/
+        # No recording published; session page: https://webexpo.net/prague2026/sessions/the-most-bizarre-software-bugs-in-history/
       - event: FOSDEM 2026
         date: 2026-02-01
         city: Brussels
@@ -87,7 +87,8 @@ talks:
 
   - slug: from-passion-to-career
     title: From Passion to Career
-    abstract: "TODO(mia): 1–2 line abstract"
+    # Generic abstract written for the site (no published programme text); edit freely.
+    abstract: "A talk for students at 42 Prague about turning an interest in programming into a career in software engineering: what the work involves day to day, how to get a first role, and how to keep growing as an engineer."
     tags: [careers]
     deliveries:
       - event: 42 Prague
@@ -113,7 +114,8 @@ talks:
   - slug: breaking-barriers
     # README spells it "Breaking Bareers".
     title: "Panel discussion: Breaking Barriers"
-    abstract: "TODO(mia): 1–2 line abstract"
+    # Generic abstract written for the site (no published programme text); edit freely.
+    abstract: "A panel discussion about how the panelists got into tech, the obstacles they met along the way, and advice for juniors and people moving into IT from other careers."
     tags: [diversity in tech]
     deliveries:
       - event: Women in Tech 2024
@@ -153,7 +155,8 @@ talks:
 
   - slug: getting-started-with-fastapi
     title: Getting Started with FastAPI for Web Development
-    abstract: "TODO(mia): 1–2 line abstract"
+    # Generic abstract written for the site (no published programme text); edit freely.
+    abstract: "An introduction to building web APIs with FastAPI: setting up a first project, defining endpoints with Python type hints, validating data with Pydantic, and using the automatically generated interactive documentation."
     tags: [FastAPI, Python web development]
     deliveries:
       - event: PyCon Namibia 2024
@@ -222,7 +225,8 @@ talks:
 
   - slug: vibecoded-app-production-ready
     title: How to Take a Vibecoded App and Make It Production-Ready
-    abstract: "TODO(mia): 1–2 line abstract"
+    # abstract condensed from the text Mia supplied (Oct 2026)
+    abstract: "AI lets anyone build a working app in an afternoon, but working once on a screen is not the same as working in production. The talk walks through the five things AI-generated code leaves out, how to spot each one, the smallest fix that gets it to production, and how to use the same AI as security reviewer and test writer."
     tags: [AI-assisted development, software engineering]
     deliveries:
       - event: Women in Tech 2026
@@ -231,11 +235,10 @@ talks:
         country: Czech Republic
         type: talk
 
-  - slug: pycon-espana-2026-keynote
-    # No talk page is generated while the title is a TODO; the delivery still appears in /talks/.
-    title: "TODO(mia): keynote title"
+  - slug: gardener-biggest-building-age-of-iron
+    title: "A gardener built the biggest building in the world: what the age of iron tells us about community in the age of AI"
     abstract: "TODO(mia): 1–2 line abstract"
-    tags: []
+    tags: [open source communities, AI]
     deliveries:
       - event: PyCon España 2026
         date: 2026-11-07
